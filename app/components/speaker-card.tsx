@@ -1,4 +1,3 @@
-// components/speaker-card.tsx
 'use client'
 
 import Image from 'next/image'
@@ -23,12 +22,7 @@ export default function SpeakerCard({
   const odds = probs ? probs[answerId] : null
 
   return (
-    <a
-      href={`https://manifold.markets/${marketSlug}`}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="block border rounded-xl p-4 hover:shadow-md transition"
-    >
+    <div className="border rounded-xl p-4">
       <div className="flex justify-center mb-3">
         {image ? (
           <div className="w-20 h-20 relative overflow-hidden rounded-full">
@@ -49,6 +43,6 @@ export default function SpeakerCard({
       </div>
       <h3 className="text-md font-semibold text-center">{name}</h3>
       <p className="text-xs text-center text-ink-600">{bio}</p>
-    </a>
+    </div>
   )
 }
