@@ -4,7 +4,7 @@
 import Image from "next/image";
 import speakers from "./data/speakers";
 import Kindwords from "./data/kindwords";
-import Card from "./components/card";
+import SpeakerCard from "./components/speaker-card";
 import Quote from "./components/ui/Quote";
 
 export default function Page() {
@@ -61,7 +61,7 @@ export default function Page() {
   <h2 className="text-2xl font-bold mb-6 text-center">Predicted Attending Guests</h2>
   <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
     {speakers.map((s, i) => (
-      <Card
+      <SpeakerCard
         key={i}
         name={s.name}
         bio={s.bio}

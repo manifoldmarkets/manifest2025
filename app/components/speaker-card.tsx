@@ -3,14 +3,14 @@
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 
-interface CardProps {
+interface SpeakerCardProps {
   name: string
   bio: string
   image?: string  
   marketSlug: string
 }
 
-export default function Card({ name, bio, image, marketSlug }: CardProps) {
+export default function SpeakerCard({ name, bio, image, marketSlug }: SpeakerCardProps) {
   const [odds, setOdds] = useState<number | null>(null)
 
   // Load fallback from localStorage on first render
