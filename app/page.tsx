@@ -5,7 +5,7 @@ import Image from "next/image";
 import speakers from "./data/speakers";
 import Kindwords from "./data/kindwords";
 import SpeakerCard from "./components/speaker-card";
-import Quote from "./components/ui/Quote";
+import Quote from "./components/ui/quote";
 
 const MANIFEST_ATTEND_SLUG =
   "which-users-will-attend-manifest-20-2ud9IuN5U6"
