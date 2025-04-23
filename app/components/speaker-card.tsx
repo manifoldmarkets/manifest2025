@@ -1,35 +1,26 @@
+// components/speaker-card.tsx
 'use client'
 
 import Image from 'next/image'
-import { useEffect, useState } from 'react'
+import { useAnswerProbabilities } from '../hooks/use-answer-probabilities'
 
 interface SpeakerCardProps {
   name: string
   bio: string
-  image?: string  
+  image?: string
   marketSlug: string
+  answerId: string
 }
 
-export default function SpeakerCard({ name, bio, image, marketSlug }: SpeakerCardProps) {
-  const [odds, setOdds] = useState<number | null>(null)
-
-  useEffect(() => {
-    if (!marketSlug) return
-
-    fetch(`https://api.manifold.markets/v0/slug/${marketSlug}`)
-      .then(res => {
-        if (!res.ok) throw new Error(`HTTP ${res.status}`)
-        return res.json()
-      })
-      .then((data: { probability?: number }) => {
-        if (typeof data.probability === 'number') {
-          setOdds(Math.round(data.probability * 100))
-        } else {
-          console.error('Expected data.probability, got:', data)
-        }
-      })
-      .catch(err => console.error(`Failed to fetch ${marketSlug}:`, err))
-  }, [marketSlug])
+export default function SpeakerCard({
+  name,
+  bio,
+  image,
+  marketSlug,
+  answerId,
+}: SpeakerCardProps) {
+  const probs = useAnswerProbabilities(marketSlug, [answerId])
+  const odds = probs ? probs[answerId] : null
 
   return (
     <a
@@ -54,7 +45,7 @@ export default function SpeakerCard({ name, bio, image, marketSlug }: SpeakerCar
         )}
       </div>
       <div className="text-xs text-center text-gray-500 mb-1">
-        {odds === null ? 'Loading odds…' : `Current Odds: ${odds}%`}
+        {odds == null ? 'Loading odds…' : `Current Odds: ${odds}%`}
       </div>
       <h3 className="text-md font-semibold text-center">{name}</h3>
       <p className="text-xs text-center text-ink-600">{bio}</p>

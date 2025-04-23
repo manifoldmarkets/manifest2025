@@ -7,6 +7,9 @@ import Kindwords from "./data/kindwords";
 import SpeakerCard from "./components/speaker-card";
 import Quote from "./components/ui/Quote";
 
+const MANIFEST_ATTEND_SLUG =
+  "which-users-will-attend-manifest-20-2ud9IuN5U6"
+
 export default function Page() {
   return (
     <main className="relative bg-canvas-0 text-ink-900 dark:bg-ink-1000 dark:text-ink-100 font-serif min-h-screen transition-colors duration-300">
@@ -62,12 +65,13 @@ export default function Page() {
   <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
     {speakers.map((s, i) => (
       <SpeakerCard
-        key={i}
-        name={s.name}
-        bio={s.bio}
-        image={s.image}
-        marketSlug={s.marketSlug}
-      />
+      key={s.answerId}
+      name={s.name}
+      bio={s.bio}
+      image={s.image}
+      marketSlug={MANIFEST_ATTEND_SLUG}
+      answerId={s.answerId}
+    />
     ))}
   </div>
 </section>
