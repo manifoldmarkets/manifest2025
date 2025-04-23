@@ -39,7 +39,7 @@ const speakers = [
       name: "Emmett Shear",
       bio: "CEO of Softmax, Cofounder of Twitch",
       image: "/images/speakers/emmett.jpg",
-      marketSlug: "/EmmettShear/will-emmett-shear-attend-manifest-2"
+      marketSlug: "will-emmett-shear-attend-manifest-2"
     },
     {
       name: "Byrne Hobart",
@@ -86,5 +86,3 @@ const speakers = [
   ]
   
   export default speakers
-  
-  
