@@ -92,6 +92,18 @@ const speakers: Speaker[] = [
     image: "/images/speakers/roon.jpg",
     answerId: "tdcOd5pPCN",  
   },
+  {
+    name: "David Shor",
+    bio: "Political forecaster, Head of Data Science at Blue Rose Research",
+    image: "/images/speakers/davidshor.jpg",
+    answerId: "0pZ6nL5AOy",  
+  },
+  {
+    name: "Laura Deming",
+    bio: "Longevity Venture Capitalist",
+    image: "/images/speakers/laura.jpg",
+    answerId: "gtZcPULnp8",  
+  },
 ]
 
 export default speakers

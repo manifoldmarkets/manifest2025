@@ -1,4 +1,3 @@
-// app/page.tsx
 'use client'
 
 import Image from "next/image";
@@ -6,6 +5,10 @@ import speakers from "./data/speakers";
 import Kindwords from "./data/kindwords";
 import SpeakerCard from "./components/speaker-card";
 import Quote from "./components/ui/quote";
+import Section from "./components/ui/Section";
+import Navbar from "./components/Navbar";
+import staff from "./data/staff";
+import sponsors from "./data/sponsors";
 
 const MANIFEST_ATTEND_SLUG =
   "which-users-will-attend-manifest-20-2ud9IuN5U6"
@@ -13,24 +16,8 @@ const MANIFEST_ATTEND_SLUG =
 export default function Page() {
   return (
     <main className="relative bg-canvas-0 text-ink-900 dark:bg-ink-1000 dark:text-ink-100 font-serif min-h-screen transition-colors duration-300">
-      {/* Navigation */}
-      <nav className="flex justify-center gap-6 text-sm py-4">
-        <a href="#about" className="hover:underline">About</a>
-        <a href="#speakers" className="hover:underline">Speakers</a>
-        <a href="#sponsors" className="hover:underline">Sponsors</a>
-        <a href="#kindwords" className="hover:underline">Kind Words</a>
-        <a href="#tickets" className="hover:underline">Tickets</a>
-        <a href="#contact" className="hover:underline">Contact</a>
-      </nav>
+      <Navbar />
 
-      {/* floating gradient blobs */}
-      <div className="absolute inset-0 -z-10 overflow-hidden">
-        <div className="absolute top-[-80px] left-[10%] w-72 h-72 bg-primary-600 rounded-full opacity-20 blur-3xl animate-float-slow" />
-        <div className="absolute top-[40%] right-[5%] w-48 h-48 bg-purple-300 rounded-full opacity-20 blur-2xl animate-float" />
-        <div className="absolute bottom-[-60px] left-[40%] w-64 h-64 bg-fuchsia-400 rounded-full opacity-10 blur-3xl animate-float" />
-      </div>
-
-      {/* Hero */}
       <section className="text-center space-y-4 mb-16 mt-12 max-w-3xl mx-auto px-6">
         <h1 className="text-4xl sm:text-5xl font-bold tracking-tight">Manifest 2025</h1>
         <p className="italic text-lg">
@@ -38,7 +25,7 @@ export default function Page() {
           <a href="https://manifold.markets" className="underline hover:text-primary-600">Manifold</a> and{' '}
           <a href="https://manifund.org" className="underline hover:text-primary-600">Manifund</a>.
         </p>
-        <p className="text-md">June 6–8 · Lighthaven, Berkeley</p>
+        <p className="text-md">June 6–8 · Lighthaven, Berkeley, California</p>
         <div className="flex justify-center gap-4 mt-4">
           <a
             href="https://www.havenbookings.space/festival-season"
@@ -52,72 +39,117 @@ export default function Page() {
             href="https://manifold.markets/topic/manifest"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-4 py-2 border border-primary-600 text-primary-600 rounded hover:bg-primary-600 hover:text-white transition"
+            className="px-4 py-2 border border-primary-600 text-primary-600 rounded hover:bg-primary-700 hover:text-white transition"
           >
             Start Predicting
           </a>
         </div>
       </section>
 
-{/* Predicted Attending Guests */}
-<section id="speakers" className="mb-20 max-w-5xl mx-auto px-6">
-  <h2 className="text-2xl font-bold mb-6 text-center">Predicted Attending Guests</h2>
-  <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
-    {speakers.map((s, i) => (
-      <SpeakerCard
-      key={s.answerId}
-      name={s.name}
-      bio={s.bio}
-      image={s.image}
-      marketSlug={MANIFEST_ATTEND_SLUG}
-      answerId={s.answerId}
-    />
-    ))}
-  </div>
-</section>
-
-
-
-      {/* Kind Words */}
-      <section id="kindwords" className="mb-20 max-w-3xl mx-auto px-6">
-  <Quote />
-</section>
-
-      {/* Sponsors */}
-      <section id="sponsors" className="mb-16 max-w-5xl mx-auto px-6">
-        <h2 className="text-xl font-bold mb-6 text-center">Sponsors</h2>
-        <p className="text-center text-sm text-ink-600 dark:text-ink-400">Coming soon — interested? Email <a className="underline" href="mailto:manifest@manifold.markets">manifest@manifold.markets</a></p>
-      </section>
-
-      {/* Night Market */}
-      <section id="nightmarket" className="mb-16 max-w-5xl mx-auto px-6">
-        <h2 className="text-xl font-bold mb-6 text-center">Night Market</h2>
-        <p className="text-center text-sm text-ink-600 dark:text-ink-400">Immersive experiences, secret projects, and weird delights. <a className="underline" href="https://airtable.com/shrxX8lz0P2D0hVbD" target="_blank">Apply for a booth →</a></p>
-      </section>
-
-      {/* Festival Season */}
-      <section id="festivalseason" className="mb-16 max-w-5xl mx-auto px-6">
-        <h2 className="text-xl font-bold mb-6 text-center">Festival Season</h2>
-        <p className="text-center text-sm text-ink-600 dark:text-ink-400">Manifest is part of a week of connected events in the Bay. <a className="underline" href="https://www.havenbookings.space/festival-season" target="_blank">View the calendar →</a></p>
-      </section>
-
-      {/* FAQ */}
-      <section id="faq" className="mb-16 max-w-5xl mx-auto px-6">
-        <h2 className="text-xl font-bold mb-6 text-center">FAQ</h2>
-        <p className="text-center text-sm text-ink-600 dark:text-ink-400">Coming soon. For now, you can email us with questions.</p>
-      </section>
-
-      {/* Contact */}
-      <section id="contact" className="mb-16 max-w-5xl mx-auto px-6 text-center">
-        <h2 className="text-xl font-bold mb-6">Contact</h2>
-        <p className="text-sm text-ink-600 dark:text-ink-400">
-          manifest@manifold.markets<br />
-          Or join the <a className="underline" href="https://discord.gg/manifest">Discord</a>.
+      <Section id="speakers" title="Notable Guests" className="mb-20">
+        <p className="text-center text-ink-600 mb-6">
+          All have express intent to attend, most will be speaking, for fun we've included the{' '}
+          <a 
+            href="https://manifold.markets/RickiHeicklen/which-users-will-attend-manifest-20-2ud9IuN5U6"
+            className="underline italic hover:text-primary-600"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Manifold market odds
+          </a>
+          {' '}of them actually showing up.
         </p>
-      </section>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+          {speakers.map((s) => (
+            <SpeakerCard
+              key={s.answerId}
+              name={s.name}
+              bio={s.bio}
+              image={s.image}
+              marketSlug={MANIFEST_ATTEND_SLUG}
+              answerId={s.answerId}
+            />
+          ))}
+        </div>
+      </Section>
+
+      <Section id="kindwords" title="Kind Words" className="mb-20">
+        <Quote />
+      </Section>
+
+      <Section id="sponsors" title="Sponsors">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-12 place-items-center max-w-3xl mx-auto">
+          {sponsors.map((sponsor) => (
+            <a
+              key={sponsor.name}
+              href={sponsor.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block"
+            >
+              <div className="h-9 flex items-center">
+                <Image
+                  src={sponsor.image}
+                  alt={sponsor.name}
+                  width={200}
+                  height={36}
+                  className="object-contain h-full w-auto"
+                />
+              </div>
+            </a>
+          ))}
+        </div>
+        <p className="text-center mt-6">
+          Want to sponsor Manifest 2025?{' '}
+          <a 
+            href="https://docs.google.com/document/d/10edfRza-_i5927dLcQHRKG-n-Y8qidadTYvxFNuGvAg/edit?usp=sharing" 
+            className="text-primary-700 hover:underline hover:text-primary-600"
+          >
+            Take a look at our sponsor prospectus.
+          </a>
+        </p>
+      </Section>
+
+      <Section id="nightmarket" title="Night Market">
+        <p className="text-center text-sm text-ink-600 dark:text-ink-400">
+          Immersive experiences, secret projects, and weird delights.{' '}
+          <a className="underline" href="https://airtable.com/shrxX8lz0P2D0hVbD" target="_blank">
+            Apply for a booth →
+          </a>
+        </p>
+      </Section>
+
+      <Section id="festivalseason" title="Festival Season">
+        <p className="text-center text-sm text-ink-600 dark:text-ink-400">
+          Manifest is part of a week of connected events in the Bay.{' '}
+          <a className="underline" href="https://www.havenbookings.space/festival-season" target="_blank">
+            View the calendar →
+          </a>
+        </p>
+      </Section>
+
+      <Section id="faq" title="FAQ">
+        <p className="text-center text-sm text-ink-600 dark:text-ink-400">
+          Coming soon. For now, you can email us with questions.
+        </p>
+      </Section>
+
+      <Section id="contact" title="Contact the Team" className="mb-10">
+        <div className="grid grid-flow-col justify-center gap-6 mb-6">
+          {staff.map((s) => (
+            <SpeakerCard
+              key={s.name}
+              name={s.name}
+              bio={s.bio}
+              image={s.image}
+              email={s.email}
+            />
+          ))}
+        </div>
+        <p className="text-sm text-ink-600 dark:text-ink-400 text-center">
+          Or ask in <a className="underline hover:text-primary-700" href="https://discord.gg/manifest">Discord</a>.
+        </p>
+      </Section>
     </main>
   )
 }
-
-
-

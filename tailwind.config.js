@@ -20,6 +20,7 @@ module.exports = {
           },
           primary: {
             600: 'rgb(129 140 248 / <alpha-value>)',
+            700: 'rgb(99 102 241 / <alpha-value>)',
           },
         },
       },

@@ -7,8 +7,7 @@ export default function Quote() {
   const [expanded, setExpanded] = useState<Record<number, boolean>>({})
 
   return (
-    <section className="max-w-prose mx-auto px-6 py-12 font-serif text-[15px] leading-relaxed text-ink-900 dark:text-ink-100 space-y-10">
-      <h2 className="text-xl font-bold mb-6 text-center">Kind Words</h2>
+    <section className="max-w-prose mx-auto px-6 font-serif text-[15px] leading-relaxed text-ink-900 dark:text-ink-100 space-y-10">
       {Kindwords.map((q, i) => (
         <div key={i}>
           <p className="italic mb-1">“{q.preview}”</p>
