@@ -19,6 +19,12 @@ const gallery: GalleryImage[] = [
     height: 1200,
   },
   {
+    src: '/images/gallery/13.jpg',
+    alt: 'Night vibes 2',
+    width: 1800,
+    height: 1200,
+  },
+  {
     src: '/images/gallery/4.jpg',
     alt: 'Crowd around poker table',
     width: 1800,
@@ -73,6 +79,13 @@ const gallery: GalleryImage[] = [
     width: 1800,
     height: 1200,
   },
+  {
+    src: '/images/gallery/12.jpg',
+    alt: 'Night vibes 1',
+    width: 1800,
+    height: 1200,
+  },
+  
 ];
 
 export default gallery;

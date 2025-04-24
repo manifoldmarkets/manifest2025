@@ -2,17 +2,34 @@
 
 import Image from "next/image";
 import speakers from "./data/speakers";
-import Kindwords from "./data/kindwords";
 import SpeakerCard from "./components/speaker-card";
-import Quote from "./components/ui/quote";
 import Section from "./components/ui/Section";
 import Navbar from "./components/Navbar";
 import staff from "./data/staff";
 import sponsors from "./data/sponsors";
 import Gallery from "./components/ui/Gallery";
+import SubstackCarousel from "./components/ui/substack-carousel";
 
 const MANIFEST_ATTEND_SLUG =
   "which-users-will-attend-manifest-20-2ud9IuN5U6"
+
+const testimonials = [
+  {
+    text: "The Manifest conference has been a successful experiment: put enough introverts with common interests into a confined space and they'll spontaneously turn into extroverts.",
+    author: "Byrne Hobart",
+    link: "https://x.com/ByrneHobart/status/1799963459658154203"
+  },
+  {
+    text: "For much of my life, I have poured my attention into tough-to-explain solitary pursuits, finding myself often sitting in quiet corners on the fringes of gatherings wondering if they're worth the effort. Not so last weekend.",
+    author: "TracingWoodgrains",
+    link: "https://x.com/tracewoodgrains/status/1800790146633138395"
+  },
+  {
+    text: "It's hard to describe the vibe at Manifest unless you were there. But it was part Burning Man, part prediction market science fair, part middle school talent show. It was utterly delightful.",
+    author: "Devansh Mehta",
+    link: "https://twitter.com/TheDevanshMehta/status/1800289126085951563"
+  }
+];
 
 export default function Page() {
   return (
@@ -74,10 +91,6 @@ export default function Page() {
         </div>
       </Section>
 
-      <Section id="kindwords" title="Kind Words" className="mb-20">
-        <Quote />
-      </Section>
-
       <Section id="sponsors" title="Sponsors">
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-12 place-items-center max-w-3xl mx-auto">
           {sponsors.map((sponsor) => (
@@ -100,15 +113,28 @@ export default function Page() {
             </a>
           ))}
         </div>
-        <p className="text-center mt-6">
-          Want to sponsor Manifest 2025?{' '}
-          <a 
-            href="https://docs.google.com/document/d/10edfRza-_i5927dLcQHRKG-n-Y8qidadTYvxFNuGvAg/edit?usp=sharing" 
-            className="text-primary-700 hover:underline hover:text-primary-600"
-          >
-            Take a look at our sponsor prospectus.
-          </a>
-        </p>
+      </Section>
+
+      <Section id="testimonials" title="Rave Reviews" className="mb-20">
+        <SubstackCarousel />
+        <div className="max-w-prose mx-auto px-6 font-serif text-[15px] leading-relaxed text-ink-900 dark:text-ink-100 space-y-10 mt-12">
+          {testimonials.map((quote, i) => (
+            <p key={i} className="italic">
+              "{quote.text}" — {quote.link ? (
+                <a 
+                  href={quote.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary-600 text-primary-700 hover:underline"
+                >
+                  {quote.author}
+                </a>
+              ) : (
+                quote.author
+              )}
+            </p>
+          ))}
+        </div>
       </Section>
 
       <Section id="gallery" title="Gallery">
@@ -117,7 +143,7 @@ export default function Page() {
 
       <Section id="nightmarket" title="Night Market">
         <p className="text-center text-sm text-ink-600 dark:text-ink-400">
-          Immersive experiences, secret projects, and weird delights.{' '}
+          Futuristic career fair, immersive experiences, secret projects, and weird delights.{' '}
           <a className="underline" href="https://airtable.com/shrxX8lz0P2D0hVbD" target="_blank">
             Apply for a booth →
           </a>
@@ -151,8 +177,17 @@ export default function Page() {
             />
           ))}
         </div>
-        <p className="text-sm text-ink-600 dark:text-ink-400 text-center">
-          Or ask in <a className="underline hover:text-primary-700" href="https://discord.gg/manifest">Discord</a>.
+        <p className="text-center mt-6">
+          Want to sponsor Manifest 2025?{' '}
+          <a 
+            href="https://docs.google.com/document/d/10edfRza-_i5927dLcQHRKG-n-Y8qidadTYvxFNuGvAg/edit?usp=sharing" 
+            className="text-primary-700 hover:underline hover:text-primary-600"
+          >
+            Take a look at our sponsor prospectus.
+          </a>
+        </p>
+        <p className=" text-ink-600 dark:text-ink-400 text-center">
+          Join the <a className="hover:underline hover:text-primary-600 text-primary-700" href="https://discord.gg/manifest">Discord</a>!
         </p>
       </Section>
     </main>

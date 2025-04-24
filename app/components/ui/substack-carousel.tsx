@@ -3,9 +3,9 @@
 import useEmblaCarousel from 'embla-carousel-react';
 import { useCallback } from 'react';
 import Image from 'next/image';
-import gallery from '../../data/gallery';
+import substackQuotes from '../../data/substack-quotes';
 
-export default function Gallery() {
+export default function SubstackCarousel() {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: true,
     align: 'center',
@@ -16,19 +16,21 @@ export default function Gallery() {
   const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
 
   return (
-    <div className="relative max-w-2xl mx-auto">
+    <div className="relative max-w-xl mx-auto">
       <div className="overflow-hidden" ref={emblaRef}>
         <div className="flex -ml-4">
-          {gallery.map((image) => (
-            <div key={image.src} className="relative min-w-0 flex-[0_0_80%] pl-4">
-              <div className="relative aspect-[16/9] rounded-lg overflow-hidden">
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  fill
-                  className="object-cover"
-                />
-              </div>
+          {substackQuotes.map((quote) => (
+            <div key={quote.src} className="relative min-w-0 flex-[0_0_80%] pl-4">
+              <a href={quote.link} target="_blank" rel="noopener noreferrer">
+                <div className="relative aspect-square rounded-lg overflow-hidden">
+                  <Image
+                    src={quote.src}
+                    alt={quote.alt}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </a>
             </div>
           ))}
         </div>

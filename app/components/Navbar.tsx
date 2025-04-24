@@ -22,7 +22,7 @@ export default function Navbar() {
           <Link href="/" className="hover:underline">Home</Link>
           <Link href="/#speakers" className="hover:underline">Speakers</Link>
           <Link href="/#sponsors" className="hover:underline">Sponsors</Link>
-          <Link href="/#kindwords" className="hover:underline">Kind Words</Link>
+          <Link href="/#testimonials" className="hover:underline">Rave Reviews</Link>
           <Link href="/#contact" className="hover:underline">Contact</Link>
           <Link href="/schedule" className="hover:underline">Schedule</Link>
           <a 
