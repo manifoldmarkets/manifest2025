@@ -9,6 +9,7 @@ import Section from "./components/ui/Section";
 import Navbar from "./components/Navbar";
 import staff from "./data/staff";
 import sponsors from "./data/sponsors";
+import Gallery from "./components/ui/Gallery";
 
 const MANIFEST_ATTEND_SLUG =
   "which-users-will-attend-manifest-20-2ud9IuN5U6"
@@ -108,6 +109,10 @@ export default function Page() {
             Take a look at our sponsor prospectus.
           </a>
         </p>
+      </Section>
+
+      <Section id="gallery" title="Gallery">
+        <Gallery />
       </Section>
 
       <Section id="nightmarket" title="Night Market">
