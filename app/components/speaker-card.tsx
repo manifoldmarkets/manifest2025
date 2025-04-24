@@ -61,11 +61,9 @@ export default function SpeakerCard({
           {odds != null && (
             <div className="relative h-6 w-full overflow-hidden rounded-b-xl bg-gray-200">
               <div
-                className="absolute inset-0 flex items-center justify-center text-xs text-gray-900 transition-all duration-300"
+                className="bg-primary-400 absolute inset-0 flex items-center justify-center text-xs font-bold text-white transition-all duration-300"
                 style={{
                   width: `${odds}%`,
-                  // background: 'linear-gradient(to right, #93c5fd, #3b82f6)',
-                  background: '#93c5fd',
                 }}
               >
                 {odds}%
