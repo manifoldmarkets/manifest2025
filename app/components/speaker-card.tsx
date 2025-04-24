@@ -57,11 +57,18 @@ export default function SpeakerCard({
       </div>
 
       {answerId && (
-        <div className="">
+        <div className="border-t border-gray-200">
           {odds != null && (
-            <div className="relative h-6 w-full overflow-hidden rounded-b-xl bg-gray-200">
+            <div className="relative h-6 w-full overflow-hidden rounded-b-xl bg-gradient-to-r from-blue-400/10 to-indigo-600/10">
               <div
-                className="absolute inset-0 flex items-center justify-center bg-primary-400 text-xs font-bold text-white transition-all duration-300"
+                className="absolute inset-0 flex items-center justify-center bg-white text-xs font-bold text-ink-900 transition-all duration-300"
+                style={{
+                  width: `${100 - odds}%`,
+                  left: `${odds}%`,
+                }}
+              />
+              <div
+                className="absolute inset-0 flex items-center justify-center bg-gradient-to-r from-blue-400/10 to-indigo-600/10 text-xs font-bold text-ink-900 transition-all duration-300"
                 style={{
                   width: `${odds}%`,
                 }}
