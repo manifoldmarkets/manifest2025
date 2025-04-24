@@ -1,7 +1,7 @@
 interface SubstackQuote {
-  src: string;
-  alt: string;
-  link: string;
+  src: string
+  alt: string
+  link: string
 }
 
 const substackQuotes: SubstackQuote[] = [
@@ -25,6 +25,6 @@ const substackQuotes: SubstackQuote[] = [
     alt: 'Benthams Substack quote about Manifest',
     link: 'https://benthams.substack.com/p/reflections-on-manifest',
   },
-];
+]
 
-export default substackQuotes;
+export default substackQuotes

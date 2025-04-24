@@ -1,67 +1,67 @@
 'use client'
 
-import { useState, useEffect } from "react";
-import { HiExternalLink, HiMenu, HiX } from "react-icons/hi";
-import Link from "next/link";
-import Image from "next/image";
+import { useEffect, useState } from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
+import { HiExternalLink, HiMenu, HiX } from 'react-icons/hi'
 
 export default function Navbar() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   useEffect(() => {
     if (isMenuOpen) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = 'hidden'
     } else {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = 'unset'
     }
     return () => {
-      document.body.style.overflow = 'unset';
-    };
-  }, [isMenuOpen]);
+      document.body.style.overflow = 'unset'
+    }
+  }, [isMenuOpen])
 
   const links = [
-    { href: "/", label: "Home" },
-    { href: "/#speakers", label: "Speakers" },
-    { href: "/#sponsors", label: "Sponsors" },
-    { href: "/#testimonials", label: "Rave Reviews" },
-    { href: "/#contact", label: "Contact" },
-    { href: "/schedule", label: "Schedule" },
-    { 
-      href: "https://www.havenbookings.space/festival-season",
-      label: "Buy Tickets",
-      external: true
+    { href: '/', label: 'Home' },
+    { href: '/#speakers', label: 'Speakers' },
+    { href: '/#sponsors', label: 'Sponsors' },
+    { href: '/#testimonials', label: 'Rave Reviews' },
+    { href: '/#contact', label: 'Contact' },
+    { href: '/schedule', label: 'Schedule' },
+    {
+      href: 'https://www.havenbookings.space/festival-season',
+      label: 'Buy Tickets',
+      external: true,
     },
-  ];
+  ]
 
   return (
     <>
-      <div className="fixed top-0 left-0 right-0 z-50 bg-canvas-0/80 backdrop-blur-sm border-b">
-        <div className="flex items-center justify-between p-4 max-w-7xl mx-auto">
+      <div className="fixed left-0 right-0 top-0 z-50 border-b bg-canvas-0/80 backdrop-blur-sm">
+        <div className="mx-auto flex max-w-7xl items-center justify-between p-4">
           <div className="flex items-center gap-2">
-            <Image 
-              src="/images/manifold-logo.svg" 
-              alt="Manifold" 
-              width={24} 
+            <Image
+              src="/images/manifold-logo.svg"
+              alt="Manifold"
+              width={24}
               height={24}
             />
             <span className="font-semibold">Manifest 2025</span>
           </div>
 
-          <button 
+          <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden text-2xl"
+            className="text-2xl md:hidden"
           >
             {isMenuOpen ? <HiX /> : <HiMenu />}
           </button>
 
-          <div className="hidden md:flex justify-center gap-8 text-sm">
+          <div className="hidden justify-center gap-8 text-sm md:flex">
             {links.map((link) => (
-              <Link 
+              <Link
                 key={link.label}
                 href={link.href}
                 className={`hover:underline ${link.external ? 'inline-flex items-center gap-0.5' : ''}`}
-                target={link.external ? "_blank" : undefined}
-                rel={link.external ? "noopener noreferrer" : undefined}
+                target={link.external ? '_blank' : undefined}
+                rel={link.external ? 'noopener noreferrer' : undefined}
               >
                 {link.label}
                 {link.external && <HiExternalLink />}
@@ -69,45 +69,45 @@ export default function Navbar() {
             ))}
           </div>
 
-          <div className="hidden md:flex items-center gap-2">
-            <span className="text-sm text-ink-600">Sponsored by</span>
-            <Image 
-              src="/images/polymarket-logo-black.svg" 
-              alt="Polymarket" 
-              width={80} 
+          <div className="hidden items-center gap-2 md:flex">
+            <span className="text-ink-600 text-sm">Sponsored by</span>
+            <Image
+              src="/images/polymarket-logo-black.svg"
+              alt="Polymarket"
+              width={80}
               height={20}
             />
           </div>
         </div>
       </div>
 
-      <div 
-        className={`md:hidden fixed inset-0 z-40 transition-transform duration-300 ${
+      <div
+        className={`fixed inset-0 z-40 transition-transform duration-300 md:hidden ${
           isMenuOpen ? 'translate-y-0' : '-translate-y-full'
         }`}
       >
-        <div className="absolute inset-0 bg-canvas-0/95 backdrop-blur-sm pt-20">
-          <div className="flex flex-col items-center gap-6 p-6 h-full overflow-y-auto">
+        <div className="absolute inset-0 bg-canvas-0/95 pt-20 backdrop-blur-sm">
+          <div className="flex h-full flex-col items-center gap-6 overflow-y-auto p-6">
             {links.map((link) => (
-              <Link 
+              <Link
                 key={link.label}
                 href={link.href}
                 className={`text-sm hover:underline ${link.external ? 'inline-flex items-center gap-0.5' : ''}`}
-                target={link.external ? "_blank" : undefined}
-                rel={link.external ? "noopener noreferrer" : undefined}
+                target={link.external ? '_blank' : undefined}
+                rel={link.external ? 'noopener noreferrer' : undefined}
                 onClick={() => setIsMenuOpen(false)}
               >
                 {link.label}
                 {link.external && <HiExternalLink />}
               </Link>
             ))}
-            
-            <div className="mt-auto pt-4 border-t w-full flex flex-col items-center gap-2">
-              <span className="text-sm text-ink-600">Sponsored by</span>
-              <Image 
-                src="/images/polymarket-logo-black.svg" 
-                alt="Polymarket" 
-                width={80} 
+
+            <div className="mt-auto flex w-full flex-col items-center gap-2 border-t pt-4">
+              <span className="text-ink-600 text-sm">Sponsored by</span>
+              <Image
+                src="/images/polymarket-logo-black.svg"
+                alt="Polymarket"
+                width={80}
                 height={20}
               />
             </div>
@@ -117,5 +117,5 @@ export default function Navbar() {
 
       <div className="h-[60px]" />
     </>
-  );
+  )
 }

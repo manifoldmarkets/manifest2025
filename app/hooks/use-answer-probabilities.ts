@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
- //Fetches a multiple-choice market by slug and returns the % probability for only the specified answer IDs.
+//Fetches a multiple-choice market by slug and returns the % probability for only the specified answer IDs.
 
 export function useAnswerProbabilities(
   marketSlug: string,

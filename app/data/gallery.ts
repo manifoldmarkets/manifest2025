@@ -1,8 +1,8 @@
 interface GalleryImage {
-  src: string;
-  alt: string;
-  width: number;
-  height: number;
+  src: string
+  alt: string
+  width: number
+  height: number
 }
 
 const gallery: GalleryImage[] = [
@@ -85,7 +85,6 @@ const gallery: GalleryImage[] = [
     width: 1800,
     height: 1200,
   },
-  
-];
+]
 
-export default gallery;
+export default gallery
