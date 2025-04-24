@@ -8,6 +8,7 @@ module.exports = {
         serif: ['var(--font-body)', 'serif'],
         sans: ['var(--font-sans)', 'sans-serif'],
         mono: ['var(--font-mono)', 'monospace'],
+        heading: ['var(--font-heading)', 'sans-serif'],
       },
       colors: {
         ink: {

@@ -22,19 +22,32 @@ html {
 }
 
 body {
-  @apply bg-canvas-0 text-ink-900 dark:bg-canvas-0 dark:text-ink-100 font-serif;
+  @apply bg-canvas-0 font-serif text-ink-900 dark:bg-canvas-0 dark:text-ink-100;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-heading;
 }
 
 @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+  0%,
+  100% {
+    transform: translateY(0);
   }
-  
-  .animate-float {
-    animation: float 6s ease-in-out infinite;
+  50% {
+    transform: translateY(-10px);
   }
-  
-  .animate-float-slow {
-    animation: float 12s ease-in-out infinite;
-  }
-  
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float 12s ease-in-out infinite;
+}
