@@ -27,52 +27,57 @@ export default function SpeakerCard({
   const odds = probs && answerId ? probs[answerId] : null
 
   return (
-    <div
-      className="
-        w-full
-        border
-        rounded-xl
-        p-3 sm:p-4           /* equal top & bottom padding */
-        h-[190px]
-        grid
-        grid-rows-[auto_auto_auto_1fr_auto]  /* avatar, odds, name, bio⇾fill, email */
-        gap-y-1             /* vertical gaps between rows */
-      "
-    >
-      <div className="flex justify-center">
-        {image ? (
-          <div className="w-20 h-20 rounded-full overflow-hidden relative">
-            <Image
-              src={image}
-              alt={name}
-              fill
-              className="object-cover"
-              sizes="80px"
-            />
-          </div>
-        ) : (
-          <div className="w-20 h-20 rounded-full bg-gray-300" />
-        )}
+    <div className="flex w-full flex-col rounded-xl border border-gray-200">
+      <div className="flex flex-1 flex-col gap-1 p-3 sm:p-4">
+        <div className="flex justify-center">
+          {image ? (
+            <div className="relative h-28 w-28 overflow-hidden rounded-full">
+              <Image
+                src={image}
+                alt={name}
+                fill
+                className="object-cover"
+                sizes="112px"
+              />
+            </div>
+          ) : (
+            <div className="h-28 w-28 rounded-full bg-gray-300" />
+          )}
+        </div>
+
+        <h3 className="text-md mt-2 text-center font-semibold">{name}</h3>
+
+        <div className="min-h-10 flex-1">
+          <p className="text-ink-600 line-clamp-2 text-center text-xs leading-relaxed">
+            {bio}
+          </p>
+        </div>
+
+        {email && <p className="text-ink-600 text-center text-xs">{email}</p>}
       </div>
 
       {answerId && (
-        <div className="text-xs text-center text-gray-500">
-          {odds == null ? 'Loading odds…' : `Current Odds: ${odds}%`}
+        <div className="">
+          {odds != null && (
+            <div className="relative h-6 w-full overflow-hidden rounded-b-xl bg-gray-200">
+              <div
+                className="absolute inset-0 flex items-center justify-center text-xs text-gray-900 transition-all duration-300"
+                style={{
+                  width: `${odds}%`,
+                  // background: 'linear-gradient(to right, #93c5fd, #3b82f6)',
+                  background: '#93c5fd',
+                }}
+              >
+                {odds}%
+              </div>
+            </div>
+          )}
+          {odds == null && (
+            <div className="text-center text-xs text-gray-500">
+              Loading odds…
+            </div>
+          )}
         </div>
-      )}
-
-      <h3 className="text-md font-semibold text-center">{name}</h3>
-
-      <div className="overflow-hidden">
-        <p className="text-xs text-center text-ink-600 line-clamp-2">
-          {bio}
-        </p>
-      </div>
-
-      {email && (
-        <p className="text-xs text-center text-ink-600">
-          {email}
-        </p>
       )}
     </div>
   )
