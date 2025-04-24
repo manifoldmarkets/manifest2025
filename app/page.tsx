@@ -39,19 +39,18 @@ export default function Page() {
 
       <Section id="speakers" title="Notable Guests" className="mb-20">
         <p className="text-ink-600 mb-6 text-center">
-          All have expressed intent to attend & most will be speaking. For fun,
-          we've included the{' '}
+          (They told us they're coming -{' '}
           <a
             href="https://manifold.markets/RickiHeicklen/which-users-will-attend-manifest-20-2ud9IuN5U6"
-            className="underline hover:text-primary-600"
+            className="text-primary-600 hover:text-primary-700"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Manifold market odds
+            bet on
           </a>{' '}
-          of them showing up.
+          whether they will!)
         </p>
-        <div className="grid grid-cols-2 gap-3 px-2 sm:grid-cols-3 sm:gap-6 sm:px-0 lg:grid-cols-4">
+        <div className="grid grid-cols-2 gap-3 px-2 sm:grid-cols-3 sm:gap-6 sm:px-0 lg:grid-cols-5">
           {speakers.map((s) => (
             <div key={s.answerId} className="mx-auto w-full max-w-[224px]">
               <SpeakerCard
