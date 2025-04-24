@@ -18,7 +18,7 @@ export default function Section({
       id={id}
       className={`mx-auto mb-16 max-w-5xl scroll-mt-24 px-6 ${className}`}
     >
-      <h2 className="mb-6 text-center text-2xl font-bold">{title}</h2>
+      <h2 className="mb-6 text-center text-4xl font-bold">{title}</h2>
       {children}
     </section>
   )

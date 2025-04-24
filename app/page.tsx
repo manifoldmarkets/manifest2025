@@ -8,7 +8,7 @@ import Gallery from './components/ui/Gallery'
 import Section from './components/ui/Section'
 import SubstackCarousel from './components/ui/substack-carousel'
 import speakers from './data/speakers'
-import sponsors from './data/sponsors'
+import sponsors, { SPONSOR_SIZES } from './data/sponsors'
 import staff from './data/staff'
 
 const MANIFEST_ATTEND_SLUG = 'which-users-will-attend-manifest-20-2ud9IuN5U6'
@@ -67,26 +67,41 @@ export default function Page() {
       </Section>
 
       <Section id="sponsors" title="Sponsors">
-        <div className="mx-auto grid max-w-3xl grid-cols-2 place-items-center gap-12 sm:grid-cols-3">
-          {sponsors.map((sponsor) => (
-            <a
-              key={sponsor.name}
-              href={sponsor.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block"
-            >
-              <div className="flex h-9 items-center">
-                <Image
-                  src={sponsor.image}
-                  alt={sponsor.name}
-                  width={200}
-                  height={36}
-                  className="h-full w-auto object-contain"
-                />
+        <div className="mx-auto max-w-3xl space-y-12">
+          {(['headline', 'platinum', 'gold', 'silver'] as const).map((tier) => {
+            const tierSponsors = sponsors.filter((s) => s.tier === tier)
+            if (tierSponsors.length === 0) return null
+            return (
+              <div key={tier} className="flex flex-col items-center gap-4">
+                <h3 className="text-ink-600 text-sm font-medium capitalize">
+                  {tier}
+                </h3>
+                <div className="flex flex-wrap justify-center gap-8">
+                  {tierSponsors.map((sponsor) => (
+                    <a
+                      key={sponsor.name}
+                      href={sponsor.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block"
+                    >
+                      <div
+                        className={`flex ${SPONSOR_SIZES[tier]} items-center`}
+                      >
+                        <Image
+                          src={sponsor.image}
+                          alt={sponsor.name}
+                          width={200}
+                          height={36}
+                          className="h-full w-auto object-contain"
+                        />
+                      </div>
+                    </a>
+                  ))}
+                </div>
               </div>
-            </a>
-          ))}
+            )
+          })}
         </div>
       </Section>
 

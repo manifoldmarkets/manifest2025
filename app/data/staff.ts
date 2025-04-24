@@ -22,7 +22,7 @@ const staff: Staff[] = [
     name: 'Austin Chen',
     bio: 'Advisor',
     image: '/images/staff/austin.jpg',
-    email: 'akrolsmir@gmail.com',
+    email: 'austin@manifest.is',
   },
 ]
 
