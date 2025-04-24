@@ -2,9 +2,9 @@ import Image from 'next/image'
 import Hero from './components/Hero'
 import Navbar from './components/Navbar'
 import SpeakerCard from './components/speaker-card'
-import Gallery from './components/ui/Gallery'
+import ImageGallery from './components/ui/ImageGallery'
 import Section from './components/ui/Section'
-import SubstackCarousel from './components/ui/substack-carousel'
+import SubstackGallery from './components/ui/SubstackGallery'
 import speakers from './data/speakers'
 import sponsors, { SPONSOR_SIZES } from './data/sponsors'
 import staff from './data/staff'
@@ -115,7 +115,9 @@ export default async function Page() {
       </Section>
 
       <Section id="testimonials" title="Rave Reviews" className="mb-20">
-        <SubstackCarousel />
+        {/* <SubstackCarousel /> */}
+        <SubstackGallery />
+
         <div className="mx-auto mt-12 max-w-prose space-y-10 px-6 font-serif text-[15px] leading-relaxed text-ink-900 dark:text-ink-100">
           {testimonials.map((quote, i) => (
             <p key={i} className="italic">
@@ -138,7 +140,8 @@ export default async function Page() {
       </Section>
 
       <Section id="gallery" title="Gallery">
-        <Gallery />
+        {/* <Gallery /> */}
+        <ImageGallery />
       </Section>
 
       <Section id="nightmarket" title="Night Market">
@@ -203,7 +206,7 @@ export default async function Page() {
             Take a look at our sponsor prospectus.
           </a>
         </p>
-        <p className="text-ink-600 dark:text-ink-400 text-center">
+        <p className="text-ink-600 dark:text-ink-400 mt-6 text-center">
           Join the{' '}
           <a
             className="text-primary-700 hover:text-primary-600 hover:underline"
