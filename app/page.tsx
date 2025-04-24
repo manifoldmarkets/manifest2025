@@ -66,7 +66,7 @@ export default function Page() {
 
       <Section id="speakers" title="Notable Guests" className="mb-20">
         <p className="text-center text-ink-600 mb-6">
-          All have express intent to attend, most will be speaking, for fun we've included the{' '}
+          All have expressed intent to attend & most will be speaking. For fun, we've included the{' '}
           <a 
             href="https://manifold.markets/RickiHeicklen/which-users-will-attend-manifest-20-2ud9IuN5U6"
             className="underline italic hover:text-primary-600"
@@ -75,18 +75,19 @@ export default function Page() {
           >
             Manifold market odds
           </a>
-          {' '}of them actually showing up.
+          {' '}of them showing up.
         </p>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-6 px-2 sm:px-0">
           {speakers.map((s) => (
-            <SpeakerCard
-              key={s.answerId}
-              name={s.name}
-              bio={s.bio}
-              image={s.image}
-              marketSlug={MANIFEST_ATTEND_SLUG}
-              answerId={s.answerId}
-            />
+            <div key={s.answerId} className="max-w-[224px] w-full mx-auto">
+              <SpeakerCard
+                name={s.name}
+                bio={s.bio}
+                image={s.image}
+                marketSlug={MANIFEST_ATTEND_SLUG}
+                answerId={s.answerId}
+              />
+            </div>
           ))}
         </div>
       </Section>
@@ -142,39 +143,46 @@ export default function Page() {
       </Section>
 
       <Section id="nightmarket" title="Night Market">
-        <p className="text-center text-sm text-ink-600 dark:text-ink-400">
-          Futuristic career fair, immersive experiences, secret projects, and weird delights.{' '}
-          <a className="underline" href="https://airtable.com/shrxX8lz0P2D0hVbD" target="_blank">
-            Apply for a booth →
-          </a>
-        </p>
+        <div className="max-w-prose mx-auto">
+          <p className="text-center text-sm text-ink-600 dark:text-ink-400">
+            Futuristic career fair, immersive experiences, secret projects, and weird delights. Lighthaven will open its doors for free entry during the Night Market.{' '}
+            <a className="underline" href="https://airtable.com/shrxX8lz0P2D0hVbD" target="_blank">
+              Apply for a booth →
+            </a>
+          </p>
+        </div>
       </Section>
 
       <Section id="festivalseason" title="Festival Season">
-        <p className="text-center text-sm text-ink-600 dark:text-ink-400">
-          Manifest is part of a week of connected events in the Bay.{' '}
-          <a className="underline" href="https://www.havenbookings.space/festival-season" target="_blank">
-            View the calendar →
-          </a>
-        </p>
+        <div className="max-w-prose mx-auto">
+          <p className="text-center text-sm text-ink-600 dark:text-ink-400">
+            Manifest is part of a week of connected events in the Bay.{' '}
+            <a className="underline" href="https://www.havenbookings.space/festival-season" target="_blank">
+              View the calendar →
+            </a>
+          </p>
+        </div>
       </Section>
 
-      <Section id="faq" title="FAQ">
-        <p className="text-center text-sm text-ink-600 dark:text-ink-400">
-          Coming soon. For now, you can email us with questions.
-        </p>
-      </Section>
+      {/* <Section id="faq" title="FAQ">
+        <div className="max-w-prose mx-auto">
+          <p className="text-center text-sm text-ink-600 dark:text-ink-400">
+            Coming soon. For now, you can email us with questions.
+          </p>
+        </div>
+      </Section> */}
 
       <Section id="contact" title="Contact the Team" className="mb-10">
-        <div className="grid grid-flow-col justify-center gap-6 mb-6">
+        <div className="flex flex-wrap justify-center gap-4 mb-6">
           {staff.map((s) => (
-            <SpeakerCard
-              key={s.name}
-              name={s.name}
-              bio={s.bio}
-              image={s.image}
-              email={s.email}
-            />
+            <div key={s.name} className="w-[224px]">
+              <SpeakerCard
+                name={s.name}
+                bio={s.bio}
+                image={s.image}
+                email={s.email}
+              />
+            </div>
           ))}
         </div>
         <p className="text-center mt-6">
@@ -186,7 +194,7 @@ export default function Page() {
             Take a look at our sponsor prospectus.
           </a>
         </p>
-        <p className=" text-ink-600 dark:text-ink-400 text-center">
+        <p className="text-ink-600 dark:text-ink-400 text-center">
           Join the <a className="hover:underline hover:text-primary-600 text-primary-700" href="https://discord.gg/manifest">Discord</a>!
         </p>
       </Section>

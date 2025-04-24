@@ -20,14 +20,28 @@ export default function SpeakerCard({
   answerId,
   email,
 }: SpeakerCardProps) {
-  const probs = answerId && marketSlug ? useAnswerProbabilities(marketSlug, [answerId]) : null
+  const probs =
+    answerId && marketSlug
+      ? useAnswerProbabilities(marketSlug, [answerId])
+      : null
   const odds = probs && answerId ? probs[answerId] : null
 
   return (
-    <div className="w-56 flex-shrink-0 border rounded-xl p-4">
-      <div className="flex justify-center mb-3">
+    <div
+      className="
+        w-full
+        border
+        rounded-xl
+        p-3 sm:p-4           /* equal top & bottom padding */
+        h-[190px]
+        grid
+        grid-rows-[auto_auto_auto_1fr_auto]  /* avatar, odds, name, bio⇾fill, email */
+        gap-y-1             /* vertical gaps between rows */
+      "
+    >
+      <div className="flex justify-center">
         {image ? (
-          <div className="w-20 h-20 relative overflow-hidden rounded-full">
+          <div className="w-20 h-20 rounded-full overflow-hidden relative">
             <Image
               src={image}
               alt={name}
@@ -40,14 +54,26 @@ export default function SpeakerCard({
           <div className="w-20 h-20 rounded-full bg-gray-300" />
         )}
       </div>
+
       {answerId && (
-        <div className="text-xs text-center text-gray-500 mb-1">
-          {odds === null ? 'Loading odds…' : `Current Odds: ${odds}%`}
+        <div className="text-xs text-center text-gray-500">
+          {odds == null ? 'Loading odds…' : `Current Odds: ${odds}%`}
         </div>
       )}
+
       <h3 className="text-md font-semibold text-center">{name}</h3>
-      <p className="text-xs text-center text-ink-600">{bio}</p>
-      {email && <p className="text-xs text-center text-ink-600 mt-1">{email}</p>}
+
+      <div className="overflow-hidden">
+        <p className="text-xs text-center text-ink-600 line-clamp-2">
+          {bio}
+        </p>
+      </div>
+
+      {email && (
+        <p className="text-xs text-center text-ink-600">
+          {email}
+        </p>
+      )}
     </div>
   )
 }
