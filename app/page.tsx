@@ -1,5 +1,3 @@
-'use client'
-
 import Image from 'next/image'
 import Hero from './components/Hero'
 import Navbar from './components/Navbar'
@@ -10,6 +8,7 @@ import SubstackCarousel from './components/ui/substack-carousel'
 import speakers from './data/speakers'
 import sponsors, { SPONSOR_SIZES } from './data/sponsors'
 import staff from './data/staff'
+import { getAnswerProbabilities } from './lib/probabilities'
 
 const MANIFEST_ATTEND_SLUG = 'which-users-will-attend-manifest-20-2ud9IuN5U6'
 
@@ -31,7 +30,15 @@ const testimonials = [
   },
 ]
 
-export default function Page() {
+export const revalidate = 60 // Revalidate every 60 seconds
+
+export default async function Page() {
+  const answerIds = speakers.map((s) => s.answerId).filter(Boolean) as string[]
+  const probabilities = await getAnswerProbabilities(
+    MANIFEST_ATTEND_SLUG,
+    answerIds
+  )
+
   return (
     <main className="dark:bg-ink-1000 relative min-h-screen bg-canvas-0 font-serif text-ink-900 transition-colors duration-300 dark:text-ink-100">
       <Navbar />
@@ -59,6 +66,9 @@ export default function Page() {
                 image={s.image}
                 marketSlug={MANIFEST_ATTEND_SLUG}
                 answerId={s.answerId}
+                probability={
+                  s.answerId ? (probabilities?.[s.answerId] ?? null) : null
+                }
               />
             </div>
           ))}

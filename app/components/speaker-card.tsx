@@ -1,7 +1,6 @@
 'use client'
 
 import Image from 'next/image'
-import { useAnswerProbabilities } from '../hooks/use-answer-probabilities'
 
 interface SpeakerCardProps {
   name: string
@@ -10,6 +9,7 @@ interface SpeakerCardProps {
   marketSlug?: string
   answerId?: string
   email?: string
+  probability?: number | null
 }
 
 export default function SpeakerCard({
@@ -19,13 +19,8 @@ export default function SpeakerCard({
   marketSlug,
   answerId,
   email,
+  probability,
 }: SpeakerCardProps) {
-  const probs =
-    answerId && marketSlug
-      ? useAnswerProbabilities(marketSlug, [answerId])
-      : null
-  const odds = probs && answerId ? probs[answerId] : null
-
   return (
     <div className="flex w-full flex-col rounded-xl border border-gray-200">
       <div className="flex flex-1 flex-col gap-1 p-3 sm:p-4">
@@ -58,26 +53,26 @@ export default function SpeakerCard({
 
       {answerId && (
         <div className="border-t border-gray-200">
-          {odds != null && (
+          {probability != null && (
             <div className="relative h-6 w-full overflow-hidden rounded-b-xl bg-gradient-to-r from-blue-400/10 to-indigo-600/10">
               <div
                 className="absolute inset-0 flex items-center justify-center bg-white text-xs font-bold text-ink-900 transition-all duration-300"
                 style={{
-                  width: `${100 - odds}%`,
-                  left: `${odds}%`,
+                  width: `${100 - probability}%`,
+                  left: `${probability}%`,
                 }}
               />
               <div
                 className="absolute inset-0 flex items-center justify-center bg-gradient-to-r from-blue-400/10 to-indigo-600/10 text-xs font-bold text-ink-900 transition-all duration-300"
                 style={{
-                  width: `${odds}%`,
+                  width: `${probability}%`,
                 }}
               >
-                {odds}%
+                {probability}%
               </div>
             </div>
           )}
-          {odds == null && (
+          {probability == null && (
             <div className="text-center text-xs text-gray-500">
               Loading odds…
             </div>
