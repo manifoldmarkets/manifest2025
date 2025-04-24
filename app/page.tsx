@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import Hero from './components/Hero'
 import Navbar from './components/Navbar'
 import SpeakerCard from './components/speaker-card'
 import Gallery from './components/ui/Gallery'
@@ -34,50 +35,7 @@ export default function Page() {
   return (
     <main className="dark:bg-ink-1000 relative min-h-screen bg-canvas-0 font-serif text-ink-900 transition-colors duration-300 dark:text-ink-100">
       <Navbar />
-
-      <section className="mx-auto mb-16 mt-12 max-w-3xl space-y-4 px-6 text-center">
-        <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
-          Manifest 2025
-        </h1>
-        <p className="text-xl font-extralight">
-          A festival for forecasting, markets, AI, and novel ideas.
-          <br />
-          Hosted by{' '}
-          <a
-            href="https://manifold.markets"
-            className="underline hover:text-primary-600"
-          >
-            Manifold
-          </a>{' '}
-          and{' '}
-          <a
-            href="https://manifund.org"
-            className="underline hover:text-primary-600"
-          >
-            Manifund
-          </a>
-          .
-        </p>
-        <p className="text-md">June 6–8 · Lighthaven, Berkeley, California</p>
-        <div className="mt-4 flex justify-center gap-4">
-          <a
-            href="https://www.havenbookings.space/festival-season"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded border border-primary-600 bg-primary-600 px-4 py-2 text-white transition hover:bg-primary-700"
-          >
-            Buy Tickets
-          </a>
-          <a
-            href="https://manifold.markets/topic/manifest"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded border border-primary-600 px-4 py-2 text-primary-600 transition hover:bg-primary-700 hover:text-white"
-          >
-            Start Predicting
-          </a>
-        </div>
-      </section>
+      <Hero />
 
       <Section id="speakers" title="Notable Guests" className="mb-20">
         <p className="text-ink-600 mb-6 text-center">
