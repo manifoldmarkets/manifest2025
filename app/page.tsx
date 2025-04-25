@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 import SpeakerCard from './components/speaker-card'
 import ImageGallery from './components/ui/ImageGallery'
 import Section from './components/ui/Section'
+import SubstackCarousel from './components/ui/substack-carousel'
 import SubstackGallery from './components/ui/SubstackGallery'
 import speakers from './data/speakers'
 import sponsors, { SPONSOR_SIZES } from './data/sponsors'
@@ -115,8 +116,8 @@ export default async function Page() {
       </Section>
 
       <Section id="testimonials" title="Rave Reviews" className="mb-20">
-        {/* <SubstackCarousel /> */}
-        <SubstackGallery />
+        <SubstackCarousel />
+        {/* <SubstackGallery /> */}
 
         <div className="mx-auto mt-12 max-w-prose space-y-10 px-6 font-serif text-[15px] leading-relaxed text-ink-900 dark:text-ink-100">
           {testimonials.map((quote, i) => (
