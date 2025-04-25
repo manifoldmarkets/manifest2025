@@ -144,7 +144,8 @@ export default async function Page() {
         {/* <Gallery /> */}
         <ImageGallery />
       </Section>
-<Section id="nightmarket" title="🌙 Manifest Night Market">
+
+      <Section id="nightmarket" title="🌙 Manifest Night Market">
   <div className="mx-auto max-w-prose space-y-4">
     <p className="text-center text-ink-600 dark:text-ink-400 text-sm">
       <strong>Friday, June 6 · 7–10 PM @ Lighthaven</strong><br />
@@ -186,18 +187,8 @@ export default async function Page() {
         Interested in the career fair portion? → Apply here
       </a>
     </div>
-
-    {/* Optional Image 
-    <div className="mt-8">
-      <img 
-        src="/path/to/your-night-market-image.jpg" 
-        alt="Manifest Night Market" 
-        className="rounded-lg shadow-md mx-auto"
-      />
-    </div>
   </div>
-</Section*> */}
-
+</Section>
 
       <Section id="festivalseason" title="Festival Season">
         <div className="mx-auto max-w-prose">
