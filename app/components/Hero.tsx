@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export default function Hero() {
   return (
-    <section className="container relative z-10 mx-auto px-4 py-12 md:py-20">
+    <section className="container relative z-10 mx-auto px-4 py-12 md:py-20 md:overflow-visible overflow-hidden">
       <div className="relative">
         {/* Decorative elements */}
         <div className="absolute -right-12 top-12 h-32 w-32 rounded-full bg-gradient-to-br from-purple-500 to-pink-400 opacity-15 blur-xl"></div>
