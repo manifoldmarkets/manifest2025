@@ -145,10 +145,10 @@ export default async function Page() {
         <ImageGallery />
       </Section>
 
-      <Section id="nightmarket" title="🌙 Manifest Night Market">
+      <Section id="nightmarket" title="Manifest Night Market">
   <div className="mx-auto max-w-prose space-y-4">
     <p className="text-center text-ink-600 dark:text-ink-400 text-sm">
-      <strong>Friday, June 6 · 7–10 PM @ Lighthaven</strong><br />
+      <strong>Friday, June 6 · 7–10 PM @ Lighthaven 🌙 </strong><br />
       Free and open to the community
     </p>
 
@@ -159,7 +159,7 @@ export default async function Page() {
     </p>
 
     <p className="text-ink-600 dark:text-ink-400 text-sm">
-      Previous wares included but were not limited to grey market s’mores and the rights to name a baby’s middle name.
+      Previous markets included but not limited to:
     </p>
 
     <ul className="list-disc list-inside text-ink-600 dark:text-ink-400 text-sm space-y-1">
@@ -167,7 +167,7 @@ export default async function Page() {
       <li><strong>Experience market:</strong> mini games, fortunes</li>
       <li><strong>Book market:</strong> got a book? essay? poem?</li>
       <li><strong>Information market:</strong> like a poster session, without the standards</li>
-      <li><strong>Black market:</strong> naming rights, "probiotics", etc. (all goods must still be legal!)</li>
+      <li><strong>Black market:</strong> naming rights to a baby’s middle name, "probiotics", etc. (all goods must still be legal!)</li>
     </ul>
 
     <div className="text-center space-y-2">
