@@ -146,49 +146,68 @@ export default async function Page() {
       </Section>
 
       <Section id="nightmarket" title="Manifest Night Market">
-  <div className="mx-auto max-w-prose space-y-4">
-    <p className="text-center text-ink-600 dark:text-ink-400 text-sm">
-      <strong>Friday, June 6 · 7–10 PM @ Lighthaven 🌙 </strong><br />
-      Free and open to the community
-    </p>
+        <div className="mx-auto max-w-prose space-y-4">
+          <p className="text-ink-600 dark:text-ink-400 text-center text-sm">
+            <strong>Friday, June 6 · 7–10 PM @ Lighthaven 🌙 </strong>
+            <br />
+            Free and open to the community
+          </p>
 
-    <p className="text-ink-600 dark:text-ink-400 text-sm">
-      The Night Market is back for the third year, an open-air evening celebration of all things markets. 
-      It’s a chance to meet people, share ideas, see strange gadgets, and wander around in a transcendent twilight. 
-      A Very Bay Area World’s Fair and, if you will, an attempt to manifest the futures.
-    </p>
+          <p className="text-ink-600 dark:text-ink-400 text-sm">
+            The Night Market is back for the third year, an open-air evening
+            celebration of all things markets. It’s a chance to meet people,
+            share ideas, see strange gadgets, and wander around in a
+            transcendent twilight. A Very Bay Area World’s Fair and, if you
+            will, an attempt to manifest the futures.
+          </p>
 
-    <p className="text-ink-600 dark:text-ink-400 text-sm">
-      Previous markets included but not limited to:
-    </p>
+          <p className="text-ink-600 dark:text-ink-400 text-sm">
+            Previous markets included but not limited to:
+          </p>
 
-    <ul className="list-disc list-inside text-ink-600 dark:text-ink-400 text-sm space-y-1">
-      <li><strong>Stuff market:</strong> arts, crafts, foods</li>
-      <li><strong>Experience market:</strong> mini games, fortunes</li>
-      <li><strong>Book market:</strong> got a book? essay? poem?</li>
-      <li><strong>Information market:</strong> like a poster session, without the standards</li>
-      <li><strong>Black market:</strong> naming rights to a baby’s middle name, "probiotics", etc. (all goods must still be legal!)</li>
-    </ul>
+          <ul className="text-ink-600 dark:text-ink-400 list-inside list-disc space-y-1 text-sm">
+            <li>
+              <strong>Job market:</strong> trade your skills for other skills,
+              or find your next gig
+            </li>
+            <li>
+              <strong>Stuff market:</strong> arts, crafts, foods
+            </li>
+            <li>
+              <strong>Experience market:</strong> mini games, fortunes
+            </li>
+            <li>
+              <strong>Book market:</strong> got a book? essay? poem?
+            </li>
+            <li>
+              <strong>Information market:</strong> like a poster session,
+              without the standards
+            </li>
+            <li>
+              <strong>Black market:</strong> naming rights to a baby's middle
+              name, "probiotics", etc. (all goods must still be legal!)
+            </li>
+          </ul>
 
-    <div className="text-center space-y-2">
-      <a 
-        className="underline text-ink-600 dark:text-ink-400" 
-        href="https://airtable.com/apprhYrZf0T8NcmEp/pagE8CyXArEdGFnJm/form" 
-        target="_blank"
-      >
-        Interested in hosting a booth? → Apply here
-      </a>
-      <br />
-      <a 
-        className="underline text-ink-600 dark:text-ink-400" 
-        href="https://airtable.com/apprhYrZf0T8NcmEp/pagUMQBnuJfuwxiEn/form" 
-        target="_blank"
-      >
-        Interested in the career fair portion? → Apply here
-      </a>
-    </div>
-  </div>
-</Section>
+          <div className="space-y-2 text-center">
+            <a
+              className="text-ink-600 dark:text-ink-400 underline"
+              href="https://airtable.com/apprhYrZf0T8NcmEp/pagE8CyXArEdGFnJm/form"
+              target="_blank"
+            >
+              Interested in hosting a booth? → Apply here
+            </a>
+            <br />
+            <a
+              className="text-ink-600 dark:text-ink-400 underline"
+              href="https://airtable.com/apprhYrZf0T8NcmEp/pagUMQBnuJfuwxiEn/form"
+              target="_blank"
+            >
+              Interested in the career fair portion? → Apply here
+            </a>
+          </div>
+        </div>
+      </Section>
 
       <Section id="festivalseason" title="Festival Season">
         <div className="mx-auto max-w-prose">
