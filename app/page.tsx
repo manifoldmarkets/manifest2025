@@ -181,7 +181,7 @@ export default async function Page() {
       <br />
       <a 
         className="underline text-ink-600 dark:text-ink-400" 
-        href="https://airtable.com/apprhYrZf0T8NcmEp/pagUMQBnuJfuwxiEn/edit" 
+        href="https://airtable.com/apprhYrZf0T8NcmEp/pagUMQBnuJfuwxiEn/form" 
         target="_blank"
       >
         Interested in the career fair portion? → Apply here
