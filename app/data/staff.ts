@@ -13,9 +13,9 @@ const staff: Staff[] = [
     email: 'david@manifest.is',
   },
   {
-    name: 'Rachel F',
+    name: 'Rachel',
     bio: 'Lead Organiser',
-    image: '/images/staff/placeholder.jpg',
+    image: '/images/staff/rachel.jpg',
     email: 'rach@manifest.is',
   },
   {
