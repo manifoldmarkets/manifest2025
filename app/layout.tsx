@@ -16,6 +16,9 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   title: 'Manifest',
   description: 'A festival for forecasting, markets, AI, and novel ideas',
+  icons: {
+    icon: '/manifold-logo.ico'
+  }
 }
 
 export default function RootLayout({
