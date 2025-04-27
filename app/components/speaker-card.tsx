@@ -40,7 +40,9 @@ export default function SpeakerCard({
           )}
         </div>
 
-        <h3 className="text-md mt-2 text-center font-semibold">{name}</h3>
+        <p className="text-md mt-2 text-center font-bold tracking-tight">
+          {name}
+        </p>
 
         <div className="min-h-10 flex-1">
           <p className="text-ink-600 line-clamp-2 text-center text-xs leading-relaxed">

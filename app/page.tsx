@@ -199,9 +199,7 @@ export default async function Page() {
             if (tierSponsors.length === 0) return null
             return (
               <div key={tier} className="flex flex-col items-center gap-4">
-                <h3 className="text-ink-600 text-sm font-medium capitalize">
-                  {tier}
-                </h3>
+                <p className="text-ink-600 font-medium capitalize">{tier}</p>
                 <div className="flex flex-wrap justify-center gap-8">
                   {tierSponsors.map((sponsor) => (
                     <a
