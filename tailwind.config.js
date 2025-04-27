@@ -23,6 +23,8 @@ module.exports = {
           400: 'rgb(165 180 252 / <alpha-value>)',
           600: 'rgb(129 140 248 / <alpha-value>)',
           700: 'rgb(99 102 241 / <alpha-value>)',
+          800: 'rgb(80 82 237 / <alpha-value>)',
+          900: 'rgb(60 63 231 / <alpha-value>)',
         },
       },
     },

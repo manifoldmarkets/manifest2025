@@ -76,6 +76,122 @@ export default async function Page() {
         </div>
       </Section>
 
+      <Section id="testimonials" title="Rave Reviews" dark>
+        <SubstackCarousel />
+        {/* <SubstackGallery /> */}
+
+        <div className="mx-auto mt-12 max-w-prose space-y-10 px-6 font-serif text-[15px] leading-relaxed">
+          {testimonials.map((quote, i) => (
+            <p key={i}>
+              <span className="text-xl">“{quote.text}”</span>
+              <br />—{' '}
+              {quote.link ? (
+                <a
+                  href={quote.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-200 hover:text-blue-300 hover:underline"
+                >
+                  {quote.author}
+                </a>
+              ) : (
+                quote.author
+              )}
+            </p>
+          ))}
+        </div>
+      </Section>
+
+      <Section id="gallery" title="Gallery">
+        {/* <Gallery /> */}
+        <ImageGallery />
+      </Section>
+
+      <Section id="nightmarket" title="Manifest Night Market" dark>
+        <div className="mx-auto max-w-prose space-y-4">
+          <p className="text-center">
+            <strong>Friday, June 6 · 7–10 PM @ Lighthaven 🌙 </strong>
+            <br />
+            Free and open to the community
+          </p>
+
+          <p>
+            The Night Market is back for the third year, an open-air evening
+            celebration of all things markets. It's a chance to meet people,
+            share ideas, see strange gadgets, and wander around in a
+            transcendent twilight. A Very Bay Area World's Fair and, if you
+            will, an attempt to manifest the futures.
+          </p>
+
+          <p>Previous markets included but not limited to:</p>
+
+          <ul className="list-inside list-disc space-y-1">
+            <li>
+              <strong>Job market:</strong> trade your skills for other skills,
+              or find your next gig
+            </li>
+            <li>
+              <strong>Stuff market:</strong> arts, crafts, foods
+            </li>
+            <li>
+              <strong>Experience market:</strong> mini games, fortunes
+            </li>
+            <li>
+              <strong>Book market:</strong> got a book? essay? poem?
+            </li>
+            <li>
+              <strong>Information market:</strong> like a poster session,
+              without the standards
+            </li>
+            <li>
+              <strong>Black market:</strong> naming rights to a baby's middle
+              name, "probiotics", etc. (all goods must still be legal!)
+            </li>
+          </ul>
+
+          <div className="space-y-2 text-center">
+            <a
+              className="underline"
+              href="https://airtable.com/apprhYrZf0T8NcmEp/pagE8CyXArEdGFnJm/form"
+              target="_blank"
+            >
+              Interested in hosting a booth? → Apply here
+            </a>
+            <br />
+            <a
+              className="underline"
+              href="https://airtable.com/apprhYrZf0T8NcmEp/pagUMQBnuJfuwxiEn/form"
+              target="_blank"
+            >
+              Interested in the career fair portion? → Apply here
+            </a>
+          </div>
+        </div>
+      </Section>
+
+      <Section id="festivalseason" title="Festival Season">
+        <div className="mx-auto max-w-prose">
+          <p className="text-ink-600 dark:text-ink-400 text-center">
+            Manifest is part of a week of connected events in the Bay.{' '}
+            <a
+              className="underline"
+              href="https://www.havenbookings.space/festival-season"
+              target="_blank"
+            >
+              View the calendar →
+            </a>
+          </p>
+        </div>
+      </Section>
+
+      {/* <Section id="faq" title="FAQ">
+        <div className="max-w-prose mx-auto">
+          <p className="text-center text-sm text-ink-600 dark:text-ink-400">
+            Coming soon. For now, you can email us with questions.
+          </p>
+        </div>
+      </Section> */}
+
       <Section id="sponsors" title="Sponsors">
         <div className="mx-auto max-w-3xl space-y-12">
           {(['headline', 'platinum', 'gold', 'silver'] as const).map((tier) => {
@@ -113,124 +229,18 @@ export default async function Page() {
             )
           })}
         </div>
+        <p className="mt-12 text-center">
+          Want to sponsor Manifest 2025?
+          <br />
+          Take a look at our{' '}
+          <a
+            href="https://docs.google.com/document/d/10edfRza-_i5927dLcQHRKG-n-Y8qidadTYvxFNuGvAg/edit?usp=sharing"
+            className="text-primary-700 hover:text-primary-600 hover:underline"
+          >
+            sponsor prospectus!
+          </a>
+        </p>
       </Section>
-
-      <Section id="testimonials" title="Rave Reviews" className="mb-20">
-        <SubstackCarousel />
-        {/* <SubstackGallery /> */}
-
-        <div className="mx-auto mt-12 max-w-prose space-y-10 px-6 font-serif text-[15px] leading-relaxed text-ink-900 dark:text-ink-100">
-          {testimonials.map((quote, i) => (
-            <p key={i} className="italic">
-              "{quote.text}" —{' '}
-              {quote.link ? (
-                <a
-                  href={quote.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-primary-700 hover:text-primary-600 hover:underline"
-                >
-                  {quote.author}
-                </a>
-              ) : (
-                quote.author
-              )}
-            </p>
-          ))}
-        </div>
-      </Section>
-
-      <Section id="gallery" title="Gallery">
-        {/* <Gallery /> */}
-        <ImageGallery />
-      </Section>
-
-      <Section id="nightmarket" title="Manifest Night Market">
-        <div className="mx-auto max-w-prose space-y-4">
-          <p className="text-ink-600 dark:text-ink-400 text-center text-sm">
-            <strong>Friday, June 6 · 7–10 PM @ Lighthaven 🌙 </strong>
-            <br />
-            Free and open to the community
-          </p>
-
-          <p className="text-ink-600 dark:text-ink-400 text-sm">
-            The Night Market is back for the third year, an open-air evening
-            celebration of all things markets. It’s a chance to meet people,
-            share ideas, see strange gadgets, and wander around in a
-            transcendent twilight. A Very Bay Area World’s Fair and, if you
-            will, an attempt to manifest the futures.
-          </p>
-
-          <p className="text-ink-600 dark:text-ink-400 text-sm">
-            Previous markets included but not limited to:
-          </p>
-
-          <ul className="text-ink-600 dark:text-ink-400 list-inside list-disc space-y-1 text-sm">
-            <li>
-              <strong>Job market:</strong> trade your skills for other skills,
-              or find your next gig
-            </li>
-            <li>
-              <strong>Stuff market:</strong> arts, crafts, foods
-            </li>
-            <li>
-              <strong>Experience market:</strong> mini games, fortunes
-            </li>
-            <li>
-              <strong>Book market:</strong> got a book? essay? poem?
-            </li>
-            <li>
-              <strong>Information market:</strong> like a poster session,
-              without the standards
-            </li>
-            <li>
-              <strong>Black market:</strong> naming rights to a baby's middle
-              name, "probiotics", etc. (all goods must still be legal!)
-            </li>
-          </ul>
-
-          <div className="space-y-2 text-center">
-            <a
-              className="text-ink-600 dark:text-ink-400 underline"
-              href="https://airtable.com/apprhYrZf0T8NcmEp/pagE8CyXArEdGFnJm/form"
-              target="_blank"
-            >
-              Interested in hosting a booth? → Apply here
-            </a>
-            <br />
-            <a
-              className="text-ink-600 dark:text-ink-400 underline"
-              href="https://airtable.com/apprhYrZf0T8NcmEp/pagUMQBnuJfuwxiEn/form"
-              target="_blank"
-            >
-              Interested in the career fair portion? → Apply here
-            </a>
-          </div>
-        </div>
-      </Section>
-
-      <Section id="festivalseason" title="Festival Season">
-        <div className="mx-auto max-w-prose">
-          <p className="text-ink-600 dark:text-ink-400 text-center text-sm">
-            Manifest is part of a week of connected events in the Bay.{' '}
-            <a
-              className="underline"
-              href="https://www.havenbookings.space/festival-season"
-              target="_blank"
-            >
-              View the calendar →
-            </a>
-          </p>
-        </div>
-      </Section>
-
-      {/* <Section id="faq" title="FAQ">
-        <div className="max-w-prose mx-auto">
-          <p className="text-center text-sm text-ink-600 dark:text-ink-400">
-            Coming soon. For now, you can email us with questions.
-          </p>
-        </div>
-      </Section> */}
 
       <Section id="contact" title="Contact the Team" className="mb-10">
         <div className="mb-6 flex flex-wrap justify-center gap-4">
@@ -245,15 +255,6 @@ export default async function Page() {
             </div>
           ))}
         </div>
-        <p className="mt-6 text-center">
-          Want to sponsor Manifest 2025?{' '}
-          <a
-            href="https://docs.google.com/document/d/10edfRza-_i5927dLcQHRKG-n-Y8qidadTYvxFNuGvAg/edit?usp=sharing"
-            className="text-primary-700 hover:text-primary-600 hover:underline"
-          >
-            Take a look at our sponsor prospectus.
-          </a>
-        </p>
         <p className="text-ink-600 dark:text-ink-400 mt-6 text-center">
           Join the{' '}
           <a
