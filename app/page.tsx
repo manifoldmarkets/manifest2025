@@ -5,8 +5,7 @@ import SpeakerCard from './components/speaker-card'
 import ImageGallery from './components/ui/ImageGallery'
 import Section from './components/ui/Section'
 import SubstackCarousel from './components/ui/substack-carousel'
-import SubstackGallery from './components/ui/SubstackGallery'
-import speakers from './data/speakers'
+import speakers, { additionalSpeakers } from './data/speakers'
 import sponsors, { SPONSOR_SIZES } from './data/sponsors'
 import staff from './data/staff'
 import { getAnswerProbabilities } from './lib/probabilities'
@@ -47,7 +46,7 @@ export default async function Page() {
 
       <Section id="speakers" title="Notable Guests" className="mb-20">
         <p className="text-ink-600 mb-6 text-center">
-          (They told us they're coming -{' '}
+          They told us they're coming -{' '}
           <a
             href="https://manifold.markets/RickiHeicklen/which-users-will-attend-manifest-20-2ud9IuN5U6"
             className="text-primary-600 hover:text-primary-700"
@@ -56,7 +55,7 @@ export default async function Page() {
           >
             bet on
           </a>{' '}
-          whether they will!)
+          whether they will!
         </p>
         <div className="grid grid-cols-2 gap-3 px-2 sm:grid-cols-3 sm:gap-6 sm:px-0 lg:grid-cols-5">
           {speakers.map((s) => (
@@ -73,6 +72,17 @@ export default async function Page() {
               />
             </div>
           ))}
+        </div>
+
+        <div className="mt-12">
+          <p className="text-ink-600 mb-6 text-center">Plus good odds on:</p>
+          <div className="grid grid-cols-2 gap-4 px-4 sm:grid-cols-3">
+            {additionalSpeakers.map((name) => (
+              <p key={name} className="text-center font-bold">
+                {name}
+              </p>
+            ))}
+          </div>
         </div>
       </Section>
 

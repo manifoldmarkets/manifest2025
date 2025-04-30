@@ -98,10 +98,28 @@ const speakers: Speaker[] = [
   },
   {
     name: 'Laura Deming',
-    bio: 'Longevity Venture Capitalist',
+    bio: 'CEO of Cradle',
     image: '/images/speakers/laura.jpg',
     answerId: 'gtZcPULnp8',
   },
 ]
 
 export default speakers
+
+export const additionalSpeakers = [
+  'Lincoln Quirk',
+  'Samo Burja',
+  'Dylan Matthews',
+  'Ajeya Cotra',
+  'Dylan Patel',
+  'Jay Baxter',
+  'Noam Brown',
+  'Scott Sumner',
+  'Danielle Fong',
+  'Tracing Woodgrains',
+  'David Holt',
+  'Cremieux',
+  'Steve Hsu',
+  'Kyle Schiller',
+  'Isabel Juniewicz',
+].sort((a, b) => a.localeCompare(b))
