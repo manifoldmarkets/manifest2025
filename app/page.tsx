@@ -231,17 +231,34 @@ export default async function Page() {
 
           <FAQItem
             question="What time on Friday does Manifest start?"
-            answer="Opening session will be Friday evening sometime in 5pm to 7pm. You can arrive any time on Friday you like though as we will be at the end of Summer Camp. We will kick things off for Manifest with a night market open to the community."
+            answer="Opening session will be Friday evening sometime in 5pm to 7pm. You can arrive any time on Friday you like though doors open at 2 pm as we will be at the end of Summer Camp. We will kick things off with a night market and futuristic career fair open to the community."
           />
 
           <FAQItem
             question="What sort of things happen at Manifest?"
-            answer={null}
+            answer={
+              <>
+                Check out the{' '}
+                <a
+                  href="https://manifest.is/schedule"
+                  className="text-primary-600 hover:text-primary-700 font-serif"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  schedule
+                </a>
+                {' '}for all the details!
+              </>
+            }
           />
 
           <FAQItem
             question="Who is Manifest for?"
-            answer={null}
+            answer={
+              <>
+                Manifest is in the lineage of Manifold. This year, we're really excited about bringing together people who forecast the future, care about the future going well, and who build an interesting future. The crowd is dynamic, open, and draws from more than just one community. While there are the familiar internet subcultures, Manifest is not any one thing and people come from tech, trading, forecasting, writing, and prediction markets. It should be quite fun!
+              </>
+            }
           />
 
           <FAQItem
