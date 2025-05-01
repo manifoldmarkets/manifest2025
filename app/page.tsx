@@ -210,7 +210,7 @@ export default async function Page() {
             return (
               <div key={tier} className="flex flex-col items-center gap-4">
                 <p className="text-ink-600 font-medium capitalize">{tier}</p>
-                <div className="flex flex-wrap justify-center gap-8">
+                <div className="flex flex-wrap justify-center gap-16">
                   {tierSponsors.map((sponsor) => (
                     <a
                       key={sponsor.name}

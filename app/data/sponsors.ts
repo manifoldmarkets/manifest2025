@@ -26,6 +26,12 @@ const sponsors: Sponsor[] = [
     tier: 'platinum',
   },
   {
+    name: 'Kalshi',
+    image: '/images/sponsors/kalshi-logo.svg',
+    url: 'https://kalshi.com',
+    tier: 'platinum',
+  },
+  {
     name: 'Sovereign',
     image: '/images/sponsors/sovereign-logo.svg',
     tier: 'gold',
