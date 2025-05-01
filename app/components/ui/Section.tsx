@@ -23,7 +23,7 @@ export default function Section({
       className={`mx-auto mb-16 scroll-mt-24 ${
         dark 
           ? 'bg-primary-800 py-20 text-ink-100' 
-          : isEven ? 'bg-primary-600/10 py-10' : 'bg-gray-50/50 py-10'
+          : isEven ? 'bg-primary-600/10 py-10' : 'bg-white py-10'
       }`}
     >
       <div className={`mx-auto max-w-5xl px-6 ${className}`}>
