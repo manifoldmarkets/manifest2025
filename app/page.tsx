@@ -6,6 +6,7 @@ import ImageGallery from './components/ui/ImageGallery'
 import Section from './components/ui/Section'
 import SubstackCarousel from './components/ui/substack-carousel'
 import SubstackGallery from './components/ui/SubstackGallery'
+import FAQItem from './components/ui/FAQItem'
 import speakers, { additionalSpeakers } from './data/speakers'
 import sponsors, { SPONSOR_SIZES } from './data/sponsors'
 import staff from './data/staff'
@@ -182,7 +183,7 @@ export default async function Page() {
 
           <p>Previous markets included but not limited to:</p>
 
-          <ul className="list-inside list-disc space-y-1">
+          <ul className="list-inside list-disc space-y-1 pb-6">
             <li>
               <strong>Job market:</strong> trade your skills for other skills,
               or find your next gig
@@ -201,8 +202,7 @@ export default async function Page() {
               without the standards
             </li>
             <li>
-              <strong>Black market:</strong> naming rights to a baby's middle
-              name, "probiotics", etc. (all goods must still be legal!)
+              <strong>Black market:</strong> naming rights to a baby's middle name, 'probiotics', etc
             </li>
           </ul>
 
@@ -226,18 +226,52 @@ export default async function Page() {
         </div>
       </Section>
 
-      <Section id="festivalseason" title="Festival Season">
-        <div className="mx-auto max-w-prose">
-          <p className="text-ink-600 text-center">
-            Manifest is part of a week of connected events in the Bay.{' '}
-            <a
-              className="text-primary-600 hover:text-primary-700 font-serif"
-              href="https://www.havenbookings.space/festival-season"
-              target="_blank"
-            >
-              View the calendar →
-            </a>
-          </p>
+      <Section id="faq" title="Frequently Asked Questions">
+        <div className="mx-auto max-w-prose space-y-6">
+          <FAQItem
+            question="What is the address?"
+            answer="2740 Telegraph Avenue, Berkeley, CA."
+          />
+
+          <FAQItem
+            question="What time on Friday does Manifest start?"
+            answer="Opening session will be Friday evening sometime in 5pm to 7pm. You can arrive any time on Friday you like though as we will be at the end of Summer Camp. We will kick things off for Manifest with a night market open to the community."
+          />
+
+          <FAQItem
+            question="What sort of things happen at Manifest?"
+            answer={null}
+          />
+
+          <FAQItem
+            question="Who is Manifest for?"
+            answer={null}
+          />
+
+          <FAQItem
+            question="What does my ticket include?"
+            answer="Access from Friday through Sunday. It includes breakfast, lunch, and dinner."
+          />
+
+          <FAQItem
+            question="Can I come for just part of the event?"
+            answer="Sure! As much or as little as you want."
+          />
+
+          <FAQItem
+            question="Will housing be available for purchase?"
+            answer="Yes! We are selling rooms at Lighthaven. Unfortunately there's about a 10 to 1 ratio of people to rooms, so most people will have to find other accomodations. We are hoping to add more shared dorm beds in the coming weeks."
+          />
+
+          <FAQItem
+            question="Can I bring my kids?"
+            answer="You're quite welcome to bring your kids, but there isn't kids-focused accomodations this year."
+          />
+
+          <FAQItem
+            question="I have more questions"
+            answer="Cool! David and Rachel can answer them or join the Manifest Discord"
+          />
         </div>
       </Section>
 
