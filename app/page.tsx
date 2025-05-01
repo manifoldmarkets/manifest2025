@@ -266,7 +266,19 @@ export default async function Page() {
 
           <FAQItem
             question="I have more questions"
-            answer="Cool! David and Rachel can answer them or join the Manifest Discord"
+            answer={
+              <>
+                Cool! David and Rachel can answer them or join the{' '}
+                <a
+                  href="https://discord.gg/manifest"
+                  className="text-primary-600 hover:text-primary-700 font-serif"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Manifest Discord
+                </a>
+              </>
+            }
           />
         </div>
       </Section>
