@@ -24,6 +24,8 @@ export default function Navbar() {
     { href: '/#speakers', label: 'Speakers' },
     { href: '/#sponsors', label: 'Sponsors' },
     { href: '/#testimonials', label: 'Rave Reviews' },
+    { href: '/#gallery', label: 'Gallery' },
+    { href: '/#nightmarket', label: 'Night Market' },
     { href: '/#contact', label: 'Contact' },
     { href: '/schedule', label: 'Schedule' },
     {
@@ -71,12 +73,19 @@ export default function Navbar() {
 
           <div className="hidden items-center gap-2 md:flex">
             <span className="text-ink-600 text-sm">Sponsored by</span>
-            <Image
-              src="/images/polymarket-logo-black.svg"
-              alt="Polymarket"
-              width={80}
-              height={20}
-            />
+            <a 
+              href="https://polymarket.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:opacity-80 transition-opacity"
+            >
+              <Image
+                src="/images/polymarket-logo-black.svg"
+                alt="Polymarket"
+                width={80}
+                height={20}
+              />
+            </a>
           </div>
         </div>
       </div>
@@ -104,12 +113,19 @@ export default function Navbar() {
 
             <div className="mt-auto flex w-full flex-col items-center gap-2 border-t pt-4">
               <span className="text-ink-600 text-sm">Sponsored by</span>
-              <Image
-                src="/images/polymarket-logo-black.svg"
-                alt="Polymarket"
-                width={80}
-                height={20}
-              />
+              <a 
+                href="https://polymarket.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:opacity-80 transition-opacity"
+              >
+                <Image
+                  src="/images/polymarket-logo-black.svg"
+                  alt="Polymarket"
+                  width={80}
+                  height={20}
+                />
+              </a>
             </div>
           </div>
         </div>

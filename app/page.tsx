@@ -86,6 +86,54 @@ export default async function Page() {
         </div>
       </Section>
 
+      <Section id="sponsors" title="Sponsors">
+        <div className="mx-auto max-w-3xl space-y-12">
+          {(['headline', 'platinum', 'gold', 'silver'] as const).map((tier) => {
+            const tierSponsors = sponsors.filter((s) => s.tier === tier)
+            if (tierSponsors.length === 0) return null
+            return (
+              <div key={tier} className="flex flex-col items-center gap-4">
+                <p className="text-ink-600 font-medium capitalize">{tier}</p>
+                <div className="flex flex-wrap justify-center gap-16">
+                  {tierSponsors.map((sponsor) => (
+                    <a
+                      key={sponsor.name}
+                      href={sponsor.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block"
+                    >
+                      <div
+                        className={`flex ${SPONSOR_SIZES[tier]} items-center`}
+                      >
+                        <Image
+                          src={sponsor.image}
+                          alt={sponsor.name}
+                          width={200}
+                          height={36}
+                          className="h-full w-auto object-contain"
+                        />
+                      </div>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )
+          })}
+        </div>
+        <p className="mt-12 text-center">
+          Want to sponsor Manifest 2025?
+          <br />
+          Take a look at our{' '}
+          <a
+            href="https://docs.google.com/document/d/10edfRza-_i5927dLcQHRKG-n-Y8qidadTYvxFNuGvAg/edit?usp=sharing"
+            className="text-primary-700 hover:text-primary-600 hover:underline"
+          >
+            sponsor prospectus!
+          </a>
+        </p>
+      </Section>
+
       <Section id="testimonials" title="Rave Reviews" dark>
         <SubstackCarousel />
         {/* <SubstackGallery /> */}
@@ -113,7 +161,6 @@ export default async function Page() {
       </Section>
 
       <Section id="gallery" title="Gallery">
-        {/* <Gallery /> */}
         <ImageGallery />
       </Section>
 
@@ -192,62 +239,6 @@ export default async function Page() {
             </a>
           </p>
         </div>
-      </Section>
-
-      {/* <Section id="faq" title="FAQ">
-        <div className="max-w-prose mx-auto">
-          <p className="text-center text-sm text-ink-600 dark:text-ink-400">
-            Coming soon. For now, you can email us with questions.
-          </p>
-        </div>
-      </Section> */}
-
-      <Section id="sponsors" title="Sponsors">
-        <div className="mx-auto max-w-3xl space-y-12">
-          {(['headline', 'platinum', 'gold', 'silver'] as const).map((tier) => {
-            const tierSponsors = sponsors.filter((s) => s.tier === tier)
-            if (tierSponsors.length === 0) return null
-            return (
-              <div key={tier} className="flex flex-col items-center gap-4">
-                <p className="text-ink-600 font-medium capitalize">{tier}</p>
-                <div className="flex flex-wrap justify-center gap-16">
-                  {tierSponsors.map((sponsor) => (
-                    <a
-                      key={sponsor.name}
-                      href={sponsor.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block"
-                    >
-                      <div
-                        className={`flex ${SPONSOR_SIZES[tier]} items-center`}
-                      >
-                        <Image
-                          src={sponsor.image}
-                          alt={sponsor.name}
-                          width={200}
-                          height={36}
-                          className="h-full w-auto object-contain"
-                        />
-                      </div>
-                    </a>
-                  ))}
-                </div>
-              </div>
-            )
-          })}
-        </div>
-        <p className="mt-12 text-center">
-          Want to sponsor Manifest 2025?
-          <br />
-          Take a look at our{' '}
-          <a
-            href="https://docs.google.com/document/d/10edfRza-_i5927dLcQHRKG-n-Y8qidadTYvxFNuGvAg/edit?usp=sharing"
-            className="text-primary-700 hover:text-primary-600 hover:underline"
-          >
-            sponsor prospectus!
-          </a>
-        </p>
       </Section>
 
       <Section id="contact" title="Contact the Team" className="mb-10">
