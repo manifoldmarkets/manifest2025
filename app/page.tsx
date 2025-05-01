@@ -44,7 +44,7 @@ export default async function Page() {
       <Navbar />
       <Hero />
 
-      <Section id="speakers" title="Notable Guests" className="mb-20" isEven={false}>
+      <Section id="speakers" title="Notable Guests" className="mb-20">
         <p className="text-ink-600 mb-6 text-center">
           They told us they're coming -{' '}
           <a
@@ -86,7 +86,7 @@ export default async function Page() {
         </div>
       </Section>
 
-      <Section id="sponsors" title="Sponsors" isEven={true}>
+      <Section id="sponsors" title="Sponsors">
         <div className="mx-auto max-w-3xl space-y-12">
           {(['headline', 'platinum', 'gold', 'silver'] as const).map((tier) => {
             const tierSponsors = sponsors.filter((s) => s.tier === tier)
@@ -127,26 +127,28 @@ export default async function Page() {
           Take a look at our{' '}
           <a
             href="https://docs.google.com/document/d/10edfRza-_i5927dLcQHRKG-n-Y8qidadTYvxFNuGvAg/edit?usp=sharing"
-            className="text-primary-600 hover:text-primary-700"
+            className="text-primary-700 hover:text-primary-600 hover:underline"
           >
             sponsor prospectus!
           </a>
         </p>
       </Section>
 
-      <Section id="testimonials" title="Rave Reviews" isEven={false}>
+      <Section id="testimonials" title="Rave Reviews" dark>
         <SubstackCarousel />
+        {/* <SubstackGallery /> */}
+
         <div className="mx-auto mt-12 max-w-prose space-y-10 px-6 font-serif text-[15px] leading-relaxed">
           {testimonials.map((quote, i) => (
             <p key={i}>
-              <span className="text-xl">"{quote.text}"</span>
+              <span className="text-xl">“{quote.text}”</span>
               <br />—{' '}
               {quote.link ? (
                 <a
                   href={quote.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-primary-600 hover:text-primary-700"
+                  className="text-blue-200 hover:text-blue-300 hover:underline"
                 >
                   {quote.author}
                 </a>
@@ -158,11 +160,11 @@ export default async function Page() {
         </div>
       </Section>
 
-      <Section id="gallery" title="Gallery" isEven={true}>
+      <Section id="gallery" title="Gallery">
         <ImageGallery />
       </Section>
 
-      <Section id="nightmarket" title="Manifest Night Market" isEven={false}>
+      <Section id="nightmarket" title="Manifest Night Market" dark>
         <div className="mx-auto max-w-prose space-y-4">
           <p className="text-center">
             <strong>Friday, June 6 · 7–10 PM @ Lighthaven 🌙 </strong>
@@ -206,7 +208,7 @@ export default async function Page() {
 
           <div className="space-y-2 text-center">
             <a
-              className="text-primary-600 hover:text-primary-700"
+              className="underline"
               href="https://airtable.com/apprhYrZf0T8NcmEp/pagE8CyXArEdGFnJm/form"
               target="_blank"
             >
@@ -214,7 +216,7 @@ export default async function Page() {
             </a>
             <br />
             <a
-              className="text-primary-600 hover:text-primary-700"
+              className="underline"
               href="https://airtable.com/apprhYrZf0T8NcmEp/pagUMQBnuJfuwxiEn/form"
               target="_blank"
             >
@@ -224,12 +226,12 @@ export default async function Page() {
         </div>
       </Section>
 
-      <Section id="festivalseason" title="Festival Season" isEven={true}>
+      <Section id="festivalseason" title="Festival Season">
         <div className="mx-auto max-w-prose">
           <p className="text-ink-600 dark:text-ink-400 text-center">
             Manifest is part of a week of connected events in the Bay.{' '}
             <a
-              className="text-primary-600 hover:text-primary-700"
+              className="underline"
               href="https://www.havenbookings.space/festival-season"
               target="_blank"
             >
@@ -239,7 +241,7 @@ export default async function Page() {
         </div>
       </Section>
 
-      <Section id="contact" title="Contact the Team" className="mb-10" isEven={false}>
+      <Section id="contact" title="Contact the Team" className="mb-10">
         <div className="mb-6 flex flex-wrap justify-center gap-4">
           {staff.map((s) => (
             <div key={s.name} className="w-[224px]">
@@ -255,7 +257,7 @@ export default async function Page() {
         <p className="text-ink-600 dark:text-ink-400 mt-6 text-center">
           Join the{' '}
           <a
-            className="text-primary-600 hover:text-primary-700"
+            className="text-primary-700 hover:text-primary-600 hover:underline"
             href="https://discord.gg/manifest"
           >
             Discord
