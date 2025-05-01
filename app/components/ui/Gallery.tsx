@@ -9,7 +9,7 @@ export default function Gallery() {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: true,
     align: 'center',
-    containScroll: 'trimSnaps',
+    containScroll: 'keepSnaps',
   })
 
   const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi])
@@ -19,7 +19,7 @@ export default function Gallery() {
     <div className="relative mx-auto max-w-2xl">
       <div className="overflow-hidden" ref={emblaRef}>
         <div className="-ml-4 flex">
-          {gallery.map((image) => (
+          {gallery.map((image, index) => (
             <div
               key={image.src}
               className="relative min-w-0 flex-[0_0_80%] pl-4"
@@ -29,6 +29,8 @@ export default function Gallery() {
                   src={image.src}
                   alt={image.alt}
                   fill
+                  priority={index === 0}
+                  quality={75}
                   className="object-cover"
                 />
               </div>
