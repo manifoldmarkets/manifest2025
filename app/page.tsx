@@ -5,6 +5,7 @@ import SpeakerCard from './components/speaker-card'
 import ImageGallery from './components/ui/ImageGallery'
 import Section from './components/ui/Section'
 import SubstackCarousel from './components/ui/substack-carousel'
+import SubstackGallery from './components/ui/SubstackGallery'
 import speakers, { additionalSpeakers } from './data/speakers'
 import sponsors, { SPONSOR_SIZES } from './data/sponsors'
 import staff from './data/staff'
@@ -101,7 +102,7 @@ export default async function Page() {
                       href={sponsor.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="block"
+                      className="block focus:outline-none"
                     >
                       <div
                         className={`flex ${SPONSOR_SIZES[tier]} items-center`}
@@ -127,7 +128,7 @@ export default async function Page() {
           Take a look at our{' '}
           <a
             href="https://docs.google.com/document/d/10edfRza-_i5927dLcQHRKG-n-Y8qidadTYvxFNuGvAg/edit?usp=sharing"
-            className="text-primary-700 hover:text-primary-600 hover:underline"
+            className="text-primary-600 hover:text-primary-700 font-serif"
           >
             sponsor prospectus!
           </a>
@@ -136,19 +137,18 @@ export default async function Page() {
 
       <Section id="testimonials" title="Rave Reviews">
         <SubstackCarousel />
-        {/* <SubstackGallery /> */}
 
         <div className="mx-auto mt-12 max-w-prose space-y-10 px-6 font-serif text-[15px] leading-relaxed">
           {testimonials.map((quote, i) => (
             <p key={i}>
-              <span className="text-xl">“{quote.text}”</span>
+              <span className="text-xl">"{quote.text}"</span>
               <br />—{' '}
               {quote.link ? (
                 <a
                   href={quote.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-200 hover:text-blue-300 hover:underline"
+                  className="text-primary-600 hover:text-primary-700 font-serif"
                 >
                   {quote.author}
                 </a>
@@ -208,7 +208,7 @@ export default async function Page() {
 
           <div className="space-y-2 text-center">
             <a
-              className="underline"
+              className="text-primary-600 hover:text-primary-700 font-serif"
               href="https://airtable.com/apprhYrZf0T8NcmEp/pagE8CyXArEdGFnJm/form"
               target="_blank"
             >
@@ -216,7 +216,7 @@ export default async function Page() {
             </a>
             <br />
             <a
-              className="underline"
+              className="text-primary-600 hover:text-primary-700 font-serif"
               href="https://airtable.com/apprhYrZf0T8NcmEp/pagUMQBnuJfuwxiEn/form"
               target="_blank"
             >
@@ -231,7 +231,7 @@ export default async function Page() {
           <p className="text-ink-600 text-center">
             Manifest is part of a week of connected events in the Bay.{' '}
             <a
-              className="underline"
+              className="text-primary-600 hover:text-primary-700 font-serif"
               href="https://www.havenbookings.space/festival-season"
               target="_blank"
             >
@@ -257,7 +257,7 @@ export default async function Page() {
         <p className="text-ink-600 mt-6 text-center">
           Join the{' '}
           <a
-            className="text-primary-700 hover:text-primary-600 hover:underline"
+            className="text-primary-600 hover:text-primary-700 font-serif"
             href="https://discord.gg/manifest"
           >
             Discord
