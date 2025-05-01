@@ -1,3 +1,5 @@
+'use client'
+
 import Link from 'next/link'
 
 export default function Hero() {
@@ -48,7 +50,12 @@ export default function Hero() {
             </p>
 
             {/* Location Badge */}
-            <div className="mt-8 inline-flex items-center rounded-full bg-gradient-to-r from-blue-400/10 to-indigo-600/10 px-4 py-2">
+            <Link
+              href="https://www.google.com/maps/place/2740+Telegraph+Ave,+Berkeley,+CA+94705"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-8 inline-flex items-center rounded-full bg-gradient-to-r from-blue-400/10 to-indigo-600/10 px-4 py-2 hover:from-blue-400/20 hover:to-indigo-600/20 transition-colors"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="mr-2 h-5 w-5 text-primary-600"
@@ -72,7 +79,7 @@ export default function Hero() {
               <span className="text-sm font-medium">
                 June 6–8 · Lighthaven, Berkeley, California
               </span>
-            </div>
+            </Link>
           </div>
         </div>
 
