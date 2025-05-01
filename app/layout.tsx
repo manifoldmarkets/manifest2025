@@ -19,10 +19,28 @@ const bungeeShade = Bungee_Shade({
 })
 
 export const metadata: Metadata = {
-  title: 'Manifest',
-  description: 'A festival for forecasting, markets, AI, and novel ideas',
+  title: 'Manifest 2025',
+  description: 'A festival for forecasting, markets, AI, and novel ideas. June 6-8, 2025 in Berkeley, California.',
   icons: {
     icon: '/manifold-logo.ico',
+  },
+  openGraph: {
+    title: 'Manifest 2025',
+    description: 'A festival for forecasting, markets, AI, and novel ideas. June 6-8, 2025 in Berkeley, California.',
+    images: [
+      {
+        url: '/images/gallery/1.jpg',
+        width: 1800,
+        height: 1200,
+        alt: 'Manifest 2025 - A festival for forecasting, markets, and novel ideas',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Manifest 2025',
+    description: 'A festival for forecasting, markets, AI, and novel ideas. June 6-8, 2025 in Berkeley, California.',
+    images: ['/images/gallery/1.jpg'],
   },
 }
 
