@@ -20,10 +20,11 @@ export default function Section({
   return (
     <section
       id={id}
-      className={`mx-auto mb-16 scroll-mt-24 ${
-        dark 
-          ? 'bg-primary-800 py-20 text-ink-100' 
-          : isEven ? 'bg-primary-600/10 py-10' : 'bg-white py-10'
+      style={{
+        backgroundColor: isEven ? 'rgb(129 140 248 / 0.1)' : 'rgb(255 255 255)'
+      }}
+      className={`mx-auto mb-16 scroll-mt-24 py-10 ${
+        dark ? 'bg-primary-800 text-ink-100' : ''
       }`}
     >
       <div className={`mx-auto max-w-5xl px-6 ${className}`}>
