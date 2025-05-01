@@ -19,7 +19,7 @@ export default function FAQItem({ question, answer }: FAQItemProps) {
         <span className="text-primary-600">{isOpen ? '−' : '+'}</span>
         <span className="text-ink-900">{question}</span>
       </div>
-      <div className={`text-ink-600 pl-6 ${isOpen ? 'block' : 'hidden'}`}>
+      <div className={`text-ink-600 pl-6 font-serif ${isOpen ? 'block' : 'hidden'}`}>
         {answer}
       </div>
     </div>
