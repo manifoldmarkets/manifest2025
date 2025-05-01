@@ -134,7 +134,7 @@ export default async function Page() {
         </p>
       </Section>
 
-      <Section id="testimonials" title="Rave Reviews" dark>
+      <Section id="testimonials" title="Rave Reviews">
         <SubstackCarousel />
         {/* <SubstackGallery /> */}
 
@@ -164,7 +164,7 @@ export default async function Page() {
         <ImageGallery />
       </Section>
 
-      <Section id="nightmarket" title="Manifest Night Market" dark>
+      <Section id="nightmarket" title="Manifest Night Market">
         <div className="mx-auto max-w-prose space-y-4">
           <p className="text-center">
             <strong>Friday, June 6 · 7–10 PM @ Lighthaven 🌙 </strong>
@@ -228,7 +228,7 @@ export default async function Page() {
 
       <Section id="festivalseason" title="Festival Season">
         <div className="mx-auto max-w-prose">
-          <p className="text-ink-600 dark:text-ink-400 text-center">
+          <p className="text-ink-600 text-center">
             Manifest is part of a week of connected events in the Bay.{' '}
             <a
               className="underline"
@@ -254,7 +254,7 @@ export default async function Page() {
             </div>
           ))}
         </div>
-        <p className="text-ink-600 dark:text-ink-400 mt-6 text-center">
+        <p className="text-ink-600 mt-6 text-center">
           Join the{' '}
           <a
             className="text-primary-700 hover:text-primary-600 hover:underline"

@@ -7,7 +7,6 @@ interface SectionProps {
   title?: string
   children: ReactNode
   className?: string
-  isEven?: boolean
 }
 
 export default function Section({
@@ -15,7 +14,6 @@ export default function Section({
   title,
   children,
   className = '',
-  isEven = false,
 }: SectionProps) {
   return (
     <section
