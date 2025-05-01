@@ -71,22 +71,20 @@ export default function Navbar() {
             ))}
           </div>
 
-          <div className="hidden items-center gap-2 md:flex">
+          <a 
+            href="https://polymarket.com" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="hidden items-center gap-2 hover:opacity-80 transition-opacity md:flex"
+          >
             <span className="text-ink-600 text-sm">Sponsored by</span>
-            <a 
-              href="https://polymarket.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="hover:opacity-80 transition-opacity"
-            >
-              <Image
-                src="/images/polymarket-logo-black.svg"
-                alt="Polymarket"
-                width={80}
-                height={20}
-              />
-            </a>
-          </div>
+            <Image
+              src="/images/polymarket-logo-black.svg"
+              alt="Polymarket"
+              width={80}
+              height={20}
+            />
+          </a>
         </div>
       </div>
 
