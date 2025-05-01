@@ -20,7 +20,7 @@ export default function Section({
       id={id}
       className={`bg-ink-50 py-10 ${className}`}
     >
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="mx-auto max-w-5xl px-6">
         {title && (
           <h2 className="text-ink-900 mb-8 text-center text-3xl font-bold">
             {title}
