@@ -59,7 +59,7 @@ export default async function Page() {
           </a>{' '}
           whether they will!
         </p>
-        <div className="grid grid-cols-2 gap-3 px-2 sm:grid-cols-3 sm:gap-6 sm:px-0 lg:grid-cols-5">
+        <div className="grid grid-cols-2 gap-3 px-2 sm:grid-cols-3 sm:gap-6 sm:px-0 lg:grid-cols-4">
           {speakers.map((s) => (
             <div key={s.answerId} className="mx-auto w-full max-w-[224px]">
               <SpeakerCard
@@ -76,8 +76,8 @@ export default async function Page() {
           ))}
         </div>
 
-        <div className="mt-12">
-          <p className="text-ink-600 mb-6 text-center">Plus good odds on:</p>
+        <div className="mt-24">
+          <p className="text-ink-600 mb-12 text-center">Plus good odds on:</p>
           <div className="grid grid-cols-2 gap-4 px-4 sm:grid-cols-3">
             {additionalSpeakers.map((name) => (
               <p key={name} className="text-center font-bold">
@@ -174,11 +174,7 @@ export default async function Page() {
           </p>
 
           <p>
-            The Night Market is back for the third year, an open-air evening
-            celebration of all things markets. It's a chance to meet people,
-            share ideas, see strange gadgets, and wander around in a
-            transcendent twilight. A Very Bay Area World's Fair and, if you
-            will, an attempt to manifest the futures.
+            The Night Market is back for the third year! An open-air evening celebration of all things markets. It's a chance to meet people, share ideas, see strange gadgets, and wander around in a transcendent twilight. A Very Bay Area World's Fair and a fun attempt to manifest the futures.
           </p>
 
           <p>Previous markets included but not limited to:</p>
