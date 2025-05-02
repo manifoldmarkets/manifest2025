@@ -31,6 +31,7 @@ const sponsors: Sponsor[] = [
     url: 'https://kalshi.com',
     tier: 'platinum',
   },
+  {name: 'Bayes Labs', image: '/images/sponsors/bayes-logo.svg', url: 'https://bayeslabs.tech/', tier: 'gold'},
   {
     name: 'Sovereign',
     image: '/images/sponsors/sovereign-logo.svg',
