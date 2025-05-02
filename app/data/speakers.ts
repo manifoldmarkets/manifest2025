@@ -107,7 +107,7 @@ const speakers: Speaker[] = [
 export default speakers
 
 export const additionalSpeakers = [
-  'Lincoln Quirk',
+  'Nuño Sempere',
   'Samo Burja',
   'Dylan Matthews',
   'Ajeya Cotra',
