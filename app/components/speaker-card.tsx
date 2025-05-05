@@ -22,16 +22,16 @@ export default function SpeakerCard({
   probability,
 }: SpeakerCardProps) {
   return (
-    <div className="flex w-full flex-col rounded-xl border border-gray-200 transition-all duration-300 hover:border-indigo-500 hover:shadow-lg">
+    <div className="group flex w-full flex-col rounded-xl border border-gray-200 transition-all duration-300 hover:border-indigo-500 hover:shadow-lg">
       <div className="flex flex-1 flex-col gap-1 p-3 sm:p-4">
         <div className="flex justify-center">
           {image ? (
-            <div className="relative h-28 w-28 overflow-hidden rounded-full">
+            <div className="relative h-28 w-28 overflow-hidden rounded-full shadow-md">
               <Image
                 src={image}
                 alt={name}
                 fill
-                className="object-cover transition-transform duration-300 hover:scale-105"
+                className="object-cover transition-transform duration-300 group-hover:scale-105"
                 sizes="112px"
               />
             </div>
