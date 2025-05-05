@@ -122,4 +122,7 @@ export const additionalSpeakers = [
   'Steve Hsu',
   'Kyle Schiller',
   'Isabel Juniewicz',
+  'Richard Hanania',
+  'Lincoln Quirk',
+  'Dave White',
 ].sort((a, b) => a.localeCompare(b))

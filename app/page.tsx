@@ -2,11 +2,11 @@ import Image from 'next/image'
 import Hero from './components/Hero'
 import Navbar from './components/Navbar'
 import SpeakerCard from './components/speaker-card'
+import FAQItem from './components/ui/FAQItem'
 import ImageGallery from './components/ui/ImageGallery'
 import Section from './components/ui/Section'
 import SubstackCarousel from './components/ui/substack-carousel'
 import SubstackGallery from './components/ui/SubstackGallery'
-import FAQItem from './components/ui/FAQItem'
 import speakers, { additionalSpeakers } from './data/speakers'
 import sponsors, { SPONSOR_SIZES } from './data/sponsors'
 import staff from './data/staff'
@@ -80,7 +80,7 @@ export default async function Page() {
           <p className="text-ink-600 mb-12 text-center">Plus good odds on:</p>
           <div className="grid grid-cols-2 gap-4 px-4 sm:grid-cols-3">
             {additionalSpeakers.map((name) => (
-              <p key={name} className="text-center font-bold">
+              <p key={name} className="text-center text-lg font-semibold">
                 {name}
               </p>
             ))}
@@ -96,7 +96,9 @@ export default async function Page() {
             return (
               <div key={tier} className="flex flex-col items-center gap-4">
                 <p className="text-ink-600 font-medium capitalize">{tier}</p>
-                <div className={`flex flex-col items-center ${tier === 'gold' ? 'gap-8' : 'flex-wrap justify-center gap-16'}`}>
+                <div
+                  className={`flex flex-col items-center ${tier === 'gold' ? 'gap-8' : 'flex-wrap justify-center gap-16'}`}
+                >
                   {tierSponsors.map((sponsor) => (
                     <a
                       key={sponsor.name}
@@ -129,7 +131,7 @@ export default async function Page() {
           Take a look at our{' '}
           <a
             href="https://docs.google.com/document/d/10edfRza-_i5927dLcQHRKG-n-Y8qidadTYvxFNuGvAg/edit?usp=sharing"
-            className="text-primary-600 hover:text-primary-700 font-serif"
+            className="font-serif text-primary-600 hover:text-primary-700"
           >
             sponsor prospectus!
           </a>
@@ -149,7 +151,7 @@ export default async function Page() {
                   href={quote.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-primary-600 hover:text-primary-700 font-serif"
+                  className="font-serif text-primary-600 hover:text-primary-700"
                 >
                   {quote.author}
                 </a>
@@ -174,7 +176,11 @@ export default async function Page() {
           </p>
 
           <p>
-            The Night Market is back for the third year! An open-air evening celebration of all things markets. It's a chance to meet people, share ideas, see strange gadgets, and wander around in a transcendent twilight. A Very Bay Area World's Fair and a fun attempt to manifest the futures.
+            The Night Market is back for the third year! An open-air evening
+            celebration of all things markets. It's a chance to meet people,
+            share ideas, see strange gadgets, and wander around in a
+            transcendent twilight. A Very Bay Area World's Fair and a fun
+            attempt to manifest the futures.
           </p>
 
           <p>Previous markets included but not limited to:</p>
@@ -198,13 +204,14 @@ export default async function Page() {
               without the standards
             </li>
             <li>
-              <strong>Black market:</strong> naming rights to a baby's middle name, 'probiotics', etc
+              <strong>Black market:</strong> naming rights to a baby's middle
+              name, 'probiotics', etc
             </li>
           </ul>
 
           <div className="space-y-2 text-center">
             <a
-              className="text-primary-600 hover:text-primary-700 font-serif"
+              className="font-serif text-primary-600 hover:text-primary-700"
               href="https://airtable.com/apprhYrZf0T8NcmEp/pagE8CyXArEdGFnJm/form"
               target="_blank"
             >
@@ -212,7 +219,7 @@ export default async function Page() {
             </a>
             <br />
             <a
-              className="text-primary-600 hover:text-primary-700 font-serif"
+              className="font-serif text-primary-600 hover:text-primary-700"
               href="https://airtable.com/apprhYrZf0T8NcmEp/pagUMQBnuJfuwxiEn/form"
               target="_blank"
             >
@@ -241,13 +248,13 @@ export default async function Page() {
                 Check out the{' '}
                 <a
                   href="https://manifest.is/schedule"
-                  className="text-primary-600 hover:text-primary-700 font-serif"
+                  className="font-serif text-primary-600 hover:text-primary-700"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   schedule
-                </a>
-                {' '}for all the details!
+                </a>{' '}
+                for all the details!
               </>
             }
           />
@@ -256,7 +263,14 @@ export default async function Page() {
             question="Who is Manifest for?"
             answer={
               <>
-                Manifest is in the lineage of Manifold. This year, we're really excited about bringing together people who forecast the future, care about the future going well, and who build an interesting future. The crowd is dynamic, open, and draws from more than just one community. While there are the familiar internet subcultures, Manifest is not any one thing and people come from tech, trading, forecasting, writing, and prediction markets. It should be quite fun!
+                Manifest is in the lineage of Manifold. This year, we're really
+                excited about bringing together people who forecast the future,
+                care about the future going well, and who build an interesting
+                future. The crowd is dynamic, open, and draws from more than
+                just one community. While there are the familiar internet
+                subcultures, Manifest is not any one thing and people come from
+                tech, trading, forecasting, writing, and prediction markets. It
+                should be quite fun!
               </>
             }
           />
@@ -288,7 +302,7 @@ export default async function Page() {
                 Cool! David and Rachel can answer them or join the{' '}
                 <a
                   href="https://discord.com/invite/MjDqMcQFdR"
-                  className="text-primary-600 hover:text-primary-700 font-serif"
+                  className="font-serif text-primary-600 hover:text-primary-700"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -316,7 +330,7 @@ export default async function Page() {
         <p className="text-ink-600 mt-6 text-center">
           Join the{' '}
           <a
-            className="text-primary-600 hover:text-primary-700 font-serif"
+            className="font-serif text-primary-600 hover:text-primary-700"
             href="https://discord.com/invite/MjDqMcQFdR"
           >
             Discord
