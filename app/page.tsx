@@ -287,7 +287,7 @@ export default async function Page() {
               <>
                 Cool! David and Rachel can answer them or join the{' '}
                 <a
-                  href="https://discord.gg/manifest"
+                  href="https://discord.com/invite/MjDqMcQFdR"
                   className="text-primary-600 hover:text-primary-700 font-serif"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -317,7 +317,7 @@ export default async function Page() {
           Join the{' '}
           <a
             className="text-primary-600 hover:text-primary-700 font-serif"
-            href="https://discord.gg/manifest"
+            href="https://discord.com/invite/MjDqMcQFdR"
           >
             Discord
           </a>
