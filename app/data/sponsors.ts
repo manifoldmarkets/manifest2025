@@ -6,10 +6,10 @@ interface Sponsor {
 }
 
 export const SPONSOR_SIZES = {
-  headline: 'h-20 md:h-28',
-  platinum: 'h-16 md:h-20',
-  gold: 'h-12 md:h-16',
-  silver: 'h-10 md:h-12',
+  headline: 'h-20 md:h-24',
+  platinum: 'h-14 md:h-14',
+  gold: 'h-14 md:h-14',
+  silver: 'h-12 md:h-12',
 }
 
 const sponsors: Sponsor[] = [
