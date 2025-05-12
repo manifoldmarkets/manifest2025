@@ -127,5 +127,8 @@ export const additionalSpeakers = [
   'Dave White',
   'Mike Yao',
   'Kevin Roose',
-  'Rob Miles'
+  'Rob Miles',
+  'Samuel Hammond',
+  'Mike Solana',
+  'Eoghan McCabe',
 ].sort((a, b) => a.localeCompare(b))
