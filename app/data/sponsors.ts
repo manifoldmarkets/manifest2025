@@ -43,6 +43,11 @@ const sponsors: Sponsor[] = [
     url: 'https://elicit.com/careers',
     tier: 'silver',
   },
+  {
+    name: 'Futuur',
+    tier: 'silver',
+    image: '/images/sponsors/futuur-logo.svg',
+  },
 ]
 
 export default sponsors
