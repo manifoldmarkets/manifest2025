@@ -85,14 +85,19 @@ export default function Hero() {
 
         {/* Action Buttons */}
         <div className="mt-10 flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-          <Link
-            href="https://www.havenbookings.space/festival-season"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="transform rounded-md bg-indigo-600 px-8 py-3 font-medium text-white shadow-lg shadow-indigo-200 transition-all duration-300 hover:-translate-y-1 hover:bg-indigo-700 hover:shadow-xl"
-          >
-            Buy Tickets
-          </Link>
+          <div className="flex flex-col items-center gap-2 relative transition-all duration-300 hover:-translate-y-1">
+            <Link
+              href="https://www.havenbookings.space/festival-season"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transform rounded-md bg-indigo-600 px-8 py-3 font-medium text-white shadow-lg shadow-indigo-200 transition-all duration-300 hover:bg-indigo-700 hover:shadow-xl"
+            >
+              Buy Tickets
+            </Link>
+            <div className="early-bird-banner absolute top-full mt-1 -left-10 transform rotate-3 bg-red-700 text-white px-3 py-1.5 text-sm font-outfit font-medium shadow-md z-20 whitespace-nowrap rounded-md">
+              Prices Increase After May 24
+            </div>
+          </div>
           <Link
             href="https://manifold.markets/topic/manifest"
             target="_blank"
