@@ -10,9 +10,22 @@ interface Event {
 
 export const events: Event[] = [
   {
+    start: '2025-06-06T12:00',
+    end: '2025-06-06T13:00',
+    title: 'Volunteer training',
+    location: 'Rat Park',
+  },
+  {
+    start: '2025-06-06T13:00',
+    end: '2025-06-06T14:00',
+    title: 'Lunch for volunteers',
+    speaker: '(And summer camp) ',
+    location: 'Rat Park',
+  },
+  {
     start: '2025-06-06T15:00',
     end: '2025-06-06T15:30',
-    title: 'Doors open!',
+    title: ' ☆ Doors open!  ☆',
     description: '',
     location: 'Rat Park',
   },
@@ -241,10 +254,11 @@ export const events: Event[] = [
     location: 'C1',
   },
   {
-    start: '2025-06-07T13:00',
-    end: '2025-06-07T14:00',
-    title: 'Laura Deming',
-    description: '',
+    start: '2025-06-08T14:00',
+    end: '2025-06-08T15:00',
+    title: 'Reversible Cryopreservation',
+    description:
+      'A pragmatic analysis of reversible cryopresevation and its technical feasibility. ',
     speaker: 'Laura Deming',
     location: 'C1',
   },
@@ -478,12 +492,12 @@ Resurrecting the "Somers System", the lost art of consensus-based land valuation
     location: 'C1',
   },
   {
-    start: '2025-06-08T14:00',
-    end: '2025-06-08T15:00',
+    start: '2025-06-07T13:00',
+    end: '2025-06-07T14:00',
     title: 'AI: US vs China Panel',
     speaker: 'Steve Hsu & TBA',
     description: '',
-    location: 'C1',
+    location: 'E1',
   },
   {
     start: '2025-06-08T15:00',
@@ -522,8 +536,8 @@ This talk explores what it will take for prediction markets to move from billion
     location: 'E1',
   },
   {
-    start: '2025-06-08T11:00',
-    end: '2025-06-08T12:00',
+    start: '2025-06-08T12:00',
+    end: '2025-06-08T13:00',
     title: 'The Furry Slayer',
     description: '',
     speaker: 'Tracing Woodgrains',
@@ -554,12 +568,12 @@ This talk explores what it will take for prediction markets to move from billion
     location: 'Exobrain',
   },
   {
-    start: '2025-06-08T12:00',
-    end: '2025-06-08T13:00',
+    start: '2025-06-08T11:00',
+    end: '2025-06-08T12:00',
     title: 'AI & epistemics',
     description: '',
     speaker: 'Ozzie Goen',
-    location: 'Exobrain',
+    location: 'E1',
   },
 ] as const
 

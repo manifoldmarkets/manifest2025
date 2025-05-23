@@ -29,7 +29,7 @@ const DAYS = [
   { date: '2025-06-08', label: 'Sunday, June 8' },
 ] as const
 
-const EARLIEST_TIME = '08:00'
+const EARLIEST_TIME = '08:30'
 const LATEST_TIME = '22:00'
 const SLOT_MINUTES = 30
 const ROW_H = 40
