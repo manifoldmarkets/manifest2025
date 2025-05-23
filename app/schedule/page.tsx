@@ -215,8 +215,16 @@ export default function Schedule() {
                 const endMin = isoToMin(ev.end) - earliest
                 const top = yFromMin(startMin)
                 const height = ((endMin - startMin) / SLOT_MINUTES) * ROW_H
+
+                const eventsInThisColumnBeforeThisTime = filteredEvents.filter(
+                  (e) =>
+                    e.location === ev.location &&
+                    isoToMin(e.start) < isoToMin(ev.start)
+                ).length
                 const bg =
-                  COLOURS[col % COLOURS.length][Math.floor(startMin / 60) % 2]
+                  COLOURS[col % COLOURS.length][
+                    eventsInThisColumnBeforeThisTime % 2
+                  ]
 
                 return (
                   <button

@@ -570,8 +570,12 @@ This talk explores what it will take for prediction markets to move from billion
   {
     start: '2025-06-08T11:00',
     end: '2025-06-08T12:00',
-    title: 'AI & epistemics',
-    description: '',
+    title: 'Directions for AI and Epistemics: An Opinionated Guide',
+    description: `In this talk, Ozzie will discuss:
+- The current state of AI, forecasting, and epistemics
+- Suggestions for directions forward (using an early research agenda)
+- Strategies for using better AI and epistemics technologies to help make sure AI safety goes well
+- Updates on QURI's thinking and strategy, relating to the above`,
     speaker: 'Ozzie Goen',
     location: 'E1',
   },
