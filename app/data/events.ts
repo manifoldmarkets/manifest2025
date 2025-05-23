@@ -80,6 +80,14 @@ export const events: Event[] = [
     location: 'C1',
   },
   {
+    start: '2025-06-06T19:00',
+    end: '2025-06-06T19:30',
+    title: 'Friend networking survey schelling point',
+    description:
+      'Planning to attend the algorithmic friend networking in Rat Park on Saturday 10am? Have you filled out your survey yet? If not, come hangout with others and fill it out! It will take ~20mins.',
+    location: 'Exobrain',
+  },
+  {
     start: '2025-06-06T21:00',
     end: '2025-06-06T21:30',
     title: 'Mentor <> Mentee speed networking',
@@ -123,15 +131,18 @@ export const events: Event[] = [
   {
     start: '2025-06-07T09:00',
     end: '2025-06-07T10:00',
-    title: 'Talk: TBA',
-    description: '',
+    title: 'Talk TBA',
+    speaker: '',
     location: 'Rat Park',
   },
   {
     start: '2025-06-07T10:00',
     end: '2025-06-07T11:00',
-    title: 'Polymarket Talk/Event TBA',
-    description: '',
+    title:
+      'Speed networking: we will algorithmically find your 5 best friends at Manifest',
+    speaker: 'David Shor',
+    description:
+      'David Shor runs LoveScience events which help people find potential romantic matches. This is NOT that, but rather, the platonic version! Want to meet new people to become friends with or find like minded people? Must have filled out the survey by Friday 20:00.',
     location: 'Rat Park',
   },
   {
@@ -169,7 +180,10 @@ export const events: Event[] = [
     start: '2025-06-07T15:30',
     end: '2025-06-07T18:00',
     title: 'Startup Pitch competition',
-    description: `Manifest's very own shark tank! Founders will have the opportunity to pitch to a panel of judges in front of a live audience trading on Manifold's markets on who will receive funding. Judges include Sahil Gupta from KrakenFX/Tribe Capital and Josh Fekler from BoxOne Ventures, with more judges to be announced. Organised by Sovereign.`,
+    descriptionHtml: `
+      <p>Manifest's very own shark tank! Founders will have the opportunity to pitch to a panel of judges in front of a live audience trading on Manifold's markets on who will receive funding. Judges include Sahil Gupta from KrakenFX/Tribe Capital and Josh Fekler from BoxOne Ventures, with more judges to be announced. Organised by Sovereign.</p>
+      <p>Sign up to pitch <a href="https://docs.google.com/forms/d/e/1FAIpQLSdftL_tjcCBcC-QvNPxgazmLXCl7QVlibdgBWD8P3JLtOYeFA/viewform" class="text-primary-600 hover:text-primary-700 hover:underline">using this form</a>, approved pitches will be notified soon.</p>
+    `,
     location: 'Rat Park',
   },
   {
@@ -325,7 +339,7 @@ Resurrecting the "Somers System", the lost art of consensus-based land valuation
     end: '2025-06-07T14:00',
     title: 'Weirdly Priced Markets',
     description: `According to Polymarket, Jesus Christ has a 3% chance of returning in 2025. According to PredictIt, there was a 130% chance that Trump would get between 0 and 538 electoral votes in the 2024 election. Markets thought that Trump would have a 16% chance of winning the 2020 presidential election, after he had already lost it. In this talk + discussion, Eric and Jesse will talk about some of the most weirdly priced prediction markets they've seen, and why they were priced that way.`,
-    speaker: 'Eric Neyman',
+    speaker: 'Eric Neyman & Jesse Richardson',
     location: 'Exobrain',
   },
   {

@@ -76,11 +76,19 @@ export default function Schedule() {
       <Navbar />
 
       <section className="px-6 py-10">
-        <div className="mb-6 flex justify-center">
+        <div className="mb-6 text-center">
+          <p className="text-ink-600 dark:text-ink-400 mx-auto mb-4 max-w-4xl text-sm">
+            This schedule is not finalised and things are likely to be shuffled
+            around as speakers confirm availability. There are also a couple of
+            exciting names we are waiting to add! The final version will have
+            additional slots for attendees to register to run side sessions!
+            Community favorites such as poker and other games will also be
+            making a return!
+          </p>
           <select
             value={selectedDay}
             onChange={(e) => setSelectedDay(e.target.value)}
-            className="border-ink-200 dark:border-ink-700 dark:bg-ink-800 mr-4 w-48 rounded-lg border bg-white px-4 py-2 text-sm"
+            className="border-ink-200 dark:border-ink-700 dark:bg-ink-800 w-48 rounded-lg border bg-white px-4 py-2 text-sm"
           >
             {DAYS.map((day) => (
               <option key={day.date} value={day.date}>
@@ -133,7 +141,7 @@ export default function Schedule() {
                   )}
                   {ev.descriptionHtml ? (
                     <div
-                      className="text-ink-600 dark:text-ink-400 mt-2 text-sm space-y-2 [&_a]:text-primary-600 [&_a]:hover:text-primary-700 [&_a]:hover:underline"
+                      className="text-ink-600 dark:text-ink-400 mt-2 space-y-2 text-sm [&_a]:text-primary-600 [&_a]:hover:text-primary-700 [&_a]:hover:underline"
                       dangerouslySetInnerHTML={{ __html: ev.descriptionHtml }}
                     />
                   ) : ev.description ? (
@@ -269,7 +277,7 @@ export default function Schedule() {
             </p>
             {selected.descriptionHtml ? (
               <div
-                className="text-sm space-y-2 [&_a]:text-primary-600 [&_a]:hover:text-primary-700 [&_a]:hover:underline"
+                className="space-y-2 text-sm [&_a]:text-primary-600 [&_a]:hover:text-primary-700 [&_a]:hover:underline"
                 dangerouslySetInnerHTML={{ __html: selected.descriptionHtml }}
               />
             ) : selected.description ? (
