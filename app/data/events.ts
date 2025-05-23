@@ -291,7 +291,11 @@ export const events: Event[] = [
     start: '2025-06-07T18:00',
     end: '2025-06-07T19:00',
     title: 'Learning to Reason with LLMs',
-    description: `Large language models (LLMs) have demonstrated remarkable capabilities in generating coherent text and completing various natural language tasks. Nevertheless, their ability to perform complex, general reasoning has remained limited. In this talk, I will describe OpenAI's new o-series models, which are trained via reinforcement learning to generate a hidden chain of thought before its response. We have found that the performance of these models consistently improve with more reinforcement learning compute and with more inference compute. The latest model, o3, surpasses previous state-of-the-art models in a variety of benchmarks that require reasoning, including mathematics competitions, programming contests, and advanced science question sets. I will discuss the implications of scaling this paradigm even further.`,
+    descriptionHtml: `
+      <p>Large language models (LLMs) have demonstrated remarkable capabilities in generating coherent text and completing various natural language tasks. Nevertheless, their ability to perform complex, general reasoning has remained limited.</p>
+      <p>In this talk, I will describe OpenAI's new o-series models, which are trained via reinforcement learning to generate a hidden chain of thought before its response. We have found that the performance of these models consistently improve with more reinforcement learning compute and with more inference compute.</p>
+      <p>The latest model, o3, surpasses previous state-of-the-art models in a variety of benchmarks that require reasoning, including mathematics competitions, programming contests, and advanced science question sets. I will discuss the implications of scaling this paradigm even further.</p>
+    `,
     speaker: 'Noam Brown',
     location: 'C1',
   },
@@ -352,7 +356,15 @@ Resurrecting the "Somers System", the lost art of consensus-based land valuation
     start: '2025-06-07T13:00',
     end: '2025-06-07T14:00',
     title: 'Weirdly Priced Markets',
-    description: `According to Polymarket, Jesus Christ has a 3% chance of returning in 2025. According to PredictIt, there was a 130% chance that Trump would get between 0 and 538 electoral votes in the 2024 election. Markets thought that Trump would have a 16% chance of winning the 2020 presidential election, after he had already lost it. In this talk + discussion, Eric and Jesse will talk about some of the most weirdly priced prediction markets they've seen, and why they were priced that way.`,
+    descriptionHtml: `
+      <p>In this talk + discussion, Eric and Jesse will talk about some of the most weirdly priced prediction markets they've seen, and why they were priced that way.</p>
+      <p>Examples include:</p>
+      <ul>
+        <li>According to Polymarket, Jesus Christ has a 3% chance of returning in 2025</li>
+        <li>According to PredictIt, there was a 130% chance that Trump would get between 0 and 538 electoral votes in the 2024 election</li>
+        <li>Markets thought that Trump would have a 16% chance of winning the 2020 presidential election, after he had already lost it</li>
+      </ul>
+    `,
     speaker: 'Eric Neyman & Jesse Richardson',
     location: 'Exobrain',
   },
@@ -379,8 +391,11 @@ Resurrecting the "Somers System", the lost art of consensus-based land valuation
     end: '2025-06-07T19:00',
     title:
       'Scouting for Truth: Robust Bayesian Truth Serum, Peer Prediction and Hidden Talent',
-    description:
-      'How do you uncover overlooked brilliance in your team, especially when social dynamics discourage honesty? This talk explores a groundbreaking peer prediction mechanism from the 2016 paper Paying for Truth by Rigol and Roth, which incentivizes truthful evaluations even in tight-knit communities. By connecting this to insights from Talent by Tyler Cowen and Daniel Gross, the talk reveals how organizations can combine structured incentives with insider intuition to surface exceptional people. Drawing on real-world applications from the Church of the Infinite Game, you’ll learn how tools like Bayesian truth serum, quadratic voting, red teaming, and ritualized feedback loops can help any organization grow fast without losing clarity, culture, or coherence.',
+    descriptionHtml: `
+      <p>How do you uncover overlooked brilliance in your team, especially when social dynamics discourage honesty?</p>
+      <p>This talk explores a groundbreaking peer prediction mechanism from the 2016 paper Paying for Truth by Rigol and Roth, which incentivizes truthful evaluations even in tight-knit communities. By connecting this to insights from Talent by Tyler Cowen and Daniel Gross, the talk reveals how organizations can combine structured incentives with insider intuition to surface exceptional people.</p>
+      <p>Drawing on real-world applications from the Church of the Infinite Game, you'll learn how tools like Bayesian truth serum, quadratic voting, red teaming, and ritualized feedback loops can help any organization grow fast without losing clarity, culture, or coherence.</p>
+    `,
     speaker: 'Andrew Wilsen',
     location: 'E1',
   },
@@ -503,11 +518,11 @@ Resurrecting the "Somers System", the lost art of consensus-based land valuation
     start: '2025-06-08T15:00',
     end: '2025-06-08T16:00',
     title: 'The First Quadrillion Is the Hardest',
-    description: `Prediction markets are on the brink of their fourth wave—a transformation from niche curiosity to global financial mainstay. From the early days of Intrade and PredictIt to today’s breakout platforms like Manifold, Polymarket, and Kalshi, each wave has expanded the reach and relevance of event markets.
-
-Now, a convergence of factors—regulatory tailwinds, institutional interest, and breakthroughs in market microstructure—points toward a future where event futures sit alongside commodity derivatives as core tools for hedging policy risk and allocating capital.
-
-This talk explores what it will take for prediction markets to move from billions to quadrillions in annual volume, and what that means for investors, traders, policymakers, and builders looking to embrace, enjoy, and profit from this inevitable and imminent asymptotic moment.`,
+    descriptionHtml: `
+      <p>Prediction markets are on the brink of their fourth wave—a transformation from niche curiosity to global financial mainstay. From the early days of Intrade and PredictIt to today's breakout platforms like Manifold, Polymarket, and Kalshi, each wave has expanded the reach and relevance of event markets.</p>
+      <p>Now, a convergence of factors—regulatory tailwinds, institutional interest, and breakthroughs in market microstructure—points toward a future where event futures sit alongside commodity derivatives as core tools for hedging policy risk and allocating capital.</p>
+      <p>This talk explores what it will take for prediction markets to move from billions to quadrillions in annual volume, and what that means for investors, traders, policymakers, and builders looking to embrace, enjoy, and profit from this inevitable and imminent asymptotic moment.</p>
+    `,
     speaker: 'Flip Pidot',
     location: 'E1',
   },
@@ -571,11 +586,15 @@ This talk explores what it will take for prediction markets to move from billion
     start: '2025-06-08T11:00',
     end: '2025-06-08T12:00',
     title: 'Directions for AI and Epistemics: An Opinionated Guide',
-    description: `In this talk, Ozzie will discuss:
-- The current state of AI, forecasting, and epistemics
-- Suggestions for directions forward (using an early research agenda)
-- Strategies for using better AI and epistemics technologies to help make sure AI safety goes well
-- Updates on QURI's thinking and strategy, relating to the above`,
+    descriptionHtml: `
+      <p>In this talk, Ozzie will discuss:</p>
+      <ul>
+        <li>-The current state of AI, forecasting, and epistemics</li>
+        <li>-Suggestions for directions forward (using an early research agenda)</li>
+        <li>-Strategies for using better AI and epistemics technologies to help make sure AI safety goes well</li>
+        <li>-Updates on QURI's thinking and strategy, relating to the above</li>
+      </ul>
+    `,
     speaker: 'Ozzie Goen',
     location: 'E1',
   },
