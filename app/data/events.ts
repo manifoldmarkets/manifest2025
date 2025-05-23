@@ -80,6 +80,14 @@ export const events: Event[] = [
     location: 'C1',
   },
   {
+    start: '2025-06-06T19:00',
+    end: '2025-06-06T19:30',
+    title: 'Friend networking survey schelling point',
+    description:
+      'Planning to attend the algorithmic friend networking in Rat Park on Saturday 10am? Have you filled out your survey yet? If not, come hangout with others and fill it out! It will take ~20mins.',
+    location: 'Exobrain',
+  },
+  {
     start: '2025-06-06T21:00',
     end: '2025-06-06T21:30',
     title: 'Mentor <> Mentee speed networking',
@@ -123,15 +131,18 @@ export const events: Event[] = [
   {
     start: '2025-06-07T09:00',
     end: '2025-06-07T10:00',
-    title: 'Talk: TBA',
-    description: '',
+    title: 'Talk TBA',
+    speaker: '',
     location: 'Rat Park',
   },
   {
     start: '2025-06-07T10:00',
     end: '2025-06-07T11:00',
-    title: 'Polymarket Talk/Event TBA',
-    description: '',
+    title:
+      'Speed networking: we will algorithmically find your 5 best friends at Manifest',
+    speaker: 'David Shor',
+    description:
+      'David Shor runs LoveScience events which help people find potential romantic matches. This is NOT that, but rather, the platonic version! Want to meet new people to become friends with or find like minded people? Must have filled out the survey by Friday 20:00.',
     location: 'Rat Park',
   },
   {
