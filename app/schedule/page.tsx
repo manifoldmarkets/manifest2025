@@ -3,24 +3,21 @@
 import React, { useCallback, useEffect, useState } from 'react'
 import Navbar from '../components/Navbar'
 import Section from '../components/ui/Section'
+import events from '../data/events'
 
 export interface Event {
-  start: string // ISO – 2025-06-06T10:00
-  end: string // ISO – 2025-06-06T10:30
+  start: string
+  end: string
   title: string
   description?: string
   speaker?: string
   location: string
+  descriptionHtml?: string
 }
 
-/**
- * Hard‑coded room order + capacity ↓
- *      ────────────────────────────
- * Make sure your event.location matches one of these names.
- */
 const ROOMS = [
   { name: 'Rat Park', capacity: 300 },
-  { name: "Cantor's Diagonal Hall", capacity: 100 },
+  { name: 'C1', capacity: 100 },
   { name: 'E1', capacity: 60 },
   { name: 'Exobrain', capacity: 30 },
   { name: 'Bayes Attic', capacity: 35 },
@@ -31,394 +28,6 @@ const DAYS = [
   { date: '2025-06-07', label: 'Saturday, June 7' },
   { date: '2025-06-08', label: 'Sunday, June 8' },
 ] as const
-
-/**
- * Demo data – replace with real import.
- */
-const events: Event[] = [
-  {
-    start: '2025-06-06T09:00',
-    end: '2025-06-06T10:00',
-    title:
-      'Scouting for Truth:\nRobust Bayesian Truth Serum, Peer Prediction and Hidden Talent',
-    description: 'tbd',
-    speaker: 'Sarah Rainsberger',
-    location: 'Rat Park',
-  },
-  {
-    start: '2025-06-06T09:00',
-    end: '2025-06-06T10:00',
-    title: 'Forecasting Tournament Workshop',
-    description: 'tbd',
-    speaker: 'Jacob Lagerros',
-    location: "Cantor's Diagonal Hall",
-  },
-  {
-    start: '2025-06-06T09:00',
-    end: '2025-06-06T10:00',
-    title: 'Introduction to Manifold Markets',
-    description: 'tbd',
-    speaker: 'Austin Chen',
-    location: 'E1',
-  },
-  {
-    start: '2025-06-06T09:00',
-    end: '2025-06-06T10:00',
-    title: 'Getting Started with Metaculus',
-    description: 'tbd',
-    speaker: 'Ben Goldhaber',
-    location: 'Exobrain',
-  },
-  {
-    start: '2025-06-06T09:00',
-    end: '2025-06-06T10:00',
-    title: 'Calibration Games',
-    description: 'tbd',
-    speaker: 'Eva Vivalt',
-    location: 'Bayes Attic',
-  },
-  {
-    start: '2025-06-06T10:00',
-    end: '2025-06-06T11:00',
-    title: 'AI Welfare and Safety',
-    description: 'tbd',
-    speaker: 'Joe Carlsmith',
-    location: 'Rat Park',
-  },
-  {
-    start: '2025-06-06T10:00',
-    end: '2025-06-06T11:00',
-    title: 'Market Making Deep Dive',
-    description: 'tbd',
-    speaker: 'Robin Hanson',
-    location: "Cantor's Diagonal Hall",
-  },
-  {
-    start: '2025-06-06T10:00',
-    end: '2025-06-06T11:00',
-    title: 'Prediction Markets 101',
-    description: 'tbd',
-    speaker: 'David Manheim',
-    location: 'E1',
-  },
-  {
-    start: '2025-06-06T10:00',
-    end: '2025-06-06T11:00',
-    title: 'Forecasting Geopolitics',
-    description: 'tbd',
-    speaker: 'Juan Cambeiro',
-    location: 'Exobrain',
-  },
-  {
-    start: '2025-06-06T10:00',
-    end: '2025-06-06T11:00',
-    title: 'Superforecasting Basics',
-    description: 'tbd',
-    speaker: 'Tetlock Group',
-    location: 'Bayes Attic',
-  },
-  {
-    start: '2025-06-06T11:00',
-    end: '2025-06-06T12:00',
-    title: 'Market Design for the Future',
-    description: 'tbd',
-    speaker: 'Glen Weyl',
-    location: 'Rat Park',
-  },
-  {
-    start: '2025-06-06T11:00',
-    end: '2025-06-06T12:00',
-    title: 'Advanced Calibration',
-    description: 'tbd',
-    speaker: 'Scott Alexander',
-    location: "Cantor's Diagonal Hall",
-  },
-  {
-    start: '2025-06-06T11:00',
-    end: '2025-06-06T12:00',
-    title: 'Futuur Platform Demo',
-    description: 'tbd',
-    speaker: 'Futuur Team',
-    location: 'E1',
-  },
-  {
-    start: '2025-06-06T11:00',
-    end: '2025-06-06T12:00',
-    title: 'Polymarket Trading Strategies',
-    description: 'tbd',
-    speaker: 'Polymarket Team',
-    location: 'Exobrain',
-  },
-  {
-    start: '2025-06-06T11:00',
-    end: '2025-06-06T12:00',
-    title: 'Kalshi Exchange Workshop',
-    description: 'tbd',
-    speaker: 'Kalshi Team',
-    location: 'Bayes Attic',
-  },
-  {
-    start: '2025-06-06T12:00',
-    end: '2025-06-06T13:00',
-    title: 'Lunch & Networking',
-    location: 'Rat Park',
-  },
-  {
-    start: '2025-06-06T13:00',
-    end: '2025-06-06T14:00',
-    title: 'The Future of Forecasting',
-    description: 'tbd',
-    speaker: 'Philip Tetlock',
-    location: 'Rat Park',
-  },
-  {
-    start: '2025-06-06T13:00',
-    end: '2025-06-06T14:00',
-    title: 'Metaculus Track Record',
-    description: 'tbd',
-    speaker: 'Metaculus Team',
-    location: "Cantor's Diagonal Hall",
-  },
-  {
-    start: '2025-06-06T13:00',
-    end: '2025-06-06T14:00',
-    title: 'Automated Market Making',
-    description: 'tbd',
-    speaker: 'Robin Hanson',
-    location: 'E1',
-  },
-  {
-    start: '2025-06-06T13:00',
-    end: '2025-06-06T14:00',
-    title: 'Forecasting Tournaments',
-    description: 'tbd',
-    speaker: 'Good Judgment',
-    location: 'Exobrain',
-  },
-  {
-    start: '2025-06-06T13:00',
-    end: '2025-06-06T14:00',
-    title: 'Prediction Market Design',
-    description: 'tbd',
-    speaker: 'Manifold Team',
-    location: 'Bayes Attic',
-  },
-  {
-    start: '2025-06-06T14:00',
-    end: '2025-06-06T15:00',
-    title: 'Building Better Markets',
-    description: 'tbd',
-    speaker: 'Shaun Maguire',
-    location: 'Rat Park',
-  },
-  {
-    start: '2025-06-06T14:00',
-    end: '2025-06-06T15:00',
-    title: 'Forecasting AI Progress',
-    description: 'tbd',
-    speaker: 'Tamay Besiroglu',
-    location: "Cantor's Diagonal Hall",
-  },
-  {
-    start: '2025-06-06T14:00',
-    end: '2025-06-06T15:00',
-    title: 'Prediction Market Economics',
-    description: 'tbd',
-    speaker: 'Alex Tabarrok',
-    location: 'E1',
-  },
-  {
-    start: '2025-06-06T14:00',
-    end: '2025-06-06T15:00',
-    title: 'Forecasting Climate Change',
-    description: 'tbd',
-    speaker: 'Climate Team',
-    location: 'Exobrain',
-  },
-  {
-    start: '2025-06-06T14:00',
-    end: '2025-06-06T15:00',
-    title: 'Advanced Trading Workshop',
-    description: 'tbd',
-    speaker: 'Trading Team',
-    location: 'Bayes Attic',
-  },
-  {
-    start: '2025-06-06T15:00',
-    end: '2025-06-06T16:00',
-    title: 'Keynote: Future of Markets',
-    description: 'tbd',
-    speaker: 'Vitalik Buterin',
-    location: 'Rat Park',
-  },
-  {
-    start: '2025-06-06T15:00',
-    end: '2025-06-06T16:00',
-    title: 'Forecasting Platforms Panel',
-    description: 'tbd',
-    speaker: 'Platform Leaders',
-    location: "Cantor's Diagonal Hall",
-  },
-  {
-    start: '2025-06-06T15:00',
-    end: '2025-06-06T16:00',
-    title: 'Market Manipulation',
-    description: 'tbd',
-    speaker: 'Security Team',
-    location: 'E1',
-  },
-  {
-    start: '2025-06-06T15:00',
-    end: '2025-06-06T16:00',
-    title: 'Crypto & Prediction Markets',
-    description: 'tbd',
-    speaker: 'Crypto Team',
-    location: 'Exobrain',
-  },
-  {
-    start: '2025-06-06T15:00',
-    end: '2025-06-06T16:00',
-    title: 'Advanced Forecasting',
-    description: 'tbd',
-    speaker: 'Expert Panel',
-    location: 'Bayes Attic',
-  },
-  {
-    start: '2025-06-06T16:00',
-    end: '2025-06-06T17:00',
-    title: 'Closing Remarks',
-    description: 'tbd',
-    speaker: 'Conference Team',
-    location: 'Rat Park',
-  },
-  {
-    start: '2025-06-06T17:00',
-    end: '2025-06-06T21:00',
-    title: 'Night Market Social',
-    location: 'Rat Park',
-  },
-
-  // June 7 events
-  {
-    start: '2025-06-07T09:00',
-    end: '2025-06-07T10:30',
-    title: 'Keynote: The Future of Prediction Markets',
-    description: 'tbd',
-    speaker: 'Vitalik Buterin',
-    location: 'Rat Park',
-  },
-  {
-    start: '2025-06-07T09:00',
-    end: '2025-06-07T10:00',
-    title: 'Advanced Market Making Workshop',
-    description: 'tbd',
-    speaker: 'Robin Hanson',
-    location: "Cantor's Diagonal Hall",
-  },
-  {
-    start: '2025-06-07T10:30',
-    end: '2025-06-07T12:00',
-    title: 'AI Alignment Panel',
-    description: 'tbd',
-    speaker: 'Emmett Shear, Paul Christiano, Ajeya Cotra',
-    location: 'Rat Park',
-  },
-  {
-    start: '2025-06-07T10:00',
-    end: '2025-06-07T11:00',
-    title: 'Forecasting Workshop',
-    description: 'tbd',
-    speaker: 'Philip Tetlock',
-    location: "Cantor's Diagonal Hall",
-  },
-  {
-    start: '2025-06-07T12:00',
-    end: '2025-06-07T13:30',
-    title: 'Lunch Break & Networking',
-    location: 'Rat Park',
-  },
-  {
-    start: '2025-06-07T13:30',
-    end: '2025-06-07T15:00',
-    title: 'The Science of Forecasting',
-    description: 'tbd',
-    speaker: 'Nate Silver',
-    location: 'Rat Park',
-  },
-  {
-    start: '2025-06-07T15:00',
-    end: '2025-06-07T16:30',
-    title: 'Effective Altruism & Forecasting',
-    description: 'tbd',
-    speaker: 'William MacAskill',
-    location: 'Rat Park',
-  },
-  {
-    start: '2025-06-07T16:30',
-    end: '2025-06-07T18:00',
-    title: 'Pitch Competition',
-    description: 'tbd',
-    location: 'Rat Park',
-  },
-  {
-    start: '2025-06-07T19:00',
-    end: '2025-06-07T22:00',
-    title: 'VIP Dinner',
-    location: 'Rat Park',
-  },
-
-  // June 8 events
-  {
-    start: '2025-06-08T09:00',
-    end: '2025-06-08T10:30',
-    title: 'The Psychology of Prediction',
-    description: 'tbd',
-    speaker: 'Scott Alexander',
-    location: 'Rat Park',
-  },
-  {
-    start: '2025-06-08T10:30',
-    end: '2025-06-08T12:00',
-    title: 'Longtermism & Markets',
-    description: 'tbd',
-    speaker: 'Toby Ord',
-    location: 'Rat Park',
-  },
-  {
-    start: '2025-06-08T12:00',
-    end: '2025-06-08T13:30',
-    title: 'Lunch & Lightning Talks',
-    location: 'Rat Park',
-  },
-  {
-    start: '2025-06-08T13:30',
-    end: '2025-06-08T15:00',
-    title: 'Future of Crypto Prediction Markets',
-    description: 'tbd',
-    speaker: 'SBF',
-    location: 'Rat Park',
-  },
-  {
-    start: '2025-06-08T15:00',
-    end: '2025-06-08T16:30',
-    title: 'Closing Panel: Future of Forecasting',
-    description: 'tbd',
-    speaker: 'Multiple Speakers',
-    location: 'Rat Park',
-  },
-  {
-    start: '2025-06-08T16:30',
-    end: '2025-06-08T17:30',
-    title: 'Closing Ceremony',
-    location: 'Rat Park',
-  },
-  {
-    start: '2025-06-08T17:30',
-    end: '2025-06-08T22:00',
-    title: 'Farewell Party',
-    location: 'Rat Park',
-  },
-]
 
 const EARLIEST_TIME = '08:00'
 const LATEST_TIME = '22:00'
@@ -466,7 +75,7 @@ export default function Schedule() {
     <main className="dark:bg-ink-1000 relative min-h-screen bg-canvas-0 font-serif text-ink-900 transition-colors duration-300 dark:text-ink-100">
       <Navbar />
 
-      <section className="py-10 px-6">
+      <section className="px-6 py-10">
         <div className="mb-6 flex justify-center">
           <select
             value={selectedDay}
@@ -522,11 +131,16 @@ export default function Schedule() {
                       {ev.speaker}
                     </p>
                   )}
-                  {ev.description && (
-                    <p className="text-ink-600 dark:text-ink-400 mt-1 text-sm">
+                  {ev.descriptionHtml ? (
+                    <div
+                      className="text-ink-600 dark:text-ink-400 mt-2 text-sm space-y-2 [&_a]:text-primary-600 [&_a]:hover:text-primary-700 [&_a]:hover:underline"
+                      dangerouslySetInnerHTML={{ __html: ev.descriptionHtml }}
+                    />
+                  ) : ev.description ? (
+                    <p className="text-ink-600 dark:text-ink-400 mt-2 text-sm">
                       {ev.description}
                     </p>
-                  )}
+                  ) : null}
                 </div>
               ))}
             {filteredEvents.filter((ev) => ev.location === selectedRoom)
@@ -625,7 +239,6 @@ export default function Schedule() {
         )}
       </section>
 
-      {/* Modal - Only show in desktop view */}
       {!isMobileView && selected && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 px-4"
@@ -654,9 +267,14 @@ export default function Schedule() {
                 minute: '2-digit',
               })}
             </p>
-            {selected.description && (
+            {selected.descriptionHtml ? (
+              <div
+                className="text-sm space-y-2 [&_a]:text-primary-600 [&_a]:hover:text-primary-700 [&_a]:hover:underline"
+                dangerouslySetInnerHTML={{ __html: selected.descriptionHtml }}
+              />
+            ) : selected.description ? (
               <p className="text-sm">{selected.description}</p>
-            )}
+            ) : null}
             <button
               onClick={() => setSelected(null)}
               className="mt-6 rounded-md bg-primary-700 px-4 py-2 text-sm font-medium text-white hover:bg-primary-600"
