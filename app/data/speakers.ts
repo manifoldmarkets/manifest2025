@@ -49,10 +49,10 @@ const speakers: Speaker[] = [
     answerId: 'd2PsI6cAIp',
   },
   {
-    name: 'Byrne Hobart',
-    bio: 'Writer of The Diff',
-    image: '/images/speakers/byrne.jpg',
-    answerId: '5NsP6gEq50',
+    name: 'Luana Lopes Lara',
+    bio: 'Cofounder of Kalshi',
+    image: '/images/speakers/luana.jpg',
+    answerId: 'ZAZ2y6dN6N',
   },
   {
     name: 'Aella',
@@ -131,4 +131,7 @@ export const additionalSpeakers = [
   'Samuel Hammond',
   'Mike Solana',
   'Eoghan McCabe',
+  'Ozzie Gooen',
+  'Lars Doucet',
+  'Ric Best',
 ].sort((a, b) => a.localeCompare(b))

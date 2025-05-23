@@ -410,7 +410,7 @@ Resurrecting the "Somers System", the lost art of consensus-based land valuation
     start: '2025-06-08T10:00',
     end: '2025-06-08T11:00',
     title: 'Kalshi Talk TBA',
-    speaker: 'Luana Lopez',
+    speaker: 'Luana Lopes Lara',
     location: 'Rat Park',
   },
   {
@@ -595,7 +595,7 @@ Resurrecting the "Somers System", the lost art of consensus-based land valuation
         <li>-Updates on QURI's thinking and strategy, relating to the above</li>
       </ul>
     `,
-    speaker: 'Ozzie Goen',
+    speaker: 'Ozzie Gooen',
     location: 'E1',
   },
 ] as const
