@@ -95,7 +95,7 @@ export const events: Event[] = [
   {
     start: '2025-06-06T19:00',
     end: '2025-06-06T19:30',
-    title: 'Friend networking survey schelling point',
+    title: 'Friend algo matching survey schelling point',
     description:
       'Planning to attend the algorithmic friend networking in Rat Park on Saturday 10am? Have you filled out your survey yet? If not, come hangout with others and fill it out! It will take ~20mins.',
     location: 'Exobrain',
@@ -103,8 +103,8 @@ export const events: Event[] = [
   {
     start: '2025-06-06T21:00',
     end: '2025-06-06T21:30',
-    title: 'Mentor <> Mentee speed networking',
-    description: 'Come meet your next mentor or mentee!',
+    title: 'Mentor <> Mentee speed meeting',
+    description: 'Come find your next mentor or mentee!',
     location: 'C1',
   },
   {
