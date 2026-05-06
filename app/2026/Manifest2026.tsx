@@ -4,48 +4,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useCallback, useEffect, useRef, useState } from 'react'
 
-// -- Data --
-const PAST_PHOTOS = [
-  '/images/manifest-past/IMG_8747-110a63c1-8139-4b89-b1ef-5443cd702fa8.png',
-  '/images/manifest-past/20230924-IMG_8312-92267745-402c-4a9e-8732-4a8c59bd30b7.png',
-  '/images/manifest-past/PXL_20230923_002025426-166d116d-d3cc-486b-a7b1-d14d495277d9.png',
-  '/images/manifest-past/_ISH8090-bd0b3816-f1ab-4577-a116-5eacf14f640e.png',
-  '/images/manifest-past/_ISH8866-22ca3355-c19f-4e26-8555-b021cff69f3d.png',
-  '/images/manifest-past/_ISH7182-f444abc9-f690-4bcd-b291-1a3a32fc609b.png',
-  '/images/manifest-past/_ISH8229-177f2ef2-4d3d-4045-96c8-83688e83cc07.png',
-  '/images/manifest-past/_ISH5334-43dcbfd3-e814-4a6e-aa46-772f05240234.png',
-  '/images/manifest-past/_ISH7882-1b3ab9c9-3322-48a6-80ca-c8d752443898.png',
-  '/images/manifest-past/_ISH3968-f156f586-2ca6-4ab9-8c42-47f96caae875.png',
-  '/images/manifest-past/7Q4A8426-f1538a26-c569-4b48-a85e-53252f6c356a.png',
-  '/images/manifest-past/_ISH1523-94d7a16b-9a1c-4a4b-b2ab-73088c813965.png',
-  '/images/manifest-past/7Q4A2369-90f0eeb6-784c-4825-a2c8-11bb9981ff26.png',
-  '/images/manifest-past/_ISH2123-19aea3b7-cbb2-4d53-b316-61f5ad04dadc.png',
-  '/images/manifest-past/7Q4A9506-03524e5e-df01-4aec-a4c2-efa7fb733348.png',
-  '/images/manifest-past/7Q4A0927-cd7b871a-4c6a-49d2-8700-5d7a3af679cb.png',
-  '/images/manifest-past/7Q4A3573-af059ca5-c911-4060-afec-bf203c973ad7.png',
-  '/images/manifest-past/7Q4A2067-f1f6bebc-4cf6-4c2d-808c-85f6afc4ecbf.png',
-  '/images/manifest-past/7Q4A9988-335806b5-1971-4a79-816a-08de7d651a92.png',
-  '/images/manifest-past/7Q4A0009-1c38f4a7-cbda-4b36-8cb7-eb8c51f572cd.png',
-  '/images/manifest-past/7Q4A9765-353e9eb3-cbee-4bb9-84ef-a84492c1f4b7.png',
-  '/images/manifest-past/7Q4A2802-5fe21a70-1c20-4b57-8d12-4bd47320f887.png',
-  '/images/manifest-past/_ISH8866-f2b7e0c1-8499-4d92-9509-b32f7dd698dc.png',
-  '/images/manifest-past/_ISH1523-47434184-67e4-44ce-b4b5-8a78ad04f96c.png',
-  '/images/manifest-past/_ISH5334-6b44841d-c922-4db1-bbec-ea3116cc1dbc.png',
-  '/images/manifest-past/_ISH5163-df135a3a-ead8-40f8-9dde-bd9ecb82a847.png',
-  '/images/manifest-past/7Q4A0075-8e769430-37e7-4bb0-bd21-af7ad7b1c6b7.png',
-  '/images/manifest-past/_ISH8090-f286e476-3b95-49f4-8e08-b7038d91c8c9.png',
-  '/images/manifest-past/_ISH7662-b75656fa-d9df-4de9-9798-9bdbf41ce921.png',
-  '/images/manifest-past/_ISH9482-3fa85963-27e6-42bb-bc73-f5cd50c0d656.png',
-  '/images/manifest-past/_ISH8229-058c8700-2de9-4005-99f3-3729f28a5d1d.png',
-  '/images/manifest-past/7Q4A2074-f51b71b6-c4db-4beb-be1d-502053a71711.png',
-  '/images/manifest-past/7Q4A2266-63658851-f9d9-4684-b75f-4cd3757ae6bd.png',
-  '/images/manifest-past/7Q4A2470-62b5646d-e4e7-4cd0-b144-bc050b5cc3f6.png',
-  '/images/manifest-past/7Q4A3481-904c256e-49f2-47d6-a5e4-d04ffb995e5c.png',
-  '/images/manifest-past/7Q4A1623-1c944c0c-b9a1-4455-a1c1-daa85bec7674.png',
-  '/images/manifest-past/7Q4A0831-38065a94-7a41-4aa7-b4d4-161f5232348f.png',
-  '/images/manifest-past/7Q4A1682-961ff562-5739-4bb6-a339-b28dd7980221.png',
-]
+import { PAST_PHOTOS } from './pastPhotos'
 
+// -- Data --
 const SPEAKERS = [
   { name: 'Nate Silver', bio: 'Silver Bulletin', image: '/images/speakers/nate.jpg' },
   { name: 'Scott Alexander', bio: 'Astral Codex Ten', image: '/images/speakers/scott.jpg' },
@@ -119,7 +80,6 @@ const MARKETS = [
 ]
 
 const FAQS = [
-  { q: 'What is Manifest?', a: 'Manifest is a festival of forecasting and prediction markets, bringing together people who think deeply about the future and put their money where their mouth is.' },
   { q: 'Where is it located?', a: 'Lighthaven, 2740 Telegraph Avenue, Berkeley, CA 94705.' },
   // { q: 'What is the address?', a: '2740 Telegraph Avenue, Berkeley, CA 94705.' },
   {
@@ -139,11 +99,10 @@ const FAQS = [
       </>
     ),
   },
-  { q: 'What sorts of things will happen at Manifest?', a: 'Talks, panels, debates, workshops, games, prediction market tournaments, a night market, career fair, and much more. Much of the schedule comes from attendee-led sessions!' },
-  { q: 'What specific time does Manifest start and end?', a: 'Exact schedule TBD, but in past years, the events have started Friday afternoon around 2pm, with an opening ceremony around 6pm. Closing ceremony is Sunday evening, but events continue and people hang around all through the night.' },
+{ q: 'What specific time does Manifest start and end?', a: 'Exact schedule TBD, but in past years, the events have started Friday afternoon around 2pm, with an opening ceremony around 6pm. Closing ceremony is Sunday evening, but events continue and people hang around all through the night.' },
   { q: 'How many people will be at Manifest?', a: 'We expect around 500-700 attendees across the weekend.' },
   { q: 'What does my ticket include?', a: 'Access from Friday through Sunday, including breakfast, lunch, and dinner each day.' },
-  { q: 'Can I bring my kids?', a: "Yes, we love kids! Kids 10 and under are free. Note that we likely won't have dedicated childcare this year, so plan accordingly." },
+  { q: 'Can I bring my kids?', a: "Yes, we love kids! Kids 10 and under are free, though note that we're unlikely to offer dedicated childcare this year." },
   // { q: 'Can I come for just part of the event?', a: 'Sure! As much or as little as you want.' },
   { q: 'How does volunteering work?', a: "Volunteers get a discounted ticket in exchange for working shifts throughout the event; after the shifts are completed, volunteers are eligible for a full refund. More details coming soon!" },
   { q: 'What if I need financial assistance in order to attend?', a: (<>We don&apos;t want finances to prevent people from attending. We want everyone Manifest is meant for to feel welcome. If the volunteer shift requirement or deposit is too high, please fill out the <a href="https://airtable.com/appMZp1aBO5b7NTdM/pagTrQtYd1k1Oakhi/form" target="_blank" rel="noopener noreferrer" className="text-m26-purple underline hover:opacity-70">Low-Income Ticket Form</a> and optionally reach out to team@manifest.is if necessary.</>) },
@@ -453,22 +412,62 @@ export default function Manifest2026() {
       {/* WHAT IS MANIFEST */}
       <section id="what-is-manifest" className="scroll-mt-16 py-16 sm:py-24">
         <div className="mx-auto max-w-3xl px-6">
-          <h2 className="mb-10 text-center font-cinzel-decorative text-3xl font-normal tracking-wide sm:text-5xl">
+          <h2 className="mb-3 text-left font-cinzel text-xl font-bold tracking-wide text-m26-purple-deep sm:text-2xl">
             What is Manifest?
           </h2>
-          <p className="font-baskerville text-base leading-relaxed text-m26-purple-deep sm:text-lg sm:leading-8">
-            Manifest is a festival ostensibly about prediction markets, but
-            secretly about connecting with old friends and people you admire
-            from your favorite niche corners of the internet. It is a gathering
-            of nerds who want to find the thinkers and practitioners they
-            vehemently agree/disagree with, share a meal around a cozy
-            campfire, and come away with radically new ways of thinking.
+          <p className="text-left font-baskerville text-sm leading-relaxed text-m26-purple-deep sm:text-base sm:leading-7">
+            Manifest is a festival ostensibly about prediction markets, but secretly about connecting with old friends and people you admire from your favorite niche corners of the internet. Described by the NYT as “equal parts Math Olympiad and Burning Man; it is a gathering of nerds who want to find the thinkers and practitioners they vehemently agree/disagree with, share a meal around a cozy campfire, and come away with radically new ways of thinking.
+          </p>
+
+          <h3 className="mt-8 mb-3 text-left font-cinzel text-xl font-bold tracking-wide text-m26-purple-deep sm:text-2xl">
+            What Happens at Manifest?
+          </h3>
+          <p className="text-left font-baskerville text-sm leading-relaxed text-m26-purple-deep sm:text-base sm:leading-7">
+            Talks, panels, debates, workshops, games, prediction market tournaments, a night market, career fair, and much more. Much of the schedule comes from attendee-led sessions! Past years have included:
+          </p>
+
+          <div className="mt-6 grid gap-8 sm:grid-cols-2">
+            <div className="text-left">
+              <p className="mb-3 font-cinzel text-sm font-bold tracking-wider text-m26-purple uppercase">
+                Talks
+              </p>
+              <ul className="list-disc space-y-1 pl-5 font-baskerville text-sm leading-relaxed text-m26-purple-deep sm:text-base sm:leading-7">
+                <li>A Story Telling of Kalshi&apos;s Internal Drama &amp; Decisions During the Elections</li>
+                <li>Prediction Market Design in Outer Space</li>
+                <li>Data Science and Politics</li>
+                <li>Similarities of Selling to Nation States and on Facebook Marketplace</li>
+                <li>How To Change Your Mind (with Replacement Therapies)</li>
+                <li>The Case for Interactionist Dualism</li>
+                <li>Scouting for Truth: Robust Bayesian Truth Serum, Peer Prediction and Hidden Talent</li>
+                <li>Aristotle&apos;s Metaphysics</li>
+                <li>Weird Findings in the last 10 years of Exercise Science</li>
+                <li>Game Theory, Emotions, and Evolutionarily Stable Strategies</li>
+                <li>History of Land Reclamation</li>
+                <li>Awkward Maxxing for The Socially Anxious</li>
+                <li>Life as a Professional Gambler</li>
+              </ul>
+            </div>
+
+            <div className="text-left">
+              <p className="mb-3 font-cinzel text-sm font-bold tracking-wider text-m26-purple uppercase">
+                Sessions
+              </p>
+              <ul className="list-disc space-y-1 pl-5 font-baskerville text-sm leading-relaxed text-m26-purple-deep sm:text-base sm:leading-7">
+                <li>Memory Systems/Anki/SRS Meetup</li>
+                <li>Experimental meditation experiments</li>
+                <li>Arm Wrestling Tornaemnt</li>
+                <li>Poetry Art Jam Renga Party</li>
+                <li>Rare &amp; Exotic-ish Drama Games from Australia</li>
+                <li>History Lecture with Live Betting</li>
+                <li>Speed Friending</li>
+                <li>Niacin Hot Seat</li>
+                <li>…Run your own session!</li>
+              </ul>
+            </div>
+          </div>
         </div>
 
         <div className="mx-auto mt-10 max-w-6xl px-6">
-          <h3 className="mb-4 text-center font-cinzel-decorative text-2xl font-normal tracking-wide text-m26-purple-deep sm:text-3xl">
-            Pictures from Past Years of Manifest
-          </h3>
           <div className="relative">
             <div className="pointer-events-none absolute inset-y-0 left-0 w-10 bg-gradient-to-r from-m26-parchment to-transparent sm:w-16" />
             <div className="pointer-events-none absolute inset-y-0 right-0 w-10 bg-gradient-to-l from-m26-parchment to-transparent sm:w-16" />
