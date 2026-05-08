@@ -1,0 +1,519 @@
+[
+  {
+    "day": "Friday, June 6",
+    "slots": [
+      {
+        "slot": "Afternoon — Doors Open",
+        "sessions": [
+          {
+            "title": "☆ Doors Open ☆",
+            "speaker": "David Chee"
+          },
+          {
+            "title": "Bughouse Chess",
+            "speaker": "Arjun Panickssery"
+          },
+          {
+            "title": "manifold.love meetup #0",
+            "speaker": "Sinclair Chen"
+          },
+          {
+            "title": "Can Futarchy Fix Culture?",
+            "speaker": "Robin Hanson"
+          },
+          {
+            "title": "Manifold Founder & Theo Jaffee: Fireside Chat",
+            "speaker": "Stephen Grugett"
+          }
+        ]
+      },
+      {
+        "slot": "Evening — Opening &amp; Dinner Sessions",
+        "sessions": [
+          {
+            "title": "Opening Circle",
+            "speaker": "Rach"
+          },
+          {
+            "title": "Dinner",
+            "speaker": "David Chee"
+          },
+          {
+            "title": "Prediction Market Design in Outer Space",
+            "speaker": "Dave White"
+          },
+          {
+            "title": "Schools Should Pursue Excellence",
+            "speaker": "Tracing Woodgrains"
+          },
+          {
+            "title": "Manifold Power User Meetup",
+            "speaker": "Kevin"
+          },
+          {
+            "title": "Friend Algo Matching Survey Schelling Point",
+            "speaker": "Brian Smiley"
+          },
+          {
+            "title": "Poker Satellite #1",
+            "speaker": "David Chee"
+          }
+        ]
+      },
+      {
+        "slot": "Night — Talks &amp; Night Market",
+        "sessions": [
+          {
+            "title": "Kalshi's Internal Drama During the Elections",
+            "speaker": "Noah Sternig"
+          },
+          {
+            "title": "Why We Stopped Making New Land",
+            "speaker": "Connor Harris"
+          },
+          {
+            "title": "Predicting Large-Scale Catastrophes",
+            "speaker": "Nuño Sempere"
+          },
+          {
+            "title": "Speedfriending",
+            "speaker": "Saul Munn"
+          },
+          {
+            "title": "Night Market & Career Fair",
+            "speaker": "David Chee"
+          },
+          {
+            "title": "How Tech Hiring Is Changing with AI",
+            "speaker": "Sholto Douglas & Ben"
+          },
+          {
+            "title": "Making God — Exclusive Clip Screening + Q&A",
+            "speaker": "Connor Axiotes"
+          },
+          {
+            "title": "Super Babies!",
+            "speaker": "Rachel Wallis"
+          },
+          {
+            "title": "Stratospheric Aerosol Injection Balloon Launch",
+            "speaker": "Andrew Song"
+          },
+          {
+            "title": "Mentor <> Mentee Speed Meeting",
+            "speaker": "Ricki Heicklen"
+          },
+          {
+            "title": "Are Prediction Markets a Dead End?",
+            "speaker": "Austin Chen"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": "Saturday, June 7",
+    "slots": [
+      {
+        "slot": "Morning",
+        "sessions": [
+          {
+            "title": "Manifund: Markets in AI Safety",
+            "speaker": "Austin Chen"
+          },
+          {
+            "title": "10 Things I'd Do If I Ran Polymarket / Kalshi / Manifold / Metaculus",
+            "speaker": "Lucas Kohorst"
+          },
+          {
+            "title": "David Shor & Jesse Richardson",
+            "speaker": "Jesse Richardson"
+          },
+          {
+            "title": "Prediction Markets Panel",
+            "speaker": "Stephen Grugett"
+          },
+          {
+            "title": "Possibilities for Nuclear War",
+            "speaker": "Kyle S"
+          },
+          {
+            "title": "Electricity 2011–2040",
+            "speaker": "Sam Penrose"
+          },
+          {
+            "title": "Weird Findings in Exercise Science",
+            "speaker": "Andrew Rettek"
+          },
+          {
+            "title": "Live Polling with Aella",
+            "speaker": "Aella"
+          },
+          {
+            "title": "Scaling Public Epistemics: Community Notes & What's Next",
+            "speaker": "Jay Baxter"
+          },
+          {
+            "title": "What's the Value of Land in Berkeley?",
+            "speaker": "Lars A. Doucet"
+          },
+          {
+            "title": "Futarchy: Reimagining Governance",
+            "speaker": "Clement Lesaege"
+          },
+          {
+            "title": "Our Broken High-Skilled Immigration System",
+            "speaker": "Jasmine Ren"
+          }
+        ]
+      },
+      {
+        "slot": "Midday",
+        "sessions": [
+          {
+            "title": "Lunch",
+            "speaker": "David Chee"
+          },
+          {
+            "title": "AI 2027 Q&A",
+            "speaker": "Eli Lifland"
+          },
+          {
+            "title": "Make Polymarket Liquid with DeFi",
+            "speaker": "arsenii"
+          },
+          {
+            "title": "Life as a Gambling Globetrotter",
+            "speaker": "Michael Seaman"
+          },
+          {
+            "title": "US-China Competition: AI, Semiconductors, Miltech Panel",
+            "speaker": "Steve Hsu"
+          },
+          {
+            "title": "Panel: US-China with Steve Hsu & Noah Smith",
+            "speaker": "Steve Hsu"
+          },
+          {
+            "title": "Geopolitics of AI Infrastructure",
+            "speaker": "Dylan Patel"
+          },
+          {
+            "title": "Weirdly Priced Markets",
+            "speaker": "Eric Neyman"
+          },
+          {
+            "title": "Language Models as the Bessemer Process for Reasoning",
+            "speaker": "Panda"
+          },
+          {
+            "title": "AI Consciousness Discussion",
+            "speaker": "Rosie Campbell"
+          },
+          {
+            "title": "Nate Silver & Chris Best Discussion",
+            "speaker": "Nate Silver"
+          }
+        ]
+      },
+      {
+        "slot": "Afternoon",
+        "sessions": [
+          {
+            "title": "Cremieux",
+            "speaker": "Crémieux"
+          },
+          {
+            "title": "Election Betting Debates of 2024: A Retrospective",
+            "speaker": "Brennan Robbins"
+          },
+          {
+            "title": "patio11 + kuiper: Emergent Gameplay & Narrative",
+            "speaker": "Justin Kuiper"
+          },
+          {
+            "title": "Life as a Professional Gambler",
+            "speaker": "Vivienne Bellerose"
+          },
+          {
+            "title": "How To Change Your Mind (with Replacement Therapies)",
+            "speaker": "Matt Buckley"
+          },
+          {
+            "title": "Doom Debates: Liron vs. Everyone",
+            "speaker": "Liron Shapira"
+          },
+          {
+            "title": "Political Strategy & Delivering Reform",
+            "speaker": "Adam Jarvis"
+          },
+          {
+            "title": "YouTube Economics: Attention & Status as Currency",
+            "speaker": "Justin Kuiper"
+          },
+          {
+            "title": "Startup Pitch Competition",
+            "speaker": "David Chee"
+          },
+          {
+            "title": "Market Making at Scale",
+            "speaker": "Ric Best"
+          },
+          {
+            "title": "Richard Hanania: A Decade of Trump Forecasting",
+            "speaker": "Richard Hanania"
+          },
+          {
+            "title": "Untitled Genetic Engineering Talk",
+            "speaker": "Andrew Rettek"
+          },
+          {
+            "title": "Fine-Tuning, the Multiverse & Anthropic Bias",
+            "speaker": "Rom Gruman"
+          },
+          {
+            "title": "David Shor: Data Science & Politics",
+            "speaker": "David Shor"
+          },
+          {
+            "title": "Implementing Futarchy with Decision Markets",
+            "speaker": "Robin Hanson"
+          },
+          {
+            "title": "AI for Grantmaking: Demo",
+            "speaker": "Lydia Nottingham"
+          },
+          {
+            "title": "AI Welfare",
+            "speaker": "Joe Carlsmith"
+          }
+        ]
+      },
+      {
+        "slot": "Evening",
+        "sessions": [
+          {
+            "title": "Dinner",
+            "speaker": "David Chee"
+          },
+          {
+            "title": "Noam Brown: Learning to Reason with LLMs",
+            "speaker": "Noam Brown"
+          },
+          {
+            "title": "Scouting for Truth: Robust Bayesian Truth Serum",
+            "speaker": "Andrew Willsen"
+          },
+          {
+            "title": "Noahpinion: Mechanism Design of Deficit Spending",
+            "speaker": "Noah Smith"
+          },
+          {
+            "title": "How to Be Hot",
+            "speaker": "Aella & Chesed"
+          },
+          {
+            "title": "History Lecture with Live Betting (Sovereign)",
+            "speaker": "Michael Wheatley"
+          },
+          {
+            "title": "AI for Collective Agency",
+            "speaker": "Blake Borgeson"
+          },
+          {
+            "title": "Adventures in Text Generation: LLMs & Prose Fiction",
+            "speaker": "Alexander Wales"
+          },
+          {
+            "title": "Scott Alexander: Forecasting Transformative AI",
+            "speaker": "Scott Alexander"
+          },
+          {
+            "title": "Nash Pit: A Prediction Market Game Show",
+            "speaker": "Roque Dietrich"
+          },
+          {
+            "title": "Late Night Secrets to Trading on Kalshi",
+            "speaker": "Shaked Koplewitz"
+          },
+          {
+            "title": "Hang with Other Love Science Friend Survey People",
+            "speaker": "David Shor"
+          },
+          {
+            "title": "Dance Party",
+            "speaker": "Aella"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": "Sunday, June 8",
+    "slots": [
+      {
+        "slot": "Morning",
+        "sessions": [
+          {
+            "title": "How Accurate Are Prediction Markets, Really?",
+            "speaker": "Justin Dickerson (wasabipesto)"
+          },
+          {
+            "title": "Discussion: Deprecation of AI Models",
+            "speaker": "Clark"
+          },
+          {
+            "title": "Kalshi Sports: The Why & How",
+            "speaker": "Noah Sternig"
+          },
+          {
+            "title": "How Do We Solve the Alignment Problem?",
+            "speaker": "Joe Carlsmith"
+          },
+          {
+            "title": "From Angels to Monsters: Humanity's Hybrid Past",
+            "speaker": "Razib Khan"
+          },
+          {
+            "title": "Probability Theory for Cult Building",
+            "speaker": "Armin Stepanyan"
+          },
+          {
+            "title": "FIRE 101 & Hidden Traps",
+            "speaker": "vitalii"
+          },
+          {
+            "title": "Patrick McKenzie",
+            "speaker": "Patrick McKenzie"
+          },
+          {
+            "title": "Futuur & predict.pm: Order Books, MCPs, Aggregators",
+            "speaker": "Tom Bennett"
+          },
+          {
+            "title": "Secure Attachment Is Sexy",
+            "speaker": "Chris Lakin"
+          },
+          {
+            "title": "Futurist Theory of Traditionalism",
+            "speaker": "Pablo Peniche"
+          },
+          {
+            "title": "Droning On (Ukraine Drone Discussion)",
+            "speaker": "Nathan Young"
+          },
+          {
+            "title": "Decision Markets Are Broken — How Do We Fix Them?",
+            "speaker": "Drake Thomas"
+          }
+        ]
+      },
+      {
+        "slot": "Midday",
+        "sessions": [
+          {
+            "title": "Lunch",
+            "speaker": "David Chee"
+          },
+          {
+            "title": "Wave's Culture: A Debrief",
+            "speaker": "Lincoln Quirk"
+          },
+          {
+            "title": "Panel: Has Trading & Gambling Gone Too Far in the US?",
+            "speaker": "Jeremiah Johnson"
+          },
+          {
+            "title": "What We've Learned Doing Futarchy For a Year",
+            "speaker": "Proph3t"
+          },
+          {
+            "title": "Manifest Destiny: Space Colonization Beyond Moon & Mars",
+            "speaker": "Matt Parlmer"
+          },
+          {
+            "title": "Nate Soares & Emmett Shear Fight About AI",
+            "speaker": "Nate Soares"
+          },
+          {
+            "title": "AI Forecasting & Epistemics Projects I'd Like to See",
+            "speaker": "Javier Prieto"
+          },
+          {
+            "title": "US Public Sector Demographics",
+            "speaker": "Michael Lachanski"
+          },
+          {
+            "title": "GLP-1 Discussion Group",
+            "speaker": "Andrew Rettek"
+          },
+          {
+            "title": "How Could Deep Learning Work Well in the Real World?",
+            "speaker": "Alex Gajewski"
+          },
+          {
+            "title": "AI for Adjudication",
+            "speaker": "Campbell Hutcheson"
+          },
+          {
+            "title": "American Manufacturing War Room",
+            "speaker": "Matt Parlmer"
+          }
+        ]
+      },
+      {
+        "slot": "Afternoon",
+        "sessions": [
+          {
+            "title": "Advanced Prediction Markets: Past, Present, Future",
+            "speaker": "Robin Hanson"
+          },
+          {
+            "title": "AI Evals on All the Things",
+            "speaker": "Ozzie Gooen"
+          },
+          {
+            "title": "Controlling AI, with Redwood & UK AISI",
+            "speaker": "Asa Cooper Stickland"
+          },
+          {
+            "title": "Intro to Trading",
+            "speaker": "Ricki Heicklen"
+          },
+          {
+            "title": "Overton Window Engineering",
+            "speaker": "John Bennett"
+          },
+          {
+            "title": "Decentralized AI: Upsides, Risks & Tech Tree",
+            "speaker": "Allison Duettmann"
+          },
+          {
+            "title": "The First Quadrillion Is the Hardest",
+            "speaker": "Flip Pidot"
+          },
+          {
+            "title": "Public Speaking 101",
+            "speaker": "Joe Rogero"
+          },
+          {
+            "title": "How to Build an Exchange",
+            "speaker": "Rachel Wonnacott"
+          },
+          {
+            "title": "Reversible Cryopreservation",
+            "speaker": "Laura Deming"
+          },
+          {
+            "title": "Writing & Slop: Roon, Scott Alexander, Gwern, Alexander Wales",
+            "speaker": "Roon"
+          },
+          {
+            "title": "An Asian Perspective of Prediction Markets",
+            "speaker": "Nancy Yi"
+          }
+        ]
+      }
+    ]
+  }
+]
