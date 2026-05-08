@@ -375,7 +375,7 @@ async function loadYear(year) {
   });
 
   const meta = META[year];
-  const data = await fetch(year === '2025' ? 'events-2025.json' : 'events.json').then(r => r.json());
+  const data = await fetch(year === '2025' ? '/pastsessions/events-2025.json' : '/pastsessions/events.json').then(r => r.json());
 
   // Year meta
   document.getElementById('year-meta').textContent = meta.dates;
