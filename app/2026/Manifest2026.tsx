@@ -731,7 +731,7 @@ const PAGE_HTML = `
       <header><span class="v1-list__cat">&amp; Much more</span></header>
       <ol class="v1-list__items">
         <li><b>Speedfriending</b></li>
-        <li><b>YouTube Economics: Attention as Currency</b></li>
+        <li><b>Dance Class with Aella</b></li>
         <li><b>Experimental Meditation Experiments</b></li>
         <li><b>Memory Systems / Anki / SRS Meetup</b></li>
         <li><b>Similarities Between Selling to Nation States and on Facebook Marketplace</b></li>
