@@ -33,7 +33,7 @@
         "venue": "Bayes Ground",
         "start": "2:00 PM",
         "end": "4:00 PM",
-        "description": "On the tables between building A and B 2v2 bughouse chess"
+        "description": "On the tables between building A and B 2v2 bughouse chess https://en.wikipedia.org/wiki/Bughouse_chess"
       },
       {
         "title": "manifold.love meetup #0",
@@ -51,7 +51,7 @@
         "venue": "Rat Park",
         "start": "3:30 PM",
         "end": "4:15 PM",
-        "description": "Humanity's superpower is cultural evolution… futarchy, a new much more effective form of governance, might be an exception."
+        "description": "Humanity's superpower is cultural evolution, a power we've broken in recent centuries, at least re norms and status markers that are hard to change within a culture. Fixes are hard to find, and most offer humanity little collective agency over its fate. But futarchy, a new much more effective form of governance, might be an exception."
       },
       {
         "title": "Manifold Founder SG & Theo Jaffee: Fireside Chat",
@@ -86,7 +86,7 @@
         "venue": "Olds' Attic (Bayes)",
         "start": "6:00 PM",
         "end": "6:45 PM",
-        "description": "Schelling point for us whales (20k+ profit). Newbies welcome but geared toward advanced Manifold topics."
+        "description": "Schelling point for us whales (20k+ profit) Newbies are welcome but this session is geared towards advanced Manifold topics"
       },
       {
         "title": "Prediction Market Design in Outer Space",
@@ -95,7 +95,7 @@
         "venue": "Cantor's Diagonal Hall",
         "start": "6:00 PM",
         "end": "6:45 PM",
-        "description": "An interactive, mechanism-designed talk on mechanisms I've designed. One was featured in Money Stuff yesterday!"
+        "description": "An interactive, mechanism-designed talk on mechanisms I’ve designed. One was featured in Money Stuff yesterday! Markets, games, danger, possibly a dance break if enough people vote for it. Whoever is responsible for getting the most other attendees to attend this talk wins all the cash in my wallet."
       },
       {
         "title": "Ricki and Dave's Kabbalat Shabbat",
@@ -113,7 +113,7 @@
         "venue": "Eigenhall",
         "start": "6:00 PM",
         "end": "6:45 PM",
-        "description": "The cofounder of the Center for Educational Progress on where schools have de-prioritized raising the ceiling and the case for excellence-focused schools."
+        "description": "Using a mix of historical anecdotes, examples from the science of learning, and contemporary policy battles, the cofounder of the Center for Educational Progress examines where and why schools have de-prioritized raising the ceiling and presents the case for how and why we should prioritize building more excellence-focused schools."
       },
       {
         "title": "Friend algo matching survey schelling point",
@@ -122,7 +122,7 @@
         "venue": "Bayes Ground",
         "start": "6:30 PM",
         "end": "7:00 PM",
-        "description": "Hangout to fill out the algorithmic friend matching survey for Saturday's 10am meeting (lovescience.club)."
+        "description": "Planning to attend the algorithmic friend meeting in Rat Park on Saturday 10am? Have you filled out your survey yet? If not, come hangout with others and fill it out! It will take ~20mins. This will be mostly decentralized, come for the start to here a blurb and sit with others interested in filling out the survey. Results will be run over night Here is the survey: https://lovescience.club/"
       },
       {
         "title": "Poker Satellite #1",
@@ -139,7 +139,7 @@
         "venue": "Cantor's Diagonal Hall",
         "start": "7:00 PM",
         "end": "7:45 PM",
-        "description": "Live Q&A about working at Kalshi during the election takeoff."
+        "description": "With a live Q&A for attendees to ask for the tea throughout. Noah tells the story of what it was like to work at Kalshi during the election takeoff and spills some tea."
       },
       {
         "title": "Predicting large-scale catastrophes w/ Nuño Sempere",
@@ -166,7 +166,7 @@
         "venue": "Feynman House",
         "start": "7:00 PM",
         "end": "8:00 PM",
-        "description": "(overflow room)"
+        "description": "Quickly meet lots of people fast. Recommended for newcomers & old-timers alike."
       },
       {
         "title": "Why we stopped making new land, and why we should start again",
@@ -175,7 +175,7 @@
         "venue": "Eigenhall",
         "start": "7:00 PM",
         "end": "7:45 PM",
-        "description": "History of land reclamation, why it stopped in the U.S., and the economic case for restarting."
+        "description": "When coastal cities throughout the world ran out of land, they used to make more through reclamation: using dikes and fill materials to turn water into land. In the United States, though, we haven't done this at scale for half a century. I'll tell you the history of land reclamation, how and why it stopped in the United States, and why there's a strong economic case for starting land reclamation again."
       },
       {
         "title": "Night Market & Career Fair",
@@ -184,7 +184,7 @@
         "venue": "Rat Park",
         "start": "7:30 PM",
         "end": "8:30 PM",
-        "description": "Tons of free swag from sponsors, attendee booths, hiring companies. Doors open to public free at 8pm."
+        "description": "Tons of free swag from sponsors, booths from attendees, opportunities to talk with companies hiring. Doors will also open to the public for free starting at 8pm."
       },
       {
         "title": "Slutstack pod",
@@ -201,7 +201,7 @@
         "venue": "Cantor's Diagonal Hall",
         "start": "8:00 PM",
         "end": "8:45 PM",
-        "description": "Panel with Sholto (Anthropic) and Ben Cohen (Substack) on how hiring priorities have shifted with LLMs."
+        "description": "A panel of senior engineers, including Sholto (Anthropic) and Ben Cohen (Substack), discuss how their priorities have shifted when hiring with the rise of LLMs. What traits are they selecting for now? What can you do as a young person now competing with AI agents?"
       },
       {
         "title": "Making God Exclusive Clip Screening + Q&A",
@@ -210,7 +210,7 @@
         "venue": "Eigenhall",
         "start": "8:00 PM",
         "end": "8:45 PM",
-        "description": "Exclusive clip from the AI documentary Making God for Manifest attendees."
+        "description": "The AI documentary Making God has an exclusive clip to show to Manifest attendees."
       },
       {
         "title": "Super Babies!",
@@ -219,7 +219,7 @@
         "venue": "Olds' Attic (Bayes)",
         "start": "8:00 PM",
         "end": "8:45 PM",
-        "description": "Embryo selection, strong germline engineering, and the Super Babies conference (June 10-12 at Lighthaven)."
+        "description": "Come chat about embryo selection, strong germline engineering, and the super babies conference (June 10-12 at Lighthaven) https://x.com/BerkeleyGenomic/status/1920710695458664632"
       },
       {
         "title": "Figgie",
@@ -252,7 +252,7 @@
         "venue": "Exobrain",
         "start": "9:00 PM",
         "end": "9:45 PM",
-        "description": "Casual discussion built around two Gwern prompts on whether PM/AI is a dead end and whether classic PM design is a skeuomorphism in the LLM era."
+        "description": "A casual discussion, going over two prompts from Gwern (who probably won't be in attendance): PM/AI: deadend? Since 2019, prediction markets have invested a ton of forecaster time, money, attention, and contests etc in various AI forecasting markets. But I have the strong impression they were useless compared to SA, AI2027, Epoch benchmarking, METR, Apollo, published surveys of AI researchers etc, and have not meaningfully changed any policies, public discussion, research trends etc. Is there any way PMs can be fixed or is it time to give up on PMs for AI-related topics? Classic PM design: also a deadend in an age of human-level LLMs? Would you really design Manifold/Polymarket/Kalshi/Intrade/Iowa Electronic Markets/etc at all like they are, if you took for granted ubiquitous LLMs at least as smart as the median trader? Are they all skeuomorphisms of how you'd do it in the 1980s (or 1880s...)? Using LLMs just to power a bot account seems like hooking a combustion engine up to the harness of a carriage."
       },
       {
         "title": "Mentor <> Mentee speed meeting",
@@ -270,7 +270,7 @@
         "venue": "Olds' Attic (Bayes)",
         "start": "9:30 PM",
         "end": "12:30 AM",
-        "description": "Non-sexual cuddle puddle. Clothes on, no photos, consent mandatory."
+        "description": "Let's make oxytocin together! Cuddle puddles provide a time and place for cuddlers to come together to explore touch in a non-sexual space, experience personal exploration and intimacy, practice consent, and have fun with like minded people. Keep your clothes on - this is non-sexual space No photos Consent is mandatory Respect boundaries It's ok to say no It's ok to say yes It's ok to change your mind"
       },
       {
         "title": "Rare & Exotic-ish Drama Games from Australia",
@@ -279,7 +279,7 @@
         "venue": "Exobrain",
         "start": "10:00 PM",
         "end": "11:00 PM",
-        "description": "Drama/improv workshop run by a professional Australian drama instructor."
+        "description": "I have received many requests to run a drama/improv workshop again this year. For reference, I am a professional at this, it is my main job in Australia (which is why the games are from Australia) Games are currently TBD. WE WILL NOT BE PLAYING Ŗ̶̙̟̲͎̦̻̙̬̫̤͔̝̍͗̒̓̈́͆E̴̯̒͌́D̵̫͍̥̝͙͂̃̆̀͝Ą̷̥̙͓̞̲̪̦͉̦̖͔̮̤͐C̷̘̙̼̰̭͎͍̳̫̖͈͓̭͖̝̓̋͂T̶̨̻̦̠͙͔͕͕̤̈́̽̄̈́̃͗͘E̵̮͚̳̟͙͑̈̂̔̿̈́̓̋̍̾̈̊̾̍͝ͅD̸̢̛͓̠̼͕̫̤̈̔͂̾̅̌̕͜͠"
       }
     ]
   },
@@ -301,7 +301,7 @@
         "venue": "Exobrain",
         "start": "9:00 AM",
         "end": "9:45 AM",
-        "description": "Esperanto-style room where speaking your native language is forbidden. Bonan ŝancon!"
+        "description": "Grab breakfast and come practice your language skills with a tradition borrowed from Esperanto meetups: a room in which speaking your native language is strictly forbidden. Meet other language nerds and have fun trying to figure out a way to communicate. Bonan ŝancon!"
       },
       {
         "title": "Manifund: markets in AI safety",
@@ -310,7 +310,7 @@
         "venue": "Cantor's Diagonal Hall",
         "start": "9:00 AM",
         "end": "9:45 AM",
-        "description": "How Manifund applies markets to make AI safety funding better."
+        "description": "Why markets are beautiful, and how Manifund is applying markets to make AI safety funding better."
       },
       {
         "title": "Speedfriending #2 with Saul",
@@ -319,7 +319,7 @@
         "venue": "Rat Park",
         "start": "9:00 AM",
         "end": "9:45 AM",
-        "description": "Quickly meet lots of people fast."
+        "description": "Quickly meet lots of people fast. Recommended for newcomes & old-timers alike."
       },
       {
         "title": "10 things I would do if I ran <Polymarket, Kalshi, Manifold, Metaculus>",
@@ -328,7 +328,7 @@
         "venue": "Bayes Ground",
         "start": "9:15 AM",
         "end": "9:45 AM",
-        "description": "Interactive conversation on improvements for leading prediction markets."
+        "description": "An interactive conversation on various ideas and improvements for some of the leading prediction markets."
       },
       {
         "title": "David Shor, Jesse Richardson, & maybe special guest",
@@ -337,7 +337,7 @@
         "venue": "Rat Park",
         "start": "10:00 AM",
         "end": "10:45 AM",
-        "description": "Deep dive into political forecasting, polling, and trading."
+        "description": "Taking a deep dive into political forecasting, polling, and trading."
       },
       {
         "title": "Electricity 2011-2040",
@@ -346,7 +346,7 @@
         "venue": "Exobrain",
         "start": "10:00 AM",
         "end": "10:45 AM",
-        "description": "Mental models for nuclear, solar, fossil at scale. How electric power could become much more abundant by 2030."
+        "description": "How electricity has been and will be generated: usable mental models for nuclear, solar, fossil, scale (1GW, 110GW, 1TW, ...). How wacky is California policy? How could electric power become much more abundant by 2030, with no technical or policy breakthroughs?"
       },
       {
         "title": "Experimental Meditation Experiments",
@@ -355,7 +355,7 @@
         "venue": "Olds' Attic (Bayes)",
         "start": "10:00 AM",
         "end": "10:45 AM",
-        "description": "Cycles of: read → design experiment → try it → reflect → repeat, especially paired with friends."
+        "description": "I've had some good experiences doing meditation in experiment cycles of: do some reading come up with a meditation experiment try the experiment for a fixed amount of time reflect on the experiment repeat especially when I do this paired with friends. I'll try to provide some light framing for other people to try this with me - helps if you come to this with a friend (my goal with this session is for people to have fun coming up with experiments + to make more friends that like meditating)"
       },
       {
         "title": "Possibilities for Nuclear War",
@@ -364,7 +364,7 @@
         "venue": "Eigenhall",
         "start": "10:00 AM",
         "end": "10:45 AM",
-        "description": "Recent developments in nuclear risk and how they impact forecasts."
+        "description": "Talking through recent developments in nuclear risk, how these impact forecasts, and how views on nuclear risk impact other views on global priorities."
       },
       {
         "title": "Prediction Markets Panel",
@@ -373,7 +373,7 @@
         "venue": "Cantor's Diagonal Hall",
         "start": "10:00 AM",
         "end": "10:45 AM",
-        "description": "Panel with Stephen Grugett (Manifold), Nancy Yi (Bayes), and TBD from Kalshi."
+        "description": "Come and ask your pressing questions to a panel of people working on prediction market platforms. With Stephen Gruget (Manifold CEO), Nancy Yi (Bayes), and TBD from Kalshi Send us your questions!: https://app.sli.do/event/qqfa9wiNTJfmzBnCoTYYZd"
       },
       {
         "title": "Weird Findings in the last 10 years of Exercise Science",
@@ -382,7 +382,7 @@
         "venue": "Bayes Ground",
         "start": "10:00 AM",
         "end": "10:45 AM",
-        "description": "Three recent findings of Exercise Science that will change your understanding of your body but be of no practical value."
+        "description": "Exercise Science is pretty interesting. I'll tell you about three recent findings of Exercise Science that will change your understanding of your body, but be of no practical value."
       },
       {
         "title": "Futarchy: Reimagining Governance Through Prediction Markets",
@@ -391,7 +391,7 @@
         "venue": "Exobrain",
         "start": "11:00 AM",
         "end": "11:45 AM",
-        "description": "How prediction markets can serve as foundational primitives for rethinking governance."
+        "description": "In this talk, we'll explore how prediction markets, now known for their forecasting accuracy, can serve as foundational primitives for rethinking governance. We'll discuss conditional markets, scalar markets, price-based futarchy, metric-based futarchy, futarchy as an advisory tool, and futarchic DAOs, placing them in the broader context of the evolution of human governance."
       },
       {
         "title": "Lars A. Doucet: What's the value of land in Berkeley?…Somers System",
@@ -400,7 +400,7 @@
         "venue": "Eigenhall",
         "start": "11:00 AM",
         "end": "12:45 PM",
-        "description": "Live demo of consensus-based land valuation from the 1900s."
+        "description": "I will lead a live demonstration of the \"Somers System\" of land valuation in which a moderator gathers together a group of people and gets them to collectively value land in their local jurisdiction. I'll need either a laptop and projector, or else just a big paper map on the wall. I'll start by asking \"What's the most valuable stretch of street in Berkeley?\" Someone will give an answer. I'll write down 100 right there. Then I'll say, \"What's the NEXT most valuable stretch of street in Berkeley?\" Someone else will give an answer. I'll ask, \"How much is it worth, RELATIVE to Berkeley?\" They'll give some number, say 95%. I'll write down 95. And so on until we've filled up the whole thing. Then I'll explain how the historical Georgist movement relied on a method just like this to value land. It was used in lots big American cities for decades, including Cleveland, Colombus, Baltimore, Houston, and even New York City. Will it work? Who knows! The purpose of this demonstration is to test it out with a real audience. People should bet on the outcome in advance! See also: How Georgists Valued Land in the 1900s"
       },
       {
         "title": "Live Polling with Aella",
@@ -409,7 +409,7 @@
         "venue": "Rat Park",
         "start": "11:00 AM",
         "end": "11:45 AM",
-        "description": "Attendees line themselves up in a live interactive poll."
+        "description": "Attendees will line themselves up in a live interactive polling."
       },
       {
         "title": "Manifold users meetup [Day 2]",
@@ -418,7 +418,7 @@
         "venue": "Drethelin Gardens",
         "start": "11:00 AM",
         "end": "11:45 AM",
-        "description": "Hang with familiar Manifold usernames & profile pics."
+        "description": "Grabbing a second slot to meet & hang out with other familiar Manifold users (in addition to the Friday slot). Come say hi to familiar usernames & profile pictures."
       },
       {
         "title": "Our Broken High-skilled Immigration System: A Primer",
@@ -427,7 +427,7 @@
         "venue": "Bayes Ground",
         "start": "11:00 AM",
         "end": "11:45 AM",
-        "description": "Tobias Pace (USCIS contractor) and Jasmine Ren (visa holder) walk through the system."
+        "description": "Tobias Pace is a contractor for United States Citizenship and Immigration Services. Jasmine Ren is a temporary visa holder who's been living and working in the US for the past 7 years. Together we'll explain concrete and obscure ways the high-skills immigration system in the United States is broken. Hopefully we'll shed some light on how to fix it! Note: This session will not be recorded."
       },
       {
         "title": "Poker Satellite #2",
@@ -444,7 +444,7 @@
         "venue": "Feynman House",
         "start": "11:00 AM",
         "end": "11:45 AM",
-        "description": "Roundtable with Cremieux on how politics works, by invitation/referral only."
+        "description": "Roundtable with Cremieux on how politics works right now, for people involved in policy. By invitation or referral only."
       },
       {
         "title": "Scaling Public Epistemics: Community Notes & What's Next",
@@ -453,7 +453,7 @@
         "venue": "Cantor's Diagonal Hall",
         "start": "11:00 AM",
         "end": "11:45 AM",
-        "description": "Why Community Notes works, lessons learned, similarities to PMs, and Supernotes."
+        "description": "I'll talk about -why Community Notes works surprisingly well -some lessons learned along the way while building it -its similarities with prediction markets -Supernotes (LLM-written Community Notes with human raters) -a brand-new experimental pilot to find posts (not notes!) liked by people who typically disagree!"
       },
       {
         "title": "AI 2027 Q&A",
@@ -462,7 +462,7 @@
         "venue": "Cantor's Diagonal Hall",
         "start": "12:00 PM",
         "end": "12:45 PM",
-        "description": "Q&A with Eli Lifland (and possibly other AI 2027 team members)."
+        "description": "Eli Lifland and maybe another AI 2027 team member are happy to answer any AI 2027 related questions"
       },
       {
         "title": "Life as a Gambling Globetrotter",
@@ -471,7 +471,7 @@
         "venue": "Bayes Ground",
         "start": "12:00 PM",
         "end": "12:45 PM",
-        "description": "Full-time prediction-market betting and travel hacking."
+        "description": "Full-time prediction market betting and travel hacking"
       },
       {
         "title": "Lunch",
@@ -488,7 +488,7 @@
         "venue": "Exobrain",
         "start": "12:00 PM",
         "end": "12:45 PM",
-        "description": "Polymarket bets are tokens; building a DeFi layer on top."
+        "description": "Bets on Polymarket are tokens and Polymarket itself is a launchpad - but nobody thinks this way yet. The natural extension of Polymarket is a DeFi layer on top of it. I'll explain how to build one and why it will make post-election Polymarket liquid"
       },
       {
         "title": "ThermoRex Fanclub",
@@ -513,7 +513,7 @@
         "venue": "Olds' Attic (Bayes)",
         "start": "1:00 PM",
         "end": "1:45 PM",
-        "description": "Rob and Rosie (Eleos) on AI welfare; open discussion on consciousness."
+        "description": "Rob and Rosie work for Eleos, a nonprofit that takes a pragmatic approach to AI welfare. We'll share some takes on how we're thinking about it, and then open a discussion. Example topics: Is consciousness necessary or sufficient for moral patienthood? What other properties are important? What good things can we do for AI welfare under uncertainty about consciousness / moral status? What can we do to reduce uncertainty? How should we think about the reliability of self-reports from LLMs? Is AI welfare in tension with AI safety? How do we balance the risks of over- and under-attribution of AI consciousness / moral status?"
       },
       {
         "title": "Game Theory, Emotions, and Evolutionarily Stable Strategies",
@@ -522,7 +522,7 @@
         "venue": "Exobrain",
         "start": "1:00 PM",
         "end": "1:45 PM",
-        "description": "Threats and promises, anger and gratitude, and why we end up with some societies and not others."
+        "description": "Game theory is a nice tool to shed light on why we have certain basic emotions, and explore why we might end up with some societies and not others. Topics: Threats and promises, anger and gratitude, the hawk-dove game and several variants thereof. (Talk originally given at LessOnline 2024.)"
       },
       {
         "title": "Geopolitics of AI Infrastructure",
@@ -539,7 +539,7 @@
         "venue": "Bayes Ground",
         "start": "1:00 PM",
         "end": "1:45 PM",
-        "description": "What happens when LLMs make competent analysis cheap and abundant."
+        "description": "The Bessemer process made steel so cheap it replaced wood in construction. What happens when we do the same for human reasoning? Right now, competent analysis is scarce. Most decisions get made by overworked people doing the bare minimum. Government contracts are evaluated by overworked people without domain expertise. Small business loans are evaluated formulaically. We've accepted this scarcity as natural, and built much of modernity to work around it. Language models, even without substantial capabilities improvements, change that reality. Not because they beat experts at simulated benchmarks, but because they beat average decisionmakers on the average decision. At Elicit we've been building tools to enhance the capabilities of human experts, and have seen this first-hand. What have we learned about how humans do things, and how language models improve upon that?"
       },
       {
         "title": "Panel US-China w/ Steve Hsu and Noah Smith",
@@ -556,7 +556,7 @@
         "venue": "Drethelin Gardens",
         "start": "1:00 PM",
         "end": "1:45 PM",
-        "description": "GiveWell research-recruiting lead taking resume / interview questions."
+        "description": "I've managed research recruiting at GiveWell for a few years, so I've spent quite a bit of time reviewing resumes/applications/work trials and conducting interviews. I'm happy to answer your questions about anything related to hiring. You could consider questions like: Does my resume seem cringe? Does my cover letter seem too pitchy? What are the most common reasons that borderline candidates get rejected at the application screen? Should I cold message a current employee at a company I want to work for? Or anything else! If you also work in recruiting or have hiring manager experience, I'd welcome your involvement in the AMA! Keep in mind that my personal opinions don't speak for my employer, that I have a particular kind of recruiting experience that may not fully generalize to your situation, etc. etc."
       },
       {
         "title": "Weirdly Priced Markets with Jesse Richardson",
@@ -565,7 +565,7 @@
         "venue": "Eigenhall",
         "start": "1:00 PM",
         "end": "1:45 PM",
-        "description": "Eric and Jesse on the most weirdly priced prediction markets they've seen."
+        "description": "In this talk + discussion, Eric and Jesse Richardson will talk about some of the most weirdly priced prediction markets they've seen, and why they were priced that way. Examples include: According to Polymarket, Jesus Christ has a 3% chance of returning in 2025 According to PredictIt, there was a 130% chance that Trump would get between 0 and 538 electoral votes in the 2024 election Markets thought that Trump would have a 16% chance of winning the 2020 presidential election, after he had already lost it"
       },
       {
         "title": "Nate Silver & Chris Best discussion",
@@ -607,7 +607,7 @@
         "venue": "Exobrain",
         "start": "2:00 PM",
         "end": "2:45 PM",
-        "description": "Learning gambling strategy by reviewing 2024 election strategies."
+        "description": "In this talk, we will attempt to learn gambling strategy by reviewing key 2024 election gambling strategies. Audience engagement is strongly encouraged. The varied strategies I will cover include: 1) [Betting on Vol] Rufus Peabody's margin of victory bet (expressed on twitter) 2) [Betting on proper model parsimony] Fredi vs. the sharps on national popular vote 3) [Betting on Chaos] Bots gone wild: theories of what happened between 1 to 5 am on Kalshi in the \"closest state market\". 4) [Betting on Liquidity] How liquidity scavengers bought dead shares and made bank."
       },
       {
         "title": "Life as a Professional Gambler",
@@ -616,7 +616,7 @@
         "venue": "Drethelin Gardens",
         "start": "2:00 PM",
         "end": "2:45 PM",
-        "description": "Full-time advantage player on blackjack and video poker shares the lifestyle."
+        "description": "I work full-time as an advantage player of casino games against the house, mostly blackjack and video poker. Come hear me talk about how it works, the lifestyle, pros and cons. Notably, this makes an ideal second career for someone retired early from tech, etc. (although that is not my path). Bring questions! Ideally I would like to tailor this to aspects the audience is interested in."
       },
       {
         "title": "patio11 + kuiper: Emergent gameplay and narrative",
@@ -625,7 +625,7 @@
         "venue": "Bayes Ground",
         "start": "2:00 PM",
         "end": "2:45 PM",
-        "description": "Patrick McKenzie & Justin Kuiper on video games — emergent gameplay and narrative."
+        "description": "Patrick McKenzie (patio11 on the internets) and Justin Kuiper (Idol Manager game designer and scriptwriter) discuss video games. (Patrick and Justin's video game session at Manifest 2024 neglected to include a proper discussion of Factorio; this omission was clearly in error and will be remedied this year)"
       },
       {
         "title": "Talk to a Rationalist Leftist",
@@ -634,7 +634,7 @@
         "venue": "Feynman House",
         "start": "2:00 PM",
         "end": "2:45 PM",
-        "description": "Pop your bubble and dampen your echo chamber."
+        "description": "We are Real, I swear! Pop your bubble and dampen your echo chamber with David Youssef"
       },
       {
         "title": "Memory Systems/Anki/SRS Meetup",
@@ -643,7 +643,7 @@
         "venue": "Olds' Attic (Bayes)",
         "start": "2:30 PM",
         "end": "3:30 PM",
-        "description": "Spaced repetition / Anki / Supermemo / MathAcademy meetup."
+        "description": "Come chat with others interested in spaced repetition, Anki, Supermemo, MathAcademy, Piotr Wozniak, etc. Interest is required, experience is not. Nothing planned, we'll just be chatting. I'd recommend bringing your laptop, so that you can show others your cards, decks, or setups. Conversations will be about stuff like: How do you typically use memory systems? What are some unusual applications that have worked for you? What are some that haven't? What are your goals with them? What are goals you've realized can be accomplished with memory systems, that you didn't think of going in? Any experiments with memory systems that you're in the process of running? Any that you've been meaning to try? What's missing from your current learning/memory system — from your app, your practice, your community, etc?"
       },
       {
         "title": "The Intersection of APMMs and Prediction Markets",
@@ -652,7 +652,7 @@
         "venue": "Rat Park",
         "start": "2:30 PM",
         "end": "3:00 PM",
-        "description": "Wang presents an Automated Prediction Market Maker from the Bayes app."
+        "description": "Wang presents a novel Automated Prediction Market Maker from the new prediction market app, Bayes, that specialises in providing liquidity for a wide range of markets."
       },
       {
         "title": "Pitch competition judges huddle",
@@ -661,7 +661,7 @@
         "venue": "Feynman House",
         "start": "2:45 PM",
         "end": "3:15 PM",
-        "description": "Pitch judges/Sovereigns only."
+        "description": "Only come if you are a Pitch competition Judge/Sovereign"
       },
       {
         "title": "Doom Debates: Liron vs. Everyone",
@@ -670,7 +670,7 @@
         "venue": "Eigenhall",
         "start": "3:00 PM",
         "end": "3:45 PM",
-        "description": "Live group debate."
+        "description": "Join this live taping of Doom Debates, where I’ll be debating YOU, the collective audience. I have a 50% P(doom). Yours might be lower. In the spirit of rational discourse, let’s identify our cruxes of disagreement. Let’s see where you get off the \"doom train”— all the places where you and your fellow session attendees derail from the chain of connected claims necessary to conclude a high P(doom). Interaction is voluntary but encouraged. All levels of p(doom) welcome."
       },
       {
         "title": "Matt Buckley: How To Change Your Mind (with Replacement Therapies)",
@@ -679,7 +679,7 @@
         "venue": "Cantor's Diagonal Hall",
         "start": "3:00 PM",
         "end": "3:45 PM",
-        "description": "Brain cell/tissue replacement strategies for prolonging cognition."
+        "description": "Brain cell and tissue replacement strategies promise to prolong human cognition."
       },
       {
         "title": "Political Strategy & Delivering Reform",
@@ -688,7 +688,7 @@
         "venue": "Exobrain",
         "start": "3:00 PM",
         "end": "3:45 PM",
-        "description": "Local and international case studies on strategy and reform."
+        "description": "Local and international case studies of how strategy (or lack thereof) is often the key factor in whether reform is effective and enduring."
       },
       {
         "title": "Read Some Poetry You Like",
@@ -697,7 +697,7 @@
         "venue": "Drethelin Gardens",
         "start": "3:00 PM",
         "end": "3:45 PM",
-        "description": "Bring poems you like and read them aloud."
+        "description": "Are there poems that you really like? Come hang out and read them to other people. And optionally share what you like about them. But, like, standard poems only pls no multipage epics."
       },
       {
         "title": "YouTube economics: attention and status as currency",
@@ -706,7 +706,7 @@
         "venue": "Bayes Ground",
         "start": "3:00 PM",
         "end": "3:45 PM",
-        "description": "Lessons from 200 videos, 600M views, and a Streamy Award."
+        "description": "Lessons learned from 200 videos, 600 million views, 1 Streamy Award, and living on both sides of the AdSense dashboard. The good news: there has never been a better time to start a YouTube channel. Platform changes in 2023 and 2024 have improved the discoverability of good content, and \"overnight success stories\" are more common than ever. New tools are driving costs down, with leaving good writing as the main bottleneck to creating long-form quality content. The bad news: the economics of YouTube are bad for everyone except content marketers. AdSense is no way to get rich; the main currency that YouTubers are paid in are attention and status. More good news: everyone can benefit from attention and status, regardless of whether you're selling a product, looking for a job, or just trying to be prosocial and spread an important message."
       },
       {
         "title": "Pitch competition setup/Rapid fire tips for founders",
@@ -723,7 +723,7 @@
         "venue": "Olds' Attic (Bayes)",
         "start": "3:30 PM",
         "end": "4:00 PM",
-        "description": "Personal experiences that may be useful to you."
+        "description": "I have more sex than I used to. Perhaps my experiences will be useful to you."
       },
       {
         "title": "Startup Pitch competition",
@@ -732,7 +732,7 @@
         "venue": "Rat Park",
         "start": "3:30 PM",
         "end": "6:00 PM",
-        "description": "Manifest's shark tank with live Manifold markets on funding outcomes."
+        "description": "Manifest's very own shark tank! Founders will have the opportunity to pitch to a panel of judges in front of a live audience trading on Manifold's markets on who will receive funding. Judges include Sahil Gupta from KrakenFX/Tribe Capital and Josh Fekler from BoxOne Ventures, with more judges to be announced. Organised by Sovereign. Sign up to pitch using this form, approved pitches will be notified on a rolling basis."
       },
       {
         "title": "Fine-Tuning, the Multiverse, Anthropic Bias, and the Reference-Class Problem",
@@ -741,7 +741,7 @@
         "venue": "Bayes Ground",
         "start": "4:00 PM",
         "end": "4:45 PM",
-        "description": "Fine-tuning of the universe and what it might imply about a multiverse."
+        "description": "A discussion regarding the apparent improbable fine-tuning of our universe for the capacity to sustain complex life, and whether this improbable fine-tuning is evidence that our universe exists in a multiverse. If you’re interested in the reference class problem, bayesian inference, anthropic bias, or want a fun introduction to these concepts, then this talk is for you!"
       },
       {
         "title": "Market Making at Scale",
@@ -750,7 +750,7 @@
         "venue": "Cantor's Diagonal Hall",
         "start": "4:00 PM",
         "end": "4:45 PM",
-        "description": "Susquehanna's head of PM/event contracts on automating, taking vs making, and asymmetric news quoting."
+        "description": "Ric Best, head of prediction markets and event contracts at Susquehanna, will be highlighting the challenges of presenting markets 24/7 in many different events at once and how the considerations differ when being a market taker or a small-size maker with no obligations. Ric will focus on the need to automate, the fact that you reacting rather than reacting, the advantage of being able to \"pass\" on a market as a taker, and the asymmetrical rewards of quoting when there are news and shifts. Ric will take questions from the audience at the end."
       },
       {
         "title": "Poker Satellite #4",
@@ -776,7 +776,7 @@
         "venue": "Eigenhall",
         "start": "4:00 PM",
         "end": "4:45 PM",
-        "description": "Ten years of predicting the Trump phenomenon and where conventional wisdom got it wrong."
+        "description": "I will discuss ten years of predicting how the Trump phenomenon will go and putting money on it. The talk includes an analysis of what the conventional wisdom and markets have gotten wrong, and what that can tell us about forecasting the future of Trump."
       },
       {
         "title": "Theory Of Podcast (in gardens)",
@@ -785,7 +785,7 @@
         "venue": "Drethelin Gardens",
         "start": "4:00 PM",
         "end": "4:45 PM",
-        "description": "What podcasts do better than blog posts; concrete steps to produce one."
+        "description": "What do podcasts do better than blog posts? What are the concrete steps to produce a podcast? Should you do audio or video? I'm currently producing four podcasts, and have many takes on how to do it well--audience questions encouraged. (was a big hit at LessOnline)"
       },
       {
         "title": "Untitled Genetic Engineering Talk",
@@ -803,7 +803,7 @@
         "venue": "Olds' Attic (Bayes)",
         "start": "4:15 PM",
         "end": "4:45 PM",
-        "description": "Trivia game legally distinct from Jeopardy! about Manifold lore."
+        "description": "Do you enjoy Manifold lore? Come test your knowledge in a fun trivia game which is legally distinct from the popular game show Jeopardy!, but is otherwise quite similar. I have now written the questions, so they do really exist! WINNER GETS AT LEAST 2000 MANA"
       },
       {
         "title": "AI for Grantmaking: Demo",
@@ -812,7 +812,7 @@
         "venue": "Exobrain",
         "start": "5:00 PM",
         "end": "5:45 PM",
-        "description": "Manifund's AI grantmaker demo."
+        "description": "Manifund have been developing an AI grantmaker to evaluate, score, and boost projects. Now donors can sweep hundreds of projects, applying their taste. Come along to see our demo & learn more! https://manivaluator.org/"
       },
       {
         "title": "AI welfare",
@@ -821,7 +821,7 @@
         "venue": "Olds' Attic (Bayes)",
         "start": "5:00 PM",
         "end": "5:45 PM",
-        "description": "Why near-term AI welfare matters and why AIs can probably be conscious in principle."
+        "description": "How should we think about the welfare and moral status of near-term AI systems? I'll discuss why I think it's an important issue; why AIs can probably be conscious in principle; why near-term AIs might be conscious in practice; why consciousness might not be the only place to focus; and a few thoughts about what should be done."
       },
       {
         "title": "Armin Stepanyan vs. Liron - AI doom debate",
@@ -838,7 +838,7 @@
         "venue": "Bayes Ground",
         "start": "5:00 PM",
         "end": "6:45 PM",
-        "description": "Build the track that decides Sunday night's Mannys."
+        "description": "Come Onnnn! Build the race track that determines the winners of the Mannys on Sunday night. I'll have craft supplies but you can bring your own supplies if you've got anything weird lying around that you want to add to the track. What's a marble race track?? https://youtu.be/EAWYWG64l7I?si=IsdD96vXXJMztaDT&t=61 What are the Mannys? https://www.writehaven.space/e/manifest-2025/session/session-1749163559302"
       },
       {
         "title": "David Shor: Data Science and Politics",
@@ -856,7 +856,7 @@
         "venue": "Eigenhall",
         "start": "5:00 PM",
         "end": "5:45 PM",
-        "description": "Robin Hanson restates the case for decision markets, now with operational deployments."
+        "description": "Decision markets have occupied theoretical discourse for more than two decades, yet operational deployments are only now taking place. In this joint session, Robin Hanson restates the core insight of letting conditional asset prices steer collective choice, while Kelvin Santos presents a practical vision for how these markets can truly thrive in 2025."
       },
       {
         "title": "set up",
@@ -880,7 +880,7 @@
         "venue": "Olds' Attic (Bayes)",
         "start": "6:00 PM",
         "end": "6:30 PM",
-        "description": "Practice visualizing the future you want."
+        "description": "Practice visualizing the future you want to see. This may make you feel better but I do not promise that it will accomplish much else."
       },
       {
         "title": "NEW: Prediction Markets & Financial Research",
@@ -889,7 +889,7 @@
         "venue": "Exobrain",
         "start": "6:00 PM",
         "end": "6:45 PM",
-        "description": "Hands-on with a brand-new prediction market platform."
+        "description": "Join a hands-on session led by startup founders building a brand-new prediction market platform—launched just yesterday! We’ll walk through how the product works, invite you to try it out live, and open the floor to your feedback and ideas. Come help shape the future of how financial research gets done: faster, more accurately, and more accessibly."
       },
       {
         "title": "Noam Brown: Learning to Reason with LLMs",
@@ -898,7 +898,7 @@
         "venue": "Cantor's Diagonal Hall",
         "start": "6:00 PM",
         "end": "6:45 PM",
-        "description": "LLMs and reasoning capabilities."
+        "description": "Large language models (LLMs) have demonstrated remarkable capabilities in generating coherent text and completing various natural language tasks. Nevertheless, their ability to perform complex, general reasoning has remained limited. In this talk, I will describe OpenAI's new o-series models, which are trained via reinforcement learning to generate a hidden chain of thought before its response. We have found that the performance of these models consistently improve with more reinforcement learning compute and with more inference compute. The latest model, o3, surpasses previous state-of-the-art models in a variety of benchmarks that require reasoning, including mathematics competitions, programming contests, and advanced science question sets. I will discuss the implications of scaling this paradigm even further."
       },
       {
         "title": "Scouting for Truth: Robust Bayesian Truth Serum, Peer Prediction and Hidden Talent",
@@ -907,7 +907,7 @@
         "venue": "Eigenhall",
         "start": "6:00 PM",
         "end": "6:45 PM",
-        "description": "Peer-prediction mechanism for uncovering overlooked brilliance."
+        "description": "How do you uncover overlooked brilliance in your team, especially when social dynamics discourage honesty? This talk explores a groundbreaking peer prediction mechanism from the 2016 paper Paying for Truth by Rigol and Roth, which incentivizes truthful evaluations even in tight-knit communities. By connecting this to insights from Talent by Tyler Cowen and Daniel Gross, the talk reveals how organizations can combine structured incentives with insider intuition to surface exceptional people. Drawing on real-world applications from the Church of the Infinite Game, you'll learn how tools like Bayesian truth serum, quadratic voting, red teaming, and ritualized feedback loops can help any organization grow fast without losing clarity, culture, or coherence."
       },
       {
         "title": "Poker Satellite #4 (cont.)",
@@ -932,7 +932,7 @@
         "venue": "Olds' Attic (Bayes)",
         "start": "7:00 PM",
         "end": "7:45 PM",
-        "description": "Acroyoga / Partner Acrobatics."
+        "description": "Acroyoga, also called Partner Acrobatics or Dutch Acro is a sport that can teach you Communication and Trust, and When To Say Stop and perhaps how it is to be upside down. And it's super fun. No, you don't need to be a gymnast. There won't be much talking, mostly moving. (If you've been to the LessOnline session, the first half an hour will be the same.)"
       },
       {
         "title": "Adventures in text generation: LLMs and prose fiction",
@@ -941,7 +941,7 @@
         "venue": "Bayes Ground",
         "start": "7:00 PM",
         "end": "7:45 PM",
-        "description": "Getting LLMs to generate novels — failures, future, state of the art."
+        "description": "This is an hour talk on getting LLMs to generate novels, where they fail, what the future holds, and what I view as the state of the art. I'm an author of 20+ books and 4 million words of text, and a former software engineer with a perpetual interest in LLMs since the days of GPT-2. It's a problem that I've been giving a lot of thought to, and one where I think some non-authors aren't seeing the trees for the forest. This talk has a number of interesting examples of the failure states, going beyond simple stylistic issues and the normal LLM jank, and while the focus is on generating prose fiction, I think there's a lot of cross-applicability to other areas of interest."
       },
       {
         "title": "AI for Collective Agency (bring laptop!)",
@@ -950,7 +950,7 @@
         "venue": "Exobrain",
         "start": "7:00 PM",
         "end": "7:45 PM",
-        "description": "Using AI to increase collective agency."
+        "description": "How can we all navigate these AI-crazified times better, using these unexpectedly-amazing LLMs we find ourselves with? Let's use AI to increase our collective agency, aka let's \"do [what we want more]\" rather than \"do [what we want] more\". We'll make this session more like what we want it to be, live, using custom (human+AI, far from fully-baked, not even a prototype yet) scaffolding! This is my first try at this experiential collective agency session, and I think a cool thing can happen--come help see if we can make it so. 10 minutes of a talk, 30 minutes of experience/participation. Bring a laptop for simultaneous writing!"
       },
       {
         "title": "History Lecture with Live Betting (Sovereign)",
@@ -959,7 +959,7 @@
         "venue": "Eigenhall",
         "start": "7:00 PM",
         "end": "7:45 PM",
-        "description": "Historical topic with live betting on what happens next."
+        "description": "I will present on a historical topic and anyone not already familiar with the outcome bets on what will happen next."
       },
       {
         "title": "How to be hot (with Aella)",
@@ -985,7 +985,7 @@
         "venue": "Eigenhall",
         "start": "8:00 PM",
         "end": "9:00 PM",
-        "description": "Prisoner's-Dilemma-based game show about insider trading and market manipulation."
+        "description": "The game show that exists because market forces demand it does. Based on the Prisoner's Dilemma, this is a game show about insider trading, trust, and market manipulation that anybody can participate in. https://manifold.markets/news/nash-pit?r=UXVyb2U"
       },
       {
         "title": "Scott Alexander: Forecasting Transformative AI Using The Book Of Revelation",
@@ -1002,7 +1002,7 @@
         "venue": "Olds' Attic (Bayes)",
         "start": "8:30 PM",
         "end": "8:45 PM",
-        "description": "Embrace cringe to become more likeable."
+        "description": "The socially anxious among us need to become annoypilled. To embrace cringeceldom. Only then will you be free and, paradoxically, more likeable. In this session, I will be using you as a guinea pig for my pet theories about social anxiety in the world's least-professionally-done uncontrolled survey-slash-experiment."
       },
       {
         "title": "🌈 LGBT meetup 🌈",
@@ -1011,7 +1011,7 @@
         "venue": "Exobrain",
         "start": "9:00 PM",
         "end": "9:30 PM",
-        "description": "All orientations welcome."
+        "description": "Love isn’t binary, no matter how the market resolves. Come meet fellow queerdos charting new frontiers of desire, truth, and liquidity as they debate p(coom) timelines. All orientations welcome — especially toward truth and each other. The vibes are liquid, and the bloodbois are staking."
       },
       {
         "title": "Arm Wrestling Tournament",
@@ -1029,7 +1029,7 @@
         "venue": "Bayes Ground",
         "start": "9:00 PM",
         "end": "10:30 PM",
-        "description": "Atlas fellow meetup."
+        "description": "Atlas fellow meetup"
       },
       {
         "title": "Late night secrets to trading on Kalshi",
@@ -1038,7 +1038,7 @@
         "venue": "Cantor's Diagonal Hall",
         "start": "9:00 PM",
         "end": "10:00 PM",
-        "description": "With Shaked (Kalshi), Joshua Flemming (Sovereign), Ric Best (SIG)."
+        "description": "With Shaked Koplewitz (Kalshi trading team), Joshua Flemming (Sovereign), and Ric Best (SIG). Will alpha be revealed? Probably not but come and find out."
       },
       {
         "title": "Quizbowl/trivia",
@@ -1056,7 +1056,7 @@
         "venue": "Glass Hall (Gaming)",
         "start": "9:30 PM",
         "end": "10:30 PM",
-        "description": "AI-pipeline-based social art activity."
+        "description": "(Putting this in for Quilliest, Skyler won't be there) Banterbrush is a fun social activity that I manifested while tinkering with differetn AI pipelines. I think it had some really interesting therapeutic properties and is generally a fun social stimulant experience the joy of making stories and art together."
       },
       {
         "title": "Dance Party",
@@ -1073,7 +1073,7 @@
         "venue": "Rat Park",
         "start": "9:30 PM",
         "end": "10:00 PM",
-        "description": "Hang out with people who filled out the Love Science Friend survey."
+        "description": "Hang out with the other people who filled in the Love Science Friend suvery yesterday. If you forgot you can still come hangout and make friends. David Shor runs LoveScience events which help people find potential romantic matches. This is NOT that, but rather, the platonic version! Want to meet new people to become friends with or find like minded people? Must have filled out the survey by Friday 20:00 to get matches, but you can still get personality-profile results and generate match reports if you complete it late. Survey here: https://lovescience.club/ Note: if you have already filled out a love science suvery you don't need to again, to be put in the pool for friend matching all you need to do is rsvp on https://lovescience.club/events/manifest_2025"
       },
       {
         "title": "Niacin hot seat",
@@ -1082,7 +1082,7 @@
         "venue": "Olds' Attic (Bayes)",
         "start": "10:00 PM",
         "end": "12:00 AM",
-        "description": "Hot seat session with optional niacin (causes flushing response)."
+        "description": "Hot seat + the most dramatic B vitamin! This is a hot seat session where you have the option to try niacin. Niacin is a vitamin which causes a rapid flushing response that lasts for about an hour. The effect is harmless. This is interesting as a shared experience because 1) the sensations are definitely distinguishable from placebo, 2) there is no direct distortion of psychology as there would be with a psychoactive drug, but 3) prior sensory associations are emphasized or re-evaluated due to the strength of the sensations. The experience can be both warmly pleasant and (particularly the first time) kind of uncomfortable. One approximate description is \"being in the sauna, without the sauna\". Note that niacin works better on a more-empty stomach, and that the flushing effect is blocked by NSAIDs like ibuprofen."
       },
       {
         "title": "Rare & Exotic-ish Drama Games from Australia",
