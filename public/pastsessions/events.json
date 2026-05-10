@@ -6,130 +6,361 @@
         "color": "rose",
         "title": "Manifold Theater: Sweepstakes Mania (feat. Duncan Horst of Bet on Love)",
         "hosts": "Duncan Horst, Tim Blais",
-        "rsvp": 60
+        "rsvp": 60,
+        "venue": "Rat Park",
+        "start": "4:30 PM",
+        "end": "5:30 PM",
+        "description": "Bet on Love host and Manifold's \"CEO in 2025\" returns to the past, to spread the good news about Sweepstakes, in a surreal musical talk show setting."
       },
       {
         "color": "orange",
         "title": "The Future of Prediction Markets",
         "hosts": "James Grugett",
-        "rsvp": 98
+        "rsvp": 98,
+        "venue": "Eigen Hall",
+        "start": "2:30 PM",
+        "end": "3:30 PM",
+        "description": "What will be the most valuable use cases for prediction markets in the next 5 years? How does AI fit in? And will Manifold Love ever work? I will do my best to answer these questions and more."
       },
       {
         "color": "orange",
         "title": "Retrofund More Than Just Crypto",
         "hosts": "Evan Miyazono",
-        "rsvp": 22
+        "rsvp": 22,
+        "venue": "Eigen Hall",
+        "start": "3:30 PM",
+        "end": "4:30 PM",
+        "description": "Retroactive public goods funding (aka RetroPGF) is seeing increasing adoption across the crypto world to fund community and network growth. I'll describe how to interpret this retrospective funding as (kind of) a generalization of futarchy and explain how it could be used to fund better science and pass better laws."
       },
       {
         "color": "orange",
         "title": "Fireside Chat with Founder of Upstart, Paul Gu",
         "hosts": "Paul Gu, Austin Chen",
-        "rsvp": 21
+        "rsvp": 21,
+        "venue": "Eigen Hall",
+        "start": "4:30 PM",
+        "end": "5:30 PM"
       },
       {
         "color": "orange",
         "title": "Homo Economicus Wannabees",
         "hosts": "Daniel Reeves",
-        "rsvp": 73
+        "rsvp": 73,
+        "venue": "Eigen Hall",
+        "start": "6:00 PM",
+        "end": "7:00 PM",
+        "description": "What if you were so enamored with formalizing social choice problems that you made all group decisions that way and even raised your kids to do so? I describe in this talk what happens. In particular, I describe the half dozen or so auction- and prediction-market-based decision mechanisms we use in our family. And lots of discussion of Beeminder including a newly public feature implementing group commitment mechanisms."
       },
       {
         "color": "orange",
         "title": "The Politics of Election Market Bans",
         "hosts": "Jeremiah Johnson, Maxim Lott, Peter Hammon",
-        "rsvp": 68
+        "rsvp": 68,
+        "venue": "Eigen Hall",
+        "start": "7:00 PM",
+        "end": "8:00 PM",
+        "description": "The CFTC has proposed banning real money prediction markets on elections entirely. What are the politics surrounding this decision? And how can prediction markets chart a path to legality?\n\nThis will be structured as a panel, hosted by Jeremiah Johnson."
       },
       {
         "color": "yellow",
         "title": "What Do AI Models Think of News and Prediction Markets?",
         "hosts": "Nikolai Yakovenko",
-        "rsvp": 43
+        "rsvp": 43,
+        "venue": "Bayes Ground",
+        "start": "3:30 PM",
+        "end": "4:30 PM",
+        "description": "Can LLM based AI models create new prediction markets based on current events, resolve existing markets, and predict which markets will become popular? We explore all this and more.\n\nDeepNewz is a fully automated end-to-end news sourcing and generation system. Covering stories from tech to sports, economics and pop culture."
       },
       {
         "color": "yellow",
         "title": "Increasing Access to the Jhanas",
         "hosts": "Alex Gruver",
-        "rsvp": 37
+        "rsvp": 37,
+        "venue": "Bayes Ground",
+        "start": "4:30 PM",
+        "end": "5:30 PM",
+        "description": "The Jhanas are joyful meditative states sometimes described as MDMA without the drugs. We've been working on making access to the jhanas more widespread for two years, first with technical research and now by running retreats. This talk will cover our thoughts on: EEG neurofeedback for meditation, meditation retreat curriculum design, and hypothesis on why these states aren't more widely practiced already."
       },
       {
         "color": "yellow",
         "title": "Why Prediction Markets Need Financial Derivatives",
         "hosts": "Joseph Toles",
-        "rsvp": 29
+        "rsvp": 29,
+        "venue": "Bayes Ground",
+        "start": "6:00 PM",
+        "end": "7:00 PM",
+        "description": "Financial markets are inefficient without financial derivatives. This principle applies to prediction markets too, not just commodities and equities markets. I will give a moderately-math-intensive unscripted Socratic lecture. I will adapt the style depending on who attends.\n\nMy online blogging username is lsusr. I work for a hedge fund that does statistical arbitrage on financial futures."
       },
       {
         "color": "yellow",
         "title": "CMV: Prediction Market Theory Is Weak",
         "hosts": "Phil Hazelden",
-        "rsvp": 6
+        "rsvp": 6,
+        "venue": "Bayes Ground",
+        "start": "7:00 PM",
+        "end": "8:00 PM",
+        "description": "I think some things people want to do with prediction markets won't really work, for nonrigorous theoretical reasons. I can talk about this and maybe if I'm wrong you can change my mind. I haven't looked to see if anyone's solved the problems, so this might be easy mode for proponents."
       },
       {
         "color": "yellow",
         "title": "Bet on Love: Karaoke!",
         "hosts": "Sinclair Chen",
-        "rsvp": 27
+        "rsvp": 27,
+        "venue": "Bayes Ground",
+        "start": "8:00 PM",
+        "end": "9:00 PM",
+        "description": "We'll be playing the best songs from the Bet on Love soundtrack, including \"On the Market\", \"Blood Boy\", \"Prophecy's End\". We'll also mix in some other appropriate songs -- come and bring suggestions!\n\nAnd if we're very very lucky, we might convince Duncan Horst or Tim Blais to come by and reprise their original roles~"
       },
       {
         "color": "lime",
         "title": "Anthropics Discussion (the Kind of Reasoning, Not the Company)",
         "hosts": "Bentham's Bulldog",
-        "rsvp": 30
+        "rsvp": 30,
+        "venue": "Bayes Attic",
+        "start": "2:30 PM",
+        "end": "3:30 PM",
+        "description": "I've spent way too much time thinking about anthropics!  Come discuss it!  Anthropics is how one reasons about their own existence--involving the doomsday argument, sleeping beauty, and such.  No background knowledge of it is needed. "
       },
       {
         "color": "lime",
         "title": "Procedural Executive Function",
         "hosts": "Damon P-Sasi / Daystar Eld",
-        "rsvp": 48
+        "rsvp": 48,
+        "venue": "Bayes Attic",
+        "start": "3:30 PM",
+        "end": "4:30 PM",
+        "description": "I've been researching executive function for the past two years, and the title is my name for the way you can understand and model Executive Function as a series of steps between the initial moment of Deliberately Wanting to Do a Thing, all the way through to Actually Doing That Thing. \n\nEach of these steps can fail for one reason or another, but understanding your EF as those individual steps can help you pinpoint where things are \"going wrong\" when you fail to do something you want to do, so you can avoid that particular failure mode that prevents you going to the gym or scrolling Twitter instead of writing your blog post."
       },
       {
         "color": "lime",
         "title": "Forecasting Complex Scenarios with Scorable Functions, Using Squiggle",
         "hosts": "Ozzie Gooen",
-        "rsvp": 30
+        "rsvp": 30,
+        "venue": "Bayes Attic",
+        "start": "4:30 PM",
+        "end": "5:30 PM",
+        "description": "Traditional forecasting platforms often limit users to simple, binary or distribution questions. In contrast, programmable functions allow for more nuanced and flexible forecasting.\n\nWith the right tools, you can create functions to estimate things like, \"What will be the price of [every coin] at [any time], conditional on [list of factors], as a probability distribution?\" This workshop will teach you how to write these types of forecasting functions. We'll use the Squiggle Language for this, a language built explicitly for forecasting functions.\n\nWe'll also explore practical applications where these functions can be valuable, from finance to AI."
       },
       {
         "color": "lime",
         "title": "Crafting Great AI Strategy Forecasting Questions, with Scorable Functions",
         "hosts": "Ozzie Gooen",
-        "rsvp": 3
+        "rsvp": 3,
+        "venue": "Bayes Attic",
+        "start": "6:00 PM",
+        "end": "7:00 PM",
+        "description": "A group to discuss what key forecasting questions would be useful on AI strategy. We'll optionally make questions for functions - for example - \"For any time in the next 20 years, what is the likelihood of the nationalization of OpenAI?\" The ideal outcome would be a shareable google document of good questions, for future forecasting work. \n\nhttps://docs.google.com/document/d/15bx-_NLEfLNQWap3MApHazHEoghhjcM7ACoiKMcQbq0/edit?usp=sharing\n\nhttps://forum.effectivealtruism.org/posts/ZWQ5jbLxpd4JtQgu4/scorable-functions-a-format-for-algorithmic-forecasting"
       },
       {
         "color": "lime",
         "title": "Theo Jaffee Interviews Stephen Grugett",
         "hosts": "Stephen Grugett, Theodore Jaffee",
-        "rsvp": 34
+        "rsvp": 34,
+        "venue": "Bayes Attic",
+        "start": "8:00 PM",
+        "end": "9:00 PM",
+        "description": "Live Theo Jaffee Podcast interview of Manifold cofounder Stephen Grugett on Manifold, prediction markets, forecasting, life as a startup founder in SF, etc."
       },
       {
         "color": "lime",
         "title": "Romantic Epistemology",
         "hosts": "Damon P-Sasi / Daystar Eld",
-        "rsvp": 50
+        "rsvp": 50,
+        "venue": "Bayes Attic",
+        "start": "9:00 PM",
+        "end": "10:00 PM",
+        "description": "What do we think we know and why do we think we know it, re: romance? How do tropes in media, along with other cultural forces, shape the way we think and feel about dating and sexuality?"
       },
       {
         "color": "lime",
         "title": "Movie Night",
         "hosts": "Alok Singh",
-        "rsvp": 0
+        "rsvp": 0,
+        "venue": "Bayes Attic",
+        "start": "10:30 PM",
+        "end": "11:30 PM",
+        "description": "Some candidates come to mind"
       },
       {
         "color": "teal",
         "title": "Ukraine War: Forecast and Bet",
         "hosts": "Nathan Young",
-        "rsvp": 20
+        "rsvp": 20,
+        "venue": "Glass Hall",
+        "start": "7:00 PM",
+        "end": "8:00 PM",
+        "description": "Let's get together and discuss the Ukraine war, and bet on how we disagree."
       },
       {
         "color": "cyan",
         "title": "Actually Good Theories of Psychological Growth",
         "hosts": "Chris Lakin",
-        "rsvp": 45
+        "rsvp": 45,
+        "venue": "Walled Garden",
+        "start": "4:30 PM",
+        "end": "5:30 PM",
+        "description": "I think lots about psychological growth and improving social interaction. I have many theories to share. My research is supported by CFAR, and mentored by Kaj Sotala, Alex Zhu, and Brian Toomey the cofounder of Coherence Therapy. (I also apply these insights to AI alignment.) A 14 sentence introduction to my research: https://chrislakin.blog/p/psychological-growth-principles"
       },
       {
         "color": "cyan",
         "title": "Informal Shabbat Services Led by Ricki Heicklen and Dave Kasten",
         "hosts": "Ricki Heicklen, Dave Kasten",
-        "rsvp": 17
+        "rsvp": 17,
+        "venue": "Walled Garden",
+        "start": "7:00 PM",
+        "end": "8:00 PM",
+        "description": "An informal and relaxed Friday night Shabbat service for those interested.  We'll aim for trad egal vibes (mixed seating, everyone who wants to count for a minyan does, fairly traditional-ish tunes) with maybe some twists thrown in.*  \n\nPlease contact us if you can help make a minyan or want to help lead!\n\n*Alas, Dave's experimental project to set Lekha Dodi to the tune of Landsailor was an unqualified failure. "
+      },
+      {
+        "title": "Origami",
+        "hosts": "Chris Farina",
+        "rsvp": 5,
+        "venue": "Glass Hall",
+        "start": "3:30 PM",
+        "end": "4:00 PM",
+        "description": "Learn to make a crane (help us fold 1000!) and learn a few basic/advanced folds. As well as the magic that makes origami work and some cool facts. Beginner friendly, might be in bayes foyer (the origami room to the right when you enter)"
+      },
+      {
+        "title": "Mathematical Universe: Isekai Immortality",
+        "hosts": "Everett Unspecified",
+        "rsvp": 19,
+        "venue": "Gyroscope",
+        "start": "4:00 PM",
+        "end": "5:30 PM",
+        "description": "Physics and cosmology imply several types of infinite universe containing infinite instances of you. Maybe death is impossible because there are always more instances of you that continue on in stranger parts of greater reality.\n\nFormative texts for me here are Tegmark’s The Mathematical Universe and Yudkowsky’s Project Lawful.\n\nBring your questions, ideas, confusions, and fears, and let’s try to understand this.\n"
+      },
+      {
+        "title": "Polymarket Poker Tournament: Satellite Table #1",
+        "hosts": "David Chee",
+        "rsvp": 12,
+        "venue": "Glass Hall",
+        "start": "4:00 PM",
+        "end": "5:30 PM"
+      },
+      {
+        "title": "Festival kickoff",
+        "hosts": "Austin Chen",
+        "rsvp": 149,
+        "venue": "Rat Park",
+        "start": "5:30 PM",
+        "end": "6:00 PM"
+      },
+      {
+        "title": "Dinner",
+        "hosts": "",
+        "rsvp": 82,
+        "venue": "Rat Park",
+        "start": "6:00 PM",
+        "end": "8:00 PM"
+      },
+      {
+        "title": "Could AIs reinvent quantum mechanics if we trained them on historical data?",
+        "hosts": "Owain Evans",
+        "rsvp": 8,
+        "venue": "Gyroscope",
+        "start": "6:00 PM",
+        "end": "6:30 PM",
+        "description": "Short talk and discussion:\nSuppose you train an LLM on data up to 2019. Then you can see if it could predict Covid-19, the Ukraine War, etc. Is this kind of training feasible? How useful is it? What if we train up to 1900?"
+      },
+      {
+        "title": "Blood on the Clocktower",
+        "hosts": "Brendan Hurst",
+        "rsvp": 25,
+        "venue": "Gyroscope",
+        "start": "6:30 PM",
+        "end": "8:00 PM",
+        "description": "The best version of Werewolf/Mafia. No player elimination. Everyone gets a power or some kind of information. Reasoning under uncertainty is just as important as social vibes."
+      },
+      {
+        "title": "Nathan Young City",
+        "hosts": "Nathan Young, N.C. Young",
+        "rsvp": 8,
+        "venue": "Glass Hall",
+        "start": "6:30 PM",
+        "end": "7:00 PM",
+        "description": "What is it like to be Nathan Young? We’ll explore 2 answers to that question. Whatever we want to talk about. We are open to moderation offers from Nate Silver or Nate Soares."
+      },
+      {
+        "title": "Math: differentiating discontinuous functions (inspired by austin)",
+        "hosts": "Alok Singh",
+        "rsvp": 0,
+        "venue": "Walled Garden",
+        "start": "6:30 PM",
+        "end": "7:00 PM",
+        "description": "I'll answer any random math questions and describe how to differentiate a function that's not even continuous"
+      },
+      {
+        "title": "Guided meditation",
+        "hosts": "Yoav Tzfati",
+        "rsvp": 14,
+        "venue": "Bayes Attic",
+        "start": "7:00 PM",
+        "end": "7:30 PM",
+        "description": "Probably a simple mindfulness meditation, maybe Metta (loving kindness). Appropriate for all experience levels."
+      },
+      {
+        "title": "Experimental Conversational Format",
+        "hosts": "Sy Etirabys",
+        "rsvp": 12,
+        "venue": "Venus",
+        "start": "7:30 PM",
+        "end": "8:00 PM",
+        "description": "You slowly gain tokens by passively existing. You spend tokens to talk. If you like someone's contribution, you can give them some of your tokens. I have never tried this, it may be bad."
+      },
+      {
+        "title": "Facilitated Opening Party",
+        "hosts": "Misha Glouberman",
+        "rsvp": 131,
+        "venue": "Rat Park",
+        "start": "8:00 PM",
+        "end": "10:00 PM",
+        "description": "Have you ever thought to yourself “parties are okay, but I wish there was a professional management consultant there to help them run more efficiently”?  If so, you are in for a treat!  Misha Glouberman runs all kinds of events and helps make conferences better places for people to connect. Through a set of structured conversations and exercise you’ll get to meet a bunch of new people, and find the people who want to talk about the same things as you do. "
+      },
+      {
+        "title": "Polymarket Poker Tournament: Satellite Table #2",
+        "hosts": "David Chee",
+        "rsvp": 7,
+        "venue": "Glass Hall",
+        "start": "8:00 PM",
+        "end": "9:30 PM"
+      },
+      {
+        "title": "Experimental Conversational Format",
+        "hosts": "Sy Etirabys",
+        "rsvp": 6,
+        "venue": "Venus",
+        "start": "8:00 PM",
+        "end": "8:30 PM",
+        "description": "You slowly gain tokens by passively existing. You spend tokens to talk. If you like someone's contribution, you can give them some of your tokens. I have never tried this, it may be bad."
+      },
+      {
+        "title": "AI Waifus Are A War Crime",
+        "hosts": "Stephen Weeks",
+        "rsvp": 19,
+        "venue": "Gyroscope",
+        "start": "8:30 PM",
+        "end": "10:00 PM",
+        "description": "How do we avoid the various moral catastrophes involved in creating generally intelligent beings as personal assistants, knowledge workers, etc?\n\nWhat will the world be like for the shoggoths? What is it like to be created to exist as a tool, to be aligned, to be made “helpful” and “harmless”?\n\nWhat could make personal AI with consciousness okay? What should the boundaries be? Bring your ethical judgements."
+      },
+      {
+        "title": "Random math night",
+        "hosts": "Alok Singh",
+        "rsvp": 1,
+        "venue": "Bayes Attic",
+        "start": "10:00 PM",
+        "end": "10:30 PM",
+        "description": "Conversations with mathier bent. "
+      },
+      {
+        "title": "Rationality Cardinality",
+        "hosts": "Kathy Garcia, James Babcock",
+        "rsvp": 29,
+        "venue": "Gyroscope",
+        "start": "10:00 PM",
+        "end": "11:30 PM",
+        "description": "The Optimal Party Game!\n\nCards Against Humanity mechanics, Rationality-themed card content"
       }
-    ],
-    "count": 21
+    ]
   },
   {
     "day": "Saturday, June 8",
@@ -138,394 +369,885 @@
         "color": "rose",
         "title": "Yoga Class",
         "hosts": "Rishi Sharma",
-        "rsvp": 16
+        "rsvp": 16,
+        "venue": "Rat Park",
+        "start": "9:00 AM",
+        "end": "10:00 AM",
+        "description": "Come for an all-levels yoga class.\n\nPlease bring your own mat if you have one, and if you can, bring some extra. If you don't have a mat but want to come, please join anyways and we'll find a way to make it work.\n\nRishi has taught yoga most recently at Stanford Aerobics & Yoga. Prior to that he taught yoga to inmates and guards at the Cook County Jail in Chicago, as well as in schools throughout the South Side of Chicago. He is certified to teach yoga to both adults and children."
       },
       {
         "color": "rose",
         "title": "The Two Cultures",
         "hosts": "Agnes Callard, Robin Hanson",
-        "rsvp": 124
+        "rsvp": 124,
+        "venue": "Rat Park",
+        "start": "10:00 AM",
+        "end": "11:00 AM",
+        "description": "Agnes is a humanist.  Robin belongs to science/tech culture.  In this conversation, they will battle it out."
       },
       {
         "color": "rose",
         "title": "Forecasting AI Risks: Anthropic's Responsible Scaling Policy",
         "hosts": "Ben Mann",
-        "rsvp": 83
+        "rsvp": 83,
+        "venue": "Rat Park",
+        "start": "11:00 AM",
+        "end": "12:00 PM",
+        "description": "Anthropic's Responsible Scaling Policy (RSP) provides a concrete framework for anticipating and mitigating risks from advanced AI systems. I'll share how the RSP defines AI Safety Levels tied to key capabilities, and how our evaluation protocols and safety measures help inform predictions about transformative AI timelines.\n\nThe first half will be a prepared speech; second half will be Q&A"
       },
       {
         "color": "rose",
         "title": "Lunch",
         "hosts": "No hosts",
-        "rsvp": 48
+        "rsvp": 48,
+        "venue": "Rat Park",
+        "start": "12:00 PM",
+        "end": "1:00 PM"
       },
       {
         "color": "rose",
         "title": "Why So Much Disagreement About AI Risk?",
         "hosts": "Josh Rosenberg, Scott Alexander, Misha Glouberman",
-        "rsvp": 131
+        "rsvp": 131,
+        "venue": "Rat Park",
+        "start": "1:00 PM",
+        "end": "2:00 PM",
+        "description": "Opinions about p(doom) from AI seem to be really broadly distributed and in many cases really strongly held. There are lots of smart-seeming people who seem quite certain that risk is high, and lots who seem quite certain that it is low. Processes like FRI’s Existential Risk Persuasion tournament and Adversarial Collaboration project don’t seem to shift anyone’s opinion much. Why is consensus so hard to reach, and beliefs so strongly held and resistant to change?"
       },
       {
         "color": "rose",
         "title": "Fireside Chat with Substack CEO, Chris Best",
         "hosts": "Chris Best, Austin Chen",
-        "rsvp": 104
+        "rsvp": 104,
+        "venue": "Rat Park",
+        "start": "2:00 PM",
+        "end": "3:00 PM"
       },
       {
         "color": "rose",
         "title": "What Will March 2020 for AI Look Like?",
         "hosts": "Dwarkesh Patel",
-        "rsvp": 110
+        "rsvp": 110,
+        "venue": "Rat Park",
+        "start": "3:00 PM",
+        "end": "4:00 PM"
       },
       {
         "color": "rose",
         "title": "Cultural Drift",
         "hosts": "Robin Hanson",
-        "rsvp": 110
+        "rsvp": 110,
+        "venue": "Rat Park",
+        "start": "4:00 PM",
+        "end": "5:00 PM",
+        "description": "The forces that once kept our cultures on track and made them such reliable sources of wisdom—diversity and natural selection—are far weaker now than they were a few centuries ago. Without these forces, our modern culture has been allowed to \"drift off the rails\". Join for an expansion of Robin's recent thinking and writing on cultural drift, including time for Q&A at the end."
       },
       {
         "color": "rose",
         "title": "Q&A with Kalshi Co-Founder & CTO, Luana Lopez Lara",
         "hosts": "Luana Lopes Lara, Noah Sternig",
-        "rsvp": 32
+        "rsvp": 32,
+        "venue": "Rat Park",
+        "start": "5:00 PM",
+        "end": "6:00 PM"
       },
       {
         "color": "orange",
         "title": "How Demographic Collapse Will Affect Geopolitics, Culture, Economics, Infrastructure, and More",
         "hosts": "Malcolm Collins, Simone Collins",
-        "rsvp": 57
+        "rsvp": 57,
+        "venue": "Eigen Hall",
+        "start": "10:00 AM",
+        "end": "11:00 AM",
+        "description": "In the years and decades to come, demographic collapse will signifciantly affect not just economies, but also governments, city infrastructure, politics, and more. Join Malcolm and Simone Collins in a discussion of the inevitable impact falling fertility rates will have on our future."
       },
       {
         "color": "orange",
         "title": "Metaculus: $120K AI Benchmarking Tournament Announcement & Build-A-Bot Workshop",
         "hosts": "Deger Turan, Tom Liptay",
-        "rsvp": 48
+        "rsvp": 48,
+        "venue": "Eigen Hall",
+        "start": "11:00 AM",
+        "end": "12:00 PM",
+        "description": "We're awarding $120,000 in prizes to the best forecasting bots in our upcoming AI Benchmarking Tournament! Get up to speed on the tournament and begin building your own bot to help track the human vs. AI skill gap. Create a bot that's a real competitor and we'll even sponsor you."
       },
       {
         "color": "orange",
         "title": "Fireside Chat with Ajeya Cotra",
         "hosts": "Ajeya Cotra, Daniel Filan",
-        "rsvp": 40
+        "rsvp": 40,
+        "venue": "Eigen Hall",
+        "start": "12:00 PM",
+        "end": "1:00 PM"
       },
       {
         "color": "orange",
         "title": "Hard Questions for Manifold",
         "hosts": "Stephen Grugett, James Grugett, Austin Chen",
-        "rsvp": 56
+        "rsvp": 56,
+        "venue": "Eigen Hall",
+        "start": "1:00 PM",
+        "end": "2:00 PM",
+        "description": "James, Stephen and Austin will go over hard questions that we've fought a lot about, like \"Was Manifold Love a good idea?\" and \"Should Manifold aim for short term profitability or growth?\"\n\nCome and ask your own hard questions in the Q&A portion!"
       },
       {
         "color": "orange",
         "title": "Futuur & Prediction Market Accuracy: Play Money vs Real Money Showdown",
         "hosts": "Tom Bennett",
-        "rsvp": 26
+        "rsvp": 26,
+        "venue": "Eigen Hall",
+        "start": "2:00 PM",
+        "end": "3:00 PM",
+        "description": "Evaluating results from an apples-to-apples comparison of 9,500+ hybrid markets traded over 6 years to finally answer the question: which type of prediction market is more accurate?\n\nAnd of course we've set up a market on Futuur about which will be more accurate, play-money or real-money, which we will resolve during the presentation.  Make your bets here: https://bit.ly/futuur-market"
       },
       {
         "color": "orange",
         "title": "Forecasting the Biological Century",
         "hosts": "Razib Khan",
-        "rsvp": 75
+        "rsvp": 75,
+        "venue": "Eigen Hall",
+        "start": "3:00 PM",
+        "end": "4:00 PM",
+        "description": "The 20th century saw the emergence of biology as a true experimental and theoretical science. The 21st century will see its transformation into information science and engineering, as our ability to extract significance from data will be much greater, allowing for actions that reshape our biological world."
       },
       {
         "color": "orange",
         "title": "Forecasting Has Not Taken Off. What Should We Do About It?",
         "hosts": "Javier Prieto",
-        "rsvp": 39
+        "rsvp": 39,
+        "venue": "Eigen Hall",
+        "start": "4:00 PM",
+        "end": "5:00 PM",
+        "description": "Forecasting and prediction markets have significant potential to improve decision-making, but adoption has been underwhelming so far. In this talk, I will give an overview of (i) hypotheses that have been put forward to explain this fact and (ii) concrete interventions that could increase the usefulness and adoption of forecasting. This is a moderately interactive talk – I plan to use live markets to estimate the impact of various interventions."
       },
       {
         "color": "orange",
         "title": "FutureSearch: a New Question Answering AI",
         "hosts": "Dan Schwarz",
-        "rsvp": 53
+        "rsvp": 53,
+        "venue": "Eigen Hall",
+        "start": "5:00 PM",
+        "end": "6:00 PM",
+        "description": "ChatGPT and Perplexity give superficial answers to questions. When the answers matter, like when you're making a big bet, it is risky to trust them.\nFutureSearch is the first AI tool that lets you get better and better answers, based on how much time and money you want it to spend. Come see what it can do."
       },
       {
         "color": "orange",
         "title": "Free Speech and Prediction Markets",
         "hosts": "Pratik Chougule",
-        "rsvp": 44
+        "rsvp": 44,
+        "venue": "Eigen Hall",
+        "start": "6:00 PM",
+        "end": "7:00 PM",
+        "description": "My talk would focus on the intersection of prediction markets and free speech dilemmas. It would discuss three main sub-topics: (1) Free speech and prediction market accuracy; (2) prediction market community-building and the policing of offensive speech; (3) the First Amendment and the legalization of prediction markets. "
       },
       {
         "color": "orange",
         "title": "Ring Signatures: a Tool for Whistleblowing",
         "hosts": "Kurt  Brown",
-        "rsvp": 10
+        "rsvp": 10,
+        "venue": "Eigen Hall",
+        "start": "7:00 PM",
+        "end": "8:00 PM",
+        "description": "It would be cool to have a robust way to push against preference falsification and the Spiral of Silence. I will present the basics of the ring signature protocol, and talk about my own software project for making it conveniently usable.\n\nNot to be confused with Group Signatures!"
       },
       {
         "color": "orange",
         "title": "Forecasting \"Situational Awareness\" by Leopold Aschenbrenners",
         "hosts": "Shri Samson",
-        "rsvp": 7
+        "rsvp": 7,
+        "venue": "Eigen Hall",
+        "start": "9:00 PM",
+        "end": "10:00 PM",
+        "description": "Leopold's manifesto makes a coherent set of confident claims about how AI development, and policy will occur in the next 5 years. This includes: ASI, AI cybersecurity, AI lab nationalization, AI Manhattan Projects, and a US vs China AI race.\n\nWe'll spend the session operationalizing the claims and assumptions made into forecasts that could go on Manifest or Metaculus. This could be useful for helping people think about AI timelines and scenarios."
       },
       {
         "color": "yellow",
         "title": "Prediction Market Research",
         "hosts": "James Bailey",
-        "rsvp": 33
+        "rsvp": 33,
+        "venue": "Bayes Ground",
+        "start": "9:00 AM",
+        "end": "10:00 AM",
+        "description": "Let's discuss academic-style research on prediction markets. Have an idea for a paper? Want to talk about a cool paper you read, or one you wrote? About the best data we have, or the data you wish we had? Come to Bayes house for an informal morning chat"
       },
       {
         "color": "yellow",
         "title": "Design Your Own Compute Market (Sf Compute)",
         "hosts": "Alex Gajewski",
-        "rsvp": 33
+        "rsvp": 33,
+        "venue": "Bayes Ground",
+        "start": "10:00 AM",
+        "end": "11:00 AM",
+        "description": "A distinctive feature of the current AI wave is its degree of resource intensiveness. By one estimate, the total annual investment in compute will be $8T in 2030.\n\nOther markets of that size are typically quite financialized. Taking oil as an example (about $2T delivered each year), there is a spot price, monthly futures, options, etc.\n\nHow can we design financial markets for compute?\n\nIn this interactive workshop, we will try to map out the space of possible compute markets, and understand their trade-offs."
       },
       {
         "color": "yellow",
         "title": "Breaking the Blank Slate: Social Consequences of Genetic Screening",
         "hosts": "Jonathan Anomaly",
-        "rsvp": 60
+        "rsvp": 60,
+        "venue": "Bayes Ground",
+        "start": "11:00 AM",
+        "end": "12:00 PM",
+        "description": "We will soon see the emergence of embryo selection for socially valued traits like intelligence and personality. Once this happens, even those who fail to avail themselves of the tech will be nudged into considering that it only works because of the heritability of traits parents care about. Public knowledge of this technology will cause preference cascades among elites to move from accepting the blank slate view of human nature to embracing the hereditarian view. "
       },
       {
         "color": "yellow",
         "title": "How to Make Superbabies",
         "hosts": "Gene Smith",
-        "rsvp": 82
+        "rsvp": 82,
+        "venue": "Bayes Ground",
+        "start": "12:00 PM",
+        "end": "1:00 PM",
+        "description": "There have been several notable breakthroughs in the last 6 months which make it significantly more feasible that we could improve the welfare of future generations through genetics. This talk will cover these recent breakthroughs and what kind of testing we would need to do to ensure such technology could be used safely in humans."
       },
       {
         "color": "yellow",
         "title": "How to Reform Science",
         "hosts": "Stuart Buck",
-        "rsvp": 56
+        "rsvp": 56,
+        "venue": "Bayes Ground",
+        "start": "1:00 PM",
+        "end": "2:00 PM",
+        "description": "Too much of today's scientific enterprise is embedded within the university system. There are too many barriers (both personal and institutional) to doing creative and high-risk work. We need to rethink our scientific institutions and federal policy."
       },
       {
         "color": "yellow",
         "title": "Are Language Models on the Verge of Superhuman Forecasting?",
         "hosts": "Danny Halawi",
-        "rsvp": 37
+        "rsvp": 37,
+        "venue": "Bayes Ground",
+        "start": "2:00 PM",
+        "end": "3:00 PM",
+        "description": "Recent studies suggest that language models are becoming increasingly competitive with humans in event forecasting. However, they have not yet reached superhuman levels. Here, I explore their current forecasting capabilities and what advancements are needed to close the gap."
       },
       {
         "color": "yellow",
         "title": "Programmable Forecasting Functions: Challenges and Potential",
         "hosts": "Ozzie Gooen",
-        "rsvp": 19
+        "rsvp": 19,
+        "venue": "Bayes Ground",
+        "start": "3:00 PM",
+        "end": "4:00 PM",
+        "description": "Traditional forecasting platforms are limited to simple, predefined questions. However, programmable functions allow for complex, conditional, and multi-variable forecasts. Over the past year, we've been adapting Squiggle Hub to support these arbitrary function definitions for forecasting.\n\nIn this technical talk, we'll discuss the challenges and solutions we encountered while creating a platform that supports programmable forecasting functions.\n\nWe'll also explore the potential applications of these functions across various domains. While parts of the talk will be geared towards developers, we aim to provide valuable insights for anyone interested in the future of forecasting."
       },
       {
         "color": "yellow",
         "title": "YouTube: Free Eyeballs Are Free $100 Bills",
         "hosts": "Justin Kuiper",
-        "rsvp": 50
+        "rsvp": 50,
+        "venue": "Bayes Ground",
+        "start": "4:00 PM",
+        "end": "5:00 PM",
+        "description": "Lessons learned from 7 years, 150 videos, 500 million views, and 1 Streamy Award\n\nYou have a message that you want to broadcast to the world. (Maybe that message is \"You can hire me for a job; here are my skills\" or  \"here's why you should support my preferred housing policy\" or \"here's what my $200/mo SaaS product can do for your business.\")\n\nTopics include:\n\n- Why it's still worth starting a YouTube channel in 2024 (or, \"proof that the demand still outstrips supply, and other whitepills for content makers\")\n- The arbitrage opportunity with 500% spread (or, the difference between \"impressions\" and \"views\")\n- What I learned from 5 years of getting low attention-span users (children) to watch educational YouTube videos by disguising them as entertainment\n- The ridiculously low criteria for satisficing on video quality"
       },
       {
         "color": "yellow",
         "title": "Neopets: the Feudal Lords Reigning Over a Dying World",
         "hosts": "Tracing Woodgrains",
-        "rsvp": 75
+        "rsvp": 75,
+        "venue": "Bayes Ground",
+        "start": "5:00 PM",
+        "end": "6:00 PM",
+        "description": "Underneath a cheery exterior briefly encountered by countless young people, Neopets has the bones of a capitalist hellscape powerful enough to keep a core of ruthless traders coming back for decades. What draws people to throw themselves into a digital economy, and what results after decades of increasingly hands-off management of a world too ambitious and sprawling for its owners to handle?"
       },
       {
         "color": "yellow",
         "title": "Running an Internal Prediction Market",
         "hosts": "Keri Warr",
-        "rsvp": 43
+        "rsvp": 43,
+        "venue": "Bayes Ground",
+        "start": "6:00 PM",
+        "end": "7:00 PM",
+        "description": "In which Keri tells the tale of building Anthropic's internal prediction market platform, how it differs from a public market, and the priciples that make it useful: simplicity, a focus on decision-makers, and balancing collaboration with competition."
       },
       {
         "color": "lime",
         "title": "Meme Markets: Embracing the Primordial Chaos",
         "hosts": "Kelton Madden, Michael Elias",
-        "rsvp": 17
+        "rsvp": 17,
+        "venue": "Bayes Attic",
+        "start": "9:30 AM",
+        "end": "10:30 AM",
+        "description": "Are memecoins a sensemaking tool? We'll investigate this year's \"memecoin supercycle\" through epistemological and cultural lenses."
       },
       {
         "color": "lime",
         "title": "The Economics of Envy",
         "hosts": "Brian Chau",
-        "rsvp": 30
+        "rsvp": 30,
+        "venue": "Bayes Attic",
+        "start": "11:00 AM",
+        "end": "12:00 PM",
+        "description": "How do you economically model someone who values other peoples' losses more than they value their own gain? Let's label this class of economic preference envy (imperfect, but useful). How does envy relate to other economic factors, political theory, and long-term economic growth?"
       },
       {
         "color": "lime",
         "title": "Debate: Pause AI, or Accelerate?",
         "hosts": "Holly Elmore, Brian Chau",
-        "rsvp": 61
+        "rsvp": 61,
+        "venue": "Bayes Attic",
+        "start": "12:00 PM",
+        "end": "1:00 PM",
+        "description": "Should AI development be slowed down? Sped up? Join Holly Elmore of Pause AI and Brian Chau of Alliance for the Future as they go head to head. In this live debate, they will each have a chance to defend their opinions about how the future of AI should go, seek to persuade the audience of their views, and see what areas they actually agree on!"
       },
       {
         "color": "lime",
         "title": "The Art of Hygge",
         "hosts": "Haven Harms",
-        "rsvp": 27
+        "rsvp": 27,
+        "venue": "Bayes Attic",
+        "start": "1:00 PM",
+        "end": "2:00 PM",
+        "description": "Hygge ['hoo-gah', or 'heu-gah'] (origin: Danish/Norwegian): A quality of coziness and comfortable conviviality that engenders a feeling of contentment or well-being (regarded as a defining characteristic of Danish culture). -Oxford Dictionary\n \nWe’ll discuss the concept of hygge, how you can incorporate it more into your life (and why you might want to), then practice it together! \n\nI encourage you to bring a journal and something that helps you feel comfy/cozy (e.g., plushies, blankets, slippers).\n\nLet’s get cozy! :) "
       },
       {
         "color": "lime",
         "title": "The Estimation Game",
         "hosts": "Adam Binks",
-        "rsvp": 31
+        "rsvp": 31,
+        "venue": "Bayes Attic",
+        "start": "2:00 PM",
+        "end": "3:00 PM",
+        "description": "Estimate the answers to questions like \"How many piano tuners are in New York?\" in a Manifold-exclusive edition of The Estimation Game! Play in a team - you can find teammates at the session, or show up with your friends - and try and top the leaderboard by making calibrated estimates."
       },
       {
         "color": "lime",
         "title": "How to Talk to People About Forecasting",
         "hosts": "Misha Glouberman",
-        "rsvp": 30
+        "rsvp": 30,
+        "venue": "Bayes Attic",
+        "start": "3:00 PM",
+        "end": "4:00 PM",
+        "description": "Do you get involved in conversations around forecasting you’d like to go better? Are there colleagues, bosses, investors, etc, you wish better understood why forecasting is so valuable? Misha, running this session, knows just a tiny bit about forecasting, but a lot about how to talk to people who see things differently than you do. Get techniques you can use to make these conversations go better!"
       },
       {
         "color": "lime",
         "title": "Synthetic Biology: Fictions & Futures",
         "hosts": "Niko McCarty, Xander Balwit",
-        "rsvp": 50
+        "rsvp": 50,
+        "venue": "Bayes Attic",
+        "start": "4:00 PM",
+        "end": "5:00 PM",
+        "description": "During this informal discussion with the team behind Asimov Press, they will introduce the central ideas behind synthetic biology and discuss which capabilities are \"fact\" and which are \"fiction.\" They are also eager to answer questions about science writing and editing. So whether you're drawn by synthetic biology or writing, this conversation can act as a starting point for additional conversations throughout the weekend."
       },
       {
         "color": "lime",
         "title": "Theo Jaffee Interviews Austin Chen",
         "hosts": "Theodore Jaffee, Austin Chen",
-        "rsvp": 16
+        "rsvp": 16,
+        "venue": "Bayes Attic",
+        "start": "5:00 PM",
+        "end": "6:00 PM",
+        "description": "Theo Jaffee, of the Theo Jaffee Podcast, interviews Austin Chen on Manifund, EA and the EA funding ecosystem, AI and AI safety, Manifest itself, and a few other things."
       },
       {
         "color": "lime",
         "title": "Ambitious Epistemic Technologies",
         "hosts": "Ozzie Gooen",
-        "rsvp": 25
+        "rsvp": 25,
+        "venue": "Bayes Attic",
+        "start": "7:00 PM",
+        "end": "8:00 PM",
+        "description": "We'll discuss and debate over what sorts of ambitious epistemic technologies will be the most exciting in the next 5-20 years. \n1. Ozzie will give a short presentation about key parts of the space.\n2. There will be a Google Document, for people to collaborate on ideas and discussion.\n3. We'll move into a group discussion."
       },
       {
         "color": "lime",
         "title": "Romantic Epistemology",
         "hosts": "Damon P-Sasi / Daystar Eld",
-        "rsvp": 43
+        "rsvp": 43,
+        "venue": "Bayes Attic",
+        "start": "9:00 PM",
+        "end": "10:00 PM",
+        "description": "What do we think we know and why do we think we know it, re: romance? How do tropes in media, along with other cultural forces, shape the way we think and feel about dating and sexuality?"
       },
       {
         "color": "lime",
         "title": "Manifold.lol - Comedy Night",
         "hosts": "Emma Liddell",
-        "rsvp": 30
+        "rsvp": 30,
+        "venue": "Bayes Attic",
+        "start": "10:30 PM",
+        "end": "11:30 PM",
+        "description": "Manifold.lol is part prediction market, part comedy night! \n\nPlease visit manifold.lol * to bet on which topics any comedian will be able to make a joke about that will make the audience laugh.\n\nAt the start of the event, the market will close and all attendees will be invited (but not required) to perform a stand-up set or standalone joke. Attendees will be able to go as many times as they wish. \n\nThe judge(s) will, at their sole collective discretion, determine which jokes 'the audience' has laughed at and which topics those jokes were sufficiently about.\n\n* Also available at https://manifold.markets/EmmaLiddell/during-manifoldlol-will-the-audienc?r=RW1tYUxpZGRlbGw"
       },
       {
         "color": "green",
         "title": "Founders Meetup",
         "hosts": "Jonathan Miller, Yingru Qiu",
-        "rsvp": 24
+        "rsvp": 24,
+        "venue": "Gyroscope",
+        "start": "10:00 AM",
+        "end": "11:00 AM",
+        "description": "Anyone else at Manifest on the startup founder/cofounder journey? I'd love to meet fellow cofounders here and talk about where everyone's at and how things are going."
       },
       {
         "color": "green",
         "title": "Events Should Be Good, Not Bad",
         "hosts": "Austin Chen, Misha Glouberman",
-        "rsvp": 48
+        "rsvp": 48,
+        "venue": "Gyroscope",
+        "start": "11:00 AM",
+        "end": "12:00 PM",
+        "description": "Great conferences and events can be amazing. Bad conferences and events can be soul-crushingly horrible. Misha is a guy who runs a lot of events, and has lots of ways to make them fun and useful and meaningful. Austin is one of the people running Manifest, the amazing event that you are at! Join them in a group conversation about conferences and events - what do you love, what do you hate, how can we make them better?"
       },
       {
         "color": "green",
         "title": "Kalshi Office Hours",
         "hosts": "Luana Lopes Lara, Noah Sternig",
-        "rsvp": 22
+        "rsvp": 22,
+        "venue": "Gyroscope",
+        "start": "12:00 PM",
+        "end": "1:00 PM",
+        "description": "Come talk to the folks from Kalshi!"
       },
       {
         "color": "green",
         "title": "Sovereign Office Hours",
         "hosts": "Louis Clouatre-Latraverse, Michael Wheatley",
-        "rsvp": 13
+        "rsvp": 13,
+        "venue": "Gyroscope",
+        "start": "2:00 PM",
+        "end": "3:00 PM",
+        "description": "Office hours with Manifest's Gold sponsor, Sovereign. Read more about Sovereign here: bit.ly/sovereign-hiring"
       },
       {
         "color": "green",
         "title": "Futarchy and Conditional Markets",
         "hosts": "Kelvin Santos, Robin Hanson, Austin Chen",
-        "rsvp": 58
+        "rsvp": 58,
+        "venue": "Gyroscope",
+        "start": "3:00 PM",
+        "end": "4:00 PM",
+        "description": "We will focus on conditional markets and futures, where participants can bet on how outcomes (stock prices, inflation rates, commodities futures) are expected to vary depending on particular conditions (who wins an election, interest rate changes, etc).\n\nGoing more deeply, we will discuss how conditional markets can be used to make decisions, in what is called decision markets or futarchy, and how this can improve the governance of autonomous organizations."
       },
       {
         "color": "green",
         "title": "Repolarize American Politics: How to Make the Two-Party System Irrelevant",
         "hosts": "Barak Gila",
-        "rsvp": 20
+        "rsvp": 20,
+        "venue": "Gyroscope",
+        "start": "4:00 PM",
+        "end": "5:00 PM",
+        "description": "With negative polarization at an all-time high and memes like prediction markets and ranked-choice voting gaining steam, American Politics Company believes the time is right to redefine political affiliation in a nonpartisan way. Come learn how America's loss of a shared informational commons and toxic polarization has been 50 years in the making, how Manifold is already improving politics in San Francisco, and how we can all express our political identities proudly, in a healthier way. Can read more context at americanpolitics.co"
       },
       {
         "color": "green",
         "title": "Build the Future of Universities with Me",
         "hosts": "Madhu Sriram",
-        "rsvp": 13
+        "rsvp": 13,
+        "venue": "Gyroscope",
+        "start": "7:00 PM",
+        "end": "8:00 PM",
+        "description": "We need new university models. If you could design your own college experience, what would it look like? In this workshop, participants will collaboratively design solutions and strategies for building a university that reimagines learning and research for the 21st century."
       },
       {
         "color": "green",
         "title": "Life as a Professional Gambler: Intro to Advantage Play",
         "hosts": "Vivienne Bellerose",
-        "rsvp": 40
+        "rsvp": 40,
+        "venue": "Gyroscope",
+        "start": "8:00 PM",
+        "end": "9:00 PM",
+        "description": "I’ve worked as a professional casino gambler for the past 2.5 years. This talk will cover the basics of what is referred to as advantage play: playing games against the house for an advantage but without cheating. The main forms of advantage play I have done are blackjack (card counting) and video poker. I will cover the theory of how they work and the practice of doing it for a living.\n\nPlease, NO RECORDING or publishing of my picture in association with the topic."
       },
       {
         "color": "green",
         "title": "Rationality Cardinality",
         "hosts": "James Babcock",
-        "rsvp": 6
+        "rsvp": 6,
+        "venue": "Gyroscope",
+        "start": "9:00 PM",
+        "end": "10:00 PM",
+        "description": "The Optimal Party Game!\n\nCards Against Humanity mechanics, Rationality-themed card content"
       },
       {
         "color": "teal",
         "title": "Situational Awareness by Leopold Discussion Group",
         "hosts": "Raj Thimmiah",
-        "rsvp": 17
+        "rsvp": 17,
+        "venue": "Glass Hall",
+        "start": "10:00 AM",
+        "end": "11:00 AM",
+        "description": "Leopold Aschenbrenner's Situational Awareness makes aggressive and important predictions about the next decade. We'll spend some time reading and then discussing it. I'll try to bring some printouts but otherwise bring a laptop or other device you can read it on.\n\nWeb version: https://situational-awareness.ai/\nPDF version: https://situational-awareness.ai/wp-content/uploads/2024/06/situationalawareness.pdf \nOriginal twitter release: https://twitter.com/leopoldasch/status/1798016486700884233"
       },
       {
         "color": "teal",
         "title": "Why Are You Stuck on Your Novel?",
         "hosts": "Sy Etirabys",
-        "rsvp": 3
+        "rsvp": 3,
+        "venue": "Glass Hall",
+        "start": "3:00 PM",
+        "end": "4:00 PM",
+        "description": "I write fiction. Perhaps you write fiction. You are stuck somewhere. What component is missing? Where can you get it? Let us debug."
       },
       {
         "color": "cyan",
         "title": "Meetup: Manifold Whales & Degens",
         "hosts": "No hosts",
-        "rsvp": 21
+        "rsvp": 21,
+        "venue": "Walled Garden",
+        "start": "11:00 AM",
+        "end": "12:00 PM",
+        "description": "You've seen them on the site, complained about them on Discord, and lost (or gained) untold sums of mana thanks to them -- now it's time to meet them in person! Come hang out with the whales, degens, and others who seem to be a bit too unhealthily addicted to Manifold, at this casual meetup in the garden."
       },
       {
         "color": "cyan",
         "title": "Psychological Growth 2",
         "hosts": "Chris Lakin",
-        "rsvp": 22
+        "rsvp": 22,
+        "venue": "Walled Garden",
+        "start": "3:00 PM",
+        "end": "4:00 PM",
+        "description": "I think lots about psychological growth and improving social interaction. I have many theories to share. My research is supported by CFAR, and mentored by Kaj Sotala, Alex Zhu, and Brian Toomey the cofounder of Coherence Therapy. (I also apply these insights to AI alignment.) A 14 sentence introduction to my research: https://chrislakin.blog/p/psychological-growth-principles"
       },
       {
         "color": "cyan",
         "title": "Deliberate Grieving (And/Or Ruthlessness And/Or \"Whoops!\")",
         "hosts": "Raymond Arnold",
-        "rsvp": 3
+        "rsvp": 3,
+        "venue": "Walled Garden",
+        "start": "10:00 PM",
+        "end": "11:00 PM",
+        "description": "We'll start at Walled Garden but find the nearest empty firepit to huddle around.\n\nSometimes there's something important to you that isn't there anymore, or maybe never was. Different people have different ways of dealing with that. We'll have a low-key chat about it, hopefully around a cozy fire."
       },
       {
         "color": "blue",
         "title": "The Operant Conditioning Game",
         "hosts": "Brendan Hurst",
-        "rsvp": 1
+        "rsvp": 1,
+        "venue": "Venus",
+        "start": "12:00 PM",
+        "end": "1:00 PM",
+        "description": "Clicker train your friends in real time!"
       },
       {
         "color": "blue",
         "title": "Blood on the Clocktower",
         "hosts": "Brendan Hurst",
-        "rsvp": 11
+        "rsvp": 11,
+        "venue": "Venus",
+        "start": "2:00 PM",
+        "end": "3:00 PM",
+        "description": "The best version of Werewolf/Mafia. No player elimination. Everyone gets a power or some kind of information. Reasoning under uncertainty is just as important as social vibes."
       },
       {
         "color": "blue",
         "title": "Blood on the Clocktower",
         "hosts": "Brendan Hurst",
-        "rsvp": 7
+        "rsvp": 7,
+        "venue": "Venus",
+        "start": "3:00 PM",
+        "end": "4:00 PM",
+        "description": "The best version of Werewolf/Mafia. No player elimination. Everyone gets a power or some kind of information. Reasoning under uncertainty is just as important as social vibes."
       },
       {
         "color": "blue",
         "title": "Blood on the Clocktower",
         "hosts": "Brendan Hurst",
-        "rsvp": 5
+        "rsvp": 5,
+        "venue": "Venus",
+        "start": "4:00 PM",
+        "end": "5:00 PM",
+        "description": "The best version of Werewolf/Mafia. No player elimination. Everyone gets a power or some kind of information. Reasoning under uncertainty is just as important as social vibes."
       },
       {
         "color": "blue",
         "title": "Mira Gathering",
         "hosts": "Max Conradt",
-        "rsvp": 7
+        "rsvp": 7,
+        "venue": "Venus",
+        "start": "5:00 PM",
+        "end": "6:00 PM",
+        "description": "For followers of Mira: https://manifold.markets/Mira_ aka https://twitter.com/_mira___mira_. "
       },
       {
         "color": "blue",
         "title": "Blood on the Clocktower",
         "hosts": "Brendan Hurst",
-        "rsvp": 5
+        "rsvp": 5,
+        "venue": "Venus",
+        "start": "6:00 PM",
+        "end": "7:00 PM",
+        "description": "The best version of Werewolf/Mafia. No player elimination. Everyone gets a power or some kind of information. Reasoning under uncertainty is just as important as social vibes."
       },
       {
         "color": "blue",
         "title": "Blood on the Clocktower",
         "hosts": "Brendan Hurst",
-        "rsvp": 1
+        "rsvp": 1,
+        "venue": "Venus",
+        "start": "7:00 PM",
+        "end": "8:00 PM",
+        "description": "The best version of Werewolf/Mafia. No player elimination. Everyone gets a power or some kind of information. Reasoning under uncertainty is just as important as social vibes."
       },
       {
         "color": "blue",
         "title": "Blood on the Clocktower",
         "hosts": "Brendan Hurst",
-        "rsvp": 0
+        "rsvp": 0,
+        "venue": "Venus",
+        "start": "8:30 PM",
+        "end": "9:30 PM",
+        "description": "The best version of Werewolf/Mafia. No player elimination. Everyone gets a power or some kind of information. Reasoning under uncertainty is just as important as social vibes."
       },
       {
         "color": "blue",
         "title": "Blood on the Clocktower",
         "hosts": "Brendan Hurst",
-        "rsvp": 0
+        "rsvp": 0,
+        "venue": "Venus",
+        "start": "9:30 PM",
+        "end": "10:30 PM",
+        "description": "The best version of Werewolf/Mafia. No player elimination. Everyone gets a power or some kind of information. Reasoning under uncertainty is just as important as social vibes."
       },
       {
         "color": "blue",
         "title": "Possible Blood on the Clocktower?",
         "hosts": "Brendan Hurst",
-        "rsvp": 0
+        "rsvp": 0,
+        "venue": "Venus",
+        "start": "10:30 PM",
+        "end": "11:30 PM",
+        "description": "If there's overwhelming demand, I'll run another game, otherwise I'll go to the comedy show. If we have more than 10 we might need to run the game outside/another venue.\n\n7-12 players. 11+ players will take 90 minutes+"
+      },
+      {
+        "title": "Origami",
+        "hosts": "Chris Farina",
+        "rsvp": 5,
+        "venue": "Gyroscope",
+        "start": "9:30 AM",
+        "end": "10:00 AM",
+        "description": "Learn to make a crane (help us fold 1000!) and learn a few basic/advanced folds. As well as the magic that makes origami work and some cool facts. Beginner friendly, might be in bayes foyer (the origami room to the right when you enter)"
+      },
+      {
+        "title": "Measuring Variance in the Accuracy of Prediction Markets",
+        "hosts": "Abigail Donahue",
+        "rsvp": 21,
+        "venue": "Bayes Attic",
+        "start": "10:30 AM",
+        "end": "11:00 AM",
+        "description": "I will share findings from my senior thesis where I explore a model for evaluating the accuracy of binary prediction markets. This approach involves categorizing predictions into bins based on expected probabilities and incorporating 95% confidence intervals to capture uncertainty. I will discuss the strengths and weaknesses of this model and the interesting results it produces!"
+      },
+      {
+        "title": "Polymarket Poker Tournament: Satellite Table #3",
+        "hosts": "David Chee",
+        "rsvp": 8,
+        "venue": "Glass Hall",
+        "start": "11:30 AM",
+        "end": "1:00 PM"
+      },
+      {
+        "title": "Speed Friending",
+        "hosts": "Ricki Heicklen",
+        "rsvp": 23,
+        "venue": "Walled Garden",
+        "start": "12:00 PM",
+        "end": "12:30 PM",
+        "description": "meet people. lots of 'em. fast."
+      },
+      {
+        "title": "Lunch",
+        "hosts": "",
+        "rsvp": 18,
+        "venue": "Aumann Hall",
+        "start": "12:00 PM",
+        "end": "2:00 PM"
+      },
+      {
+        "title": "Emergent gameplay and narrative",
+        "hosts": "Patrick McKenzie, Justin Kuiper",
+        "rsvp": 51,
+        "venue": "Gyroscope",
+        "start": "1:00 PM",
+        "end": "1:30 PM",
+        "description": "Patrick McKenzie (patio11 on the internets) and Justin Kuiper (Idol Manager game designer and scriptwriter) discuss video games"
+      },
+      {
+        "title": "Banking + Dragons: analyzing The Dagger and the Coin",
+        "hosts": "Patrick McKenzie, Justin Kuiper",
+        "rsvp": 31,
+        "venue": "Gyroscope",
+        "start": "1:30 PM",
+        "end": "2:00 PM",
+        "description": "A conversation about Daniel Abraham’s fantasy novel series, The Dagger and the Coin. Lessons on epistemic humility, markets for violence, currency exchange, and negotiating with dragons.\n\nNote: This discussion may spoil plot points from The Dagger and the Coin."
+      },
+      {
+        "title": "Warcasting setup",
+        "hosts": "Nathan Young",
+        "rsvp": 4,
+        "venue": "Glass Hall",
+        "start": "2:00 PM",
+        "end": "2:30 PM",
+        "description": "Setup for the following session."
+      },
+      {
+        "title": "Warcasting: Taiwan",
+        "hosts": "Nathan Young",
+        "rsvp": 13,
+        "venue": "Glass Hall",
+        "start": "2:30 PM",
+        "end": "3:00 PM",
+        "description": "Forecast the invasion of Taiwan then discuss with others where you disagree. Lots of whiteboards. "
+      },
+      {
+        "title": "Polymarket Poker Tournament: Satellite Table #4",
+        "hosts": "David Chee",
+        "rsvp": 6,
+        "venue": "Glass Hall",
+        "start": "4:00 PM",
+        "end": "5:30 PM"
+      },
+      {
+        "title": "Metastrategy: Predicting One-Shot Strategy Games",
+        "hosts": "Raymond Arnold",
+        "rsvp": 11,
+        "venue": "Walled Garden",
+        "start": "4:00 PM",
+        "end": "5:30 PM",
+        "description": "Jump into a strategy videogame you've never played before. Each turn, make as many predictions as you can about the rules of the game, and what will be strategically relevant.\n\nTraining for the general art of metastrategy. Requires a laptop and ~$20."
+      },
+      {
+        "title": "Team Trivia",
+        "hosts": "Ameet Gaitonde",
+        "rsvp": 32,
+        "venue": "Gyroscope",
+        "start": "5:00 PM",
+        "end": "7:00 PM",
+        "description": "Team up in groups of up to 6 people to test your collective knowledge. 6 rounds + a Final question covering a range of topics."
+      },
+      {
+        "title": "Guided meditation",
+        "hosts": "Yoav Tzfati",
+        "rsvp": 19,
+        "venue": "Walled Garden",
+        "start": "5:30 PM",
+        "end": "6:00 PM",
+        "description": "Probably a simple mindfulness meditation, maybe Metta (loving kindness). Appropriate for all experience levels."
+      },
+      {
+        "title": "Dinner",
+        "hosts": "",
+        "rsvp": 68,
+        "venue": "Rat Park",
+        "start": "6:00 PM",
+        "end": "8:00 PM"
+      },
+      {
+        "title": "[Optional] Clinical Trial Journal Club Signup",
+        "hosts": "Jasmine Ren",
+        "rsvp": 13,
+        "venue": "Bayes Attic",
+        "start": "6:00 PM",
+        "end": "6:30 PM",
+        "description": "I want to learn to read clinical trial papers and develop the skills to discern the quality of a trial. I also want to do it with other people! This is a Schelling point for us to discuss logistics.\n\nIf you can't make it to this session, that's totally fine, just sign up at http://bit.ly/3VfXZkV"
+      },
+      {
+        "title": "Polymarket Poker Tournament: Satellite Table #5",
+        "hosts": "David Chee",
+        "rsvp": 10,
+        "venue": "Glass Hall",
+        "start": "6:00 PM",
+        "end": "7:30 PM"
+      },
+      {
+        "title": "Taking 30 more pills a day to live forever: more pills",
+        "hosts": "Paul Han",
+        "rsvp": 25,
+        "venue": "Walled Garden",
+        "start": "6:30 PM",
+        "end": "7:00 PM",
+        "description": "bryan johnson is my lockscreen"
+      },
+      {
+        "title": "Lightning Talks",
+        "hosts": "Ricki Heicklen",
+        "rsvp": 76,
+        "venue": "Bayes Ground",
+        "start": "7:00 PM",
+        "end": "8:30 PM",
+        "description": "Come for lightning talks! Each speaker be given 2 minutes to give an impromptu talk on the topic of their choice, in front of everyone else. Share your latest obsession or favorite hobbyhorse with the rest of Manifest!"
+      },
+      {
+        "title": "Night market",
+        "hosts": "Rachel Weinberg",
+        "rsvp": 148,
+        "venue": "Rat Park",
+        "start": "8:00 PM",
+        "end": "10:00 PM",
+        "description": "Come to the night market to buy, sell, shill, taste, swab, hire, barter, play, and more. Go to https://bit.ly/manifest-night-market to book a table!"
+      },
+      {
+        "title": "Songs to sock wrestle to",
+        "hosts": "Lydia La Roux",
+        "rsvp": 19,
+        "venue": "Bayes Attic",
+        "start": "8:00 PM",
+        "end": "8:30 PM",
+        "description": "Bring one sock, an instrument, and your fighting spirit "
+      },
+      {
+        "title": "Polymarket Poker Tournament: Satellite Table #6",
+        "hosts": "David Chee",
+        "rsvp": 4,
+        "venue": "Glass Hall",
+        "start": "8:00 PM",
+        "end": "9:30 PM"
+      },
+      {
+        "title": "Night market",
+        "hosts": "Rachel Weinberg",
+        "rsvp": 148,
+        "venue": "Walled Garden",
+        "start": "8:00 PM",
+        "end": "10:00 PM",
+        "description": "Come to the night market to buy, sell, shill, taste, swab, hire, barter, play, and more. Go to https://bit.ly/manifest-night-market to book a table!"
+      },
+      {
+        "title": "Spicy Karaoke Kompetition",
+        "hosts": "Ian Phillips",
+        "rsvp": 45,
+        "venue": "Bayes Ground",
+        "start": "8:30 PM",
+        "end": "10:30 PM",
+        "description": "Give it your best, give it your worst, give it your all, give it like AI [might/might not] kill us all.\n\nPlace your bets & add yourself:\nhttps://manifold.markets/ian/who-will-win-manifests-karaoke-komp"
+      },
+      {
+        "title": "High school Calc from diff POV",
+        "hosts": "Alok Singh",
+        "rsvp": 3,
+        "venue": "Bayes Attic",
+        "start": "8:30 PM",
+        "end": "9:00 PM",
+        "description": "Only prereq is elementary calculus.\n\nYou will learn how to do something that’s supposed to be impossible: derivative of a discontinuous function AT the discontinuity."
+      },
+      {
+        "title": "Scary stories in the dark",
+        "hosts": "Stephen Weeks",
+        "rsvp": 6,
+        "venue": "Rat Park",
+        "start": "10:00 PM",
+        "end": "11:30 PM",
+        "description": "Let’s share our scariest stories from the past and nightmares of the future.\n\nDeath, cults, conspiracies, mind control, existential horror, AI Doom, S-Risk scenarios.\n\nWhat goes bump in the night out there? What’s the scariest thing you’ve ever experienced? What makes you question reality? What are some of the ways life in this world can go wrong? What does Evil look like?\n\nPlease turn your electronics off for this conversation."
+      },
+      {
+        "title": "LGBT/gay/bi/queer meetup",
+        "hosts": "Samuel Chen, Dony Christie",
+        "rsvp": 14,
+        "venue": "Gyroscope",
+        "start": "10:00 PM",
+        "end": "10:30 PM",
+        "description": "not an orgy"
+      },
+      {
+        "title": "Draw Bluey",
+        "hosts": "keltan O’Shea, Isabella Jones, Isaac Henry Linn, August Veix",
+        "rsvp": 7,
+        "venue": "Bayes Ground",
+        "start": "11:00 PM",
+        "end": "11:30 PM",
+        "description": "Draw (and watch) Bluey\n\n*Australians mandatory attendance "
       }
-    ],
-    "count": 65
+    ]
   },
   {
     "day": "Sunday, June 9",
@@ -534,291 +1256,767 @@
         "color": "rose",
         "title": "Yoga Class",
         "hosts": "Rishi Sharma",
-        "rsvp": 8
+        "rsvp": 8,
+        "venue": "Rat Park",
+        "start": "9:00 AM",
+        "end": "10:00 AM",
+        "description": "Come for an all-levels yoga class.\n\nPlease bring your own mat if you have one, and if you can, bring some extra. If you don't have a mat but want to come, please join anyways and we'll find a way to make it work.\n\nRishi has taught yoga most recently at Stanford Aerobics & Yoga. Prior to that he taught yoga to inmates and guards at the Cook County Jail in Chicago, as well as in schools throughout the South Side of Chicago. He is certified to teach yoga to both adults and children."
       },
       {
         "color": "rose",
         "title": "Discount Rates",
         "hosts": "Byrne Hobart",
-        "rsvp": 68
+        "rsvp": 68,
+        "venue": "Rat Park",
+        "start": "10:00 AM",
+        "end": "11:00 AM",
+        "description": "When we make decisions about the future, we have to ask what the tradeoff is between getting something today and getting more of it in the future. If we're utilitarians, our future is dominated by small probabilities of a large number of very happy people, and by the risk of extinction. But even under other ethical systems, we need some way to trade off between certain present benefits and potential future ones. We even need this framing to think about predictions—asset prices that contain information about future expectations also embed expectations about the required rate of return from betting on them."
       },
       {
         "color": "rose",
         "title": "History Lecture with Live Betting",
         "hosts": "Michael Wheatley",
-        "rsvp": 50
+        "rsvp": 50,
+        "venue": "Rat Park",
+        "start": "11:00 AM",
+        "end": "12:00 PM",
+        "description": "Participants bet on the outcome of a historic event while I tell the story.\n\nThis event is for:\n- degenerate gamblers who don't watch sports\n- history lovers who hate spoilers\n- traders who like making money by betting on events after they've already happened\n- people who think about Rome every day and wishes the 21st-century economy had a way to pay them for it.\n\nExact subject matter to be revealed at the start of the presentation."
       },
       {
         "color": "rose",
         "title": "Lunch",
         "hosts": "No hosts",
-        "rsvp": 32
+        "rsvp": 32,
+        "venue": "Rat Park",
+        "start": "12:00 PM",
+        "end": "1:00 PM"
       },
       {
         "color": "rose",
         "title": "Behind the Numbers: Eliciting Rationales to Improve Decision-Making",
         "hosts": "Cate Hall, Dan Schwarz, Josh Rosenberg, Deger Turan",
-        "rsvp": 61
+        "rsvp": 61,
+        "venue": "Rat Park",
+        "start": "1:00 PM",
+        "end": "2:00 PM",
+        "description": "This will be a panel hosted by Cate Hall (Executive Director, Astera), with participants Deger Turan (CEO, Metaculus), Josh Rosenberg (CEO, Forecasting Research Institute), Dan Schwarz (CEO of FutureSearch), and David Shor (head of Data Science at Blue Rose Research). We will focus on how the reasoning behind forecasts can be elicited and shared in order to improve community knowledge and institutional decision-making."
       },
       {
         "color": "rose",
         "title": "Fireside Chat with Nate Silver and Scott Alexander",
         "hosts": "Nate Silver, Scott Alexander",
-        "rsvp": 206
+        "rsvp": 206,
+        "venue": "Rat Park",
+        "start": "2:00 PM",
+        "end": "3:00 PM"
       },
       {
         "color": "rose",
         "title": "Dance Class",
         "hosts": "Aella",
-        "rsvp": 80
+        "rsvp": 80,
+        "venue": "Rat Park",
+        "start": "5:00 PM",
+        "end": "6:00 PM"
       },
       {
         "color": "orange",
         "title": "PredictIt: Academia & Prediction Markets",
         "hosts": "John Phillips",
-        "rsvp": 33
+        "rsvp": 33,
+        "venue": "Eigen Hall",
+        "start": "11:00 AM",
+        "end": "12:00 PM"
       },
       {
         "color": "orange",
         "title": "Press X to Doubt: Journalism Edition",
         "hosts": "Patrick McKenzie",
-        "rsvp": 97
+        "rsvp": 97,
+        "venue": "Eigen Hall",
+        "start": "12:00 PM",
+        "end": "1:00 PM",
+        "description": "You might remember the New York Magazine viral article about the $50k in a shoebox. There exists a Manifold Market as to whether this is true. What do you think an irrational amount of effort in this market would look like?"
       },
       {
         "color": "orange",
         "title": "Why Science Funding Should Be Capricious",
         "hosts": "Samo Burja",
-        "rsvp": 75
+        "rsvp": 75,
+        "venue": "Eigen Hall",
+        "start": "1:00 PM",
+        "end": "2:00 PM",
+        "description": "Contemporary private and public scientific funding is gated by committee decisions based on current expert consensus—the opposite of what makes for efficient scientific discovery. We should instead return to 18th and 19th century social conventions where wealthy private individuals are both encouraged to take up their own scientific research as well as fund brilliant and eccentric individuals. For public funding empowering randomly chosen scientists for limited terms to direct portions of government scientific funding with no oversight would be beneficial."
       },
       {
         "color": "orange",
         "title": "Manifund: Impact Certs & Beyond",
         "hosts": "Austin Chen, Rachel Weinberg",
-        "rsvp": 31
+        "rsvp": 31,
+        "venue": "Eigen Hall",
+        "start": "2:00 PM",
+        "end": "3:00 PM",
+        "description": "Talk/Q&A on our work at Manifund, funding early stage projects, impact certs and more."
       },
       {
         "color": "orange",
         "title": "Technology Trees for Ambitious Futures",
         "hosts": "Allison Duettmann",
-        "rsvp": 73
+        "rsvp": 73,
+        "venue": "Eigen Hall",
+        "start": "3:00 PM",
+        "end": "4:00 PM",
+        "description": "​​If you’ve ever played the game Civ, you know what tech trees are. Can tech trees help us advance technological progress in real life? Join a demo of Foresight’s tech trees to map progress toward longevity escape velocity, secure human ai cooperation and more. Starting with the status quo of a field, the trees feature critical technical capabilities to unlock, key actors working on them and open challenges yet to be solved. The trees are AI-queryable, so you can explore the branches in an interactive way based on your level of interest; a v1 of the Young Lady's Illustrated Primer. After a brief demo, let's explore how integrating prediction markets, impact tracking, and crowd-funding could turn the trees into collective engines for civilizational progress. Perhaps you have other domains in mind to grow tech trees in? Come build some prototypes — or ask the AI to do it for you."
       },
       {
         "color": "orange",
         "title": "How AI Forecasting Can Revolutionize Science and Government",
         "hosts": "Josh Morrison",
-        "rsvp": 41
+        "rsvp": 41,
+        "venue": "Eigen Hall",
+        "start": "5:00 PM",
+        "end": "6:00 PM",
+        "description": "How AIs will help forecasting make governments brain-like via predictive processing. Applications with the FDA, scientific studies, and indoor air quality will be discussed"
       },
       {
         "color": "orange",
         "title": "The Crystal Coinflip",
         "hosts": "Case Sandberg",
-        "rsvp": 4
+        "rsvp": 4,
+        "venue": "Eigen Hall",
+        "start": "8:00 PM",
+        "end": "9:00 PM",
+        "description": "The first crystal market ever created will resolve with a coinflip LIVE on Manifold TV. Witness history!"
       },
       {
         "color": "yellow",
         "title": "Trade with the Kalshi Team",
         "hosts": "Noah Sternig, Luana Lopes Lara",
-        "rsvp": 17
+        "rsvp": 17,
+        "venue": "Bayes Ground",
+        "start": "10:00 AM",
+        "end": "11:00 AM",
+        "description": "Kalshi trading workshop! Get started with a voucher to start trading, and get advice from the Kalshi team. Kalshi will be giving out merch as well."
       },
       {
         "color": "yellow",
         "title": "Building a Technophilic Religion / Building a Religion for Your Kids",
         "hosts": "Simone Collins, Malcolm Collins",
-        "rsvp": 59
+        "rsvp": 59,
+        "venue": "Bayes Ground",
+        "start": "11:00 AM",
+        "end": "12:00 PM",
+        "description": "While predicting the future is one thing, inheriting it is another entirely: You'll need to create a pronatalist culture that is intergenerationally durable. Malcolm and Simone Collins, co-authors of the Pragmatist's Guide to Crafting Religion, will explore the underlying mechanics behind creating a custom-built (or modified) culture/religion that successfully passes your approach to life on to your kids and encourages them to do the same for theirs."
       },
       {
         "color": "yellow",
         "title": "Liquidity and Prediction Markets",
         "hosts": "Tanner Hoke",
-        "rsvp": 51
+        "rsvp": 51,
+        "venue": "Bayes Ground",
+        "start": "12:00 PM",
+        "end": "1:00 PM",
+        "description": "We will discuss why people trade, what makes some markets more liquid than others, \"Why prediction markets aren't popular\", and more."
       },
       {
         "color": "yellow",
         "title": "Community Notes: Under the Hood",
         "hosts": "Jay Baxter",
-        "rsvp": 54
+        "rsvp": 54,
+        "venue": "Bayes Ground",
+        "start": "1:00 PM",
+        "end": "2:00 PM",
+        "description": "This talk will explore the algorithm behind X's Community Notes, including bridging-based ranking (elevating consensus from people who often disagree) and a reputation system that has some commonalities with prediction markets."
       },
       {
         "color": "yellow",
         "title": "AI Threat Modeling Needs Forecasters: Closing the Gap Between Evals and Reality",
         "hosts": "Joshua Clymer",
-        "rsvp": 35
+        "rsvp": 35,
+        "venue": "Bayes Ground",
+        "start": "2:00 PM",
+        "end": "3:00 PM",
+        "description": "Multiple AI companies and external organizations are building evaluations to gauge AI dangerousness. Designing these evaluations is harder than you might think. It's difficult to connect 'how AI agents score on a test' to 'how they will impact the real world.' That's why the AI evaluation space needs forecasters! My talk discusses existing AI threat modeling work and how forecasters can contribute."
       },
       {
         "color": "yellow",
         "title": "AI & Game Design",
         "hosts": "Frank Lantz",
-        "rsvp": 32
+        "rsvp": 32,
+        "venue": "Bayes Ground",
+        "start": "3:00 PM",
+        "end": "4:00 PM",
+        "description": "Notes from 5 years of experimenting with cutting edge AI in the context of game design. Why does game design matter for understanding AI? How can game design help us think about the meaning and purpose of AI?"
       },
       {
         "color": "lime",
         "title": "Beyond Red and Blue: How Would American Politics Look with a Different System?",
         "hosts": "Karthik Ayyalasomayajula",
-        "rsvp": 7
+        "rsvp": 7,
+        "venue": "Bayes Attic",
+        "start": "9:00 AM",
+        "end": "10:00 AM",
+        "description": "Bit of a hodgepodge of different topics. Starting off with a short presentation on how modern coalitional American conservatism came to be as well as modern attempts to subdivide the Democratic and Republican coalitions into smaller groups \n\nThis will be followed by some casual speculation on what sorts of political parties may emerge if the United States ditched First Past the Post/the Two Party System"
       },
       {
         "color": "lime",
         "title": "Emotional Work of Rationality",
         "hosts": "Michael Elias",
-        "rsvp": 24
+        "rsvp": 24,
+        "venue": "Bayes Attic",
+        "start": "10:00 AM",
+        "end": "11:00 AM",
+        "description": "What is \"the emotional work of rationality\"? What are the forces that make people DESIRE truth more, or less? How can we build products that help people desire truth more? I'll share some thoughts on all of these, followed by discussion."
       },
       {
         "color": "lime",
         "title": "Intro to Quantitative Portfolio Construction",
         "hosts": "Joey Kellison-Linn",
-        "rsvp": 46
+        "rsvp": 46,
+        "venue": "Bayes Attic",
+        "start": "11:00 AM",
+        "end": "12:00 PM"
       },
       {
         "color": "lime",
         "title": "X-Risk and Your Feelings",
         "hosts": "Misha Glouberman, Gretta Duleba",
-        "rsvp": 51
+        "rsvp": 51,
+        "venue": "Bayes Attic",
+        "start": "12:00 PM",
+        "end": "1:00 PM",
+        "description": "If you think p(doom) is high, how does that affect how you get through life? Does it sentence you to a daily existence of anxiety and depression? Can you have goals? Can you have kids? Can you have fun? Are there strategies you can take? This will be a mix of on-stage talk, Q&A, and also some group discussion where you’ll be invited to talk in small groups with other people in the room about your own experiences here."
       },
       {
         "color": "lime",
         "title": "What Is Aristotle's Metaphysics About?",
         "hosts": "Arnold Brooks",
-        "rsvp": 31
+        "rsvp": 31,
+        "venue": "Bayes Attic",
+        "start": "1:00 PM",
+        "end": "2:00 PM",
+        "description": "Aristotle developed a conceptual scheme that dominated Western thinking for fifteen centuries. At the center of this project is the Metaphysics, one of the most powerful and lasting intellectual and cultural artifacts in our history. This talk will explain the aims of the Metaphysics and what makes it so important to the development of science and reason."
       },
       {
         "color": "lime",
         "title": "Salesforce, Memex, and the Self-Structuring Exacortex: Using Language Models to Automate the Creation of Ontologies and Reshape Organizations",
         "hosts": "Panda Smith",
-        "rsvp": 27
+        "rsvp": 27,
+        "venue": "Bayes Attic",
+        "start": "5:00 PM",
+        "end": "6:00 PM",
+        "description": "Systems to structure and transmit information lie at the core of every large institution, from the East India Company of the 1700s to the large software consultancies of today. Much of what prevents these systems from scaling is the human effort involved in entering an existing organization and ontologizing all of the implicit information that is required for that organization to function. Today, this is done by teams of 'solutions engineers' who build out bespoke database schemas, APIs, and surfaces to interact with said data. In the near future, LLMs will automate this work and radically shift how teams of humans coordinate."
       },
       {
         "color": "green",
         "title": "Top Manifold Traders Discuss Trading in Real-World Markets.",
         "hosts": "Michael Wheatley",
-        "rsvp": 16
+        "rsvp": 16,
+        "venue": "Gyroscope",
+        "start": "9:30 AM",
+        "end": "10:30 AM",
+        "description": "We dial up Marcus Abramovich (Manifold's pre-pivot #1 trader) to discuss how trading on Manifold is like and unlike real-world trading, whether it's crypto, venture investing, or options trading."
       },
       {
         "color": "green",
         "title": "Doom Near-Miss Liability: My Favourite AI Risk Policy",
         "hosts": "Daniel Filan",
-        "rsvp": 33
+        "rsvp": 33,
+        "venue": "Gyroscope",
+        "start": "11:00 AM",
+        "end": "12:00 PM",
+        "description": "I'd like to talk about my favourite anti-AI-doom policy: introducing punitive damages for AI accidents that are, in some sense, \"near misses\" for AI doom. I'll tell you what the policy is, why it's good, and what kinks should be ironed out.\n\nThis will be based on two policy proposals, one by Robin Hanson (\"Foom Liability\"), and one by Gabriel Weil (\"Tort Law as a Tool for Mitigating Catastrophic Risk from Artificial Intelligence\")."
       },
       {
         "color": "green",
         "title": "Polymarket Office Hours",
         "hosts": "Niraek Jain-Sharma",
-        "rsvp": 19
+        "rsvp": 19,
+        "venue": "Gyroscope",
+        "start": "12:00 PM",
+        "end": "1:00 PM",
+        "description": "Come talk to the folks from Polymarket!"
       },
       {
         "color": "green",
         "title": "Speaking to Your Elected Representatives",
         "hosts": "Gavriel Kleinwaks",
-        "rsvp": 25
+        "rsvp": 25,
+        "venue": "Gyroscope",
+        "start": "1:00 PM",
+        "end": "2:00 PM",
+        "description": "Sometimes you might have an opinion about policy, and luckily, there is someone that you pay to listen to that opinion! How should you go about speaking to them? In what contexts is it useful to do so? What are their motivations? What other input are they hearing? I'll be giving a very informal overview that attempts to answer these questions, drawing on recent policy advocacy I've been working on. \n\n(I can only speak to American policymaking, but I would welcome anyone joining for a compare/contrast discussion if you know about other countries' policymaking!) "
       },
       {
         "color": "green",
         "title": "Collaborative & Higher-Order Forecasting Roundtable",
         "hosts": "Gustavo Lacerda",
-        "rsvp": 18
+        "rsvp": 18,
+        "venue": "Gyroscope",
+        "start": "2:00 PM",
+        "end": "3:00 PM",
+        "description": "We invite you to share your experiences, aspirations, ideas re: team-based forecasting.  What factors enable more effective collaboration? Is it better to work with people who think similarly or differently?  Suggested topics: incentive structures; team vs individual forecasts; emotional factors."
       },
       {
         "color": "green",
         "title": "Metaculus Build-A-Bot Office Hours",
         "hosts": "Deger Turan, Tom Liptay",
-        "rsvp": 18
+        "rsvp": 18,
+        "venue": "Gyroscope",
+        "start": "3:00 PM",
+        "end": "4:00 PM",
+        "description": "Were you unable to make Metaculus's Build-a-Bot Workshop? Are you tinkering with the bot you built at the workshop and you could use some conversation or support? Do you just want to chat about LLM-forecasting or forecasting more generally? Come say hello!"
       },
       {
         "color": "green",
         "title": "Living on Cruise Ships for Free",
         "hosts": "Vivienne Bellerose",
-        "rsvp": 45
+        "rsvp": 45,
+        "venue": "Gyroscope",
+        "start": "4:00 PM",
+        "end": "5:00 PM",
+        "description": "In the past two years, I have been on 28 free cruises, offered by the ship casinos in connection with my job as a professional gambler. That makes over six months at sea! The casinos give me free cruises because I gamble a lot, right up until they finally realize I’m a winning player. I will cover what this has been like and how you can do it yourself."
       },
       {
         "color": "green",
         "title": "Fiction Writing: Good Prose vs Bad Prose, Humans vs LLMs",
         "hosts": "Justin Kuiper",
-        "rsvp": 22
+        "rsvp": 22,
+        "venue": "Gyroscope",
+        "start": "5:00 PM",
+        "end": "6:00 PM",
+        "description": "We can often recognize \"bad writing\" on sight, but it can be challenging to explain what exactly makes it bad. Can looking at bad prose teach us how to write good prose? Let's find out!\n\nI'm a full-time scriptwriter who moonlights as a web novelist and editor. I will break down and examine common failure modes of beginner writing, and do my best to articulate what I consider to be \"first principles\" of writing.\n\nThis session will also include comparisons of human writing to LLM output."
       },
       {
         "color": "teal",
         "title": "Learn SuperMemo and Incremental Reading!",
         "hosts": "Raj Thimmiah",
-        "rsvp": 13
+        "rsvp": 13,
+        "venue": "Glass Hall",
+        "start": "9:00 AM",
+        "end": "10:00 AM",
+        "description": "If you don't know what SuperMemo or incremental reading are, check out this video: https://www.youtube.com/watch?v=NURjZuHvDaU\n\nI'll be doing a session on the basics of using SuperMemo! If you're interested:\n- you'll need either a windows computer or a VM (I recommend parallels for mac and vmware for linux). If you don't want to actually learn how to use SuperMemo, you're welcome to come anyways\n- show up close to on time. It's harder to teach multiple people if they don't all start at the same time\n- bring some content you're interested in learning (specifically learning, not memorizing)"
       },
       {
         "color": "teal",
         "title": "A Web3+AI Prediction Market?",
         "hosts": "Rein Wu",
-        "rsvp": 2
+        "rsvp": 2,
+        "venue": "Glass Hall",
+        "start": "1:00 PM",
+        "end": "2:00 PM",
+        "description": "People discuss crypto and AI separately, can we utilize the best of AI and crypto and revolutionize the prediction market industry? Let’s brainstorm ideas and we will present some future works. "
       },
       {
         "color": "teal",
         "title": "Portfolio Construction 2",
         "hosts": "Pepe Swer",
-        "rsvp": 4
+        "rsvp": 4,
+        "venue": "Glass Hall",
+        "start": "2:00 PM",
+        "end": "3:00 PM",
+        "description": "Math behind markowitz portfolio construction"
       },
       {
         "color": "teal",
         "title": "Estimate Key AI Variables, with Squiggle",
         "hosts": "Ozzie Gooen",
-        "rsvp": 16
+        "rsvp": 16,
+        "venue": "Glass Hall",
+        "start": "4:00 PM",
+        "end": "5:00 PM",
+        "description": "We'll use Squiggle to estimate key AI variables that people are interested in.\n\nFor example:\n- Market cap of top AI organizations\n- Total value of many AI interventions, for AI safety\n- Costs and revenue of existing ML models\n- NVIDIA and other stocks prices, conditional on AI development\n\nThis will teach people how to use Squiggle for realistic and interesting models, and it will be useful for direct AI modeling.\n\nhttps://bit.ly/ai-squiggle\n\nThis workshop is not an introduction to Squiggle. It presumes familiarity with programming. (If you don't yet know Squiggle, you can learn via the docs)"
       },
       {
         "color": "cyan",
         "title": "Reforming Academia via Reputation Futures",
         "hosts": "Robin Hanson",
-        "rsvp": 32
+        "rsvp": 32,
+        "venue": "Walled Garden",
+        "start": "10:00 AM",
+        "end": "11:00 AM",
+        "description": "Hanson will quickly (<15min) consider some possible ways to reform academia, including my prior now-rejected ideas for using prediction markets, and outline his current best concept. We'll spend most of. the time comparing those and whatever alternatives you bring. "
       },
       {
         "color": "cyan",
         "title": "Thinking Like an Editor",
         "hosts": "Xander Balwit",
-        "rsvp": 24
+        "rsvp": 24,
+        "venue": "Walled Garden",
+        "start": "11:00 AM",
+        "end": "12:00 PM",
+        "description": "Join the Asimov Press editors to learn about what goes into a great pitch or story."
       },
       {
         "color": "cyan",
         "title": "Barbell Coaching",
         "hosts": "Tzu Kit Chan",
-        "rsvp": 8
+        "rsvp": 8,
+        "venue": "Walled Garden",
+        "start": "12:00 PM",
+        "end": "1:00 PM",
+        "description": "tzukitchan.com\n\nI will teach you to deadlift with perfect technique.\n\nIf you've never done any barbell stuff before, start your day zero with me :)\n\n"
       },
       {
         "color": "cyan",
         "title": "Dumb Pitch Competition",
         "hosts": "Jonathan Miller, Yingru Qiu",
-        "rsvp": 16
+        "rsvp": 16,
+        "venue": "Walled Garden",
+        "start": "1:00 PM",
+        "end": "2:00 PM",
+        "description": "Uber for blockchain? Airbnb for gamblers? Come pitch your dumb startup idea. Lightning rounds, pitch decks exceedingly optional."
       },
       {
         "color": "cyan",
         "title": "Parents Meetup",
         "hosts": "Rachel Weinberg",
-        "rsvp": 29
+        "rsvp": 29,
+        "venue": "Walled Garden",
+        "start": "3:00 PM",
+        "end": "4:00 PM",
+        "description": "Come hang out and talk about parenting! Existing parents & aspiring parents alike are welcome to join~"
       },
       {
         "color": "blue",
         "title": "Blood on the Clocktower",
         "hosts": "Brendan Hurst",
-        "rsvp": 0
+        "rsvp": 0,
+        "venue": "Venus",
+        "start": "11:00 AM",
+        "end": "12:00 PM",
+        "description": "The best version of Werewolf/Mafia. No player elimination. Everyone gets a power or some kind of information. Reasoning under uncertainty is just as important as social vibes."
       },
       {
         "color": "blue",
         "title": "Blood on the Clocktower",
         "hosts": "Brendan Hurst",
-        "rsvp": 0
+        "rsvp": 0,
+        "venue": "Venus",
+        "start": "12:00 PM",
+        "end": "1:00 PM",
+        "description": "The best version of Werewolf/Mafia. No player elimination. Everyone gets a power or some kind of information. Reasoning under uncertainty is just as important as social vibes."
       },
       {
         "color": "blue",
         "title": "Blood on the Clocktower",
         "hosts": "Brendan Hurst",
-        "rsvp": 3
+        "rsvp": 3,
+        "venue": "Venus",
+        "start": "1:00 PM",
+        "end": "2:00 PM",
+        "description": "The best version of Werewolf/Mafia. No player elimination. Everyone gets a power or some kind of information. Reasoning under uncertainty is just as important as social vibes."
       },
       {
         "color": "blue",
         "title": "Blood on the Clocktower",
         "hosts": "Brendan Hurst",
-        "rsvp": 2
+        "rsvp": 2,
+        "venue": "Venus",
+        "start": "2:00 PM",
+        "end": "3:00 PM",
+        "description": "The best version of Werewolf/Mafia. No player elimination. Everyone gets a power or some kind of information. Reasoning under uncertainty is just as important as social vibes."
       },
       {
         "color": "blue",
         "title": "Blood on the Clocktower",
         "hosts": "Brendan Hurst",
-        "rsvp": 6
+        "rsvp": 6,
+        "venue": "Venus",
+        "start": "3:00 PM",
+        "end": "4:00 PM",
+        "description": "The best version of Werewolf/Mafia. No player elimination. Everyone gets a power or some kind of information. Reasoning under uncertainty is just as important as social vibes."
+      },
+      {
+        "title": "Catholic Mass @ Newman Hall",
+        "hosts": "Austin Chen",
+        "rsvp": 12,
+        "venue": "Off-site",
+        "start": "8:00 AM",
+        "end": "9:30 AM",
+        "description": "Join us for Catholic Mass on Sunday! Mass begins at 8am at Newman Hall; we'll leave the venue at 7:45am sharp, and walk over together. Expect conversations on faith & religion on the way there and back~\n\nAll are welcome to join, religious or nonreligious alike!"
+      },
+      {
+        "title": "Kalshi Breakfast",
+        "hosts": "Noah Sternig",
+        "rsvp": 42,
+        "venue": "Aumann Hall",
+        "start": "8:30 AM",
+        "end": "10:00 AM",
+        "description": "Kalshi is hosting breakfast for all attendees!"
+      },
+      {
+        "title": "Starting a Microschool: An interview with Kelsey Piper and June Kreml",
+        "hosts": "Jasmine Ren, Kelsey Piper, June Kreml",
+        "rsvp": 85,
+        "venue": "Eigen Hall",
+        "start": "9:30 AM",
+        "end": "11:00 AM",
+        "description": "Kelsey and June have been operating a microschool in Oakland for over a year with amazing results. How did it get started? What were the hard parts? Can we replicate this in other communities? Join us for an interview to find out!"
+      },
+      {
+        "title": "Automating the Law",
+        "hosts": "Campbell Hutcheson",
+        "rsvp": 11,
+        "venue": "Venus",
+        "start": "10:00 AM",
+        "end": "10:30 AM",
+        "description": "Can we automate the law with LLMs? What would that look like? What challenges exist? Where are we?"
+      },
+      {
+        "title": "\"No significant effect\"",
+        "hosts": "Ross Rheingans-Yoo",
+        "rsvp": 6,
+        "venue": "Gyroscope",
+        "start": "10:30 AM",
+        "end": "11:00 AM",
+        "description": "This session presents a simple statistical fallacy -- extremely common in scientific journalism -- that relates to a basic incoherence in the position that \"significant\" = \"true\" and \"not significant\" = \"no effect\". Applications include (one small piece of) the Hanson/Alexander debate on healthcare, massive studies on the effectiveness of cancer screening, and debates about false-positive FDA approvals."
+      },
+      {
+        "title": "LLM products in prod • builders’ meetup",
+        "hosts": "Bence Nagy",
+        "rsvp": 8,
+        "venue": "Venus",
+        "start": "10:30 AM",
+        "end": "11:00 AM",
+        "description": "Are you operating some sort of app that uses LLMs? Come by and chat about the struggles – observability, benchmarking, stuff like that"
+      },
+      {
+        "title": "Sea shanty singing",
+        "hosts": "Connor Harris",
+        "rsvp": 8,
+        "venue": "Glass Hall",
+        "start": "12:00 PM",
+        "end": "12:30 PM",
+        "description": "See title. Music-reading ability a plus but not required."
+      },
+      {
+        "title": "Lunch",
+        "hosts": "",
+        "rsvp": 17,
+        "venue": "Aumann Hall",
+        "start": "12:00 PM",
+        "end": "2:00 PM"
+      },
+      {
+        "title": "Manifold Traders & Creators Group Photo",
+        "hosts": "Chris Farina",
+        "rsvp": 12,
+        "venue": "Glass Hall",
+        "start": "12:30 PM",
+        "end": "1:00 PM"
+      },
+      {
+        "title": "Live Manifold Podcast Recording",
+        "hosts": "Steve Hsu, Robin Hanson",
+        "rsvp": 25,
+        "venue": "Bayes Attic",
+        "start": "2:00 PM",
+        "end": "3:30 PM",
+        "description": "Steve Hsu interviews Robin Hanson on a live recorded episode of the \"Manifold Podcast\" on topics across prediction markets, AI, culture, and more."
+      },
+      {
+        "title": "Hardware meetup",
+        "hosts": "Alex Toussaint, Chris Farina",
+        "rsvp": 3,
+        "venue": "Walled Garden",
+        "start": "2:00 PM",
+        "end": "2:30 PM",
+        "description": "A meetup for all people working on hardware things"
+      },
+      {
+        "title": "Wrestling",
+        "hosts": "Keri Warr",
+        "rsvp": 56,
+        "venue": "Rat Park",
+        "start": "3:00 PM",
+        "end": "5:00 PM",
+        "description": "no experience with wrestling needed! get a little more in touch with what it's like to be a human inside a body, pushing and pulling on other humans! disengage higher functions. return to monkey."
+      },
+      {
+        "title": "Forecasting set up",
+        "hosts": "Nathan Young",
+        "rsvp": 6,
+        "venue": "Glass Hall",
+        "start": "3:00 PM",
+        "end": "3:30 PM",
+        "description": "Setup for next session"
+      },
+      {
+        "title": "Conflict Improv",
+        "hosts": "Sy Etirabys",
+        "rsvp": 44,
+        "venue": "Bayes Attic",
+        "start": "3:30 PM",
+        "end": "5:00 PM",
+        "description": "Draw cards describing conflict scenarios and strategies, and do an improv scene in front of other attendees.\n\nYou are invited to make yourself a little uncomfortable and lean into adversarial behaviors you don't often practice. If you're not used to raising your voice, consider raising your voice. If you're afraid of being seen as entitled, demand things from the other person."
+      },
+      {
+        "title": "Forecasting AI",
+        "hosts": "Nathan Young",
+        "rsvp": 22,
+        "venue": "Glass Hall",
+        "start": "3:30 PM",
+        "end": "4:00 PM",
+        "description": "Forecasting the future of AI then discussing it with others where you disagree. Lots of whiteboards. "
+      },
+      {
+        "title": "The Elegance of Land Value Taxes",
+        "hosts": "Nate Foss",
+        "rsvp": 40,
+        "venue": "Eigen Hall",
+        "start": "4:00 PM",
+        "end": "4:30 PM",
+        "description": "Landed aristocracies HATE this one weird trick to increase total surplus, internalize externalities, and increase usage efficiency of our most scarce resource"
+      },
+      {
+        "title": "Startup Pitch Competition",
+        "hosts": "Samuel Cottrell",
+        "rsvp": 69,
+        "venue": "Bayes Ground",
+        "start": "4:00 PM",
+        "end": "6:00 PM"
+      },
+      {
+        "title": "LVT in practice: Valuebase",
+        "hosts": "Will Jarvis",
+        "rsvp": 38,
+        "venue": "Eigen Hall",
+        "start": "4:30 PM",
+        "end": "5:00 PM"
+      },
+      {
+        "title": "Guided meditation",
+        "hosts": "Yoav Tzfati",
+        "rsvp": 13,
+        "venue": "Walled Garden",
+        "start": "4:30 PM",
+        "end": "5:00 PM",
+        "description": "Probably a simple mindfulness meditation, maybe Metta (loving kindness). Appropriate for all experience levels."
+      },
+      {
+        "title": "Drawback Chess!",
+        "hosts": "Jacob Cohen",
+        "rsvp": 19,
+        "venue": "Glass Hall",
+        "start": "5:00 PM",
+        "end": "6:30 PM",
+        "description": "We’ll play an easy-to-learn yet strategically complex variant of chess (inspired by drawbackchess.com) where each player gets a secret drawback card - for instance, “True Gentleman” (you can’t capture queens) or “My Kingdom for a Horse” (if you lose a knight, you lose). \n\nPlease show up no matter your chess skill level; you’ll get interesting games! Gameplay is a fun mix of figuring out your strategy with a strange restriction and trying to puzzle out what’s weird about your opponent’s moves to exploit it. \n\nWe’ll try to procure enough real boards to play without screens (I printed the drawbacks on cards!) but we may fall back on the online version. "
+      },
+      {
+        "title": "Followups & Accountability",
+        "hosts": "Forrest Wolf",
+        "rsvp": 6,
+        "venue": "Walled Garden",
+        "start": "5:30 PM",
+        "end": "6:00 PM",
+        "description": "Share things we've learned or projects you've been inspired to work on due to this conference, and (optionally) set up to keep in touch, hold each other accountable about actually working on them, and share future results."
+      },
+      {
+        "title": "Dinner & closing ceremony",
+        "hosts": "Austin Chen, Rachel Weinberg, Saul Munn",
+        "rsvp": 118,
+        "venue": "Rat Park",
+        "start": "6:00 PM",
+        "end": "7:30 PM"
+      },
+      {
+        "title": "[6:45 PM - 8:00 PM] Costume Contest",
+        "hosts": "Ricki Heicklen",
+        "rsvp": 25,
+        "venue": "Bayes Ground",
+        "start": "6:30 PM",
+        "end": "8:00 PM",
+        "description": "Learn what makes for a good costume and then go forth and apply those skills in a costume building competition!\n\n1. Workshop on building good costumes and pareto improvements you can make on the effort/costume quality curve. (30 minutes)\n2. Theme announced, mad rush to build an on-theme costume using available supplies (1 hour)\n3. Themed afterparty will commence (5 hours?) including judging of costumes"
+      },
+      {
+        "title": "Polymarket Poker Tournament: Finals",
+        "hosts": "David Chee",
+        "rsvp": 11,
+        "venue": "Glass Hall",
+        "start": "6:30 PM",
+        "end": "9:00 PM"
+      },
+      {
+        "title": "Why Not a \"Retrodiction Market\"?",
+        "hosts": "Frank Enrique Guerra-Pujol",
+        "rsvp": 10,
+        "venue": "Venus",
+        "start": "7:00 PM",
+        "end": "7:30 PM",
+        "description": "Why not a retrodiction market in which participants buy and sell belief contracts, i.e. place bets on \"hindcasts\". I will present my work proposing a retrodiction market, available here: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4323607"
+      },
+      {
+        "title": "Yud's Hat & Tie Auction",
+        "hosts": "Ronny Fernandez, Eliezer Yudkowsky",
+        "rsvp": 118,
+        "venue": "Rat Park",
+        "start": "7:30 PM",
+        "end": "8:00 PM",
+        "description": "Eliezer Yudkowsky's legendary hat and tie are going up for auction! Join Ronny Fernandez as he brokers this transition for Yud's signature look. If you're looking for something to wear to the afterparty, come submit a bid!"
+      },
+      {
+        "title": "Raemon Strategizes Himself",
+        "hosts": "Raymond Arnold",
+        "rsvp": 2,
+        "venue": "Gyroscope",
+        "start": "7:30 PM",
+        "end": "9:00 PM",
+        "description": "Ray attempts to present-in-realtime his own planmaking process for himself, and solicits help from audience to operationalize predictions about his plans."
+      },
+      {
+        "title": "Epic math puzzle sesh",
+        "hosts": "Elliot Glazer",
+        "rsvp": 6,
+        "venue": "Venus",
+        "start": "7:30 PM",
+        "end": "8:00 PM",
+        "description": "Bring/solve epic math puzzles"
+      },
+      {
+        "title": "Afterparty",
+        "hosts": "Ricki Heicklen, Aella",
+        "rsvp": 143,
+        "venue": "Rat Park",
+        "start": "8:00 PM",
+        "end": "11:30 PM",
+        "description": "Afterparty starts at 8pm, hosted by @Ricki Heicklen and @Aella here on-site! We'll open up the campus to the public at 9pm, free of charge -- invite your nearby friends to join us and celebrate the end of Manifest~"
+      },
+      {
+        "title": "Afterparty",
+        "hosts": "Ricki Heicklen, Aella",
+        "rsvp": 143,
+        "venue": "Bayes Ground",
+        "start": "8:00 PM",
+        "end": "11:30 PM",
+        "description": "Afterparty starts at 8pm, hosted by @Ricki Heicklen and @Aella here on-site! We'll open up the campus to the public at 9pm, free of charge -- invite your nearby friends to join us and celebrate the end of Manifest~"
+      },
+      {
+        "title": "<in the rat park dome> Church",
+        "hosts": "Lydia La Roux, Ian Phillips, Robin Hanson, Sy Etirabys",
+        "rsvp": 9,
+        "venue": "Bayes Attic",
+        "start": "8:00 PM",
+        "end": "8:30 PM",
+        "description": "Have you ever held space in your hands?\nHave you ever felt small?\n"
+      },
+      {
+        "title": "Cuddle Party! A cuddle puddle of 6 or more people",
+        "hosts": "Claire LaPolt",
+        "rsvp": 13,
+        "venue": "Bayes Attic",
+        "start": "9:00 PM",
+        "end": "11:00 PM",
+        "description": "https://manifold.markets/Joshua/what-will-happen-at-manifest-2-gene?r=bW9v"
+      },
+      {
+        "title": "Cuddles, continued!",
+        "hosts": "Manifold User",
+        "rsvp": 0,
+        "venue": "Bayes Attic",
+        "start": "11:00 PM",
+        "end": "11:30 PM"
       }
-    ],
-    "count": 48
+    ]
   }
 ]

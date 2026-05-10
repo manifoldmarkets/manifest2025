@@ -87,34 +87,34 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    gap: 12px;
+    gap: 8px;
     margin: 0 0 22px;
     flex-wrap: wrap;
   }
   .filter-row label {
     font-family: var(--font-cinzel);
-    font-size: 12px;
-    letter-spacing: 0.18em;
+    font-size: 10px;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--muted);
     font-weight: 600;
   }
   .filter-row select {
     font-family: var(--font-cinzel);
-    font-size: 15px;
-    line-height: 1.5;
+    font-size: 12px;
+    line-height: 1.2;
     font-weight: 600;
     color: var(--ink);
     background: var(--panel);
     border: 1px solid var(--rule);
     border-radius: 999px;
-    padding: 13px 36px 13px 18px;
+    padding: 7px 28px 7px 12px;
     cursor: pointer;
     appearance: none;
     -webkit-appearance: none;
     background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path fill='none' stroke='%236b5f4f' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round' d='M1 1l5 5 5-5'/></svg>");
     background-repeat: no-repeat;
-    background-position: right 12px center;
+    background-position: right 10px center;
   }
   .filter-row select:hover { border-color: var(--ink); }
 
@@ -143,7 +143,7 @@
     margin-left: 8px;
   }
   .session-grid {
-    column-count: 3;
+    column-count: 4;
     column-gap: 14px;
   }
   .session {
@@ -161,9 +161,49 @@
     margin: 0 0 10px;
   }
   .session:hover { transform: translateY(-1px); }
+  #session-tooltip {
+    position: fixed;
+    display: none;
+    width: min(420px, calc(100vw - 32px));
+    max-height: min(520px, calc(100vh - 32px));
+    overflow: auto;
+    background: #2b2419;
+    color: #fbfaf7;
+    font-family: var(--font-baskerville);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.45;
+    padding: 12px 14px;
+    border-radius: 6px;
+    white-space: pre-wrap;
+    pointer-events: none;
+    z-index: 1000;
+    box-shadow: 0 10px 30px rgba(43, 36, 25, 0.28);
+    text-align: left;
+  }
+  #session-tooltip.visible {
+    display: block;
+  }
+  #session-tooltip .tooltip-meta {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 8px;
+    font-family: var(--font-cinzel);
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #f1eadf;
+  }
+  #session-tooltip .tooltip-location {
+    margin-left: auto;
+    text-align: right;
+  }
+  #session-tooltip .tooltip-description {
+    white-space: pre-wrap;
+  }
   .session .cat-label {
     font-family: var(--font-cinzel);
-    display: inline-block;
     font-size: 10px;
     letter-spacing: 0.2px;
     font-weight: 600;
@@ -171,9 +211,33 @@
     opacity: 0.7;
     margin-bottom: 6px;
     grid-column: 1;
+    grid-row: 1;
+    align-self: start;
+  }
+  .session .rsvp {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+    align-self: start;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-family: var(--font-cinzel);
+    font-size: 11px;
+    font-weight: 700;
+    color: #5d5547;
+    opacity: 0.85;
+    line-height: 1;
+  }
+  .session .rsvp svg {
+    width: 12px;
+    height: 12px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 1.6;
   }
   .session .title {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 700;
     margin-bottom: 0;
     color: #2b2419;
@@ -186,13 +250,13 @@
     color: #5d5547;
     font-style: italic;
     grid-column: 2;
-    grid-row: 1 / 3;
+    grid-row: 2;
     justify-self: end;
     align-self: end;
     text-align: right;
     overflow-wrap: break-word;
   }
-  .session .speaker-name { display: inline-block; }
+  .session .speaker-name { display: inline-block; white-space: nowrap; }
   .session a.speaker-name { color: inherit; text-decoration: none; border-bottom: 1px dotted currentColor; }
   .session a.speaker-name:hover { color: var(--ink); border-bottom-style: solid; }
   footer.site a { color: inherit; text-decoration: underline; text-decoration-color: var(--rule); }
@@ -253,6 +317,7 @@
   </div>
 
   <main id="schedule"></main>
+  <div id="session-tooltip" role="tooltip"></div>
 
   <footer class="site">
     <span id="footer-text"></span>
@@ -297,6 +362,7 @@ const HIDE_PATTERNS = [
   /\bcuddle\b/i,
   /\bsex\b/i,
   /\bsexual\b/i,
+  /\bsexy\b/i,
   /\bnsfw\b/i,
   /\bdoors?\s+open\b/i,
   /\bopening circle\b/i,
@@ -305,12 +371,8 @@ const HIDE_PATTERNS = [
   /\bregistration\b/i,
   /\bvolunteer training\b/i,
   /\bbreak\b/i,
-  /\bclosing (ceremony|circle)\b/i,
+  /\bclosing\b/i,
   /^\s*\[blocked/i,
-  /^\s*reserved\s*$/i,
-  /\boverflow\b/i,
-  /\bjudges huddle\b/i,
-  /pitch competition (judges|setup)/i,
 ];
 function shouldHide(title) {
   const t = title || '';
@@ -380,32 +442,10 @@ function titleCase(text) {
 
 const CATEGORY_OVERRIDES = {
   'repolarize american politics: how to make the two-party system irrelevant': 'talk',
-  'weird findings in the last 10 years of exercise science': 'talk',
-  'breaking the blank slate: social consequences of genetic screening': 'talk',
-  'writing & slop': 'panel',
-  'writing & slop: roon, scott alexander, gwern, alexander wales': 'panel',
-  'top manifold traders discuss trading in real-world markets.': 'panel',
-  'metaculus: $120k ai benchmarking tournament announcement & build-a-bot workshop': 'workshop',
-  'nate soares & emmett shear fight about ai': 'panel',
-  // 2025 — "learn" false positives
-  'noam brown: learning to reason with llms': 'talk',
-  "what we've learned doing futarchy for a year": 'talk',
-  'how could deep learning work well in the real world?': 'talk',
-  // 2023 — games not caught by regex
-  'hang out and laugh: monikers': 'game',
-  'cornhole rpg': 'game',
-  'mafia with markets': 'game',
-  'late night jackbox': 'game',
-  'balance games and wrestling!': 'game',
-  'hot seat (intrusive questions game)': 'game',
-  // 2023 — performance not caught
-  'jazz jam (byo instrument)': 'performance',
-  'descent into dance hell': 'performance',
-  // 2023 — talk wrongly caught as game
-  'how ai poker works': 'talk',
 };
 
 const SPEAKER_LINKS = {};
+const tooltipEl = document.getElementById('session-tooltip');
 
 function categorize(title, hosts) {
   const t = (title || '').toLowerCase();
@@ -415,31 +455,34 @@ function categorize(title, hosts) {
   const override = CATEGORY_OVERRIDES[cleanText(title).toLowerCase()];
   if (override) return override;
 
-  // Wellness — yoga, meditation, jhana, dance class, hygge, barbell, acro
-  if (/\b(yoga|meditation|guided meditation|jhana|barbell|hygge|dance class|grieving|psychological growth|meditat|acro)/.test(t)) return 'wellness';
+  // Wellness — yoga, meditation, jhana, dance class, hygge, barbell
+  if (/\b(yoga|meditation|guided meditation|jhana|barbell|hygge|dance class|grieving|psychological growth|meditat)/.test(t)) return 'wellness';
   // Performance — comedy, karaoke, theater, screening, music, magic
   if (/\b(karaoke|comedy|theater|screening|movie|night market|dance party|stand[\s-]?up|music|magic|talent)\b/.test(t)) return 'performance';
   // Game / competition — poker, chess, trivia, clocktower, tournament, game show, cardinality, sock wrestle
-  if (/\b(poker|chess|bughouse|trivia|tournament|clocktower|game show|cardinality|sock wrestle|origami|estimation game|nash pit|operant conditioning game|crystal coinflip|dumb pitch|pitch competition|startup pitch|speed friending|speed meeting|speedfriend|mentor.*mentee|jeopardy|drama games?|improv games?|figgie|game[s]? from)\b/.test(t)) return 'game';
-  // Social — meetup, mixer, party, hangout, gathering, friends, lgbt, parents, founders meetup
-  if (/\b(meetup|mixer|party|hangout|gathering|meet[\s-]?up|friends?|lgbt|gay|parents meetup|founders meetup|shabbat|whales|degens|mira)\b/.test(all)) return 'social';
-  // Demo / showcase / office hours / live
-  if (/\b(demo|showcase|launch|live (polling|betting)|setup|warcasting setup|office hours)\b/.test(t)) return 'demo';
-  // Q&A / Fireside / Panel / discuss / debate
-  if (/\b(q&a|q ?and ?a|fireside|panel|debate|interviews?|conversation|discussion|discussing|discuss\b)\b/.test(t)) return 'panel';
+  if (/\b(poker|chess|bughouse|trivia|tournament|clocktower|game show|cardinality|sock wrestle|origami|estimation game|nash pit|operant conditioning game|crystal coinflip|dumb pitch|pitch competition|startup pitch|speed friending|speed meeting|speedfriend|mentor.*mentee)\b/.test(t)) return 'game';
+  // Social — meetup, mixer, party, hangout, gathering, social, friends, lgbt, parents, founders meetup
+  if (/\b(meetup|mixer|party|hangout|gathering|social|meet[\s-]?up|friends?|lgbt|gay|parents meetup|founders meetup|shabbat|whales|degens|mira|founders meetup)\b/.test(all)) return 'social';
+  // Office Hours / Q&A / Fireside / Panel
+  if (/\b(office hours|q&a|q ?and ?a|fireside|panel|debate|interviews?|conversation|discussion)\b/.test(t)) return 'panel';
   // Workshop / class / training / build-a-bot / lesson
-  if (/\b(workshop|class|training|build[\s-]?a[\s-]?bot|how to|intro to|101|tutorial|hands[\s-]?on|guided|learn)\b/.test(t)) return 'workshop';
+  if (/\b(workshop|class|training|build[\s-]?a[\s-]?bot|how to|intro to|101|tutorial|exercise|hands[\s-]?on|guided|learn)\b/.test(t)) return 'workshop';
+  // Demo / showcase / live
+  if (/\b(demo|showcase|launch|live (polling|betting)|setup|warcasting setup)\b/.test(t)) return 'demo';
   // Default to talk
   return 'talk';
 }
 
 function sessionsForDay(day, year) {
-  if (year === '2025') {
-    return day.slots.flatMap(slot =>
-      slot.sessions.map(s => ({ title: cleanText(s.title), speaker: cleanText(s.speaker) }))
-    );
-  }
-  return day.events.map(ev => ({ title: cleanText(ev.title), speaker: cleanText(ev.hosts) }));
+  return day.events.map(ev => ({
+    title: cleanText(ev.title),
+    speaker: cleanText(ev.hosts),
+    rsvp: ev.rsvp,
+    start: ev.start,
+    end: ev.end,
+    venue: ev.venue,
+    description: ev.description,
+  }));
 }
 
 function visibleSessions(day, year) {
@@ -464,10 +507,35 @@ function createSessionCard(session) {
   card.dataset.cat = cat;
   card.innerHTML = `
     <div class="cat-label"></div>
+    <div class="rsvp">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="12" cy="8" r="4"/>
+        <path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/>
+      </svg>
+      <span class="rsvp-count"></span>
+    </div>
     <div class="title"></div>
     <div class="speaker"></div>`;
+  const rsvpEl = card.querySelector('.rsvp');
+  if (session.rsvp && Number(session.rsvp) > 0) {
+    rsvpEl.querySelector('.rsvp-count').textContent = session.rsvp;
+  } else {
+    rsvpEl.remove();
+  }
   card.querySelector('.cat-label').textContent = CAT_LABEL[cat] || cat;
   card.querySelector('.title').textContent = titleCase(session.title);
+  const time = session.start && session.end ? `${session.start} – ${session.end}` : session.start;
+  const tipLines = [];
+  if (time) tipLines.push(time);
+  if (session.venue) tipLines.push(session.venue);
+  if (session.description) tipLines.push(session.description);
+  if (tipLines.length) {
+    card.classList.add('has-tooltip');
+    if (time) card.dataset.tipTime = time;
+    if (session.venue) card.dataset.tipVenue = session.venue;
+    if (session.description) card.dataset.tipDescription = session.description;
+    card.tabIndex = 0;
+  }
   const speakerEl = card.querySelector('.speaker');
   const names = (session.speaker || '').split(',').map(s => s.trim()).filter(Boolean);
   speakerEl.textContent = '';
@@ -487,7 +555,58 @@ function createSessionCard(session) {
   return { card, cat };
 }
 
+function positionTooltip(card) {
+  const gap = 12;
+  const rect = card.getBoundingClientRect();
+  const tipRect = tooltipEl.getBoundingClientRect();
+  let top = rect.bottom + gap;
+  let left = rect.left;
+
+  if (left + tipRect.width > window.innerWidth - gap) left = window.innerWidth - tipRect.width - gap;
+  if (left < gap) left = gap;
+  if (top + tipRect.height > window.innerHeight - gap) {
+    top = window.innerHeight - tipRect.height - gap;
+  }
+  if (top < gap) top = gap;
+
+  tooltipEl.style.left = `${Math.round(left)}px`;
+  tooltipEl.style.top = `${Math.round(top)}px`;
+}
+
+function showTooltip(card) {
+  if (!card.dataset.tipTime && !card.dataset.tipVenue && !card.dataset.tipDescription) return;
+  tooltipEl.textContent = '';
+  const meta = document.createElement('div');
+  meta.className = 'tooltip-meta';
+  if (card.dataset.tipTime) {
+    const time = document.createElement('span');
+    time.textContent = card.dataset.tipTime;
+    meta.appendChild(time);
+  }
+  if (card.dataset.tipVenue) {
+    const venue = document.createElement('span');
+    venue.className = 'tooltip-location';
+    venue.textContent = card.dataset.tipVenue;
+    meta.appendChild(venue);
+  }
+  if (meta.childNodes.length) tooltipEl.appendChild(meta);
+  if (card.dataset.tipDescription) {
+    const description = document.createElement('div');
+    description.className = 'tooltip-description';
+    description.textContent = card.dataset.tipDescription;
+    tooltipEl.appendChild(description);
+  }
+  tooltipEl.classList.add('visible');
+  positionTooltip(card);
+}
+
+function hideTooltip() {
+  tooltipEl.classList.remove('visible');
+  tooltipEl.textContent = '';
+}
+
 async function loadYear(year) {
+  hideTooltip();
   document.body.className = 'year-' + year;
   document.querySelectorAll('nav.years button').forEach(b => {
     const active = b.dataset.year === year;
@@ -569,6 +688,7 @@ function refreshFilterOptions() {
 }
 
 function applyFilter() {
+  hideTooltip();
   const cat = filterSelect.value;
   document.querySelectorAll('.day-section').forEach(section => {
     let visibleCount = 0;
@@ -582,6 +702,37 @@ function applyFilter() {
 }
 
 filterSelect.addEventListener('change', applyFilter);
+
+document.getElementById('schedule').addEventListener('mouseover', event => {
+  const card = event.target.closest('.session.has-tooltip');
+  if (!card || card.contains(event.relatedTarget)) return;
+  showTooltip(card);
+});
+
+document.getElementById('schedule').addEventListener('mouseout', event => {
+  const card = event.target.closest('.session.has-tooltip');
+  if (!card || card.contains(event.relatedTarget)) return;
+  hideTooltip();
+});
+
+document.getElementById('schedule').addEventListener('focusin', event => {
+  const card = event.target.closest('.session.has-tooltip');
+  if (card) showTooltip(card);
+});
+
+document.getElementById('schedule').addEventListener('focusout', event => {
+  const card = event.target.closest('.session.has-tooltip');
+  if (!card || card.contains(event.relatedTarget)) return;
+  hideTooltip();
+});
+
+window.addEventListener('scroll', () => {
+  const card = document.querySelector('.session.has-tooltip:hover');
+  if (card && tooltipEl.classList.contains('visible')) positionTooltip(card);
+  else hideTooltip();
+}, { passive: true });
+
+window.addEventListener('resize', hideTooltip);
 
 const initialYear = (location.hash.match(/year-(2023|2024|2025)/) || [,'2025'])[1];
 loadYear(initialYear).then(() => { refreshFilterOptions(); applyFilter(); });
