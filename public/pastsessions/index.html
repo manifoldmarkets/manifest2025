@@ -73,6 +73,39 @@
 
   .year-meta { font-size: 14px; color: var(--muted); margin-bottom: 22px; }
 
+  .filter-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0 0 22px;
+    flex-wrap: wrap;
+  }
+  .filter-row label {
+    font-family: var(--font-cinzel);
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 600;
+  }
+  .filter-row select {
+    font-family: var(--font-cinzel);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--ink);
+    background: var(--panel);
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    padding: 8px 32px 8px 16px;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path fill='none' stroke='%236b5f4f' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round' d='M1 1l5 5 5-5'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+  }
+  .filter-row select:hover { border-color: var(--ink); }
+
   .day-section {
     border-top: 1px solid var(--rule);
     padding-top: 22px;
@@ -195,6 +228,14 @@
   </nav>
 
   <div id="year-meta" class="year-meta"></div>
+
+  <div class="filter-row">
+    <label for="cat-filter">Filter by type</label>
+    <select id="cat-filter">
+      <option value="all">All types</option>
+    </select>
+  </div>
+
   <main id="schedule"></main>
 
   <footer class="site">
@@ -382,6 +423,7 @@ async function loadYear(year) {
   document.getElementById('footer-text').textContent = `Manifest ${year}`;
 
   // Render schedule
+  const catOrder = Object.fromEntries(CATEGORIES.map((c, i) => [c.key, i]));
   const main = document.getElementById('schedule');
   main.innerHTML = '';
   for (const d of data) {
@@ -393,8 +435,13 @@ async function loadYear(year) {
     const grid = document.createElement('div');
     grid.className = 'session-grid';
 
-    for (const s of visible) {
-      const item = createSessionCard(s);
+    const items = visible.map(s => createSessionCard(s));
+    items.sort((a, b) => {
+      const ai = catOrder[a.cat] ?? 99;
+      const bi = catOrder[b.cat] ?? 99;
+      return ai - bi;
+    });
+    for (const item of items) {
       grid.appendChild(item.card);
     }
     sec.appendChild(grid);
@@ -404,13 +451,46 @@ async function loadYear(year) {
 
 document.querySelectorAll('nav.years button').forEach(btn => {
   btn.addEventListener('click', () => {
-    loadYear(btn.dataset.year);
+    loadYear(btn.dataset.year).then(() => { refreshFilterOptions(); applyFilter(); });
     history.replaceState(null, '', '#year-' + btn.dataset.year);
   });
 });
 
+// Filter dropdown
+const filterSelect = document.getElementById('cat-filter');
+
+function refreshFilterOptions() {
+  const present = new Set();
+  document.querySelectorAll('#schedule .session').forEach(c => present.add(c.dataset.cat));
+  const previous = filterSelect.value || 'all';
+  filterSelect.innerHTML = '<option value="all">All types</option>';
+  for (const cat of CATEGORIES) {
+    if (!present.has(cat.key)) continue;
+    const opt = document.createElement('option');
+    opt.value = cat.key;
+    opt.textContent = cat.label;
+    filterSelect.appendChild(opt);
+  }
+  filterSelect.value = present.has(previous) || previous === 'all' ? previous : 'all';
+}
+
+function applyFilter() {
+  const cat = filterSelect.value;
+  document.querySelectorAll('.day-section').forEach(section => {
+    let visibleCount = 0;
+    section.querySelectorAll('.session').forEach(card => {
+      const match = cat === 'all' || card.dataset.cat === cat;
+      card.style.display = match ? '' : 'none';
+      if (match) visibleCount++;
+    });
+    section.style.display = visibleCount === 0 ? 'none' : '';
+  });
+}
+
+filterSelect.addEventListener('change', applyFilter);
+
 const initialYear = (location.hash.match(/year-(2024|2025)/) || [,'2025'])[1];
-loadYear(initialYear);
+loadYear(initialYear).then(() => { refreshFilterOptions(); applyFilter(); });
 </script>
 </body>
 </html>
