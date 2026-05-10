@@ -5,7 +5,7 @@
       {
         "color": "rose",
         "title": "Manifold Theater: Sweepstakes Mania (feat. Duncan Horst of Bet on Love)",
-        "hosts": "Duncan Horst, Tim Blais",
+        "hosts": "Tim Blais & Duncan Horst",
         "rsvp": 60,
         "venue": "Rat Park",
         "start": "4:30 PM",
@@ -35,7 +35,7 @@
       {
         "color": "orange",
         "title": "Fireside Chat with Founder of Upstart, Paul Gu",
-        "hosts": "Paul Gu, Austin Chen",
+        "hosts": "Paul Gu & Austin Chen",
         "rsvp": 21,
         "venue": "Eigen Hall",
         "start": "4:30 PM",
@@ -54,7 +54,7 @@
       {
         "color": "orange",
         "title": "The Politics of Election Market Bans",
-        "hosts": "Jeremiah Johnson, Maxim Lott, Peter Hammon",
+        "hosts": "Jeremiah Johnson & Maxim Lott & Peter Hammon",
         "rsvp": 68,
         "venue": "Eigen Hall",
         "start": "7:00 PM",
@@ -154,7 +154,7 @@
       {
         "color": "lime",
         "title": "Theo Jaffee Interviews Stephen Grugett",
-        "hosts": "Stephen Grugett, Theodore Jaffee",
+        "hosts": "Stephen Grugett & Theodore Jaffee",
         "rsvp": 34,
         "venue": "Bayes Attic",
         "start": "8:00 PM",
@@ -407,7 +407,7 @@
       {
         "color": "rose",
         "title": "Why So Much Disagreement About AI Risk?",
-        "hosts": "Josh Rosenberg, Scott Alexander, Misha Glouberman",
+        "hosts": "Josh Rosenberg & Scott Alexander & Misha Glouberman",
         "rsvp": 131,
         "venue": "Rat Park",
         "start": "1:00 PM",
@@ -417,7 +417,7 @@
       {
         "color": "rose",
         "title": "Fireside Chat with Substack CEO, Chris Best",
-        "hosts": "Chris Best, Austin Chen",
+        "hosts": "Chris Best & Austin Chen",
         "rsvp": 104,
         "venue": "Rat Park",
         "start": "2:00 PM",
@@ -464,7 +464,7 @@
       {
         "color": "orange",
         "title": "Metaculus: $120K AI Benchmarking Tournament Announcement & Build-A-Bot Workshop",
-        "hosts": "Deger Turan, Tom Liptay",
+        "hosts": "Tom Liptay & Deger Turan",
         "rsvp": 48,
         "venue": "Eigen Hall",
         "start": "11:00 AM",
@@ -483,7 +483,7 @@
       {
         "color": "orange",
         "title": "Hard Questions for Manifold",
-        "hosts": "Stephen Grugett, James Grugett, Austin Chen",
+        "hosts": "Austin Chen, James Grugett & Stephen Grugett",
         "rsvp": 56,
         "venue": "Eigen Hall",
         "start": "1:00 PM",
@@ -773,7 +773,7 @@
       {
         "color": "green",
         "title": "Founders Meetup",
-        "hosts": "Jonathan Miller, Yingru Qiu",
+        "hosts": "Yingru Qiu & Jonathan Miller",
         "rsvp": 24,
         "venue": "Gyroscope",
         "start": "10:00 AM",
@@ -783,7 +783,7 @@
       {
         "color": "green",
         "title": "Events Should Be Good, Not Bad",
-        "hosts": "Austin Chen, Misha Glouberman",
+        "hosts": "Austin Chen & Misha Glouberman",
         "rsvp": 48,
         "venue": "Gyroscope",
         "start": "11:00 AM",
@@ -813,7 +813,7 @@
       {
         "color": "green",
         "title": "Futarchy and Conditional Markets",
-        "hosts": "Kelvin Santos, Robin Hanson, Austin Chen",
+        "hosts": "Austin Chen, Robin Hanson & Kelvin Santos",
         "rsvp": 58,
         "venue": "Gyroscope",
         "start": "3:00 PM",
@@ -1055,7 +1055,7 @@
       },
       {
         "title": "Emergent gameplay and narrative",
-        "hosts": "Patrick McKenzie, Justin Kuiper",
+        "hosts": "Justin Kuiper & Patrick McKenzie",
         "rsvp": 51,
         "venue": "Gyroscope",
         "start": "1:00 PM",
@@ -1064,7 +1064,7 @@
       },
       {
         "title": "Banking + Dragons: analyzing The Dagger and the Coin",
-        "hosts": "Patrick McKenzie, Justin Kuiper",
+        "hosts": "Justin Kuiper & Patrick McKenzie",
         "rsvp": 31,
         "venue": "Gyroscope",
         "start": "1:30 PM",
@@ -1240,7 +1240,7 @@
       },
       {
         "title": "Draw Bluey",
-        "hosts": "keltan O’Shea, Isabella Jones, Isaac Henry Linn, August Veix",
+        "hosts": "August Veix & keltan O’Shea & Isabella Jones & Isaac Henry Linn",
         "rsvp": 7,
         "venue": "Bayes Ground",
         "start": "11:00 PM",
@@ -1294,7 +1294,7 @@
       {
         "color": "rose",
         "title": "Behind the Numbers: Eliciting Rationales to Improve Decision-Making",
-        "hosts": "Cate Hall, Dan Schwarz, Josh Rosenberg, Deger Turan",
+        "hosts": "Cate Hall & Dan Schwarz & Deger Turan & Josh Rosenberg",
         "rsvp": 61,
         "venue": "Rat Park",
         "start": "1:00 PM",
@@ -1747,7 +1747,7 @@
       },
       {
         "title": "Starting a Microschool: An interview with Kelsey Piper and June Kreml",
-        "hosts": "Jasmine Ren, Kelsey Piper, June Kreml",
+        "hosts": "June Kreml & Jasmine Ren & Kelsey Piper",
         "rsvp": 85,
         "venue": "Eigen Hall",
         "start": "9:30 AM",
@@ -1993,7 +1993,7 @@
       },
       {
         "title": "<in the rat park dome> Church",
-        "hosts": "Lydia La Roux, Ian Phillips, Robin Hanson, Sy Etirabys",
+        "hosts": "Sy Etirabys & Ian Phillips & Robin Hanson & Lydia La Roux",
         "rsvp": 9,
         "venue": "Bayes Attic",
         "start": "8:00 PM",

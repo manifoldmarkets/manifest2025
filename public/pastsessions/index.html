@@ -149,18 +149,22 @@
   .session {
     background: var(--card);
     border: 1px solid var(--rule);
-    padding: 10px 12px;
+    padding: 8px 10px;
     border-radius: 6px;
     transition: transform 100ms;
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(96px, 38%);
-    grid-template-rows: auto 1fr;
-    gap: 2px 12px;
-    min-height: 86px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
     break-inside: avoid;
-    margin: 0 0 10px;
+    margin: 0 0 8px;
   }
   .session:hover { transform: translateY(-1px); }
+  .session__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
   #session-tooltip {
     position: fixed;
     display: none;
@@ -209,16 +213,14 @@
     font-weight: 600;
     color: #5d5547;
     opacity: 0.7;
-    margin-bottom: 6px;
-    grid-column: 1;
-    grid-row: 1;
-    align-self: start;
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
   .session .rsvp {
-    grid-column: 2;
-    grid-row: 1;
-    justify-self: end;
-    align-self: start;
+    flex: 0 0 auto;
     display: inline-flex;
     align-items: center;
     gap: 4px;
@@ -239,22 +241,24 @@
   .session .title {
     font-size: 12px;
     font-weight: 700;
-    margin-bottom: 0;
     color: #2b2419;
     line-height: 1.28;
-    grid-column: 1;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
   .session .speaker {
     font-family: var(--font-cinzel);
     font-size: 12px;
     color: #5d5547;
     font-style: italic;
-    grid-column: 2;
-    grid-row: 2;
-    justify-self: end;
-    align-self: end;
     text-align: right;
+    align-self: stretch;
     overflow-wrap: break-word;
+    line-height: 1.25;
+    margin-top: 3px;
   }
   .session .speaker-name { display: inline-block; white-space: nowrap; }
   .session a.speaker-name { color: inherit; text-decoration: none; border-bottom: 1px dotted currentColor; }
@@ -286,13 +290,6 @@
     header.site h1 { font-size: 28px; }
     h2.day { font-size: 22px; }
     .session-grid { column-count: 1; }
-    .session { grid-template-columns: minmax(0, 1fr); }
-    .session .speaker {
-      grid-column: 1;
-      grid-row: auto;
-      justify-self: start;
-      text-align: left;
-    }
   }
 </style>
 </head>
@@ -460,6 +457,7 @@ const CATEGORY_OVERRIDES = {
   'awkwardmaxxing for the socially anxious': 'workshop',
   'balance games and wrestling!': 'game',
   'banterbrush: chill, chat and make art': 'social',
+  'behind the numbers: eliciting rationales to improve decision-making': 'panel',
   'big manifold awards ceremony': 'performance',
   'breaking the blank slate: social consequences of genetic screening': 'talk',
   'build the future of universities with me': 'workshop',
@@ -476,6 +474,7 @@ const CATEGORY_OVERRIDES = {
   'draw bluey': 'social',
   'epic math puzzle sesh': 'game',
   'experimental conversational format': 'social',
+  'emergent gameplay and narrative': 'panel',
   'figgie': 'game',
   'fine-tuning, the multiverse, anthropic bias, and the reference-class problem': 'panel',
   'fire 101 & hidden traps': 'talk',
@@ -599,13 +598,15 @@ function createSessionCard(session) {
   const cat = categorize(session.title, session.speaker);
   card.dataset.cat = cat;
   card.innerHTML = `
-    <div class="cat-label"></div>
-    <div class="rsvp">
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <circle cx="12" cy="8" r="4"/>
-        <path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/>
-      </svg>
-      <span class="rsvp-count"></span>
+    <div class="session__top">
+      <div class="cat-label"></div>
+      <div class="rsvp">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="8" r="4"/>
+          <path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/>
+        </svg>
+        <span class="rsvp-count"></span>
+      </div>
     </div>
     <div class="title"></div>
     <div class="speaker"></div>`;
@@ -630,20 +631,34 @@ function createSessionCard(session) {
     card.tabIndex = 0;
   }
   const speakerEl = card.querySelector('.speaker');
-  const names = (session.speaker || '').split(',').map(s => s.trim()).filter(Boolean);
+  let groups = (session.speaker || '').split(',').map(s => s.trim()).filter(Boolean);
+  groups.sort((a, b) => a.length - b.length);
+  if (groups.length === 2 && !groups[0].includes('&') && !groups[1].includes('&')) {
+    groups = [groups.join(' & ')];
+  }
   speakerEl.textContent = '';
-  names.forEach((name, i) => {
-    const url = SPEAKER_LINKS[name];
-    const el = document.createElement(url ? 'a' : 'span');
-    el.className = 'speaker-name';
-    el.textContent = name;
-    if (url) {
-      el.href = url;
-      el.target = '_blank';
-      el.rel = 'noopener noreferrer';
-    }
-    speakerEl.appendChild(el);
-    if (i < names.length - 1) speakerEl.appendChild(document.createElement('br'));
+  groups.forEach((group, gi) => {
+    const subnames = group.split(/\s*&\s*/).map(s => s.trim()).filter(Boolean).sort((a, b) => a.length - b.length);
+    subnames.forEach((name, si) => {
+      if (si > 0) {
+        let sep;
+        if (subnames.length === 2) sep = ' & ';
+        else if (si === subnames.length - 1) sep = ', & ';
+        else sep = ', ';
+        speakerEl.appendChild(document.createTextNode(sep));
+      }
+      const url = SPEAKER_LINKS[name];
+      const el = document.createElement(url ? 'a' : 'span');
+      el.className = 'speaker-name';
+      el.textContent = name;
+      if (url) {
+        el.href = url;
+        el.target = '_blank';
+        el.rel = 'noopener noreferrer';
+      }
+      speakerEl.appendChild(el);
+    });
+    if (gi < groups.length - 1) speakerEl.appendChild(document.createElement('br'));
   });
   return { card, cat };
 }
