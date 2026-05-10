@@ -714,7 +714,7 @@ const PAGE_HTML = `
       <div class="v1-cell__img" style="background-image:url('/images/gallery/2025-3.jpg'); background-position:center 30%;"></div>
     </figure>
     <article class="v1-cell v1-cell--list">
-      <header><span class="v1-list__cat">Firesides &amp; Q&amp;A</span></header>
+      <header><span class="v1-list__cat">Fireside / Panel / Q&amp;A</span></header>
       <ol class="v1-list__items v1-list__items--stack">
         <li><b>Founder of Upstart, Paul Gu</b></li>
         <li><b>Nate Silver &amp; Scott Alexander</b></li>
