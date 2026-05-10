@@ -2,44 +2,1003 @@
 
 import { useEffect } from 'react'
 
-const PAGE_CSS = "@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Cinzel+Decorative:wght@400;700;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');\n\n  :root {\n    --m26-parchment: #f0e8df;\n    --m26-cream: #f5f0eb;\n    --m26-lav-light: #ddd5ea;\n    --m26-lav: #c8bdd6;\n    --m26-lav-mid: #a99bc2;\n    --m26-purple: #6b5b8d;\n    --m26-purple-deep: #4a3a6b;\n    --m26-purple-dark: #2e1f4d;\n    --m26-btn: #7b6b9e;\n    --m26-btn-hover: #6a5a8d;\n    --m26-muted: #6b5b7d;\n    --m26-card: #8b80b8;\n    --m26-ink: #4a3a6b;\n\n    --font-cinzel: \"Cinzel\", serif;\n    --font-cinzel-deco: \"Cinzel Decorative\", serif;\n    --font-baskerville: \"Libre Baskerville\", Georgia, serif;\n  }\n  * { box-sizing: border-box; }\n  html, body { margin: 0; padding: 0; }\n  body {\n    background: var(--m26-parchment);\n    color: var(--m26-purple-deep);\n    font-family: var(--font-baskerville);\n    -webkit-font-smoothing: antialiased;\n  }\n\n  .pill { border-radius: 9999px 0 9999px 0; }\n\n  a { color: inherit; }\n  img { max-width: 100%; display: block; }\n\n  /* NAV */\n  nav.top {\n    position: fixed; top: 0; left: 0; right: 0;\n    display: flex; align-items: center; justify-content: space-between;\n    padding: 12px 24px;\n    background: rgba(240, 232, 223, 0.30);\n    backdrop-filter: blur(6px);\n    z-index: 50;\n    transition: background 180ms, box-shadow 180ms;\n  }\n  .top__brand {\n    font-family: var(--font-cinzel);\n    font-weight: 700; font-size: 14px;\n    text-transform: uppercase; letter-spacing: 0.04em;\n    color: #fff;\n    text-shadow: 0 2px 8px rgba(0,0,0,0.5);\n  }\n  .top__links {\n    display: flex; align-items: center; gap: 24px;\n  }\n  .top__links a {\n    font-family: var(--font-cinzel);\n    font-weight: 700; font-size: 14px;\n    color: #fff;\n    text-decoration: none;\n    text-shadow: 0 2px 8px rgba(0,0,0,0.5);\n  }\n  .top__links a:hover { opacity: 0.7; }\n  nav.top.is-scrolled {\n    background: rgba(240, 232, 223, 0.88);\n    box-shadow: 0 1px 10px rgba(46,31,77,0.08);\n  }\n  nav.top.is-scrolled .top__brand,\n  nav.top.is-scrolled .top__links a {\n    color: var(--m26-purple-deep);\n    text-shadow: none;\n  }\n  nav.top.is-scrolled .top__register {\n    color: #fff !important;\n  }\n  .top__register {\n    background: var(--m26-btn);\n    color: #fff !important;\n    text-shadow: none !important;\n    padding: 8px 20px;\n  }\n  .top__register:hover { background: var(--m26-btn-hover); }\n\n  /* HERO */\n  .hero { position: relative; }\n  .hero__img {\n    height: 100vh;\n    min-height: 720px;\n    position: relative;\n    overflow: hidden;\n  }\n  .hero__img img {\n    position: absolute; inset: 0;\n    width: 100%; height: 100%;\n    object-fit: cover; object-position: center;\n  }\n  .hero__fade {\n    position: absolute; left: 0; right: 0; bottom: 0;\n    height: 10vh;\n    background: linear-gradient(to top, var(--m26-parchment), transparent);\n  }\n  .hero__content {\n    position: absolute; inset: 0;\n    display: flex; flex-direction: column;\n    align-items: center; justify-content: center;\n    padding: 0 24px;\n    text-align: center;\n  }\n  .hero__title {\n    font-family: var(--font-cinzel-deco);\n    font-weight: 700;\n    font-size: 96px;\n    line-height: 1;\n    letter-spacing: -0.04em;\n    color: #fff;\n    margin: 0;\n    text-shadow:\n      0 2px 4px rgba(46,31,77,0.95),\n      0 4px 20px rgba(46,31,77,0.85),\n      0 8px 40px rgba(46,31,77,0.7);\n  }\n  .hero__sub {\n    margin-top: 16px;\n    font-family: var(--font-cinzel);\n    font-weight: 700; font-size: 24px;\n    color: #fff; line-height: 1.4;\n    text-shadow:\n      0 2px 3px rgba(46,31,77,0.95),\n      0 3px 14px rgba(46,31,77,0.85),\n      0 6px 28px rgba(46,31,77,0.7);\n  }\n  .hero__cta {\n    margin-top: 144px;\n    position: relative;\n  }\n  .hero__cta-glow {\n    position: absolute; inset: -8px;\n    background: linear-gradient(135deg, rgba(245,240,235,0.4), rgba(200,189,214,0.2));\n    filter: blur(20px);\n    border-radius: 24px 0 24px 0;\n    opacity: 0.7;\n    z-index: 0;\n    pointer-events: none;\n  }\n  .hero__cta-card {\n    position: relative; z-index: 1;\n    display: flex; flex-direction: row; align-items: center;\n    gap: 32px;\n    padding: 20px 32px;\n    background: rgba(240,232,223,0.5);\n    backdrop-filter: blur(8px);\n    border: 1px solid rgba(245,240,235,0.8);\n    box-shadow: 0 4px 16px rgba(0,0,0,0.18);\n  }\n  .hero__date {\n    font-family: var(--font-cinzel);\n    font-weight: 700; font-size: 18px;\n    letter-spacing: 0.02em;\n    color: var(--m26-purple-deep);\n  }\n  .hero__register {\n    background: var(--m26-btn);\n    color: #fff;\n    text-decoration: none;\n    padding: 12px 28px;\n    font-family: var(--font-cinzel);\n    font-weight: 700; font-size: 16px;\n    letter-spacing: 0.08em;\n  }\n  .hero__register:hover { background: var(--m26-btn-hover); }\n\n  /* SECTIONS */\n  .scroll-mt { scroll-margin-top: 64px; }\n  section { position: relative; }\n  .container-5xl { max-width: 1024px; margin: 0 auto; padding: 0 24px; }\n  .container-3xl { max-width: 768px; margin: 0 auto; padding: 0 24px; }\n  .container-4xl { max-width: 896px; margin: 0 auto; padding: 0 24px; }\n  .container-6xl { max-width: 1152px; margin: 0 auto; padding: 0 24px; }\n\n  .h2 {\n    font-family: var(--font-cinzel-deco);\n    font-weight: 400;\n    font-size: 48px;\n    letter-spacing: 0.04em;\n    color: var(--m26-purple-deep);\n    text-align: center;\n    margin: 0 0 56px 0;\n  }\n\n  /* SPEAKERS */\n  #speakers { padding-top: 5vh; padding-bottom: 96px; }\n  .speakers-grid {\n    display: grid;\n    grid-template-columns: repeat(5, 1fr);\n    gap: 32px;\n  }\n  .speaker { display: flex; flex-direction: column; align-items: center; }\n  .speaker__photo {\n    width: 112px; height: 112px;\n    border-radius: 50%;\n    overflow: hidden;\n    box-shadow: 0 4px 16px rgba(46,31,77,0.2);\n    background: var(--m26-lav);\n  }\n  .speaker__photo img { width: 100%; height: 100%; object-fit: cover; transition: transform 250ms ease, filter 250ms ease; }\n  .speaker__photo:hover img { transform: scale(1.06); filter: brightness(1.05); }\n  .speaker__name {\n    margin: 12px 0 2px 0;\n    font-family: var(--font-cinzel);\n    font-weight: 700; font-size: 14px;\n    letter-spacing: 0.02em;\n    text-align: center;\n    color: var(--m26-purple-deep);\n  }\n  .speaker__bio {\n    font-family: var(--font-baskerville);\n    font-size: 12px;\n    color: var(--m26-muted);\n    text-align: center;\n    margin: 0;\n  }\n\n  .past-appearances {\n    margin-top: 64px;\n    text-align: center;\n  }\n  .past-appearances__label {\n    font-family: var(--font-cinzel);\n    font-weight: 700;\n    font-size: 14px;\n    letter-spacing: 0.32em;\n    text-transform: uppercase;\n    color: var(--m26-purple);\n    margin: 0 0 48px 0;\n  }\n  .past-appearances__grid {\n    max-width: 680px;\n    margin: 0 auto;\n    display: grid;\n    grid-template-columns: repeat(3, 1fr);\n    column-gap: 36px;\n    row-gap: 6px;\n  }\n  .past-appearances__grid > div:nth-child(3n+1) { text-align: right; }\n  .past-appearances__grid > div:nth-child(3n+2) { text-align: center; }\n  .past-appearances__grid > div:nth-child(3n) { text-align: left; }\n  .past-appearances__grid .pa-name {\n    font-family: var(--font-cinzel);\n    font-size: 14px;\n    font-weight: 500;\n    color: var(--m26-ink);\n    margin: 0 0 1px 0;\n    line-height: 1.2;\n  }\n  .past-appearances__grid .pa-aff {\n    font-family: var(--font-baskerville);\n    font-style: italic;\n    font-size: 11px;\n    color: var(--m26-muted);\n    margin: 0;\n    line-height: 1.3;\n  }\n  .past-appearances__cta {\n    margin-top: 64px;\n  }\n  .past-appearances__note {\n    font-family: var(--font-baskerville);\n    font-style: italic;\n    font-size: 18px;\n    color: var(--m26-ink);\n    margin: 0;\n  }\n  @media (max-width: 720px) {\n    .past-appearances__grid {\n      grid-template-columns: 1fr;\n      column-gap: 0;\n      row-gap: 24px;\n      max-width: 320px;\n    }\n  }\n\n  /* DIVIDER */\n  .divider {\n    display: flex; justify-content: center;\n    padding: 4px 0;\n  }\n  .divider__line {\n    width: 100%;\n    max-width: 1400px;\n    height: 3px;\n    border-radius: 9999px;\n    background: linear-gradient(90deg, transparent, rgba(107,91,141,0.4) 15%, rgba(107,91,141,0.4) 85%, transparent);\n  }\n\n  /* WHAT IS MANIFEST */\n  #what-is-manifest { padding: 0; }\n  .what--wide {\n    max-width: 100%;\n    margin: 0;\n    padding: 0;\n  }\n  .what--wide > h2,\n  .what--wide > p {\n    padding: 0 48px;\n  }\n  .what--wide p { max-width: 78ch; }\n  .what--wide .what__lists { max-width: 1100px; }\n  .what h2 {\n    font-family: var(--font-cinzel);\n    font-weight: 700; font-size: 24px;\n    color: var(--m26-purple-deep);\n    margin: 0 0 12px 0;\n    letter-spacing: 0.02em;\n  }\n  .what h2.next { margin-top: 32px; }\n  .what p {\n    font-family: var(--font-baskerville);\n    font-size: 16px; line-height: 1.75;\n    color: var(--m26-purple-deep);\n    margin: 0;\n  }\n\n  /* THEMES GRID */\n  .what__intro {\n    font-style: italic;\n    color: var(--m26-muted);\n    max-width: 60ch;\n  }\n  .themes-grid {\n    margin-top: 40px;\n    margin-left: 0;\n    margin-right: 0;\n    width: 100%;\n    display: grid;\n    grid-template-columns: 1fr 1fr;\n    border-bottom: 1px solid rgba(107,91,141,0.4);\n  }\n  .theme-cell {\n    border-right: 1px solid rgba(107,91,141,0.4);\n    min-height: 340px;\n    padding: 36px 48px;\n    position: relative;\n    display: flex;\n    flex-direction: column;\n    justify-content: flex-start;\n  }\n  .theme-cell:nth-child(2n) { border-right: none; }\n  .theme-cell:nth-child(n+3) { border-top: 1px solid rgba(107,91,141,0.4); }\n  .theme-cell--text {\n    background: var(--m26-parchment);\n  }\n  .theme-cell--full .theme-title {\n    font-family: var(--font-cinzel-deco);\n    font-weight: 400;\n    max-width: none;\n    white-space: nowrap;\n    font-size: 48px;\n    letter-spacing: 0.04em;\n    text-align: center;\n  }\n  .theme-title {\n    font-family: var(--font-cinzel);\n    font-weight: 700;\n    font-size: 28px;\n    line-height: 1.15;\n    color: var(--m26-ink);\n    margin: 0 0 18px 0;\n    max-width: 14ch;\n  }\n  .theme-title--program {\n    font-family: var(--font-cinzel);\n    font-weight: 700;\n    font-size: 22px;\n    letter-spacing: 0.02em;\n  }\n  .theme-title--happens {\n    font-family: var(--font-cinzel-deco);\n    font-weight: 400;\n    font-size: 36px;\n    max-width: none;\n    white-space: nowrap;\n  }\n  .theme-date {\n    font-family: var(--font-baskerville);\n    font-style: italic;\n    font-size: 15px;\n    color: var(--m26-ink);\n    margin: 0 0 28px 0;\n  }\n  .theme-tags {\n    font-family: var(--font-baskerville);\n    font-size: 13px;\n    color: var(--m26-ink);\n    line-height: 1.7;\n    margin: 0;\n    max-width: 38ch;\n  }\n  .theme-cell--image {\n    padding: 0;\n    min-height: 340px;\n    display: flex;\n    align-items: flex-end;\n    justify-content: flex-start;\n  }\n  .theme-cell--full {\n    grid-column: 1 / -1;\n    min-height: auto;\n    padding: 56px 48px;\n    border-bottom: 1px solid rgba(74,58,107,0.35);\n  }\n  .theme-cell--full .theme-tags--prose {\n    max-width: 78ch;\n    margin-left: auto;\n    margin-right: auto;\n    text-align: center;\n  }\n  .theme-tags--prose {\n    max-width: 50ch;\n    line-height: 1.65;\n  }\n  .talks-list {\n    list-style: none;\n    padding: 0;\n    margin: 0;\n    font-family: var(--font-baskerville);\n    font-size: 13px;\n    color: var(--m26-ink);\n  }\n  .talks-list li {\n    display: flex;\n    justify-content: space-between;\n    align-items: baseline;\n    gap: 16px;\n    padding: 6px 0;\n    border-bottom: 1px solid rgba(74,58,107,0.18);\n  }\n  .talks-list li:last-child { border-bottom: none; }\n  .talks-list .talk-title { flex: 1; }\n  .talks-list .talk-speaker {\n    color: var(--m26-muted);\n    font-style: italic;\n    text-align: right;\n  }\n  .theme-cell--intro {\n    background: linear-gradient(180deg, #c9b8d2 0%, #a89cb8 50%, #6b5b8d 100%);\n  }\n  .theme-cell--happens {\n    background: url('/images/themes/sessions-1.jpg') center/cover no-repeat, linear-gradient(180deg, #d8c4b8 0%, #b8a496 50%, #7a6450 100%);\n  }\n  .theme-cell--dawn {\n    background: url('/images/themes/talks-adjacent.jpg') center/cover no-repeat, linear-gradient(180deg, #d9c9d8 0%, #c9b8d2 35%, #a8b89a 100%);\n  }\n  .theme-cell--summit {\n    background: url('/images/gallery/2025-3.jpg') center 30%/cover no-repeat, linear-gradient(180deg, #d4c5db 0%, #b9a4c0 50%, #6f5a73 100%);\n  }\n  .theme-cell--dusk {\n    background: url('/images/themes/sessions-courtyard.png') center/cover no-repeat, linear-gradient(180deg, #d8c4b8 0%, #b89a8a 50%, #7a5a52 100%);\n  }\n  .theme-cell--meadow {\n    background: url('/images/themes/much-more-guitar.png') center/cover no-repeat, linear-gradient(180deg, #c9c4d8 0%, #a8a89c 60%, #6a7458 100%);\n  }\n  .theme-badge {\n    margin: 24px;\n    display: inline-block;\n    padding: 6px 14px;\n    background: var(--m26-parchment);\n    border: 1px solid rgba(31,28,24,0.3);\n    font-family: var(--font-cinzel);\n    font-weight: 600;\n    font-size: 11px;\n    letter-spacing: 0.22em;\n    color: var(--m26-ink);\n  }\n  @media (max-width: 720px) {\n    .themes-grid { grid-template-columns: 1fr; }\n    .theme-cell { min-height: 220px; padding: 28px; }\n    .theme-cell:nth-child(2n) { border-right: 1px solid rgba(107,91,141,0.4); }\n    .theme-title { font-size: 24px; }\n  }\n\n  /* PHOTO ROW */\n  .photo-row {\n    margin-top: 40px;\n    position: relative;\n    max-width: 1152px;\n    margin-left: auto; margin-right: auto;\n    padding: 0 24px;\n  }\n  .photo-row__scroll {\n    overflow-x: auto;\n    padding: 0 24px 8px 24px;\n    margin: 0 -24px;\n    scrollbar-width: thin;\n  }\n  .photo-row__inner {\n    display: flex;\n    gap: 16px;\n  }\n  .photo-row__item {\n    flex: 0 0 320px;\n    aspect-ratio: 4/3;\n    border-radius: 16px 0 16px 0;\n    overflow: hidden;\n    border: 1px solid rgba(107,91,141,0.2);\n    background: var(--m26-cream);\n    box-shadow: 0 1px 3px rgba(0,0,0,0.05);\n  }\n  .photo-row__item img { width: 100%; height: 100%; object-fit: cover; }\n  .photo-row__hint {\n    margin-top: 12px;\n    text-align: center;\n    font-family: var(--font-cinzel);\n    font-size: 12px;\n    letter-spacing: 0.18em;\n    text-transform: uppercase;\n    color: rgba(107,91,141,0.7);\n  }\n\n  /* TESTIMONIALS */\n  #testimonials { padding: 96px 0; }\n  .testimonials-wide { max-width: 1152px; margin: 0 auto; padding: 0 24px; }\n  .testimonials-wide--flush {\n    max-width: none;\n    padding: 0;\n  }\n  .testimonial-grid {\n    display: flex;\n    flex-direction: row;\n    gap: 24px;\n    overflow-x: auto;\n    scroll-snap-type: x mandatory;\n    padding: 4px 0 24px 0;\n    -webkit-overflow-scrolling: touch;\n    scrollbar-width: none;\n  }\n  .testimonial-grid::-webkit-scrollbar { display: none; }\n  .testimonial {\n    flex: 0 0 360px;\n    scroll-snap-align: start;\n    margin-bottom: 0;\n    padding: 32px;\n    background: rgba(245, 240, 235, 0.8);\n    border: 1px solid rgba(107,91,141,0.2);\n    border-radius: 16px 0 16px 0;\n    text-decoration: none;\n    transition: border-color 200ms, box-shadow 200ms;\n    display: flex;\n    flex-direction: column;\n  }\n  .testimonial:hover {\n    border-color: rgba(107,91,141,0.4);\n    box-shadow: 0 10px 25px rgba(46,31,77,0.08);\n  }\n  .testimonial p {\n    font-family: var(--font-baskerville);\n    font-size: 15px;\n    line-height: 1.7;\n    color: var(--m26-purple-deep);\n    margin: 0;\n  }\n  .testimonial__author {\n    text-align: right;\n    margin-top: auto !important;\n    padding-top: 24px !important;\n    font-family: var(--font-cinzel) !important;\n    font-weight: 700 !important;\n    font-size: 12px !important;\n    letter-spacing: 0.18em !important;\n    text-transform: uppercase !important;\n    color: var(--m26-purple) !important;\n  }\n  /* SPONSORS */\n  #sponsors { padding: 96px 0; }\n  .sponsors-stack {\n    display: flex; flex-direction: column;\n    align-items: center; gap: 32px;\n  }\n  .mono-img { display: block; }\n  .mono-img--polymarket {\n    height: 80px; width: 280px;\n    background-color: var(--m26-purple);\n    -webkit-mask-image: url('/images/sponsors/polymarket-logo.svg');\n    mask-image: url('/images/sponsors/polymarket-logo.svg');\n    -webkit-mask-size: contain; mask-size: contain;\n    -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;\n    -webkit-mask-position: center; mask-position: center;\n  }\n  .mono-img--substack {\n    height: 48px; width: 200px;\n    background-color: var(--m26-purple);\n    -webkit-mask-image: url('/images/sponsors/substack-logo.png');\n    mask-image: url('/images/sponsors/substack-logo.png');\n    -webkit-mask-size: contain; mask-size: contain;\n    -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;\n    -webkit-mask-position: center; mask-position: center;\n  }\n  .mono-img--kalshi {\n    height: 48px; width: 120px;\n    background-color: var(--m26-purple);\n    -webkit-mask-image: url('/images/sponsors/kalshi-logo.svg');\n    mask-image: url('/images/sponsors/kalshi-logo.svg');\n    -webkit-mask-size: contain; mask-size: contain;\n    -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;\n    -webkit-mask-position: center; mask-position: center;\n  }\n  .sponsors-row {\n    display: flex; align-items: center; gap: 56px;\n  }\n  .sponsors-small {\n    margin-top: 8px;\n    font-family: var(--font-cinzel);\n    font-weight: 700;\n    font-size: 18px;\n    letter-spacing: 0.02em;\n    color: var(--m26-purple);\n  }\n  .sponsors-cta { margin-top: 40px; text-align: center; }\n\n  .btn-solid {\n    display: inline-block;\n    background: var(--m26-btn);\n    color: #fff !important;\n    padding: 12px 24px;\n    font-family: var(--font-cinzel);\n    font-weight: 700; font-size: 14px;\n    letter-spacing: 0.08em;\n    text-decoration: none;\n    transition: background 160ms;\n  }\n  .btn-solid:hover { background: var(--m26-btn-hover); }\n  .btn-outline {\n    display: inline-block;\n    border: 1px solid var(--m26-purple);\n    background: rgba(240,232,223,0.6);\n    color: var(--m26-purple-deep) !important;\n    padding: 11px 24px;\n    font-family: var(--font-cinzel);\n    font-weight: 700; font-size: 14px;\n    letter-spacing: 0.08em;\n    text-decoration: none;\n  }\n  .btn-outline:hover { background: rgba(240,232,223,0.85); }\n\n  /* NIGHT MARKET */\n  #nightmarket { padding: 96px 0; }\n  .nm-row {\n    display: flex; gap: 48px;\n  }\n  .nm-left { flex: 0 0 40%; }\n  .nm-right { flex: 1; }\n  .nm-eyebrow {\n    font-family: var(--font-cinzel);\n    font-size: 14px;\n    letter-spacing: 0.18em;\n    color: var(--m26-purple);\n    margin: 0 0 8px 0;\n  }\n  .nm-title {\n    font-family: var(--font-cinzel-deco);\n    font-weight: 400;\n    font-size: 36px;\n    letter-spacing: 0.04em;\n    color: var(--m26-purple-deep);\n    margin: 0 0 8px 0;\n  }\n  .nm-when {\n    font-family: var(--font-cinzel);\n    font-size: 12px;\n    letter-spacing: 0.06em;\n    color: var(--m26-muted);\n    margin: 0 0 16px 0;\n  }\n  .nm-body {\n    font-family: var(--font-baskerville);\n    font-size: 14px;\n    line-height: 1.7;\n    color: var(--m26-muted);\n    margin: 0;\n  }\n  .nm-cta {\n    margin-top: 24px;\n    text-align: center;\n  }\n  .nm-cta--page {\n    margin-top: 40px;\n  }\n  .nm-emphasize {\n    font-family: var(--font-cinzel);\n    font-weight: 700; font-size: 14px;\n    letter-spacing: 0.08em;\n    color: var(--m26-purple);\n  }\n  .nm-grid {\n    display: grid;\n    grid-template-columns: 1fr 1fr;\n    column-gap: 24px;\n    row-gap: 20px;\n  }\n  .nm-grid h3 {\n    font-family: var(--font-cinzel);\n    font-weight: 700; font-size: 18px;\n    letter-spacing: 0.02em;\n    color: var(--m26-purple);\n    margin: 0 0 4px 0;\n  }\n  .nm-grid p {\n    font-family: var(--font-baskerville);\n    font-size: 14px; line-height: 1.5;\n    color: var(--m26-purple);\n    margin: 0;\n  }\n  .nm-reel {\n    margin-top: 64px;\n    margin-left: calc(50% - 50vw);\n    margin-right: calc(50% - 50vw);\n    overflow-x: auto;\n    display: flex;\n    gap: 18px;\n    padding: 0 0 18px 0;\n    scroll-snap-type: x mandatory;\n    -webkit-overflow-scrolling: touch;\n  }\n  .nm-reel::-webkit-scrollbar { height: 8px; }\n  .nm-reel::-webkit-scrollbar-thumb {\n    background: rgba(107,91,141,0.32);\n    border-radius: 999px;\n  }\n  .nm-reel__item {\n    flex: 0 0 min(72vw, 520px);\n    height: 320px;\n    scroll-snap-align: start;\n    overflow: hidden;\n    background: var(--m26-cream);\n    transition: box-shadow 250ms ease;\n  }\n  .nm-reel__item:hover { box-shadow: 0 12px 28px rgba(46,31,77,0.22); }\n  .nm-reel__item img {\n    width: 100%;\n    height: 100%;\n    object-fit: cover;\n    transition: transform 350ms ease;\n  }\n  .nm-reel__item:hover img { transform: scale(1.04); }\n  @media (max-width: 720px) {\n    .nm-row { flex-direction: column; gap: 32px; }\n    .nm-grid { grid-template-columns: 1fr; }\n    .nm-reel__item {\n      flex-basis: 86vw;\n      height: 240px;\n    }\n  }\n\n  /* TICKETS */\n  #tickets { padding: 96px 0; }\n  .tickets-iframe {\n    max-width: 1152px; margin: 0 auto; padding: 0 24px;\n  }\n\n  /* FAQ */\n  #faq { padding: 96px 0; }\n  .faq-row {\n    border-bottom: 1px solid rgba(107,91,141,0.2);\n    padding: 16px 0;\n    cursor: pointer;\n  }\n  .faq-row__head {\n    display: flex; align-items: center; justify-content: space-between;\n    font-family: var(--font-cinzel);\n    font-size: 16px;\n    letter-spacing: 0.04em;\n    color: var(--m26-purple);\n  }\n  .faq-row__icon {\n    font-size: 20px;\n    margin-left: 16px;\n  }\n  .faq-row__body {\n    margin-top: 12px;\n    font-family: var(--font-baskerville);\n    font-size: 14px;\n    line-height: 1.7;\n    color: var(--m26-muted);\n    display: none;\n  }\n  .faq-row.open .faq-row__body { display: block; }\n  .faq-row__body a {\n    color: var(--m26-purple);\n    text-decoration: underline;\n    text-underline-offset: 2px;\n  }\n  .faq-row__body a:hover { color: var(--m26-purple-deep); }\n\n  /* ORGANIZERS */\n  #organizers { padding: 96px 0; }\n  .org-grid {\n    display: flex; flex-wrap: wrap;\n    justify-content: center; gap: 48px;\n  }\n  .organizer { display: flex; flex-direction: column; align-items: center; width: 160px; }\n  .organizer__photo {\n    width: 128px; height: 128px;\n    border-radius: 50%;\n    overflow: hidden;\n    box-shadow: 0 4px 16px rgba(46,31,77,0.2);\n    background: var(--m26-lav);\n  }\n  .organizer__photo img { width: 100%; height: 100%; object-fit: cover; transition: transform 250ms ease, filter 250ms ease; }\n  .organizer__photo:hover img { transform: scale(1.06); filter: brightness(1.05); }\n  .organizer__name {\n    margin: 12px 0 0 0;\n    font-family: var(--font-cinzel);\n    font-weight: 700; font-size: 18px;\n    letter-spacing: 0.02em;\n  }\n  .organizer__email {\n    margin: 0;\n    font-family: var(--font-baskerville);\n    font-size: 14px;\n    color: var(--m26-muted);\n  }\n  .org-sub {\n    margin: 0 auto 40px;\n    font-family: var(--font-cinzel);\n    font-size: 14px;\n    text-align: center;\n    color: var(--m26-purple);\n    letter-spacing: 0.04em;\n  }\n\n  /* FOOTER */\n  footer.foot { padding: 32px 0; text-align: center; }\n  .foot-links {\n    display: flex; gap: 24px; justify-content: center;\n    font-family: var(--font-cinzel);\n    font-size: 12px;\n  }\n  .foot-links a { color: var(--m26-purple); text-decoration: none; }\n  .foot-links a:hover { opacity: 0.7; }\n\n  @media (max-width: 720px) {\n    .hero__title { font-size: 56px; }\n    .hero__sub { font-size: 18px; }\n    .hero__cta-card { flex-direction: column; gap: 16px; padding: 16px 20px; }\n    .speakers-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }\n    .h2 { font-size: 32px; margin-bottom: 32px; }\n  }\n"
+/* -------------------------------------------------------------------------- */
+/* PAGE_CSS — original m26-* tokens + new v1-* editorial styles                */
+/* -------------------------------------------------------------------------- */
 
-const PAGE_HTML = "<!-- NAV -->\n<nav class=\"top\">\n  <span class=\"top__brand\">Manifest 2026</span>\n  <div class=\"top__links\">\n    <a href=\"#speakers\">Home</a>\n    <a href=\"#speakers\">Speakers</a>\n    <a href=\"#tickets\" class=\"top__register pill\">Register</a>\n  </div>\n</nav>\n\n<!-- HERO -->\n<section class=\"hero\">\n  <div class=\"hero__img\">\n    <img src=\"/images/2026/campfire.jpg\" alt=\"Manifest 2026\" />\n    <div class=\"hero__fade\"></div>\n  </div>\n  <div class=\"hero__content\">\n    <h1 class=\"hero__title\">Manifest 2026</h1>\n    <p class=\"hero__sub\">A festival for predictions,<br/>and markets thereof</p>\n    <div class=\"hero__cta\">\n      <span class=\"hero__cta-glow\"></span>\n      <div class=\"hero__cta-card\">\n        <span class=\"hero__date\">June 12&ndash;14, 2026 &nbsp;|&nbsp; Berkeley, CA</span>\n        <a href=\"#tickets\" class=\"hero__register pill\">Register</a>\n      </div>\n    </div>\n  </div>\n</section>\n\n<!-- SPEAKERS -->\n<section id=\"speakers\" class=\"scroll-mt\">\n  <div class=\"container-5xl\">\n    <h2 class=\"h2\">Speakers, of years past</h2>\n    <div class=\"speakers-grid\">\n      <div class=\"speaker\"><div class=\"speaker__photo\"><img src=\"/images/speakers/nate.jpg\" alt=\"Nate Silver\"/></div><p class=\"speaker__name\">Nate Silver</p><p class=\"speaker__bio\">Silver Bulletin</p></div>\n      <div class=\"speaker\"><div class=\"speaker__photo\"><img src=\"/images/speakers/scott.jpg\" alt=\"Scott Alexander\"/></div><p class=\"speaker__name\">Scott Alexander</p><p class=\"speaker__bio\">Astral Codex Ten</p></div>\n      <div class=\"speaker\"><div class=\"speaker__photo\"><img src=\"/images/speakers/chris.jpg\" alt=\"Chris Best\"/></div><p class=\"speaker__name\">Chris Best</p><p class=\"speaker__bio\">Substack</p></div>\n      <div class=\"speaker\"><div class=\"speaker__photo\"><img src=\"/images/speakers/luana.jpg\" alt=\"Luana Lopes Lara\"/></div><p class=\"speaker__name\">Luana Lopes Lara</p><p class=\"speaker__bio\">Kalshi</p></div>\n      <div class=\"speaker\"><div class=\"speaker__photo\"><img src=\"/images/speakers/shayne.jpg\" alt=\"Shayne Coplan\"/></div><p class=\"speaker__name\">Shayne Coplan</p><p class=\"speaker__bio\">Polymarket</p></div>\n      <div class=\"speaker\"><div class=\"speaker__photo\"><img src=\"/images/speakers/emmett.jpg\" alt=\"Emmett Shear\"/></div><p class=\"speaker__name\">Emmett Shear</p><p class=\"speaker__bio\">Softmax</p></div>\n      <div class=\"speaker\"><div class=\"speaker__photo\"><img src=\"/images/speakers/joe.jpg\" alt=\"Joe Carlsmith\"/></div><p class=\"speaker__name\">Joe Carlsmith</p><p class=\"speaker__bio\">Anthropic</p></div>\n      <div class=\"speaker\"><div class=\"speaker__photo\"><img src=\"/images/speakers/laura.jpg\" alt=\"Laura Deming\"/></div><p class=\"speaker__name\">Laura Deming</p><p class=\"speaker__bio\">Cradle</p></div>\n      <div class=\"speaker\"><div class=\"speaker__photo\"><img src=\"/images/speakers/patrick.jpg\" alt=\"Patrick McKenzie\"/></div><p class=\"speaker__name\">Patrick McKenzie</p><p class=\"speaker__bio\">Writer</p></div>\n      <div class=\"speaker\"><div class=\"speaker__photo\"><img src=\"/images/speakers/robin.jpg\" alt=\"Robin Hanson\"/></div><p class=\"speaker__name\">Robin Hanson</p><p class=\"speaker__bio\">Economist</p></div>\n      <div class=\"speaker\"><div class=\"speaker__photo\"><img src=\"/images/speakers/davidshor.jpg\" alt=\"David Shor\"/></div><p class=\"speaker__name\">David Shor</p><p class=\"speaker__bio\">Blue Rose Research</p></div>\n      <div class=\"speaker\"><div class=\"speaker__photo\"><img src=\"/images/speakers/dwarkesh.jpg\" alt=\"Dwarkesh Patel\"/></div><p class=\"speaker__name\">Dwarkesh Patel</p><p class=\"speaker__bio\">Dwarkesh Podcast</p></div>\n      <div class=\"speaker\"><div class=\"speaker__photo\"><img src=\"/images/speakers/eliezer.jpg\" alt=\"Eliezer Yudkowsky\"/></div><p class=\"speaker__name\">Eliezer Yudkowsky</p><p class=\"speaker__bio\">MIRI</p></div>\n      <div class=\"speaker\"><div class=\"speaker__photo\"><img src=\"/images/speakers/ajeya.jpg\" alt=\"Ajeya Cotra\"/></div><p class=\"speaker__name\">Ajeya Cotra</p><p class=\"speaker__bio\">METR</p></div>\n      <div class=\"speaker\"><div class=\"speaker__photo\"><img src=\"/images/speakers/agnes.webp\" alt=\"Agnes Callard\"/></div><p class=\"speaker__name\">Agnes Callard</p><p class=\"speaker__bio\">Philosopher</p></div>\n    </div>\n    <div class=\"past-appearances\">\n      <p class=\"past-appearances__label\">&mdash; And many more &mdash;</p>\n      <div class=\"past-appearances__grid\" id=\"past-list\"></div>\n      <div class=\"past-appearances__cta\">\n        <p class=\"past-appearances__note\">Stay tuned as we announce speakers &amp; guests for 2026</p>\n      </div>\n    </div>\n  </div>\n</section>\n\n<div class=\"divider\"><div class=\"divider__line\"></div></div>\n\n<!-- WHAT IS MANIFEST -->\n<section id=\"what-is-manifest\" class=\"scroll-mt\">\n  <div class=\"what what--wide\">\n    <div class=\"themes-grid\">\n      <div class=\"theme-cell theme-cell--text theme-cell--full\">\n        <h3 class=\"theme-title\">What is Manifest?</h3>\n        <p class=\"theme-tags theme-tags--prose\">Manifest is a festival ostensibly about prediction markets, but secretly about connecting with old friends and people you admire from your favorite niche corners of the internet.<br><br>&ldquo;Equal parts Math Olympiad and Burning Man&rdquo;, it is a gathering of nerds who want to find the thinkers and practitioners they vehemently agree/disagree with, share a meal around a cozy campfire, and come away with radically new ways of thinking.</p>\n      </div>\n      <div class=\"theme-cell theme-cell--text\">\n        <h3 class=\"theme-title\" style=\"max-width: none; white-space: nowrap;\">What sorts of things happen at Manifest?</h3>\n        <p class=\"theme-tags theme-tags--prose\">Talks, panels, debates, workshops, games, prediction market tournaments, a night market, career fair, and much more.<br><br>Much of the schedule comes from attendee-led sessions.<br><br>Past years have included:</p>\n      </div>\n      <div class=\"theme-cell theme-cell--image theme-cell--happens\"></div>\n      <div class=\"theme-cell theme-cell--image theme-cell--dawn\"></div>\n      <div class=\"theme-cell theme-cell--text\">\n        <h3 class=\"theme-title theme-title--program\">Talks</h3>\n        <ul class=\"talks-list\">\n          <li><span class=\"talk-title\">Press X to Doubt: Journalism Edition</span><span class=\"talk-speaker\">Patrick McKenzie</span></li>\n          <li><span class=\"talk-title\">Reforming Academia via Reputation Futures</span><span class=\"talk-speaker\">Robin Hanson</span></li>\n          <li><span class=\"talk-title\">What Is Aristotle&rsquo;s Metaphysics About?</span><span class=\"talk-speaker\">Arnold Brooks</span></li>\n          <li><span class=\"talk-title\">Writing &amp; Slop</span><span class=\"talk-speaker\">Roon, Scott Alexander, Gwern, Alexander Wales</span></li>\n          <li><span class=\"talk-title\">Forecasting AI Risks: Anthropic&rsquo;s Responsible Scaling Policy</span><span class=\"talk-speaker\">Ben Mann</span></li>\n          <li><span class=\"talk-title\">How Do We Solve the Alignment Problem?</span><span class=\"talk-speaker\">Joe Carlsmith</span></li>\n          <li><span class=\"talk-title\">Data Science &amp; Politics</span><span class=\"talk-speaker\">David Shor</span></li>\n          <li><span class=\"talk-title\">History Lecture with Live Betting</span><span class=\"talk-speaker\"></span></li>\n        </ul>\n      </div>\n      <div class=\"theme-cell theme-cell--text\">\n        <h3 class=\"theme-title theme-title--program\">Workshops</h3>\n        <ul class=\"talks-list\">\n          <li><span class=\"talk-title\">How to Make Superbabies</span><span class=\"talk-speaker\"></span></li>\n          <li><span class=\"talk-title\">How to Reform Science</span><span class=\"talk-speaker\"></span></li>\n          <li><span class=\"talk-title\">Learn SuperMemo and Incremental Reading</span><span class=\"talk-speaker\"></span></li>\n          <li><span class=\"talk-title\">Weird Findings in the Last 10 Years of Exercise Science</span><span class=\"talk-speaker\"></span></li>\n          <li><span class=\"talk-title\">How to Change Your Mind (with Replacement Therapies)</span><span class=\"talk-speaker\"></span></li>\n          <li><span class=\"talk-title\">Intro to Trading</span><span class=\"talk-speaker\"></span></li>\n          <li><span class=\"talk-title\">Startup Pitch Competition</span><span class=\"talk-speaker\"></span></li>\n        </ul>\n      </div>\n      <div class=\"theme-cell theme-cell--image theme-cell--summit\"></div>\n      <div class=\"theme-cell theme-cell--image theme-cell--dusk\"></div>\n      <div class=\"theme-cell theme-cell--text\">\n        <h3 class=\"theme-title theme-title--program\">Fireside chat / Q&amp;A with:</h3>\n        <ul class=\"talks-list\">\n          <li><span class=\"talk-title\">Founder of Upstart, Paul Gu</span><span class=\"talk-speaker\"></span></li>\n          <li><span class=\"talk-title\">Nate Silver &amp; Scott Alexander</span><span class=\"talk-speaker\"></span></li>\n          <li><span class=\"talk-title\">Stephen Grugett &amp; Theo Jaffee</span><span class=\"talk-speaker\"></span></li>\n          <li><span class=\"talk-title\">Ajeya Cotra</span><span class=\"talk-speaker\"></span></li>\n          <li><span class=\"talk-title\">Kalshi Co-Founder Luana Lopes Lara</span><span class=\"talk-speaker\"></span></li>\n          <li><span class=\"talk-title\">Substack CEO, Chris Best</span><span class=\"talk-speaker\"></span></li>\n          <li><span class=\"talk-title\">David Shor &amp; Jesse Richardson</span><span class=\"talk-speaker\"></span></li>\n        </ul>\n      </div>\n      <div class=\"theme-cell theme-cell--text\">\n        <h3 class=\"theme-title theme-title--program\">&amp; Much more</h3>\n        <ul class=\"talks-list\">\n          <li><span class=\"talk-title\">Actually Good Theories of Psychological Growth</span><span class=\"talk-speaker\"></span></li>\n          <li><span class=\"talk-title\">YouTube Economics: Attention &amp; Status as Currency</span><span class=\"talk-speaker\"></span></li>\n          <li><span class=\"talk-title\">Experimental Meditation Experiments</span><span class=\"talk-speaker\"></span></li>\n          <li><span class=\"talk-title\">Memory Systems / Anki / SRS Meetup</span><span class=\"talk-speaker\"></span></li>\n          <li><span class=\"talk-title\">Similarities Between Selling to Nation States and on Facebook Marketplace</span><span class=\"talk-speaker\"></span></li>\n          <li><span class=\"talk-title\">The Case for Interactionist Dualism</span><span class=\"talk-speaker\"></span></li>\n          <li><span class=\"talk-title\">Futurist Theory of Traditionalism</span><span class=\"talk-speaker\"></span></li>\n          <li><span class=\"talk-title\">Fun Etymology</span><span class=\"talk-speaker\"></span></li>\n        </ul>\n      </div>\n      <div class=\"theme-cell theme-cell--image theme-cell--meadow\"></div>\n    </div>\n  </div>\n</section>\n\n<!-- NIGHT MARKET -->\n<section id=\"nightmarket\" class=\"scroll-mt\">\n  <div class=\"container-5xl\">\n    <div class=\"nm-row\">\n      <div class=\"nm-left\">\n        <p class=\"nm-eyebrow\">Opening Night &middot; Free &amp; Public</p>\n        <h2 class=\"nm-title\">The Night Market</h2>\n        <p class=\"nm-body\">On Friday, the first night of Manifest, Lighthaven will be open and free to the public for our Career Fair &amp; Night Market. An open-air evening celebration of all things markets; it&rsquo;s a chance to meet people, share ideas, see strange gadgets, and wander around in a transcendent twilight&hellip;<br/><br/><span class=\"nm-emphasize\">no ticket required</span></p>\n      </div>\n      <div class=\"nm-right\">\n        <div class=\"nm-grid\">\n          <div><h3>Job Market</h3><p>Trade your skills for other skills, or find your next gig</p></div>\n          <div><h3>Stuff Market</h3><p>Arts, crafts, and locally crafted foods</p></div>\n          <div><h3>Experience Market</h3><p>Mini games, fortunes, and digital interactions</p></div>\n          <div><h3>Book Market</h3><p>Got a book? Essay? Poem? Share your physical prints</p></div>\n          <div><h3>Information Market</h3><p>Like a poster session, but without the academic standards</p></div>\n          <div><h3>Black Market</h3><p>Naming rights to a baby&rsquo;s middle name, &lsquo;probiotics&rsquo;, etc</p></div>\n        </div>\n      </div>\n    </div>\n    <div class=\"nm-cta nm-cta--page\"><a href=\"https://airtable.com/appMZp1aBO5b7NTdM/pagH4yhHlxyolS2Qv/form\" class=\"btn-solid pill\" target=\"_blank\" rel=\"noopener\">Register your interest</a></div>\n    <div class=\"nm-reel\" aria-label=\"Night Market photos\">\n      <div class=\"nm-reel__item\"><img src=\"/images/night-market/ish-8691.jpg\" alt=\"Night Market scene\" /></div>\n      <div class=\"nm-reel__item\"><img src=\"/images/night-market/7q4a-9011.jpg\" alt=\"Night Market scene\" /></div>\n      <div class=\"nm-reel__item\"><img src=\"/images/night-market/7q4a-0831.jpg\" alt=\"Night Market scene\" /></div>\n      <div class=\"nm-reel__item\"><img src=\"/images/night-market/7q4a-0927.jpg\" alt=\"Night Market scene\" /></div>\n      <div class=\"nm-reel__item\"><img src=\"/images/night-market/ish-3968.jpg\" alt=\"Night Market scene\" /></div>\n      <div class=\"nm-reel__item\"><img src=\"/images/night-market/7q4a-2266.jpg\" alt=\"Night Market scene\" /></div>\n      <div class=\"nm-reel__item\"><img src=\"/images/night-market/ish-8040.jpg\" alt=\"Night Market scene\" /></div>\n      <div class=\"nm-reel__item\"><img src=\"/images/night-market/7q4a-2067.jpg\" alt=\"Night Market scene\" /></div>\n      <div class=\"nm-reel__item\"><img src=\"/images/night-market/ish-5334.jpg\" alt=\"Night Market scene\" /></div>\n      <div class=\"nm-reel__item\"><img src=\"/images/night-market/ish-7882.jpg\" alt=\"Night Market scene\" /></div>\n      <div class=\"nm-reel__item\"><img src=\"/images/night-market/ish-8482.jpg\" alt=\"Night Market scene\" /></div>\n      <div class=\"nm-reel__item\"><img src=\"/images/night-market/7q4a-1682.jpg\" alt=\"Night Market scene\" /></div>\n      <div class=\"nm-reel__item\"><img src=\"/images/night-market/7q4a-9506.jpg\" alt=\"Night Market scene\" /></div>\n      <div class=\"nm-reel__item\"><img src=\"/images/night-market/7q4a-2536.jpg\" alt=\"Night Market scene\" /></div>\n      <div class=\"nm-reel__item\"><img src=\"/images/night-market/7q4a-9765.jpg\" alt=\"Night Market scene\" /></div>\n      <div class=\"nm-reel__item\"><img src=\"/images/night-market/20230924-img-8312.jpg\" alt=\"Night Market scene\" /></div>\n      <div class=\"nm-reel__item\"><img src=\"/images/night-market/7q4a-3907.jpg\" alt=\"Night Market scene\" /></div>\n    </div>\n  </div>\n</section>\n\n<div class=\"divider\"><div class=\"divider__line\"></div></div>\n\n<!-- TESTIMONIALS -->\n<section id=\"testimonials\" class=\"scroll-mt\">\n  <div class=\"testimonials-wide\">\n    <h2 class=\"h2\">Tales from festivalgoers</h2>\n  </div>\n  <div class=\"testimonials-wide testimonials-wide--flush\">\n    <div class=\"testimonial-grid\">\n      <a href=\"https://scottsumner.substack.com/p/paradise-on-telegraph-avenue\" class=\"testimonial\">\n        <p>I met many well known figures that I&rsquo;ve been reading for years. Where else will you meet multiple people within 24 hours who casually mentioned the short story Funes the Memorious in conversation?</p>\n        <p class=\"testimonial__author\">&mdash; Scott Sumner</p>\n      </a>\n      <a href=\"https://x.com/tomieinlove/status/1931934629218734083\" class=\"testimonial\">\n        <p>I love Manifest. I paid the full price for the full ticket, sucker I am, and my subsidy provided for these swaying bauble lights, these warm soporific nooks, these flames and corridors, these souls brought to Earth together, eyes lighting up at their electric worlds made real.</p>\n        <p class=\"testimonial__author\">&mdash; Tomie</p>\n      </a>\n      <a href=\"https://x.com/PabloPeniche/status/1932095093827334543\" class=\"testimonial\">\n        <p>Gwern came to my talk and told me at the end &ldquo;I disagree with everything you said and your entire theory of aesthetics is wrong.&rdquo; lol</p>\n        <p class=\"testimonial__author\">&mdash; Pablo</p>\n      </a>\n      <a href=\"https://jakeseliger.com/2024/06/13/manifest-the-manifold-markets-nerd-festival/\" class=\"testimonial\">\n        <p>Bess and I went to Manifest, which bills itself as &ldquo;A festival for forecasting and prediction markets,&rdquo; a description that may technically be true but fails to capture the spirit; to my eye and experience, it&rsquo;s maybe more accurately stated as &ldquo;Substack and Twitter live&rdquo; or &ldquo;a mixture of festival-conference-party-Burning-Man for nerds with many interests to show up and enjoy each other&rsquo;s company.&rdquo;</p>\n        <p class=\"testimonial__author\">&mdash; Jake Seliger</p>\n      </a>\n      <a href=\"https://x.com/ByrneHobart/status/1799963459658154203\" class=\"testimonial\">\n        <p>The Manifest conference has been a successful experiment: put enough introverts with common interests into a confined space and they&rsquo;ll spontaneously turn into extroverts.</p>\n        <p class=\"testimonial__author\">&mdash; Byrne Hobart</p>\n      </a>\n      <a href=\"https://x.com/tracewoodgrains/status/1800790146633138395\" class=\"testimonial\">\n        <p>For much of my life, I have poured my attention into tough-to-explain solitary pursuits, finding myself often sitting in quiet corners on the fringes of gatherings wondering if they&rsquo;re worth the effort. Not so last weekend.</p>\n        <p class=\"testimonial__author\">&mdash; TracingWoodgrains</p>\n      </a>\n    </div>\n  </div>\n</section>\n\n<div class=\"divider\"><div class=\"divider__line\"></div></div>\n\n<!-- SPONSORS -->\n<section id=\"sponsors\" class=\"scroll-mt\">\n  <div class=\"container-4xl\" style=\"text-align: center;\">\n    <h2 class=\"h2\">Sponsors of 2025</h2>\n    <div class=\"sponsors-stack\">\n      <a href=\"https://polymarket.com\"><div class=\"mono-img mono-img--polymarket\" role=\"img\" aria-label=\"Polymarket\"></div></a>\n      <div class=\"sponsors-row\">\n        <a href=\"https://substack.com\"><div class=\"mono-img mono-img--substack\" role=\"img\" aria-label=\"Substack\"></div></a>\n        <a href=\"https://kalshi.com\"><div class=\"mono-img mono-img--kalshi\" role=\"img\" aria-label=\"Kalshi\"></div></a>\n      </div>\n      <p class=\"sponsors-small\">Sovereign &middot; Bayes &middot; Elicit &middot; Futuur &middot; Metagame</p>\n    </div>\n    <div class=\"sponsors-cta\">\n      <a href=\"mailto:team@manifest.is\" class=\"btn-solid pill\">Sponsorships available for 2026</a>\n    </div>\n  </div>\n</section>\n\n<div class=\"divider\"><div class=\"divider__line\"></div></div>\n\n<!-- TICKETS -->\n<section id=\"tickets\" class=\"scroll-mt\">\n  <div class=\"tickets-iframe\">\n    <iframe src=\"https://less.online/manifest-embed\" title=\"Manifest 2026 tickets\" style=\"width: 100%; height: 900px; border: 0; display: block; background: var(--m26-cream); border-radius: 16px 0 16px 0;\" loading=\"lazy\"></iframe>\n  </div>\n</section>\n\n<div class=\"divider\"><div class=\"divider__line\"></div></div>\n\n<!-- FAQ -->\n<section id=\"faq\" class=\"scroll-mt\">\n  <div class=\"container-3xl\">\n    <h2 class=\"h2\">Frequently Asked</h2>\n    <div id=\"faq-list\">\n      <div class=\"faq-row\"><div class=\"faq-row__head\"><span>Where is Manifest happening?</span><span class=\"faq-row__icon\">+</span></div><p class=\"faq-row__body\">Lighthaven, 2740 Telegraph Avenue, Berkeley, CA 94705.</p></div>\n      <div class=\"faq-row\"><div class=\"faq-row__head\"><span>Can I purchase accommodation?</span><span class=\"faq-row__icon\">+</span></div><p class=\"faq-row__body\">Yes. Our venue, Lighthaven, has a limited number of rooms available for ticketholders &mdash; book directly through <a href=\"https://lighthaven.space\" target=\"_blank\" rel=\"noopener\">Lighthaven</a>.<br><br>However, space fills up quickly, so most attendees will need to find other accommodations nearby.</p></div>\n      <div class=\"faq-row\"><div class=\"faq-row__head\"><span>When does Manifest start and end?</span><span class=\"faq-row__icon\">+</span></div><p class=\"faq-row__body\">We&rsquo;re still finalizing the schedule. In past years, the festival has started Friday afternoon around 2pm, with the opening ceremony happening around 6pm.<br><br>The closing ceremony is Sunday evening, though events and informal gatherings continue into the night.</p></div>\n      <div class=\"faq-row\"><div class=\"faq-row__head\"><span>How many people will be at Manifest?</span><span class=\"faq-row__icon\">+</span></div><p class=\"faq-row__body\">We are expecting 500&ndash;700 attendees across the weekend.</p></div>\n      <div class=\"faq-row\"><div class=\"faq-row__head\"><span>What does my ticket include?</span><span class=\"faq-row__icon\">+</span></div><p class=\"faq-row__body\">Access to the festival from Friday through Sunday, including breakfast, lunch, and dinner every day.</p></div>\n      <div class=\"faq-row\"><div class=\"faq-row__head\"><span>Can I bring my kids?</span><span class=\"faq-row__icon\">+</span></div><p class=\"faq-row__body\">Yes, we love kids! Children 10 and under don&rsquo;t need tickets. Note, however, that we&rsquo;re unlikely to offer dedicated childcare this year.</p></div>\n      <div class=\"faq-row\"><div class=\"faq-row__head\"><span>How does volunteering work?</span><span class=\"faq-row__icon\">+</span></div><p class=\"faq-row__body\">Volunteers receive a discounted ticket in exchange for working shifts during the event. Once all shifts are completed, volunteers are eligible for a full refund. More details coming soon.</p></div>\n      <div class=\"faq-row\"><div class=\"faq-row__head\"><span>What if I need financial assistance to attend?</span><span class=\"faq-row__icon\">+</span></div><p class=\"faq-row__body\">We don&rsquo;t want finances to keep anyone from attending, and we want everyone Manifest is meant for to feel welcome.<br><br>If the volunteer shift requirement or deposit is a barrier, please fill out the <a href=\"https://airtable.com/appMZp1aBO5b7NTdM/pagTrQtYd1k1Oakhi/form\" target=\"_blank\" rel=\"noopener\">Low-Income Ticket Form</a>. You can also reach out to team@manifest.is if you&rsquo;d like to discuss further.</p></div>\n      <div class=\"faq-row\"><div class=\"faq-row__head\"><span>What is your refund policy?</span><span class=\"faq-row__icon\">+</span></div><p class=\"faq-row__body\">Full refunds are available up to 7 days before the event.<br><br>To request one, please contact team@manifest.is.</p></div>\n    </div>\n  </div>\n</section>\n\n<div class=\"divider\"><div class=\"divider__line\"></div></div>\n\n<!-- ORGANIZERS -->\n<section id=\"organizers\" class=\"scroll-mt\">\n  <div class=\"container-4xl\">\n    <h2 class=\"h2\" style=\"margin-bottom: 8px;\">Organizers</h2>\n    <p class=\"org-sub\">Questions? Reach out to the organizers</p>\n    <div class=\"org-grid\">\n      <div class=\"organizer\">\n        <div class=\"organizer__photo\"><img src=\"/images/staff/winter.jpg\" alt=\"Winter\"/></div>\n        <p class=\"organizer__name\">Winter</p>\n        <p class=\"organizer__email\">winter@manifest.is</p>\n      </div>\n      <div class=\"organizer\">\n        <div class=\"organizer__photo\"><img src=\"/images/staff/austin.jpg\" alt=\"Austin\"/></div>\n        <p class=\"organizer__name\">Austin</p>\n        <p class=\"organizer__email\">austin@manifest.is</p>\n      </div>\n      <div class=\"organizer\">\n        <div class=\"organizer__photo\"><img src=\"/images/staff/carolanne.jpg\" alt=\"Carolanne\"/></div>\n        <p class=\"organizer__name\">Carolanne</p>\n        <p class=\"organizer__email\">carolanne@manifest.is</p>\n      </div>\n    </div>\n  </div>\n</section>\n\n<!-- FOOTER -->\n<footer class=\"foot\">\n  <div class=\"foot-links\">\n    <a href=\"https://discord.com/invite/MjDqMcQFdR\">Discord</a>\n    <a href=\"/2025\">Manifest 2025</a>\n  </div>\n</footer>"
+const PAGE_CSS = `
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Cinzel+Decorative:wght@400;700;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap');
 
-const PAST_GUESTS = [["Aidan McLaughlin","OpenAI"],["Alex Gajewski","Atomic Industries"],["Danielle Fong","LightCell Energy"],["Dave White","Paradigm"],["David Holt","Researcher"],["Divya Siddarth","Collective Intelligence"],["Dylan Matthews","Future Perfect"],["Dylan Patel","SemiAnalysis"],["Gwern","Writer"],["Jay Baxter","xAI"],["Kevin Roose","NYT"],["Kyle Schiller","Energy researcher"],["Lars Doucet","Fool Functor"],["Lincoln Quirk","Wave"],["Nate Soares","MIRI"],["Noam Brown","OpenAI"],["Oliver Habryka","Lightcone"],["Panda Smith","Researcher"],["Ric Best","Substack"],["Rob Miles","AI Safety"],["Samo Burja","Bismarck Analysis"],["Samuel Hammond","FAI"],["Scott Sumner","Mercatus"],["Sholto Douglas","Anthropic"],["Steve Hsu","MSU"],["Tracing Woodgrains","Writer"],["Roon","OpenAI"],["Paul Gu","Upstart"],["Noah Smith","Noahpinion"],["Aella","Researcher"],["Stephen Grugett","Manifold"],["Katja Grace","AI Impacts"],["Tarek Mansour","Kalshi"],["Allison Duettmann","Foresight"],["Zvi Mowshowitz","Don't Worry About the Vase"],["Arnold Brooks","Philosopher"]].sort((a, b) => a[0].localeCompare(b[0]))
+:root {
+  --m26-parchment: #f0e8df;
+  --m26-cream: #f5f0eb;
+  --m26-lav: #c8bdd6;
+  --m26-purple: #6b5b8d;
+  --m26-purple-deep: #4a3a6b;
+  --m26-purple-dark: #2e1f4d;
+  --m26-btn: #7b6b9e;
+  --m26-btn-hover: #6a5a8d;
+  --m26-muted: #6b5b7d;
+  --m26-ink: #4a3a6b;
+
+  /* V1 tokens (alias same palette) */
+  --p: #f0e8df; --c: #f5f0eb; --pdeep: #2e1f4d; --pmid: #4a3a6b;
+  --plav: #6b5b8d; --btn: #7b6b9e; --ink: #4a3a6b; --muted: #6b5b7d;
+  --rule: rgba(74,58,107,0.18);
+
+  --font-cinzel: "Cinzel", serif;
+  --font-cinzel-deco: "Cinzel Decorative", serif;
+  --font-baskerville: "Libre Baskerville", Georgia, serif;
+  --cinzel: "Cinzel", serif;
+  --deco: "Cinzel Decorative", serif;
+  --serif: "Libre Baskerville", Georgia, serif;
+  --display: "Cormorant Garamond", "Libre Baskerville", Georgia, serif;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  background: var(--m26-parchment);
+  color: var(--m26-purple-deep);
+  font-family: var(--font-baskerville);
+  -webkit-font-smoothing: antialiased;
+}
+
+.pill { border-radius: 9999px 0 9999px 0; }
+a { color: inherit; }
+img { max-width: 100%; display: block; }
+
+/* ----- NAV (original m26 chrome — kept) ----- */
+nav.top {
+  position: fixed; top: 0; left: 0; right: 0;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 12px 24px;
+  background: rgba(240, 232, 223, 0.30);
+  backdrop-filter: blur(6px);
+  z-index: 50;
+  transition: background 180ms, box-shadow 180ms;
+}
+.top__brand {
+  font-family: var(--font-cinzel);
+  font-weight: 700; font-size: 14px;
+  text-transform: uppercase; letter-spacing: 0.04em;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+.top__links { display: flex; align-items: center; gap: 24px; }
+.top__links a {
+  font-family: var(--font-cinzel);
+  font-weight: 700; font-size: 14px;
+  color: #fff; text-decoration: none;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+.top__links a:hover { opacity: 0.7; }
+nav.top.is-scrolled {
+  background: rgba(240, 232, 223, 0.88);
+  box-shadow: 0 1px 10px rgba(46,31,77,0.08);
+}
+nav.top.is-scrolled .top__brand,
+nav.top.is-scrolled .top__links a {
+  color: var(--m26-purple-deep);
+  text-shadow: none;
+}
+nav.top.is-scrolled .top__register { color: #fff !important; }
+.top__register {
+  background: var(--m26-btn);
+  color: #fff !important;
+  text-shadow: none !important;
+  padding: 8px 20px;
+}
+.top__register:hover { background: var(--m26-btn-hover); }
+
+/* ----- HERO (V1 editorial) ----- */
+.v1-hero { position: relative; height: 100vh; min-height: 720px; overflow: hidden; }
+.v1-hero__img {
+  position: absolute; inset: 0;
+  background-size: cover; background-position: center;
+  transform: scale(1.04);
+}
+.v1-hero__veil {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse at center, transparent 50%, rgba(20,16,14,0.25) 100%),
+    linear-gradient(to bottom, rgba(20,16,14,0.05), rgba(20,16,14,0.30));
+}
+.v1-hero__fade {
+  position: absolute; left: 0; right: 0; bottom: 0;
+  height: 10vh;
+  background: linear-gradient(to top, var(--m26-parchment), transparent);
+  pointer-events: none;
+}
+.v1-hero__inner {
+  position: absolute; inset: 0; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; text-align: center;
+  padding: 0 24px; color: #fff;
+}
+.v1-hero__eyebrow {
+  font-family: var(--cinzel); font-size: 12px; letter-spacing: 0.4em; text-transform: uppercase;
+  color: rgba(255,255,255,0.85); margin-bottom: 18px;
+}
+.v1-hero__title {
+  font-family: var(--deco); font-weight: 700; font-size: 128px; line-height: 1;
+  margin: 0; letter-spacing: -0.04em; color: #fff;
+  text-shadow:
+    0 2px 4px rgba(46,31,77,0.95),
+    0 4px 20px rgba(46,31,77,0.85),
+    0 8px 40px rgba(46,31,77,0.7);
+}
+.v1-hero__sub {
+  margin: 28px 0 36px; font-family: var(--cinzel); font-weight: 700;
+  font-size: 24px; line-height: 1.4; color: rgba(255,255,255,0.95);
+  letter-spacing: 0.02em;
+  text-shadow: 0 2px 10px rgba(46,31,77,0.7);
+}
+.v1-hero__row { display: flex; gap: 14px; }
+.v1-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 14px 26px; font-family: var(--cinzel); font-weight: 700; font-size: 13px;
+  letter-spacing: 0.2em; text-transform: uppercase; text-decoration: none;
+  border-radius: 999px 0 999px 0; transition: transform 200ms, background 160ms;
+}
+.v1-btn--solid { background: #fff; color: var(--pdeep); }
+.v1-btn--solid:hover { transform: translateY(-1px); }
+.v1-btn--ink {
+  background: var(--m26-btn); color: #fff;
+  padding: 10px 24px; font-size: 13px;
+}
+.v1-btn--ink:hover { background: var(--m26-btn-hover); }
+
+/* ----- shared editorial primitives ----- */
+.v1-divider { border: 0; height: 1px; background: var(--rule); margin: 0 0 36px; }
+.v1-h2 {
+  font-family: var(--display); font-style: italic; font-weight: 500; font-size: 84px; line-height: 0.95;
+  margin: 0 0 28px; letter-spacing: -0.015em; color: var(--pdeep);
+}
+.v1-h2 em { font-style: italic; color: var(--plav); }
+.v1-h2--center { text-align: center; }
+.v1-lede {
+  font-family: var(--serif); font-style: italic; font-size: 22px; line-height: 1.55;
+  margin: 0 0 18px; color: var(--pdeep); max-width: 56ch;
+}
+.v1-body {
+  font-size: 16px; line-height: 1.75; color: var(--pmid); margin: 0; max-width: 64ch;
+}
+
+.scroll-mt { scroll-margin-top: 64px; }
+
+/* ----- SPEAKERS (V1) ----- */
+.v1-speakers { padding: 28px 56px 80px; }
+.v1-speakers__head { display: grid; grid-template-columns: 1.2fr 1fr; gap: 56px; align-items: end; margin-bottom: 44px; }
+.v1-speakers__head .v1-h2 { margin: 0; }
+.v1-spk-grid {
+  display: grid; grid-template-columns: repeat(5, 1fr); gap: 4px 0;
+}
+.v1-spk { margin: 0; display: flex; flex-direction: column; align-items: center; }
+.v1-spk__img {
+  width: 112px; height: 112px;
+  background-size: cover; background-position: center center;
+  border-radius: 50%;
+  box-shadow: 0 4px 16px rgba(46,31,77,0.2);
+  transition: transform 250ms ease, filter 250ms ease;
+}
+.v1-spk:hover .v1-spk__img { transform: scale(1.04); filter: brightness(1.05); }
+.v1-spk figcaption { display: flex; flex-direction: column; gap: 2px; padding-top: 12px; align-items: center; text-align: center; }
+.v1-spk__name {
+  font-family: var(--cinzel); font-weight: 700; font-size: 12px;
+  letter-spacing: 0.06em; text-transform: uppercase; color: var(--pdeep);
+}
+.v1-spk__role { font-style: italic; font-size: 12px; color: var(--muted); }
+
+.v1-spk-more { margin: 64px auto 0; text-align: center; max-width: 900px; }
+.v1-spk-more__label {
+  display: block;
+  font-family: var(--cinzel); font-weight: 600; font-size: 12px;
+  letter-spacing: 0.32em; text-transform: uppercase; color: var(--plav);
+  margin-bottom: 36px;
+}
+.v1-spk-more__grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); column-gap: 56px; row-gap: 8px;
+  font-family: var(--cinzel); font-weight: 500; font-size: 14px;
+  letter-spacing: 0.02em; color: var(--m26-ink); line-height: 1.3;
+}
+.v1-spk-more__grid > :nth-child(3n+1) { text-align: right; }
+.v1-spk-more__grid > :nth-child(3n+2) { text-align: center; }
+.v1-spk-more__grid > :nth-child(3n)   { text-align: left; }
+.v1-spk-more__note {
+  margin: 56px 0 0; font-family: var(--cinzel); font-style: italic;
+  font-size: 16px; color: var(--m26-purple);
+  letter-spacing: 0.02em;
+}
+
+/* ----- WHAT IS MANIFEST (V1) ----- */
+.v1-what { margin: 0; padding: 28px 56px 56px; }
+
+/* ----- THEMES GRID (V1) ----- */
+.v1-themes { padding: 56px 0 0; }
+.v1-themes__head { margin: 0; padding: 0 56px 40px; }
+.v1-themes__title {
+  font-family: var(--display); font-style: italic; font-weight: 500; font-size: 56px; line-height: 1.0;
+  letter-spacing: -0.015em; max-width: none; white-space: nowrap; margin: 0 0 18px; color: var(--pdeep);
+}
+.v1-themes__sub {
+  font-family: var(--serif); font-size: 16px; line-height: 1.75;
+  color: var(--pmid); margin: 0; max-width: 64ch;
+}
+.v1-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);
+}
+.v1-cell {
+  position: relative; min-height: 360px; padding: 36px 56px;
+  border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule);
+  margin: 0;
+}
+.v1-cell:nth-child(2n) { border-right: none; }
+.v1-cell:nth-last-child(-n+2) { border-bottom: none; }
+.v1-cell--photo { padding: 0; overflow: hidden; }
+.v1-cell--photo .v1-cell__img {
+  position: absolute; inset: 0; background-size: cover; background-position: center;
+  transition: transform 600ms ease;
+}
+.v1-cell--photo:hover .v1-cell__img { transform: scale(1.03); }
+.v1-cell--photo figcaption {
+  position: absolute; left: 24px; bottom: 20px; color: #fff;
+  font-family: var(--cinzel); font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.6);
+}
+.v1-cell--photo figcaption i { font-style: normal; opacity: 0.7; margin-right: 10px; }
+
+.v1-cell--list { padding-top: 0; }
+.v1-cell--list header {
+  display: flex; justify-content: space-between; align-items: baseline; gap: 16px;
+  margin: 0 -56px 18px; padding: 22px 56px 14px;
+  background: var(--p);
+  border-bottom: 1px dotted var(--rule);
+}
+.v1-list__cat {
+  font-family: var(--cinzel); font-weight: 700; font-size: 18px;
+  letter-spacing: 0.04em; text-transform: uppercase; color: var(--pdeep);
+}
+.v1-list__items {
+  list-style: none; margin: 0; padding: 0;
+  font-family: var(--serif); font-size: 13.5px; line-height: 1.45; color: var(--ink);
+}
+.v1-list__items li {
+  display: flex; align-items: baseline; gap: 16px;
+  padding: 9px 0;
+  border-bottom: 1px dotted var(--rule);
+  transition: color 150ms;
+}
+.v1-list__items li i {
+  font-style: italic; color: var(--muted); font-size: 12px;
+  text-align: right; white-space: nowrap;
+}
+.v1-list__items li:last-child { border-bottom: none; }
+.v1-list__items li:hover { color: var(--pdeep); }
+.v1-list__items li b {
+  flex: 1; font-family: var(--serif); font-style: normal; font-weight: 400;
+  font-size: 14px; color: var(--pdeep); letter-spacing: 0;
+}
+
+/* ----- NIGHT MARKET (V1) ----- */
+.v1-nm { padding: 0 56px 88px; }
+.v1-strip {
+  display: flex;
+  gap: 0;
+  border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+.v1-strip::-webkit-scrollbar { height: 6px; }
+.v1-strip::-webkit-scrollbar-thumb { background: rgba(74,58,107,0.3); border-radius: 999px; }
+.v1-nm { padding-top: 0; }
+.v1-nm > .v1-strip { margin: 0 -56px 56px; }
+.v1-strip__item {
+  position: relative; flex: 0 0 25%;
+  aspect-ratio: 4/3; margin: 0;
+  border-right: 1px solid var(--rule); overflow: hidden;
+  scroll-snap-align: start;
+}
+.v1-strip__item:last-child { border-right: none; }
+.v1-strip__img {
+  position: absolute; inset: 0; background-size: cover; background-position: center;
+  transition: transform 600ms ease;
+}
+/* (no strip hover) */
+.v1-strip__item figcaption {
+  position: absolute; left: 16px; bottom: 14px; color: #fff;
+  font-family: var(--cinzel); font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.7);
+}
+.v1-strip__item figcaption i { font-style: normal; opacity: 0.7; margin-right: 8px; }
+
+.v1-nm__row {
+  display: grid; grid-template-columns: 1.1fr 1.4fr; gap: 64px; align-items: start;
+}
+.v1-nm__eyebrow {
+  display: block; font-family: var(--cinzel); font-weight: 700; font-size: 11px; letter-spacing: 0.34em;
+  text-transform: uppercase; color: var(--plav); margin-bottom: 18px;
+}
+.v1-nm__title {
+  font-family: var(--display); font-style: italic; font-weight: 500; font-size: 84px;
+  line-height: 0.95; letter-spacing: -0.015em; color: var(--pdeep); margin: 0 0 28px;
+}
+.v1-nm__lede .v1-body { margin: 0 0 28px; max-width: 44ch; font-weight: 600; color: var(--pdeep); }
+.v1-nm__pill {
+  display: inline-block;
+  font-family: var(--cinzel); font-weight: 800; font-size: 14px; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--pdeep);
+}
+.v1-nm__cols { display: grid; grid-template-columns: 1fr 1fr; gap: 0 40px; margin-top: 40px; }
+.v1-nm__col { margin: 0; display: flex; flex-direction: column; }
+.v1-nm__col > div {
+  padding: 18px 0;
+  border-bottom: 1px dotted var(--rule);
+}
+.v1-nm__col > div:first-child { padding-top: 0; }
+.v1-nm__col > div:last-child { border-bottom: none; }
+.v1-nm__col dt {
+  font-family: var(--cinzel); font-weight: 700; font-size: 13px;
+  letter-spacing: 0.14em; text-transform: uppercase; color: var(--pdeep);
+  margin-bottom: 8px;
+}
+.v1-nm__col dd {
+  margin: 0; font-family: var(--serif); font-weight: 700; font-size: 14px;
+  line-height: 1.5; color: var(--pdeep);
+}
+.v1-nm__cta { display: flex; justify-content: center; margin-top: 56px; }
+
+/* ----- TESTIMONIALS (V1) ----- */
+.v1-testi { padding: 28px 56px 80px; }
+.v1-testi__head { display: grid; grid-template-columns: 1.2fr 1fr; gap: 56px; align-items: end; margin-bottom: 44px; }
+.v1-testi__row {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+}
+.v1-testi__card {
+  margin: 0; padding: 28px 26px;
+  background: var(--m26-cream);
+  border: 1px solid var(--rule);
+  display: flex; flex-direction: column; gap: 18px;
+  text-decoration: none;
+  transition: box-shadow 220ms, border-color 220ms, transform 220ms;
+}
+.v1-testi__card:hover {
+  border-color: var(--plav); box-shadow: 0 14px 32px rgba(46,31,77,0.10);
+  transform: translateY(-2px);
+}
+.v1-testi__card blockquote {
+  margin: 0;
+  font-family: var(--display); font-style: italic;
+  font-size: 17px; line-height: 1.55; color: var(--pdeep);
+  text-wrap: pretty;
+}
+.v1-testi__card figcaption {
+  margin-top: auto;
+  font-family: var(--cinzel); font-size: 11px; letter-spacing: 0.22em;
+  text-transform: uppercase; color: var(--plav);
+  border-top: 1px dotted var(--rule);
+  padding-top: 16px;
+}
+
+/* ----- SPONSORS (V1) ----- */
+.v1-spon { padding: 28px 56px 88px; text-align: center; }
+.v1-spon__head { margin-bottom: 56px; display: flex; flex-direction: column; align-items: center; gap: 12px; }
+.v1-spon__head-row {
+  display: flex; align-items: center; gap: 18px; margin: 0 auto 18px; max-width: 760px;
+}
+.v1-spon__tier {
+  font-family: var(--cinzel); font-weight: 600; font-size: 11px;
+  letter-spacing: 0.28em; text-transform: uppercase; color: var(--plav);
+  flex: 0 0 auto;
+}
+.v1-spon__rule { flex: 1; height: 1px; background: var(--rule); }
+.v1-spon__row {
+  display: flex; flex-wrap: wrap; align-items: baseline; justify-content: center;
+  gap: 18px 28px; margin-bottom: 36px;
+}
+.v1-spon__row--head { margin-bottom: 44px; }
+.v1-spon__name {
+  font-family: var(--display); font-weight: 500; font-size: 22px;
+  color: var(--pdeep); letter-spacing: -0.01em;
+  text-decoration: none;
+}
+.v1-spon__name--lg { font-size: 32px; }
+.v1-spon__name--xl { font-size: 56px; font-weight: 600; letter-spacing: -0.02em; }
+.v1-spon__sep { color: var(--plav); font-size: 14px; }
+.v1-spon__cta { margin-top: 20px; }
+
+/* ----- SPONSORS (original m26 — restored) ----- */
+.sponsors-orig { padding: 28px 56px 88px; text-align: center; }
+.sponsors-orig .v1-h2 { margin-bottom: 56px; }
+.sponsors-stack { display: flex; flex-direction: column; align-items: center; gap: 32px; }
+.sponsors-row { display: flex; align-items: center; gap: 56px; }
+.mono-img { display: block; }
+.mono-img--polymarket {
+  height: 80px; width: 280px;
+  background-color: var(--m26-purple);
+  -webkit-mask-image: url('/images/sponsors/polymarket-logo.svg');
+  mask-image: url('/images/sponsors/polymarket-logo.svg');
+  -webkit-mask-size: contain; mask-size: contain;
+  -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
+  -webkit-mask-position: center; mask-position: center;
+}
+.mono-img--substack {
+  height: 48px; width: 200px;
+  background-color: var(--m26-purple);
+  -webkit-mask-image: url('/images/sponsors/substack-logo.png');
+  mask-image: url('/images/sponsors/substack-logo.png');
+  -webkit-mask-size: contain; mask-size: contain;
+  -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
+  -webkit-mask-position: center; mask-position: center;
+}
+.mono-img--kalshi {
+  height: 48px; width: 120px;
+  background-color: var(--m26-purple);
+  -webkit-mask-image: url('/images/sponsors/kalshi-logo.svg');
+  mask-image: url('/images/sponsors/kalshi-logo.svg');
+  -webkit-mask-size: contain; mask-size: contain;
+  -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
+  -webkit-mask-position: center; mask-position: center;
+}
+.sponsors-small {
+  margin-top: 8px;
+  font-family: var(--font-cinzel); font-weight: 700; font-size: 18px;
+  letter-spacing: 0.02em; color: var(--m26-purple);
+}
+.sponsors-cta { margin-top: 40px; text-align: center; }
+.btn-solid {
+  display: inline-block;
+  background: var(--m26-btn); color: #fff !important;
+  padding: 12px 24px;
+  font-family: var(--font-cinzel); font-weight: 700; font-size: 14px;
+  letter-spacing: 0.08em; text-decoration: none;
+  transition: background 160ms;
+}
+.btn-solid:hover { background: var(--m26-btn-hover); }
+
+/* ----- TICKETS (V1, restored) ----- */
+.v1-tix { padding: 28px 56px 80px; }
+.v1-tix__head { text-align: center; margin-bottom: 36px; }
+.v1-tix__frame {
+  max-width: 1100px; margin: 0 auto;
+  background: var(--m26-cream);
+}
+.v1-tix__frame iframe {
+  width: 100%; height: 900px; border: 0; display: block; background: var(--m26-cream);
+}
+
+/* ----- FAQ (V1) ----- */
+.v1-faq { padding: 28px 56px 80px; }
+.v1-faq__head { margin-bottom: 36px; }
+.v1-faq__list {
+  margin: 0; padding: 0;
+  border-top: 1px solid var(--rule);
+}
+.v1-faq__item {
+  position: relative;
+  border-bottom: 1px solid var(--rule);
+  padding: 20px 36px 20px 0;
+  display: grid; grid-template-columns: 1fr 1.2fr; gap: 48px;
+  align-items: baseline;
+  cursor: pointer;
+}
+.v1-faq__item::after {
+  content: '+';
+  position: absolute;
+  right: 0; top: 20px;
+  font-family: var(--cinzel); font-weight: 600; font-size: 22px;
+  color: var(--plav);
+  transition: color 150ms;
+}
+.v1-faq__item.open::after { content: '−'; color: var(--pdeep); }
+.v1-faq__item dt {
+  margin: 0;
+  font-family: var(--display); font-weight: 600; font-size: 22px;
+  color: var(--pdeep); line-height: 1.25;
+  display: flex; gap: 14px; align-items: baseline;
+}
+/* +/- now lives on .v1-faq__item itself */
+.v1-faq__num {
+  font-family: var(--cinzel); font-weight: 500; font-size: 11px;
+  letter-spacing: 0.18em; color: var(--plav); flex: 0 0 auto;
+}
+.v1-faq__item dd {
+  margin: 0;
+  font-family: var(--serif); font-size: 14px; line-height: 1.65;
+  color: var(--ink); text-wrap: pretty;
+}
+.v1-faq__item dd a {
+  color: var(--m26-purple);
+  text-decoration: underline; text-underline-offset: 2px;
+}
+.v1-faq__item dd a:hover { color: var(--m26-purple-deep); }
+
+/* ----- ORGANIZERS (V1) ----- */
+.v1-org { padding: 28px 56px 88px; text-align: center; }
+.v1-org__head { margin-bottom: 48px; display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.v1-org__sub {
+  font-family: var(--display); font-style: italic; font-size: 18px;
+  color: var(--muted); margin: 0;
+}
+.v1-org__grid {
+  display: flex; justify-content: center; gap: 72px;
+}
+.v1-org__card { margin: 0; display: flex; flex-direction: column; align-items: center; gap: 12px; }
+.v1-org__photo {
+  width: 144px; height: 144px; border-radius: 50%;
+  background-size: cover; background-position: center;
+  background-color: var(--plav);
+  box-shadow: 0 6px 20px rgba(46,31,77,0.18);
+  transition: transform 250ms;
+}
+.v1-org__card:hover .v1-org__photo { transform: scale(1.04); }
+.v1-org__name {
+  display: block;
+  font-family: var(--cinzel); font-weight: 700; font-size: 14px;
+  letter-spacing: 0.06em; text-transform: uppercase; color: var(--pdeep);
+}
+.v1-org__email {
+  display: block; margin-top: 2px;
+  font-family: var(--display); font-style: italic; font-size: 14px;
+  color: var(--muted); text-decoration: none;
+}
+.v1-org__email:hover { color: var(--pdeep); }
+
+/* ----- FOOTER (V1) ----- */
+.v1-foot {
+  padding: 56px 56px 64px; background: var(--pdeep); color: rgba(255,255,255,0.85);
+}
+.v1-foot__row { display: flex; justify-content: space-between; align-items: flex-start; gap: 32px; }
+.v1-foot__brand { display: flex; flex-direction: column; gap: 6px; }
+.v1-foot__title {
+  font-family: var(--deco); font-weight: 700; font-size: 28px; color: #fff;
+}
+.v1-foot__sub {
+  font-family: var(--cinzel); font-size: 11px; letter-spacing: 0.28em;
+  text-transform: uppercase; color: rgba(255,255,255,0.6);
+}
+.v1-foot__links { display: flex; flex-wrap: wrap; gap: 18px 28px; max-width: 360px; justify-content: flex-end; }
+.v1-foot__links a {
+  color: rgba(255,255,255,0.8); text-decoration: none;
+  font-family: var(--cinzel); font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+}
+.v1-foot__links a:hover { color: #fff; }
+.v1-foot__rule { height: 1px; background: rgba(255,255,255,0.2); margin: 36px 0 22px; }
+.v1-foot__fine {
+  display: flex; justify-content: space-between; gap: 24px;
+  font-family: var(--cinzel); font-size: 10px; letter-spacing: 0.22em;
+  text-transform: uppercase; color: rgba(255,255,255,0.5);
+}
+
+/* ----- responsive ----- */
+@media (max-width: 900px) {
+  .v1-spk-grid { grid-template-columns: repeat(3, 1fr); }
+  .v1-grid { grid-template-columns: 1fr; }
+  .v1-cell { border-right: none; }
+  .v1-nm__row { grid-template-columns: 1fr; gap: 40px; }
+  .v1-nm__cols { grid-template-columns: 1fr; }
+  .v1-testi__row { grid-template-columns: 1fr; }
+  .v1-faq__item { grid-template-columns: 1fr; gap: 12px; }
+  .v1-speakers__head { grid-template-columns: 1fr; gap: 20px; }
+  .v1-strip { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 720px) {
+  .v1-hero__title { font-size: 64px; }
+  .v1-hero__sub { font-size: 18px; }
+  .v1-h2 { font-size: 48px; }
+  .v1-nm__title { font-size: 48px; }
+  .v1-themes__title { font-size: 36px; }
+  .v1-speakers, .v1-what, .v1-themes__head, .v1-nm, .v1-testi, .v1-spon, .v1-tix, .v1-faq, .v1-org { padding-left: 24px; padding-right: 24px; }
+  .v1-cell { padding: 28px 24px; }
+  .v1-cell--list header { margin: 0 -24px 18px; padding: 22px 24px 14px; }
+  .v1-foot { padding: 40px 24px 48px; }
+  .v1-foot__row { flex-direction: column; gap: 24px; }
+  .v1-foot__links { justify-content: flex-start; }
+  .v1-foot__fine { flex-direction: column; gap: 8px; }
+}
+`
+
+/* -------------------------------------------------------------------------- */
+/* PAGE_HTML — V1 markup, with ticket section preserved                       */
+/* -------------------------------------------------------------------------- */
+
+const PAGE_HTML = `
+<!-- NAV -->
+<nav class="top">
+  <span class="top__brand">Manifest 2026</span>
+  <div class="top__links">
+    <a href="#speakers">Speakers</a>
+    <a href="#what-is-manifest">Festival</a>
+    <a href="#nightmarket">Night Market</a>
+    <a href="#faq">FAQ</a>
+    <a href="#tickets" class="top__register pill">Register</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="v1-hero">
+  <div class="v1-hero__img" style="background-image: url('/images/2026/campfire.jpg');"></div>
+  <div class="v1-hero__veil"></div>
+  <div class="v1-hero__inner">
+    <h1 class="v1-hero__title">Manifest 2026</h1>
+    <p class="v1-hero__sub">A festival for predictions,<br/>and markets thereof.</p>
+    <div class="v1-hero__row">
+      <a href="#tickets" class="v1-btn v1-btn--solid pill">Register · June 12–14 · Berkeley</a>
+    </div>
+  </div>
+  <div class="v1-hero__fade"></div>
+</section>
+
+<!-- SPEAKERS -->
+<section id="speakers" class="v1-speakers scroll-mt">
+  <hr class="v1-divider" />
+  <header class="v1-speakers__head">
+    <h2 class="v1-h2">Speakers of <em>Past Years</em></h2>
+  </header>
+  <div class="v1-spk-grid">
+    <figure class="v1-spk"><div class="v1-spk__img" style="background-image:url('/images/speakers/nate.jpg')"></div><figcaption><span class="v1-spk__name">Nate Silver</span><span class="v1-spk__role">Silver Bulletin</span></figcaption></figure>
+    <figure class="v1-spk"><div class="v1-spk__img" style="background-image:url('/images/speakers/scott.jpg')"></div><figcaption><span class="v1-spk__name">Scott Alexander</span><span class="v1-spk__role">Astral Codex Ten</span></figcaption></figure>
+    <figure class="v1-spk"><div class="v1-spk__img" style="background-image:url('/images/speakers/chris.jpg')"></div><figcaption><span class="v1-spk__name">Chris Best</span><span class="v1-spk__role">Substack</span></figcaption></figure>
+    <figure class="v1-spk"><div class="v1-spk__img" style="background-image:url('/images/speakers/luana.jpg')"></div><figcaption><span class="v1-spk__name">Luana Lopes Lara</span><span class="v1-spk__role">Kalshi</span></figcaption></figure>
+    <figure class="v1-spk"><div class="v1-spk__img" style="background-image:url('/images/speakers/shayne.jpg')"></div><figcaption><span class="v1-spk__name">Shayne Coplan</span><span class="v1-spk__role">Polymarket</span></figcaption></figure>
+    <figure class="v1-spk"><div class="v1-spk__img" style="background-image:url('/images/speakers/emmett.jpg')"></div><figcaption><span class="v1-spk__name">Emmett Shear</span><span class="v1-spk__role">Softmax</span></figcaption></figure>
+    <figure class="v1-spk"><div class="v1-spk__img" style="background-image:url('/images/speakers/joe.jpg')"></div><figcaption><span class="v1-spk__name">Joe Carlsmith</span><span class="v1-spk__role">Anthropic</span></figcaption></figure>
+    <figure class="v1-spk"><div class="v1-spk__img" style="background-image:url('/images/speakers/laura.jpg')"></div><figcaption><span class="v1-spk__name">Laura Deming</span><span class="v1-spk__role">Cradle</span></figcaption></figure>
+    <figure class="v1-spk"><div class="v1-spk__img" style="background-image:url('/images/speakers/patrick.jpg')"></div><figcaption><span class="v1-spk__name">Patrick McKenzie</span><span class="v1-spk__role">Writer</span></figcaption></figure>
+    <figure class="v1-spk"><div class="v1-spk__img" style="background-image:url('/images/speakers/robin.jpg')"></div><figcaption><span class="v1-spk__name">Robin Hanson</span><span class="v1-spk__role">Economist</span></figcaption></figure>
+    <figure class="v1-spk"><div class="v1-spk__img" style="background-image:url('/images/speakers/davidshor.jpg')"></div><figcaption><span class="v1-spk__name">David Shor</span><span class="v1-spk__role">Blue Rose Research</span></figcaption></figure>
+    <figure class="v1-spk"><div class="v1-spk__img" style="background-image:url('/images/speakers/dwarkesh.jpg')"></div><figcaption><span class="v1-spk__name">Dwarkesh Patel</span><span class="v1-spk__role">Dwarkesh Podcast</span></figcaption></figure>
+    <figure class="v1-spk"><div class="v1-spk__img" style="background-image:url('/images/speakers/eliezer.jpg')"></div><figcaption><span class="v1-spk__name">Eliezer Yudkowsky</span><span class="v1-spk__role">MIRI</span></figcaption></figure>
+    <figure class="v1-spk"><div class="v1-spk__img" style="background-image:url('/images/speakers/ajeya.jpg')"></div><figcaption><span class="v1-spk__name">Ajeya Cotra</span><span class="v1-spk__role">METR</span></figcaption></figure>
+    <figure class="v1-spk"><div class="v1-spk__img" style="background-image:url('/images/speakers/agnes.webp')"></div><figcaption><span class="v1-spk__name">Agnes Callard</span><span class="v1-spk__role">Philosopher</span></figcaption></figure>
+  </div>
+
+  <div class="v1-spk-more">
+    <span class="v1-spk-more__label">— And many more —</span>
+    <div class="v1-spk-more__grid" id="past-list"></div>
+    <p class="v1-spk-more__note"><em>Stay tuned as we announce speakers &amp; guests for 2026</em></p>
+  </div>
+</section>
+
+<!-- WHAT IS MANIFEST -->
+<section id="what-is-manifest" class="v1-what scroll-mt">
+  <hr class="v1-divider" />
+  <h2 class="v1-h2">What is Manifest?</h2>
+  <p class="v1-lede">Manifest is a festival ostensibly about prediction markets, but secretly about connecting with old friends and people you admire from your favorite niche corners of the internet.</p>
+  <p class="v1-body">&ldquo;Equal parts Math Olympiad and Burning Man&rdquo; — a gathering of nerds who want to find the thinkers and practitioners they vehemently agree (and disagree) with, share a meal around a cozy campfire, and come away with radically new ways of thinking.</p>
+</section>
+
+<!-- THEMES GRID -->
+<section class="v1-themes">
+  <header class="v1-themes__head">
+    <h3 class="v1-themes__title">What sorts of things happen at Manifest?</h3>
+    <p class="v1-themes__sub">Talks, panels, debates, workshops, games, prediction market tournaments, a night market, career fair, and much more.<br/><br/>Much of the schedule comes from attendee-led sessions. Past years have included&thinsp;—</p>
+  </header>
+
+  <div class="v1-grid">
+    <figure class="v1-cell v1-cell--photo">
+      <div class="v1-cell__img" style="background-image:url('/images/themes/sessions-1.jpg')"></div>
+    </figure>
+    <article class="v1-cell v1-cell--list">
+      <header><span class="v1-list__cat">Talks</span></header>
+      <ol class="v1-list__items">
+        <li><b>Press X to Doubt: Journalism Edition</b><i>Patrick McKenzie</i></li>
+        <li><b>Reforming Academia via Reputation Futures</b><i>Robin Hanson</i></li>
+        <li><b>What Is Aristotle&rsquo;s Metaphysics About?</b><i>Arnold Brooks</i></li>
+        <li><b>Writing &amp; Slop</b><i>Roon, Scott Alexander, Gwern</i></li>
+        <li><b>Forecasting AI Risks: Anthropic&rsquo;s RSP</b><i>Ben Mann</i></li>
+        <li><b>How Do We Solve the Alignment Problem?</b><i>Joe Carlsmith</i></li>
+        <li><b>Data Science &amp; Politics</b><i>David Shor</i></li>
+        <li><b>History Lecture with Live Betting</b><i>Sovereign</i></li>
+      </ol>
+    </article>
+
+    <article class="v1-cell v1-cell--list">
+      <header><span class="v1-list__cat">Workshops</span></header>
+      <ol class="v1-list__items">
+        <li><b>How to Make Superbabies</b></li>
+        <li><b>How to Reform Science</b></li>
+        <li><b>SuperMemo &amp; Incremental Reading</b></li>
+        <li><b>Weird Findings in Exercise Science</b></li>
+        <li><b>How to Change Your Mind</b></li>
+        <li><b>Intro to Trading</b></li>
+        <li><b>Startup Pitch Competition</b></li>
+      </ol>
+    </article>
+    <figure class="v1-cell v1-cell--photo">
+      <div class="v1-cell__img" style="background-image:url('/images/themes/talks-adjacent.jpg')"></div>
+    </figure>
+
+    <figure class="v1-cell v1-cell--photo">
+      <div class="v1-cell__img" style="background-image:url('/images/gallery/2025-3.jpg'); background-position:center 30%;"></div>
+    </figure>
+    <article class="v1-cell v1-cell--list">
+      <header><span class="v1-list__cat">Firesides &amp; Q&amp;A</span></header>
+      <ol class="v1-list__items v1-list__items--stack">
+        <li><b>Founder of Upstart, Paul Gu</b></li>
+        <li><b>Nate Silver &amp; Scott Alexander</b></li>
+        <li><b>Stephen Grugett &amp; Theo Jaffee</b></li>
+        <li><b>Ajeya Cotra</b></li>
+        <li><b>Kalshi Co-Founder, Luana Lopes Lara</b></li>
+        <li><b>Substack CEO</b></li>
+        <li><b>Chris Best</b></li>
+        <li><b>David Shor &amp; Jesse Richardson</b></li>
+      </ol>
+    </article>
+
+    <article class="v1-cell v1-cell--list">
+      <header><span class="v1-list__cat">&amp; Much more</span></header>
+      <ol class="v1-list__items">
+        <li><b>Speedfriending</b></li>
+        <li><b>YouTube Economics: Attention as Currency</b></li>
+        <li><b>Experimental Meditation Experiments</b></li>
+        <li><b>Memory Systems / Anki / SRS Meetup</b></li>
+        <li><b>Similarities Between Selling to Nation States and on Facebook Marketplace</b></li>
+        <li><b>The Case for Interactionist Dualism</b></li>
+        <li><b>Futurist Theory of Traditionalism</b></li>
+        <li><b>Fun Etymology</b></li>
+      </ol>
+    </article>
+    <figure class="v1-cell v1-cell--photo">
+      <div class="v1-cell__img" style="background-image:url('/images/themes/much-more-guitar.png')"></div>
+    </figure>
+  </div>
+</section>
+
+<!-- NIGHT MARKET -->
+<section id="nightmarket" class="v1-nm scroll-mt">
+  <div class="v1-strip">
+    <figure class="v1-strip__item"><div class="v1-strip__img" style="background-image:url('/images/night-market/ish-8691.jpg')"></div></figure>
+    <figure class="v1-strip__item"><div class="v1-strip__img" style="background-image:url('/images/night-market/7q4a-9011.jpg')"></div></figure>
+    <figure class="v1-strip__item"><div class="v1-strip__img" style="background-image:url('/images/night-market/7q4a-0831.jpg')"></div></figure>
+    <figure class="v1-strip__item"><div class="v1-strip__img" style="background-image:url('/images/night-market/7q4a-0927.jpg')"></div></figure>
+    <figure class="v1-strip__item"><div class="v1-strip__img" style="background-image:url('/images/night-market/ish-3968.jpg')"></div></figure>
+    <figure class="v1-strip__item"><div class="v1-strip__img" style="background-image:url('/images/night-market/7q4a-2266.jpg')"></div></figure>
+    <figure class="v1-strip__item"><div class="v1-strip__img" style="background-image:url('/images/night-market/ish-8040.jpg')"></div></figure>
+    <figure class="v1-strip__item"><div class="v1-strip__img" style="background-image:url('/images/night-market/7q4a-2067.jpg')"></div></figure>
+    <figure class="v1-strip__item"><div class="v1-strip__img" style="background-image:url('/images/night-market/ish-5334.jpg')"></div></figure>
+    <figure class="v1-strip__item"><div class="v1-strip__img" style="background-image:url('/images/night-market/ish-7882.jpg')"></div></figure>
+    <figure class="v1-strip__item"><div class="v1-strip__img" style="background-image:url('/images/night-market/ish-8482.jpg')"></div></figure>
+    <figure class="v1-strip__item"><div class="v1-strip__img" style="background-image:url('/images/night-market/7q4a-1682.jpg')"></div></figure>
+    <figure class="v1-strip__item"><div class="v1-strip__img" style="background-image:url('/images/night-market/7q4a-9506.jpg')"></div></figure>
+    <figure class="v1-strip__item"><div class="v1-strip__img" style="background-image:url('/images/night-market/7q4a-2536.jpg')"></div></figure>
+    <figure class="v1-strip__item"><div class="v1-strip__img" style="background-image:url('/images/night-market/7q4a-9765.jpg')"></div></figure>
+    <figure class="v1-strip__item"><div class="v1-strip__img" style="background-image:url('/images/night-market/20230924-img-8312.jpg')"></div></figure>
+    <figure class="v1-strip__item"><div class="v1-strip__img" style="background-image:url('/images/night-market/7q4a-3907.jpg')"></div></figure>
+  </div>
+  <div class="v1-nm__row">
+    <div class="v1-nm__lede">
+      <span class="v1-nm__eyebrow">— Opening Night · Free &amp; Public —</span>
+      <h2 class="v1-nm__title">The Night Market</h2>
+      <p class="v1-body">On Friday, the first night of Manifest, Lighthaven will be open and free to the public for our Career Fair &amp; Night Market. An open-air evening celebration of all things markets; it&rsquo;s a chance to meet people, share ideas, see strange gadgets, and wander around in a transcendent twilight…</p>
+      <span class="v1-nm__pill">No ticket required</span>
+    </div>
+    <div class="v1-nm__cols">
+      <dl class="v1-nm__col">
+        <div><dt>Job Market</dt><dd>Trade your skills for other skills, or find your next gig</dd></div>
+        <div><dt>Experience Market</dt><dd>Mini games, fortunes, and digital interactions</dd></div>
+        <div><dt>Information Market</dt><dd>Like a poster session, but without the academic standards</dd></div>
+      </dl>
+      <dl class="v1-nm__col">
+        <div><dt>Stuff Market</dt><dd>Arts, crafts, and locally crafted foods</dd></div>
+        <div><dt>Book Market</dt><dd>Got a book? Essay? Poem? Share your physical prints</dd></div>
+        <div><dt>Black Market</dt><dd>Naming rights to a baby&rsquo;s middle name, &lsquo;probiotics&rsquo;, etc.</dd></div>
+      </dl>
+    </div>
+  </div>
+  <div class="v1-nm__cta">
+    <a href="https://airtable.com/appMZp1aBO5b7NTdM/pagH4yhHlxyolS2Qv/form" class="v1-btn v1-btn--ink pill" target="_blank" rel="noopener">Register your interest</a>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="v1-testi scroll-mt">
+  <hr class="v1-divider" />
+  <header class="v1-testi__head">
+    <h2 class="v1-h2">Tales from <em>Festivalgoers</em></h2>
+  </header>
+  <div class="v1-testi__row">
+    <a class="v1-testi__card" href="https://scottsumner.substack.com/p/paradise-on-telegraph-avenue" target="_blank" rel="noopener">
+      <blockquote>I met many well-known figures I&rsquo;ve been reading for years. Where else will you meet multiple people within 24 hours who casually mentioned the short story Funes the Memorious in conversation?</blockquote>
+      <figcaption>— Scott Sumner</figcaption>
+    </a>
+    <a class="v1-testi__card" href="https://x.com/tomieinlove/status/1931934629218734083" target="_blank" rel="noopener">
+      <blockquote>I love Manifest. My subsidy provided for swaying bauble lights, warm soporific nooks, flames and corridors, souls brought to Earth together, eyes lighting up at their electric worlds made real.</blockquote>
+      <figcaption>— Tomie</figcaption>
+    </a>
+    <a class="v1-testi__card" href="https://x.com/PabloPeniche/status/1932095093827334543" target="_blank" rel="noopener">
+      <blockquote>Gwern came to my talk and told me at the end &ldquo;I disagree with everything you said and your entire theory of aesthetics is wrong.&rdquo; lol</blockquote>
+      <figcaption>— Pablo</figcaption>
+    </a>
+    <a class="v1-testi__card" href="https://jakeseliger.com/2024/06/13/manifest-the-manifold-markets-nerd-festival/" target="_blank" rel="noopener">
+      <blockquote>It bills itself as &ldquo;a festival for forecasting and prediction markets,&rdquo; which fails to capture the spirit — it&rsquo;s more like &ldquo;Substack and Twitter live&rdquo;, a festival-conference-party-Burning-Man for nerds with many interests.</blockquote>
+      <figcaption>— Jake Seliger</figcaption>
+    </a>
+    <a class="v1-testi__card" href="https://x.com/ByrneHobart/status/1799963459658154203" target="_blank" rel="noopener">
+      <blockquote>The Manifest conference has been a successful experiment: put enough introverts with common interests into a confined space and they&rsquo;ll spontaneously turn into extroverts.</blockquote>
+      <figcaption>— Byrne Hobart</figcaption>
+    </a>
+    <a class="v1-testi__card" href="https://x.com/tracewoodgrains/status/1800790146633138395" target="_blank" rel="noopener">
+      <blockquote>For much of my life, I have poured my attention into tough-to-explain solitary pursuits, sitting in quiet corners on the fringes of gatherings wondering if they&rsquo;re worth the effort. Not so last weekend.</blockquote>
+      <figcaption>— TracingWoodgrains</figcaption>
+    </a>
+  </div>
+</section>
+
+<!-- SPONSORS (original layout) -->
+<section id="sponsors" class="sponsors-orig scroll-mt">
+  <hr class="v1-divider" />
+  <h2 class="v1-h2 v1-h2--center" style="font-family: var(--deco); font-style: normal; font-weight: 400; font-size: 48px; letter-spacing: 0.04em;">Sponsors of 2025</h2>
+  <div class="sponsors-stack">
+    <a href="https://polymarket.com" target="_blank" rel="noopener"><div class="mono-img mono-img--polymarket" role="img" aria-label="Polymarket"></div></a>
+    <div class="sponsors-row">
+      <a href="https://substack.com" target="_blank" rel="noopener"><div class="mono-img mono-img--substack" role="img" aria-label="Substack"></div></a>
+      <a href="https://kalshi.com" target="_blank" rel="noopener"><div class="mono-img mono-img--kalshi" role="img" aria-label="Kalshi"></div></a>
+    </div>
+    <p class="sponsors-small">Sovereign &middot; Bayes &middot; Elicit &middot; Futuur &middot; Metagame</p>
+  </div>
+  <div class="sponsors-cta">
+    <a href="mailto:team@manifest.is" class="btn-solid pill">Sponsorships available for 2026</a>
+  </div>
+</section>
+
+<!-- TICKETS (preserved) -->
+<section id="tickets" class="v1-tix scroll-mt">
+  <div class="v1-tix__frame">
+    <iframe src="https://less.online/manifest-embed" title="Manifest 2026 tickets" loading="lazy"></iframe>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="v1-faq scroll-mt">
+  <hr class="v1-divider" />
+  <header class="v1-faq__head">
+    <h2 class="v1-h2" style="font-size: 56px;">Frequently <em>Asked</em></h2>
+  </header>
+  <dl class="v1-faq__list">
+    <div class="v1-faq__item"><dt><span class="v1-faq__num">01</span>Where is Manifest happening?</dt><dd>Lighthaven, 2740 Telegraph Avenue, Berkeley, CA 94705.</dd></div>
+    <div class="v1-faq__item"><dt><span class="v1-faq__num">02</span>Can I purchase accommodation?</dt><dd>Yes. Our venue, Lighthaven, has a limited number of rooms available for ticketholders — book directly through <a href="https://lighthaven.space" target="_blank" rel="noopener">Lighthaven</a>. Space fills up quickly, so most attendees will need to find other accommodations nearby.</dd></div>
+    <div class="v1-faq__item"><dt><span class="v1-faq__num">03</span>When does Manifest start and end?</dt><dd>We&rsquo;re still finalizing the schedule. In past years, the festival has started Friday afternoon around 2pm, with the opening ceremony around 6pm. The closing ceremony is Sunday evening, though events and informal gatherings continue into the night.</dd></div>
+    <div class="v1-faq__item"><dt><span class="v1-faq__num">04</span>How many people will be at Manifest?</dt><dd>We are expecting 500–700 attendees across the weekend.</dd></div>
+    <div class="v1-faq__item"><dt><span class="v1-faq__num">05</span>What does my ticket include?</dt><dd>Access to the festival from Friday through Sunday, including breakfast, lunch, and dinner every day.</dd></div>
+    <div class="v1-faq__item"><dt><span class="v1-faq__num">06</span>Can I bring my kids?</dt><dd>Yes, we love kids! Children 10 and under don&rsquo;t need tickets. We&rsquo;re unlikely to offer dedicated childcare this year.</dd></div>
+    <div class="v1-faq__item"><dt><span class="v1-faq__num">07</span>How does volunteering work?</dt><dd>Volunteers receive a discounted ticket in exchange for working shifts during the event. Once all shifts are completed, volunteers are eligible for a full refund.</dd></div>
+    <div class="v1-faq__item"><dt><span class="v1-faq__num">08</span>What if I need financial assistance to attend?</dt><dd>We don&rsquo;t want finances to keep anyone from attending. If the volunteer shift requirement or deposit is a barrier, fill out our <a href="https://airtable.com/appMZp1aBO5b7NTdM/pagTrQtYd1k1Oakhi/form" target="_blank" rel="noopener">Low-Income Ticket Form</a>, or reach out to team@manifest.is.</dd></div>
+    <div class="v1-faq__item"><dt><span class="v1-faq__num">09</span>What is your refund policy?</dt><dd>Full refunds are available up to 7 days before the event. Contact team@manifest.is to request one.</dd></div>
+  </dl>
+</section>
+
+<!-- ORGANIZERS -->
+<section id="organizers" class="v1-org scroll-mt">
+  <hr class="v1-divider" />
+  <header class="v1-org__head">
+    <h2 class="v1-h2 v1-h2--center">Organizers:</h2>
+    <p class="v1-org__sub">Questions? Please reach out.</p>
+  </header>
+  <div class="v1-org__grid">
+    <figure class="v1-org__card">
+      <div class="v1-org__photo" style="background-image:url('/images/staff/winter.jpg')"></div>
+      <figcaption><span class="v1-org__name">Winter</span><a class="v1-org__email" href="mailto:winter@manifest.is">winter@manifest.is</a></figcaption>
+    </figure>
+    <figure class="v1-org__card">
+      <div class="v1-org__photo" style="background-image:url('/images/staff/austin.jpg')"></div>
+      <figcaption><span class="v1-org__name">Austin</span><a class="v1-org__email" href="mailto:austin@manifest.is">austin@manifest.is</a></figcaption>
+    </figure>
+    <figure class="v1-org__card">
+      <div class="v1-org__photo" style="background-image:url('/images/staff/carolanne.jpg')"></div>
+      <figcaption><span class="v1-org__name">Carolanne</span><a class="v1-org__email" href="mailto:carolanne@manifest.is">carolanne@manifest.is</a></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="v1-foot">
+  <div class="v1-foot__row">
+    <div class="v1-foot__brand">
+      <span class="v1-foot__title">Manifest 2026</span>
+      <span class="v1-foot__sub">June 12 – 14 · Lighthaven, Berkeley</span>
+    </div>
+    <div class="v1-foot__links">
+      <a href="#speakers">Speakers</a>
+      <a href="#what-is-manifest">Festival</a>
+      <a href="#nightmarket">Night Market</a>
+      <a href="#tickets">Tickets</a>
+      <a href="#faq">FAQ</a>
+      <a href="https://discord.com/invite/MjDqMcQFdR" target="_blank" rel="noopener">Discord</a>
+      <a href="/2025">Manifest 2025</a>
+    </div>
+  </div>
+  <div class="v1-foot__rule"></div>
+  <div class="v1-foot__fine">
+    <span>Berkeley, CA</span>
+    <span>team@manifest.is</span>
+  </div>
+</footer>
+`
+
+/* -------------------------------------------------------------------------- */
+/* PAST_GUESTS — appended after the featured speaker grid                      */
+/* -------------------------------------------------------------------------- */
+
+const PAST_GUESTS: [string, string][] = [
+  ['Aidan McLaughlin', 'OpenAI'],
+  ['Alex Gajewski', 'Atomic Industries'],
+  ['Danielle Fong', 'LightCell Energy'],
+  ['Dave White', 'Paradigm'],
+  ['David Holt', 'Researcher'],
+  ['Divya Siddarth', 'Collective Intelligence'],
+  ['Dylan Matthews', 'Future Perfect'],
+  ['Dylan Patel', 'SemiAnalysis'],
+  ['Gwern', 'Writer'],
+  ['Jay Baxter', 'xAI'],
+  ['Kevin Roose', 'NYT'],
+  ['Kyle Schiller', 'Energy researcher'],
+  ['Lars Doucet', 'Fool Functor'],
+  ['Lincoln Quirk', 'Wave'],
+  ['Nate Soares', 'MIRI'],
+  ['Noam Brown', 'OpenAI'],
+  ['Oliver Habryka', 'Lightcone'],
+  ['Panda Smith', 'Researcher'],
+  ['Ric Best', 'Substack'],
+  ['Rob Miles', 'AI Safety'],
+  ['Samo Burja', 'Bismarck Analysis'],
+  ['Samuel Hammond', 'FAI'],
+  ['Scott Sumner', 'Mercatus'],
+  ['Sholto Douglas', 'Anthropic'],
+  ['Steve Hsu', 'MSU'],
+  ['Tracing Woodgrains', 'Writer'],
+  ['Roon', 'OpenAI'],
+  ['Paul Gu', 'Upstart'],
+  ['Noah Smith', 'Noahpinion'],
+  ['Aella', 'Researcher'],
+  ['Stephen Grugett', 'Manifold'],
+  ['Katja Grace', 'AI Impacts'],
+  ['Tarek Mansour', 'Kalshi'],
+  ['Allison Duettmann', 'Foresight'],
+  ['Zvi Mowshowitz', "Don't Worry About the Vase"],
+  ['Arnold Brooks', 'Philosopher'],
+].sort((a, b) => a[0].localeCompare(b[0])) as [string, string][]
 
 export default function Manifest2026() {
   useEffect(() => {
-    const topNav = document.querySelector('.top')
+    /* nav scroll color shift (same behaviour as before) */
+    const topNav = document.querySelector('nav.top') as HTMLElement | null
     const updateNavColor = () => {
-      topNav?.classList.toggle('is-scrolled', window.scrollY > window.innerHeight * 0.8)
+      if (!topNav) return
+      if (window.scrollY > window.innerHeight - 80) topNav.classList.add('is-scrolled')
+      else topNav.classList.remove('is-scrolled')
     }
     updateNavColor()
     window.addEventListener('scroll', updateNavColor, { passive: true })
 
+    /* populate the "and many more" grid (same id, same data) */
     const list = document.getElementById('past-list')
     if (list) {
+      // reorder so the grid reads down columns rather than across rows
       const cols = 3
       const rows = Math.ceil(PAST_GUESTS.length / cols)
-      const reordered: string[][] = []
+      const reordered: [string, string][] = []
       for (let r = 0; r < rows; r++) {
         for (let c = 0; c < cols; c++) {
-          const i = c * rows + r
-          if (PAST_GUESTS[i]) reordered.push(PAST_GUESTS[i])
+          const idx = c * rows + r
+          if (idx < PAST_GUESTS.length) reordered.push(PAST_GUESTS[idx])
         }
       }
-      list.innerHTML = reordered.map(([name]) => `<div><p class="pa-name">${name}</p></div>`).join('')
+      list.innerHTML = reordered.map(([name]) => `<div>${name}</div>`).join('')
     }
 
-    const rows = Array.from(document.querySelectorAll('.faq-row'))
-    const handlers = rows.map((row) => {
+    /* FAQ accordion — V1 markup uses .v1-faq__item */
+    const items = Array.from(document.querySelectorAll<HTMLElement>('.v1-faq__item'))
+    const handlers = items.map((item) => {
+      const dd = item.querySelector('dd') as HTMLElement | null
+      if (dd) dd.style.display = 'none'
       const handler = () => {
-        row.classList.toggle('open')
-        const icon = row.querySelector('.faq-row__icon')
-        if (icon) icon.textContent = row.classList.contains('open') ? '−' : '+'
+        const isOpen = item.classList.toggle('open')
+        if (dd) dd.style.display = isOpen ? 'block' : 'none'
       }
-      row.addEventListener('click', handler)
-      return () => row.removeEventListener('click', handler)
+      item.addEventListener('click', handler)
+      return () => item.removeEventListener('click', handler)
     })
 
     return () => {
