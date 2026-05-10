@@ -348,7 +348,8 @@ const CATEGORIES = [
   { key: 'performance', label: 'Performance / Comedy' },
   { key: 'panel',       label: 'Panel / Q&A / Fireside' },
   { key: 'workshop',    label: 'Workshop / Class'     },
-  { key: 'demo',        label: 'Demo / Office Hours'  },
+  { key: 'demo',        label: 'Demo'                 },
+  { key: 'office',      label: 'Office Hours'         },
   { key: 'talk',        label: 'Talk / Lecture'       },
 ];
 
@@ -554,8 +555,10 @@ function categorize(title, hosts) {
   if (/\b(poker|chess|bughouse|trivia|tournament|clocktower|game show|cardinality|sock wrestle|origami|estimation game|nash pit|operant conditioning game|crystal coinflip|dumb pitch|pitch competition|startup pitch|speed friending|speed meeting|speedfriend|mentor.*mentee)\b/.test(t)) return 'game';
   // Social — meetup, mixer, party, hangout, gathering, social, friends, lgbt, parents, founders meetup
   if (/\b(meetup|mixer|party|hangout|gathering|social|meet[\s-]?up|friends?|lgbt|gay|parents meetup|founders meetup|shabbat|whales|degens|mira|founders meetup)\b/.test(all)) return 'social';
-  // Office Hours / Q&A / Fireside / Panel
-  if (/\b(office hours|q&a|q ?and ?a|fireside|panel|debate|interviews?|conversation|discussion)\b/.test(t)) return 'panel';
+  // Office Hours — anything titled "... Office Hours"
+  if (/\boffice hours\b/.test(t)) return 'office';
+  // Q&A / Fireside / Panel
+  if (/\b(q&a|q ?and ?a|fireside|panel|debate|interviews?|conversation|discussion)\b/.test(t)) return 'panel';
   // Workshop / class / training / build-a-bot / lesson
   if (/\b(workshop|class|training|build[\s-]?a[\s-]?bot|how to|intro to|101|tutorial|exercise|hands[\s-]?on|guided|learn)\b/.test(t)) return 'workshop';
   // Demo / showcase / live
