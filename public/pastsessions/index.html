@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Manifest Schedule — 2024 & 2025</title>
+<title>Manifest Schedule — 2023, 2024 & 2025</title>
 <style>
   @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Cinzel+Decorative:wght@400;700;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
 
@@ -33,14 +33,23 @@
     border-bottom: 2px solid var(--ink);
     padding-bottom: 18px;
     margin-bottom: 20px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
   }
   header.site h1 {
     font-family: var(--font-cinzel-deco);
     font-size: 34px;
     font-weight: 700;
-    margin: 0 0 4px;
+    margin: 0;
   }
-  header.site .sub { color: var(--muted); font-style: italic; }
+  header.site .brand {
+    font-family: var(--font-cinzel-deco);
+    font-size: 34px;
+    font-weight: 700;
+  }
 
   nav.years {
     display: flex;
@@ -71,11 +80,13 @@
     font-weight: 700;
   }
 
-  .year-meta { font-size: 14px; color: var(--muted); margin-bottom: 22px; }
+  footer.site #year-meta::before { content: " · "; }
+  footer.site #year-organizers { margin-top: 4px; }
 
   .filter-row {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     gap: 12px;
     margin: 0 0 22px;
     flex-wrap: wrap;
@@ -90,13 +101,14 @@
   }
   .filter-row select {
     font-family: var(--font-cinzel);
-    font-size: 14px;
+    font-size: 15px;
+    line-height: 1.5;
     font-weight: 600;
     color: var(--ink);
     background: var(--panel);
     border: 1px solid var(--rule);
     border-radius: 999px;
-    padding: 8px 32px 8px 16px;
+    padding: 13px 36px 13px 18px;
     cursor: pointer;
     appearance: none;
     -webkit-appearance: none;
@@ -178,8 +190,13 @@
     justify-self: end;
     align-self: end;
     text-align: right;
-    overflow-wrap: anywhere;
+    overflow-wrap: break-word;
   }
+  .session .speaker-name { display: inline-block; }
+  .session a.speaker-name { color: inherit; text-decoration: none; border-bottom: 1px dotted currentColor; }
+  .session a.speaker-name:hover { color: var(--ink); border-bottom-style: solid; }
+  footer.site a { color: inherit; text-decoration: underline; text-decoration-color: var(--rule); }
+  footer.site a:hover { text-decoration-color: currentColor; }
 
   /* Category palette — soft pastels */
   .session[data-cat="talk"]      { background: #edf5fa; border-color: #d6e8f2; }
@@ -218,16 +235,15 @@
 <body class="year-2025">
 <div class="wrap">
   <header class="site">
-    <h1>Manifest Schedule</h1>
-    <div class="sub">A festival of forecasting, prediction markets, and big ideas</div>
+    <div class="brand">Manifest</div>
+    <h1>Schedule of Previous Years</h1>
   </header>
 
   <nav class="years" role="tablist">
-    <button data-year="2025" class="active" role="tab" aria-selected="true">Manifest 2025</button>
-    <button data-year="2024" role="tab" aria-selected="false">Manifest 2024</button>
+    <button data-year="2025" class="active" role="tab" aria-selected="true">2025</button>
+    <button data-year="2024" role="tab" aria-selected="false">2024</button>
+    <button data-year="2023" role="tab" aria-selected="false">2023</button>
   </nav>
-
-  <div id="year-meta" class="year-meta"></div>
 
   <div class="filter-row">
     <label for="cat-filter">Filter by type</label>
@@ -240,6 +256,8 @@
 
   <footer class="site">
     <span id="footer-text"></span>
+    <span id="year-meta"></span>
+    <div id="year-organizers"></div>
   </footer>
 </div>
 
@@ -247,8 +265,15 @@
 const slugify = s => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 
 const META = {
-  '2025': { dates: 'June 6–8, 2025' },
-  '2024': { dates: 'June 7–9, 2024' },
+  '2025': { dates: 'June 6–8, 2025', organizers: 'David Chee, Rachel Farley & Austin Chen' },
+  '2024': { dates: 'June 7–9, 2024', organizers: 'Saul Munn, Rachel Weinberg & Austin Chen' },
+  '2023': { dates: 'September 22–24, 2023', organizers: 'Saul Munn, David Chee & Austin Chen' },
+};
+
+const YEAR_FILES = {
+  '2025': '/pastsessions/events-2025.json',
+  '2024': '/pastsessions/events.json',
+  '2023': '/pastsessions/events-2023.json',
 };
 
 const CATEGORIES = [
@@ -305,18 +330,23 @@ function titleCase(text) {
   const acronyms = {
     ai: 'AI',
     agi: 'AGI',
+    aisi: 'AISI',
     api: 'API',
     ea: 'EA',
     gpt: 'GPT',
+    'glp-1': 'GLP-1',
     lgbt: 'LGBT',
     lgbtq: 'LGBTQ',
     llm: 'LLM',
     llms: 'LLMs',
     mats: 'MATS',
+    nhk: 'NHK',
     nsfw: 'NSFW',
+    optic: 'OPTIC',
     qna: 'Q&A',
     'q&a': 'Q&A',
     rsvp: 'RSVP',
+    uk: 'UK',
     usa: 'USA',
   };
 
@@ -345,10 +375,19 @@ function titleCase(text) {
     .replace(/\bQ&a\b/g, 'Q&A');
 }
 
+const CATEGORY_OVERRIDES = {
+  'repolarize american politics: how to make the two-party system irrelevant': 'talk',
+};
+
+const SPEAKER_LINKS = {};
+
 function categorize(title, hosts) {
   const t = (title || '').toLowerCase();
   const h = (hosts || '').toLowerCase();
   const all = t + ' || ' + h;
+
+  const override = CATEGORY_OVERRIDES[cleanText(title).toLowerCase()];
+  if (override) return override;
 
   // Wellness — yoga, meditation, jhana, dance class, hygge, barbell
   if (/\b(yoga|meditation|guided meditation|jhana|barbell|hygge|dance class|grieving|psychological growth|meditat)/.test(t)) return 'wellness';
@@ -403,7 +442,22 @@ function createSessionCard(session) {
     <div class="speaker"></div>`;
   card.querySelector('.cat-label').textContent = CAT_LABEL[cat] || cat;
   card.querySelector('.title').textContent = titleCase(session.title);
-  card.querySelector('.speaker').textContent = session.speaker;
+  const speakerEl = card.querySelector('.speaker');
+  const names = (session.speaker || '').split(',').map(s => s.trim()).filter(Boolean);
+  speakerEl.textContent = '';
+  names.forEach((name, i) => {
+    const url = SPEAKER_LINKS[name];
+    const el = document.createElement(url ? 'a' : 'span');
+    el.className = 'speaker-name';
+    el.textContent = name;
+    if (url) {
+      el.href = url;
+      el.target = '_blank';
+      el.rel = 'noopener noreferrer';
+    }
+    speakerEl.appendChild(el);
+    if (i < names.length - 1) speakerEl.appendChild(document.createElement('br'));
+  });
   return { card, cat };
 }
 
@@ -416,11 +470,25 @@ async function loadYear(year) {
   });
 
   const meta = META[year];
-  const data = await fetch(year === '2025' ? '/pastsessions/events-2025.json' : '/pastsessions/events.json').then(r => r.json());
+  const data = await fetch(YEAR_FILES[year]).then(r => r.json());
 
   // Year meta
   document.getElementById('year-meta').textContent = meta.dates;
   document.getElementById('footer-text').textContent = `Manifest ${year}`;
+  const orgEl = document.getElementById('year-organizers');
+  orgEl.textContent = '';
+  meta.organizers.split(/\s*[,&]\s*/).forEach((name, i, arr) => {
+    const url = SPEAKER_LINKS[name];
+    const el = document.createElement(url ? 'a' : 'span');
+    el.textContent = name;
+    if (url) {
+      el.href = url;
+      el.target = '_blank';
+      el.rel = 'noopener noreferrer';
+    }
+    orgEl.appendChild(el);
+    if (i < arr.length - 1) orgEl.appendChild(document.createElement('br'));
+  });
 
   // Render schedule
   const catOrder = Object.fromEntries(CATEGORIES.map((c, i) => [c.key, i]));
@@ -489,7 +557,7 @@ function applyFilter() {
 
 filterSelect.addEventListener('change', applyFilter);
 
-const initialYear = (location.hash.match(/year-(2024|2025)/) || [,'2025'])[1];
+const initialYear = (location.hash.match(/year-(2023|2024|2025)/) || [,'2025'])[1];
 loadYear(initialYear).then(() => { refreshFilterOptions(); applyFilter(); });
 </script>
 </body>
