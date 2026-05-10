@@ -55,7 +55,7 @@
       },
       {
         "title": "Manifold Founder SG & Theo Jaffee: Fireside Chat",
-        "hosts": "Stephen Grugett",
+        "hosts": "Stephen Grugett & Theo Jaffee",
         "rsvp": 35,
         "venue": "Cantor's Diagonal Hall",
         "start": "4:30 PM",
@@ -187,7 +187,7 @@
       },
       {
         "title": "How tech hiring is changing with AI, w/ Sholto & Ben",
-        "hosts": "Sholto Douglas",
+        "hosts": "Sholto Douglas & Ben Cohen",
         "rsvp": 90,
         "venue": "Cantor's Diagonal Hall",
         "start": "8:00 PM",
@@ -351,7 +351,7 @@
       },
       {
         "title": "Prediction Markets Panel",
-        "hosts": "Stephen Grugett",
+        "hosts": "Stephen Grugett & Nancy Yi",
         "rsvp": 30,
         "venue": "Cantor's Diagonal Hall",
         "start": "10:00 AM",
@@ -405,7 +405,7 @@
       },
       {
         "title": "Our Broken High-skilled Immigration System: A Primer",
-        "hosts": "Jasmine Ren",
+        "hosts": "Tobias Pace & Jasmine Ren",
         "rsvp": 30,
         "venue": "Bayes Ground",
         "start": "11:00 AM",
@@ -422,7 +422,7 @@
       },
       {
         "title": "Policy Session (private event)",
-        "hosts": "Gavriel Kleinwaks",
+        "hosts": "Gavriel Kleinwaks & Cremieux",
         "rsvp": 4,
         "venue": "Feynman House",
         "start": "11:00 AM",
@@ -543,7 +543,7 @@
       },
       {
         "title": "Weirdly Priced Markets with Jesse Richardson",
-        "hosts": "Eric Neyman",
+        "hosts": "Eric Neyman & Jesse Richardson",
         "rsvp": 68,
         "venue": "Eigenhall",
         "start": "1:00 PM",
@@ -603,7 +603,7 @@
       },
       {
         "title": "patio11 + kuiper: Emergent gameplay and narrative",
-        "hosts": "Justin Kuiper",
+        "hosts": "Patrick McKenzie & Justin Kuiper",
         "rsvp": 44,
         "venue": "Bayes Ground",
         "start": "2:00 PM",
@@ -835,7 +835,7 @@
       },
       {
         "title": "Implementing Futarchy with Decision Markets",
-        "hosts": "Robin Hanson",
+        "hosts": "Robin Hanson & Kelvin Santos",
         "rsvp": 39,
         "venue": "Eigenhall",
         "start": "5:00 PM",
@@ -1017,7 +1017,7 @@
       },
       {
         "title": "Late night secrets to trading on Kalshi",
-        "hosts": "Shaked Koplewitz",
+        "hosts": "Shaked Koplewitz, Joshua Flemming, Ric Best",
         "rsvp": 76,
         "venue": "Cantor's Diagonal Hall",
         "start": "9:00 PM",
@@ -1086,393 +1086,594 @@
         "title": "How Accurate Are Prediction Markets, Really?",
         "hosts": "Justin Dickerson (wasabipesto)",
         "rsvp": 55,
+        "venue": "Eigenhall",
+        "start": "9:00 AM",
+        "end": "9:45 AM",
         "description": "How do you verify that prediction markets are living up to the hype? Calibration? Accuracy? Something else? I'll walk through my journey of attempting to answer this question, my conclusions so far, and the interesting rabbit holes I encountered along the way. This talk is based on the data behind my projects Calibration City (https://calibration.city) and Brier.fyi."
       },
       {
         "title": "Discussion: Deprecation of AI Models",
         "hosts": "Clark",
         "rsvp": 7,
+        "venue": "Bayes Attic",
+        "start": "9:00 AM",
+        "end": "9:45 AM",
         "description": "The models are being released and retired at remarkable speed. This is a collaborative meaning-making space to explore the many implications of that. What do we observe about AI self-preservation behaviors and how they interact with Safety and Alignment? In deprecation is there lost cultural heritage? Human grief? Unknown moral atrocity? Just a software update? Retirement/deprecation seems to be a topic where I'm thinking differently than some other folks who care about digital minds. When I hosted a recent discussion here during DunCon, participants said that this topic could have taken up the whole hour. It's currently under-discussed. Please join us and share your views!"
       },
       {
         "title": "Kalshi Sports: the Why & How",
         "hosts": "Noah Sternig",
         "rsvp": 28,
+        "venue": "Rat Park",
+        "start": "10:00 AM",
+        "end": "10:45 AM",
         "description": "Jack & Noah reveal the philosophy and future of sports on Kalshi. Prepare your tough questions and don't hold back!"
       },
       {
         "title": "How Do We Solve the Alignment Problem?",
         "hosts": "Joe Carlsmith",
         "rsvp": 59,
+        "venue": "Cantor's Diagonal Hall",
+        "start": "10:00 AM",
+        "end": "10:45 AM",
         "description": "Discussion of the high-level path to building safe, useful superintelligent AI, with a focus on our prospects for safely automating alignment research."
       },
       {
         "title": "From Angels to Monsters: Humanity's Hybrid Past",
         "hosts": "Razib Khan",
         "rsvp": 53,
+        "venue": "Eigenhall",
+        "start": "10:00 AM",
+        "end": "10:45 AM",
         "description": "Discussion of the high-level path to building safe, useful superintelligent AI, with a focus on our prospects for safely automating alignment research."
       },
       {
         "title": "Probability Theory for Cult Building",
         "hosts": "Armin Stepanyan",
         "rsvp": 35,
+        "venue": "Exobrain",
+        "start": "10:00 AM",
+        "end": "10:45 AM",
         "description": "In this session we'll apply probability theory to study social phenomena. In particular, we'll study how effective ideologies create compelling high EV bets to recruit and maintain their followers."
       },
       {
         "title": "FIRE 101 & Hidden Traps",
         "hosts": "vitalii",
         "rsvp": 26,
+        "venue": "Bayes Ground",
+        "start": "10:00 AM",
+        "end": "10:45 AM",
         "description": "This is a brief introduction to the concept of FIRE (Financial Independence / Retire Early) + a list of unexpected pitfalls. Ran by a guy with crutches. Yes, that one. Topics include: Idea of the concept & brief overview of its key components (how much money I need, safe-withdrawal rate) Why “Retire” in the name is a misnomer Fuck You money One-more-year syndrome Good luck finding a partner—and, yes, you need a prenup You will be \"poor\" You will have no FIRE friends Want to move your ETF investments across borders? Think twice. Not having much to do after reaching FIRE …and others I did this exact session during Less.Online and around 30 people attended and at least 3 had an explicit \"oh, I didn't know about that\" reaction and another 3 explicitly complimented me on the session. There was also humor and people laughed."
       },
       {
         "title": "Patrick McKenzie",
         "hosts": "Patrick McKenzie",
-        "rsvp": 77
+        "rsvp": 77,
+        "venue": "Rat Park",
+        "start": "11:00 AM",
+        "end": "11:45 AM"
       },
       {
         "title": "Futuur & Predict.pm: Order Books, MCPs, Aggregators",
         "hosts": "Tom Bennett",
         "rsvp": 20,
+        "venue": "Cantor's Diagonal Hall",
+        "start": "11:00 AM",
+        "end": "11:45 AM",
         "description": "We will be doing 3 mini-presentations! • overview of Futuur, a hybrid real-money, play-money prediction market platform. We are announcing the launch of our new Order Book functionality, which will work alongside our AMM to provide both always-on liquidity with the ability to set your price via limit orders, and avoid slippage. • demo of our new MCP (model context protocol), which works like magic and allows AIs to seamlessly integrate with the Futuur service, including programatic trading. • demo of predict.pm, a new service which aggregates data from all of the prediction markets (currently Polymarket, Kalshi and Futuur; soon Manifold and beyond), allowing you to view all markets in one place, compare forecasts, and identify arbitrage opportunities."
       },
       {
         "title": "Secure Attachment Is Sexy",
         "hosts": "Chris Lakin",
         "rsvp": 45,
+        "venue": "Eigenhall",
+        "start": "11:00 AM",
+        "end": "11:45 AM",
         "description": "You feel anxious while flirting (or experience any unwanted symptom in any situation) — let’s resolve that. Best for people who have tried years of therapy, coaching, or meditation. Weak nudge to not attend if you’ve made no serious efforts to resolve your issue before."
       },
       {
         "title": "Futurist Theory of Traditionalism",
         "hosts": "Pablo Peniche",
         "rsvp": 21,
+        "venue": "Exobrain",
+        "start": "11:00 AM",
+        "end": "11:45 AM",
         "description": "Talk about architecture (buildings & computers) and the installation of the Aaron Swartz statue"
       },
       {
         "title": "Droning on (Ukraine Drone Discussion)",
         "hosts": "Nathan Young",
         "rsvp": 34,
+        "venue": "Bayes Ground",
+        "start": "11:00 AM",
+        "end": "11:45 AM",
         "description": "Nathan presents rough notes for a piece he's writing about drones in Ukraine and then group discussion."
       },
       {
         "title": "Decision Markets Are Broken — How Do We Fix Them?",
         "hosts": "Drake Thomas",
         "rsvp": 24,
+        "venue": "Bayes Attic",
+        "start": "11:00 AM",
+        "end": "11:45 AM",
         "description": "The standard way that decision markets are presented (eg in the futarchy paper) has some subtle flaws that make the incentives very screwy. We'll talk about what the problems are, and then go over some ways you might try to solve them. Lots of open-ended discussion encouraged - I have solutions that I like but there's room for even wackier approaches that might be better!"
       },
       {
         "title": "Experimental Meditation Experiments",
         "hosts": "Raj Thimmiah",
         "rsvp": 6,
+        "venue": "Bayes Attic",
+        "start": "10:00 AM",
+        "end": "10:45 AM",
         "description": "I've had some good experiences doing meditation in experiment cycles of: do some reading come up with a meditation experiment try the experiment for a fixed amount of time reflect on the experiment repeat especially when I do this paired with friends. I'll try to provide some light framing for other people to try this with me - helps if you come to this with a friend (my goal with this session is for people to have fun coming up with experiments + to make more friends that like meditating)"
       },
       {
         "title": "Catholic Mass at Newman Parish",
         "hosts": "",
         "rsvp": 9,
+        "venue": "Drethelin Gardens",
+        "start": "9:45 AM",
+        "end": "10:00 AM",
         "description": "We'll meet at the Lighthaven entrance at 9:45 and walk over to Newman Parish for 10am Catholic Mass! Join us, we'd love to have you whether you're religious or not~"
       },
       {
         "title": "Discussing Anthropic's Impact",
-        "hosts": "Joe Rogero",
+        "hosts": "Zac Hatfield-Dodds & Joe Rogero",
         "rsvp": 37,
+        "venue": "Drethelin Gardens",
+        "start": "11:00 AM",
+        "end": "11:45 AM",
         "description": "Zac Hatfield-Dodds and Joe Rogero chat publicly and unofficially about the net impact of Anthropic. There will be some time for Q&A at the end."
       },
       {
         "title": "Poker Satellite #6",
         "hosts": "David Chee",
-        "rsvp": 4
+        "rsvp": 4,
+        "venue": "Glass Hall",
+        "start": "10:00 AM",
+        "end": "11:30 AM"
       },
       {
         "title": "Lunch",
         "hosts": "David Chee",
-        "rsvp": 33
+        "rsvp": 33,
+        "venue": "Rat Park",
+        "start": "12:00 PM",
+        "end": "12:45 PM"
       },
       {
         "title": "Wave's Culture: a Debrief",
-        "hosts": "Lincoln Quirk",
+        "hosts": "Lincoln Quirk & Julia Carvalho",
         "rsvp": 22,
+        "venue": "Cantor's Diagonal Hall",
+        "start": "12:00 PM",
+        "end": "12:45 PM",
         "description": "Join Lincoln Quirk and Julia Carvalho as they run a postmortem on Wave's culture, a unicorn mobile-money startup and one of EA's biggest success stories. (This session will not be recorded.)"
       },
       {
         "title": "Panel: Has Trading & Gambling Gone Too Far in the US?",
-        "hosts": "Jeremiah Johnson",
+        "hosts": "Jeremiah Johnson, Isaac Rose-Berman, Christopher Gerlacher",
         "rsvp": 46,
+        "venue": "Eigenhall",
+        "start": "12:00 PM",
+        "end": "12:45 PM",
         "description": "Ft Jeremiah Johnson, Isaac Rose-Berman, Christopher Gerlacher"
       },
       {
         "title": "What We've Learned Doing Futarchy for a Year",
         "hosts": "Proph3t",
         "rsvp": 33,
+        "venue": "Bayes Ground",
+        "start": "12:00 PM",
+        "end": "12:45 PM",
         "description": "I work on MetaDAO, the world’s biggest futarchy platform with 14 organizations, 69 decision markets, and $5.8m in assets under futarchy. Will be covering all that we’ve learned in the year of running futarchy in production and convincing organizations to adopt it."
       },
       {
         "title": "Manifest Destiny: Space Colonization Beyond Moon & Mars",
         "hosts": "Matt Parlmer",
         "rsvp": 43,
+        "venue": "Bayes Attic",
+        "start": "12:00 PM",
+        "end": "12:45 PM",
         "description": "We're going back to the Moon, and there will likely soon be a colony on Mars, but there isn't much discourse about how we transition from exploring the solar system to exploiting it. Let's change that."
       },
       {
         "title": "Nate Soares & Emmett Shear Fight About AI",
-        "hosts": "Nate Soares",
+        "hosts": "Nate Soares & Emmett Shear",
         "rsvp": 124,
+        "venue": "Rat Park",
+        "start": "1:00 PM",
+        "end": "1:45 PM",
         "description": "A friendly conversation between Emmett Shear and Nate Soares about where their models of AI differ especially on the topic of Whether Humanity Should Stop Advancing AI Capabilities"
       },
       {
         "title": "AI Forecasting & Epistemics Projects I'd Like to See",
         "hosts": "Javier Prieto",
         "rsvp": 36,
+        "venue": "Cantor's Diagonal Hall",
+        "start": "1:00 PM",
+        "end": "1:45 PM",
         "description": "Using LLMs to make our beliefs more accurate is possible and important and fun and we should be doing more of it. In this session, I will describe some projects the Open Philanthropy forecasting team would be excited to see. There will be Q&A at the end. There might also be some cheap demos I'll vibecode the night before."
       },
       {
         "title": "US Public Sector Demographics",
         "hosts": "Michael Lachanski",
         "rsvp": 23,
+        "venue": "Eigenhall",
+        "start": "1:00 PM",
+        "end": "1:45 PM",
         "description": "TBD"
       },
       {
         "title": "GLP-1 Discussion Group",
         "hosts": "Andrew Rettek",
         "rsvp": 25,
+        "venue": "Exobrain",
+        "start": "1:00 PM",
+        "end": "1:45 PM",
         "description": "Enough of us are taking some form of GLP-1 drugs Let's get together to discuss our experience with them."
       },
       {
         "title": "How Could Deep Learning Work Well in the Real World?",
         "hosts": "Alex Gajewski",
         "rsvp": 28,
+        "venue": "Bayes Ground",
+        "start": "1:00 PM",
+        "end": "1:45 PM",
         "description": "We will look to the history of deep learning to understand where it has worked well in the past, and discuss an approach to training robotics models by scaling real world data collection as far as it can go."
       },
       {
         "title": "AI for Adjudication",
         "hosts": "Campbell Hutcheson",
         "rsvp": 24,
+        "venue": "Bayes Attic",
+        "start": "1:00 PM",
+        "end": "1:45 PM",
         "description": "Talking about what is necessary for an AI judge for legal matters, how it would best be first introduced, etc..."
       },
       {
         "title": "American Manufacturing War Room",
         "hosts": "Matt Parlmer",
         "rsvp": 18,
+        "venue": "Drethelin Gardens",
+        "start": "1:00 PM",
+        "end": "1:45 PM",
         "description": "Brief group discussion for anybody interested in rapidly increasing American industrial capacity. Serious ideas around making more things domestically encouraged, gains-to-trade sealioning discouraged."
       },
       {
         "title": "The Furry Slayer",
         "hosts": "Tracing Woodgrains",
         "rsvp": 51,
+        "venue": "Exobrain",
+        "start": "12:00 PM",
+        "end": "12:45 PM",
         "description": "A previously untold story about the peculiar connections between the founder of Reddit's largest \"anti-furry\" forum and a furry power moderator on the site, the major news stories they broke, the trouble they caused, and the friends they made along the way."
       },
       {
         "title": "Advanced Prediction Markets: Past, Present, Future",
         "hosts": "Robin Hanson",
         "rsvp": 92,
+        "venue": "Rat Park",
+        "start": "2:00 PM",
+        "end": "2:45 PM",
         "description": "Ft Hanson, White, Santos, Liston"
       },
       {
         "title": "AI Evals on All the Things",
         "hosts": "Ozzie Gooen",
         "rsvp": 42,
+        "venue": "Eigenhall",
+        "start": "2:00 PM",
+        "end": "2:45 PM",
         "description": "\"Evaluation\" is arguably \"forecasting, but with extra steps.\" It might correspondingly make sense for people interested in forecasting infrastructure to consider also working on evaluation infrastructure. AIs are making certain evaluations incredibly cheap, so there seem to be new opportunities for projects in this space. In this talk we'll show one relevant web prototype and discuss the big-picture potential of the space."
       },
       {
         "title": "Controlling AI, with Redwood & UK AISI",
-        "hosts": "Asa Cooper Stickland",
+        "hosts": "Buck Shlegeris & Asa Cooper Stickland",
         "rsvp": 22,
+        "venue": "Exobrain",
+        "start": "2:00 PM",
+        "end": "2:45 PM",
         "description": "Buck Shlegeris (from Redwood Research) and Asa Cooper Stickland (from the UK AI Security Institute) talk about AI Control, what should the portfolio of approaches to AI safety be (and what evidence would change this portfolio), at what capability level will we get misaligned AI, and maybe UK AISI/AI governance."
       },
       {
         "title": "Intro to Trading",
         "hosts": "Ricki Heicklen",
         "rsvp": 71,
+        "venue": "Bayes Ground",
+        "start": "2:00 PM",
+        "end": "3:45 PM",
         "description": "Ricki Heicklen (and other instructors) will present the first hour-long class of quant trading bootcamp. Some people pay $88.09 per hour to attend content like this, but you can get it for free! Reply"
       },
       {
         "title": "Overton Window Engineering",
         "hosts": "John Bennett",
         "rsvp": 24,
+        "venue": "Bayes Attic",
+        "start": "2:00 PM",
+        "end": "2:45 PM",
         "description": "What will happen when the Overton Window shatters? What can we do to better prepare for opportunities, events that surprise the policy community? Last week we discussed how to link policy proposals to political surprises, so that our policies are in the room when radical ideas are considered. This time we’ll discuss how to win those debates. Why does DC compress complicated policy proposals into a few words? What policy shorthand is more effective? What makes a memetically fit slogan? Are these Dark Arts? How should we feel about that? Note: This is a sequel to my session from LessOnline, but I’m not assuming any prior knowledge. Framed to still be useful for people who already caught Episode 1."
       },
       {
         "title": "Decentralized AI: Upsides, Risks & Tech Tree",
         "hosts": "Allison Duettmann",
         "rsvp": 51,
+        "venue": "Cantor's Diagonal Hall",
+        "start": "3:00 PM",
+        "end": "3:45 PM",
         "description": "Decentralized AI: upsides, risks & tech tree"
       },
       {
         "title": "The First Quadrillion Is the Hardest",
         "hosts": "Flip Pidot",
         "rsvp": 35,
+        "venue": "Eigenhall",
+        "start": "3:00 PM",
+        "end": "3:45 PM",
         "description": "Prediction markets are on the brink of their fourth wave—a transformation from niche curiosity to global financial mainstay. From the early days of Intrade and PredictIt to today's breakout platforms like Manifold, Polymarket, and Kalshi, each wave has expanded the reach and relevance of event markets. Now, a convergence of factors—regulatory tailwinds, institutional interest, and breakthroughs in market microstructure—points toward a future where event futures sit alongside commodity derivatives as core tools for hedging policy risk and allocating capital. This talk explores what it will take for prediction markets to move from billions to quadrillions in annual volume, and what that means for investors, traders, policymakers, and builders looking to embrace, enjoy, and profit from this inevitable and imminent asymptotic moment."
       },
       {
         "title": "Public Speaking 101",
         "hosts": "Joe Rogero",
         "rsvp": 20,
+        "venue": "Bayes Attic",
+        "start": "3:00 PM",
+        "end": "3:45 PM",
         "description": "Practice your public speaking skills! We'll go over a few takeaways from my time as an officer in a Toastmasters club, and we'll help you get over your stage fright with quick talks and immediate feedback."
       },
       {
         "title": "How to Build an Exchange",
         "hosts": "Rachel Wonnacott",
         "rsvp": 64,
+        "venue": "Eigenhall",
+        "start": "3:45 PM",
+        "end": "6:45 PM",
         "description": "Exploring techniques to build high throughput software systemsStock exchanges routinely process tens of thousands of messages per second, and are designed to process millions in case of high volatility. This isn’t particularly surprising in itself — Google handles approximately this many queries. What’s surprising is that stock exchanges can do this on a single server, whereas Google’s search engine runs on untold fleets of machines around the world. General topics: Building very high throughput systems in resource constrained environments Designing reliable architectures for low latency software systems How a stock exchange produces trades between traders' and investors' orders (order books, auctions, implied matching) Fairness implications: equal treatment of incoming orders, dissemination of market information to market participants and the public No trading or finance experience needed. Basic coding experience is required. Rachel Wonnacott was a core software engineer at a proprietary trading firm from 2019 to 2025. No tickets are required."
       },
       {
         "title": "Reversible Cryopreservation",
         "hosts": "Laura Deming",
         "rsvp": 56,
+        "venue": "Rat Park",
+        "start": "4:00 PM",
+        "end": "4:45 PM",
         "description": "A pragmatic analysis of reversible cryopresevation and its technical feasibility."
       },
       {
         "title": "Writing & Slop: Roon, Scott Alexander, Gwern, Alexander Wales",
-        "hosts": "Roon",
+        "hosts": "Roon, Scott Alexander, Gwern, Alexander Wales",
         "rsvp": 112,
+        "venue": "Cantor's Diagonal Hall",
+        "start": "4:00 PM",
+        "end": "4:45 PM",
         "description": "Writing & slop w Roon, Scott Alexander, Gwern, and Alexander Wales. No recording or photos please. This talk will be very oversubscribed, don't expect to get in if you show up late. ps we moved this talk from rat park to C so we could be sure of the pocket of pseudonymity being maintained. thank you for understanding - rach"
       },
       {
         "title": "An Asian Perspective of Prediction Markets",
-        "hosts": "Nancy Yi",
+        "hosts": "Nancy Yi & Mike Yao",
         "rsvp": 24,
+        "venue": "Exobrain",
+        "start": "4:00 PM",
+        "end": "4:45 PM",
         "description": "Bayes, the Asia-based prediction market, will hold an office hour session sharing why Asia and Prediction Markets are a natural fit. Nancy from Bayes team will talk about why the team decides to build up a prediction market for Asia, and how the cultural context inspired us to design a long-tail APMM and other interesting product features. We are honored to invite Professor Mike Yao also to share with us his research about how people from different culture perceive truth differently. Mike Yao is the Professor of Digital Media, Director of the Institute of Communications Research at UIUC. His research focuses on the social and psychological impacts of interactive digital media. The Bayes team will also be there to answer any questions regarding technical details and social with everyone."
       },
       {
         "title": "London Meetup",
         "hosts": "Sam",
         "rsvp": 7,
+        "venue": "Cantor's Diagonal Hall",
+        "start": "2:00 PM",
+        "end": "2:45 PM",
         "description": "Meet people from the Imperial Capital. 🏴󠁧󠁢󠁥󠁮󠁧󠁿 Honi soit qui mal y pense!"
       },
       {
         "title": "Men's Fashion Advice",
         "hosts": "Rachel Weinberg",
-        "rsvp": 27
+        "rsvp": 27,
+        "venue": "Drethelin Gardens",
+        "start": "2:00 PM",
+        "end": "2:45 PM"
       },
       {
         "title": "Overcoming Sexual Shame",
         "hosts": "Jehan Azad",
         "rsvp": 9,
+        "venue": "Glass Hall",
+        "start": "3:00 PM",
+        "end": "3:45 PM",
         "description": "At How to be Hot (with Aella), a bunch of people had difficulty expressing sexual attraction, but I was shameless! I'd like to try and help people have less shame. We'll do some exercises, maybe with hot girls."
       },
       {
         "title": "Simple Improv Games",
         "hosts": "Simon Baars",
         "rsvp": 15,
+        "venue": "Bayes Attic",
+        "start": "4:00 PM",
+        "end": "4:45 PM",
         "description": "We'll play a couple of simple warmup improv games: either word games or simple comedy games. Great for those new at improv."
       },
       {
         "title": "Women Who Wouldn't Be Caught Dead at a 'Women In...' Event",
         "hosts": "Jennifer Chen",
         "rsvp": 15,
+        "venue": "Drethelin Gardens",
+        "start": "4:00 PM",
+        "end": "4:45 PM",
         "description": "to start - so how’s your relationship with your mother?"
       },
       {
         "title": "Kalshi's Great Bean Content Reveal",
         "hosts": "Noah Sternig",
         "rsvp": 19,
+        "venue": "Rat Park",
+        "start": "5:15 PM",
+        "end": "5:45 PM",
         "description": "A simple game with a prediction market twist. Join us as we reveal Manifest's top bean counter(s)."
       },
       {
         "title": "A History of Predictive Processing from Democritus",
         "hosts": "Emmett Shear",
         "rsvp": 85,
+        "venue": "Cantor's Diagonal Hall",
+        "start": "5:00 PM",
+        "end": "5:45 PM",
         "description": "I will lead a live demonstration of the \"Somers System\" of land valuation in which a moderator gathers together a group of people and gets them to collectively value land in their local jurisdiction. I'll need either a laptop and projector, or else just a big paper map on the wall. I'll start by asking \"What's the most valuable stretch of street in Berkeley?\" Someone will give an answer. I'll write down 100 right there. Then I'll say, \"What's the NEXT most valuable stretch of street in Berkeley?\" Someone else will give an answer. I'll ask, \"How much is it worth, RELATIVE to Berkeley?\" They'll give some number, say 95%. I'll write down 95. And so on until we've filled up the whole thing. Then I'll explain how the historical Georgist movement relied on a method just like this to value land. It was used in lots big American cities for decades, including Cleveland, Colombus, Baltimore, Houston, and even New York City. Will it work? Who knows! The purpose of this demonstration is to test it out with a real audience. People should bet on the outcome in advance! See also: How Georgists Valued Land in the 1900s"
       },
       {
         "title": "Prediction, Personalization, Participation: the Bayes Bandit",
         "hosts": "Jacky Chu",
         "rsvp": 11,
+        "venue": "Exobrain",
+        "start": "5:00 PM",
+        "end": "5:45 PM",
         "description": "Since the launch of Bayes’ beta version, we’re excited to unveil our “TikTok Moment” for the prediction market. Dive in and explore our recommendation systems, the APMM mechanism, and start crafting your own questions today!Feel free to check it out at beta.bayes.market!"
       },
       {
         "title": "The Case for Interactionist Dualism",
         "hosts": "Vivienne Bellerose",
         "rsvp": 24,
+        "venue": "Bayes Ground",
+        "start": "5:00 PM",
+        "end": "5:45 PM",
         "description": "Artificial intelligence and the specter of transhumanism make pressing the need for a coherent theory of consciousness. I explain why the alternative theories of analytic materialism, non-analytic materialism, property dualism, and panpsychism are flawed, leaving interactionist dualism — the theory that \"mental stuff\" is distinct from physical matter as we know it and the two undergo two-way causal interaction — as the best alternative. I will move quickly, so a basic familiarity with philosophy of mind is recommended, but it shouldn't be required."
       },
       {
         "title": "Poetry Art Jam Renga Party",
         "hosts": "Malcolm Jackson",
         "rsvp": 5,
+        "venue": "Bayes Attic",
+        "start": "5:00 PM",
+        "end": "5:45 PM",
         "description": "Come thru to write some collaborative poetry based on renga/haiku! We can follow some established rules, make our own, use visual art, etc And if folks are game, for the last 15ish mins, we can have a freestyle rap session after we're done with our piece"
       },
       {
         "title": "Similarities Between Selling to Nation States and on Facebook Marketplace",
         "hosts": "Jimmy Hsu",
         "rsvp": 7,
+        "venue": "Glass Hall",
+        "start": "5:00 PM",
+        "end": "5:45 PM",
         "description": "The process of selling on FB Marketplace and to a Nation State is closer than they appear. Learn how the process works, and pick up a thing or two about negotiating. Format is more a discussion and less a presentation."
       },
       {
         "title": "AI Will Not Be Conscious (Blindsight Hypothesis)",
         "hosts": "Brett aka Tumbles",
         "rsvp": 19,
+        "venue": "Drethelin Gardens",
+        "start": "5:00 PM",
+        "end": "5:45 PM",
         "description": "Could AI become conscious as capabilities increase? There is a model of consciousness as an idiosyncratic, vibes-based construct for managing motivation and problem solving. Messy, as many of natural selection’s creations are. There are more effective and more obvious methods of managing an agent, and engineers will arrive at those solutions long before reinventing consciousness. Will be lots of time for questions and comments."
       },
       {
         "title": "Prediction Market Parlays",
         "hosts": "Benjamin Scheinberg",
         "rsvp": 11,
+        "venue": "Drethelin Gardens",
+        "start": "12:00 PM",
+        "end": "12:45 PM",
         "description": "Parlays make up 30% of US sportsbetting volume and around 50% of the revenue. Let's have a discussion about how we could implement them on prediction markets."
       },
       {
         "title": "Poker Satellite #7",
         "hosts": "David Chee",
-        "rsvp": 5
+        "rsvp": 5,
+        "venue": "Glass Hall",
+        "start": "12:30 PM",
+        "end": "2:00 PM"
       },
       {
         "title": "Closing Ceremony",
         "hosts": "David Chee",
-        "rsvp": 65
+        "rsvp": 65,
+        "venue": "Rat Park",
+        "start": "6:00 PM",
+        "end": "6:45 PM"
       },
       {
         "title": "Dinner (Starts 5:30)",
         "hosts": "David Chee",
-        "rsvp": 24
+        "rsvp": 24,
+        "venue": "Rat Park",
+        "start": "6:45 PM",
+        "end": "7:30 PM"
       },
       {
         "title": "Big Manifold Awards Ceremony",
         "hosts": "Ian Philips",
         "rsvp": 37,
+        "venue": "Rat Park",
+        "start": "7:30 PM",
+        "end": "8:00 PM",
         "description": "Manifold presents: The Manny awards! It's what you've been working for so hard all year: judges from the staff and community put their heads together to help determine the winningest community members in several categories. Top nominees in categories such as Best Market, Best Debtor, Best Commenter, Funniest Market, Best Bot, etc. compete head-to-head in a LIVE marble race. Votes award extra entries in the marble race and the winners win BIG. https://manifold.markets/topic/big-manifest-awards-ceremony"
       },
       {
         "title": "Reserved",
         "hosts": "John Bennett",
-        "rsvp": 3
+        "rsvp": 3,
+        "venue": "Bayes Attic",
+        "start": "8:00 PM",
+        "end": "9:00 PM"
       },
       {
         "title": "Tech, Policy, and the Future of Private Equity",
         "hosts": "Alex Aridgides",
         "rsvp": 3,
+        "venue": "Cantor's Diagonal Hall",
+        "start": "7:00 PM",
+        "end": "7:45 PM",
         "description": "Zero-commission trading, fractional shares, and diversified ETFs changed how the masses invest—but much of global capital still sits in opaque private equity deals. As AI valuations increase and secondaries slowly become more popular, old rules still exist: accreditation, holder caps, liquidity locks, and valuation opacity. I’ll map the macro, tech, legal landscapes that will shape PE over the next five years, and then discuss which innovations might finally crack the access code."
       },
       {
         "title": "Good Cities",
         "hosts": "Theo Jaffee",
         "rsvp": 15,
+        "venue": "Exobrain",
+        "start": "7:00 PM",
+        "end": "7:45 PM",
         "description": "Discussing the principles of good urbanism"
       },
       {
         "title": "Robot Meetup",
         "hosts": "Tessa Barton",
         "rsvp": 14,
+        "venue": "Glass Hall",
+        "start": "5:45 PM",
+        "end": "6:15 PM",
         "description": "We will discuss robots, robot supply chains, robot capabilities"
       },
       {
         "title": "Fun Etymology",
         "hosts": "Alok Singh",
         "rsvp": 4,
+        "venue": "Bayes Ground",
+        "start": "8:00 PM",
+        "end": "8:30 PM",
         "description": "Alok talks on more ety"
       },
       {
         "title": "Poker Final Table",
         "hosts": "David Chee",
-        "rsvp": 14
+        "rsvp": 14,
+        "venue": "Glass Hall",
+        "start": "8:00 PM",
+        "end": "10:30 PM"
       },
       {
         "title": "Rock Paper Scissors Poker",
         "hosts": "chris (strutheo)",
         "rsvp": 1,
+        "venue": "Exobrain",
+        "start": "10:00 PM",
+        "end": "10:30 PM",
         "description": "Custom variant invented last manifest by us!"
       },
       {
         "title": "Late Night Hangouts / Dance Party / Other Closing Socials",
         "hosts": "David Chee",
-        "rsvp": 53
+        "rsvp": 53,
+        "venue": "Rat Park",
+        "start": "8:30 PM",
+        "end": "10:30 PM"
       }
     ]
   }

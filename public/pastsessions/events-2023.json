@@ -214,7 +214,8 @@
       },
       {
         "title": "Parenting & Pronatalism",
-        "hosts": "Simone Collins, Byrne Hobart, Zvi Mowshowitz, Malcolm Collins, Rachel Weinberg",
+        "hosts": "Zvi Mowshowitz & Byrne Hobart & Simone Collins & Malcolm Collins & Rachel Weinberg",
+        "hostOrder": "preserve",
         "venue": "E - Main Session",
         "start": "12:00 PM",
         "end": "1:00 PM"
@@ -417,7 +418,7 @@
       },
       {
         "title": "Reducing Bias in Education with Prediction Markets",
-        "hosts": "Simone Collins, Malcolm Collins, Rachel Weinberg",
+        "hosts": "Simone Collins & Malcolm Collins & Rachel Weinberg",
         "venue": "E - Main Session",
         "start": "10:00 AM",
         "end": "11:00 AM"
@@ -548,7 +549,8 @@
       },
       {
         "title": "Fireside Chat: ManiFund Q+A",
-        "hosts": "Elizabeth Van Nostrand, Austin Chen, Rachel Weinberg",
+        "hosts": "Elizabeth Van Nostrand & Rachel Weinberg & Austin Chen",
+        "hostOrder": "preserve",
         "venue": "E - Floor 2 (Side Sessions)",
         "start": "3:00 PM",
         "end": "4:00 PM",
@@ -563,7 +565,7 @@
       },
       {
         "title": "Proofniks / Conflux Q&A",
-        "hosts": "Jacob Cohen, Andrew Imbens, Allison Hung, Marco Angeldones",
+        "hosts": "Jacob Cohen & Andrew Imbens & Allison Hung & Marco Angeldones",
         "venue": "B - Ground floor",
         "start": "3:00 PM",
         "end": "3:45 PM",
@@ -594,14 +596,14 @@
       },
       {
         "title": "Polymarket and Making Prediction Markets Mainstream",
-        "hosts": "Scott Alexander, Shayne Coplan, Zvi Mowshowitz, Pratik Chougule",
+        "hosts": "Scott Alexander & Shayne Coplan & Zvi Mowshowitz & Pratik Chougule",
         "venue": "E - Main Session",
         "start": "4:00 PM",
         "end": "5:00 PM"
       },
       {
         "title": "Caramel Taste Test Showdown",
-        "hosts": "Matt C. Wilson, Noa Nabeshima, Lauren Milliken",
+        "hosts": "Matt C. Wilson & Noa Nabeshima & Lauren Milliken",
         "start": "5:00 PM",
         "end": "5:30 PM",
         "description": "Join us at the kitchen and help us decide which of Lauren’s caramels taste the best, or just bet on the market!\n\nhttps://manifold.markets/NoaNabeshima/will-apple-cider-caramels-beat-pine?r=TWF0dENXaWxzb24"
