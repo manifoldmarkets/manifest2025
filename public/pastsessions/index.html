@@ -371,12 +371,11 @@ const HIDE_PATTERNS = [
   /\bregistration\b/i,
   /\bvolunteer training\b/i,
   /\bbreak\b/i,
-  /\bclosing\b/i,
+  /\bclosing (ceremony|circle)\b/i,
+  /\bdinner & closing ceremony\b/i,
   /^\s*\[blocked/i,
   /^\s*reserved\s*$/i,
-  /\boverflow\b/i,
   /\bjudges huddle\b/i,
-  /pitch competition (judges|setup)/i,
 ];
 function shouldHide(title) {
   const t = title || '';
