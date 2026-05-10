@@ -718,7 +718,8 @@ const PAGE_HTML = `
       <ol class="v1-list__items v1-list__items--stack">
         <li><b>Founder of Upstart, Paul Gu</b></li>
         <li><b>Nate Silver &amp; Scott Alexander</b></li>
-        <li><b>Stephen Grugett &amp; Theo Jaffee</b></li>
+        <li><b>Manifold Founder, Stephen Grugett &amp; Theo Jaffee</b></li>
+        <li><b>AI 2027 Q&amp;A, Eli Lifland</b></li>
         <li><b>Ajeya Cotra</b></li>
         <li><b>Kalshi Co-Founder, Luana Lopes Lara</b></li>
         <li><b>Substack CEO, Chris Best</b></li>
