@@ -721,8 +721,7 @@ const PAGE_HTML = `
         <li><b>Stephen Grugett &amp; Theo Jaffee</b></li>
         <li><b>Ajeya Cotra</b></li>
         <li><b>Kalshi Co-Founder, Luana Lopes Lara</b></li>
-        <li><b>Substack CEO</b></li>
-        <li><b>Chris Best</b></li>
+        <li><b>Substack CEO, Chris Best</b></li>
         <li><b>David Shor &amp; Jesse Richardson</b></li>
       </ol>
     </article>
