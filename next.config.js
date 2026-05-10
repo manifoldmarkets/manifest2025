@@ -9,6 +9,14 @@ const nextConfig = {
       },
     ],
   },
+  async rewrites() {
+    return [
+      {
+        source: '/2024',
+        destination: '/2024/index.html',
+      },
+    ]
+  },
 }
 
 module.exports = nextConfig
