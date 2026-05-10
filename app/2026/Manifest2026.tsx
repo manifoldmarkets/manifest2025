@@ -699,11 +699,11 @@ const PAGE_HTML = `
       <header><span class="v1-list__cat">Workshops</span></header>
       <ol class="v1-list__items">
         <li><b>Fine-Tuning, the Multiverse, Anthropic Bias, and the Reference-Class Problem</b></li>
-        <li><b>How to Change Your Mind (with Replacement Therapies)</b><i>Matt Buckley</i></li>
-        <li><b>$120K AI Benchmarking Tournament Announcement &amp; Build-A-Bot Workshop</b><i>Metaculus</i></li>
+        <li><b>Matt Buckley: How to Change Your Mind (with Replacement Therapies)</b></li>
+        <li><b>History Lecture with Live Betting</b></li>
         <li><b>SuperMemo &amp; Incremental Reading</b></li>
         <li><b>Intro to Quantitative Portfolio Construction</b></li>
-        <li><b>Intro to Trading</b><i>Ricki Heicklen</i></li>
+        <li><b>Ricki Heicklen: Intro to Trading</b></li>
       </ol>
     </article>
     <figure class="v1-cell v1-cell--photo">
