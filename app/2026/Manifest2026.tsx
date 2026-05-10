@@ -687,24 +687,23 @@ const PAGE_HTML = `
         <li><b>Press X to Doubt: Journalism Edition</b><i>Patrick McKenzie</i></li>
         <li><b>Reforming Academia via Reputation Futures</b><i>Robin Hanson</i></li>
         <li><b>What Is Aristotle&rsquo;s Metaphysics About?</b><i>Arnold Brooks</i></li>
-        <li><b>Writing &amp; Slop</b><i>Roon, Scott Alexander, Gwern</i></li>
-        <li><b>Forecasting AI Risks: Anthropic&rsquo;s RSP</b><i>Ben Mann</i></li>
+        <li><b>Humanist vs. Science/Tech Culture</b><i>Agnes Callard &amp; Robin Hanson</i></li>
+        <li><b>Forecasting AI Risks: Anthropic&rsquo;s Responsible Scaling Policy</b><i>Ben Mann</i></li>
         <li><b>How Do We Solve the Alignment Problem?</b><i>Joe Carlsmith</i></li>
         <li><b>Data Science &amp; Politics</b><i>David Shor</i></li>
-        <li><b>History Lecture with Live Betting</b><i>Sovereign</i></li>
+        <li><b>Predicting Large-Scale Catastrophes</b><i>Nuño Sempere</i></li>
       </ol>
     </article>
 
     <article class="v1-cell v1-cell--list">
       <header><span class="v1-list__cat">Workshops</span></header>
       <ol class="v1-list__items">
-        <li><b>How to Make Superbabies</b></li>
-        <li><b>How to Reform Science</b></li>
+        <li><b>Fine-Tuning, the Multiverse, Anthropic Bias, and the Reference-Class Problem</b></li>
+        <li><b>How to Change Your Mind (with Replacement Therapies)</b><i>Matt Buckley</i></li>
+        <li><b>$120K AI Benchmarking Tournament Announcement &amp; Build-A-Bot Workshop</b><i>Metaculus</i></li>
         <li><b>SuperMemo &amp; Incremental Reading</b></li>
-        <li><b>Weird Findings in Exercise Science</b></li>
-        <li><b>How to Change Your Mind</b></li>
-        <li><b>Intro to Trading</b></li>
-        <li><b>Startup Pitch Competition</b></li>
+        <li><b>Intro to Quantitative Portfolio Construction</b></li>
+        <li><b>Intro to Trading</b><i>Ricki Heicklen</i></li>
       </ol>
     </article>
     <figure class="v1-cell v1-cell--photo">
