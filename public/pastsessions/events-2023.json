@@ -3,64 +3,135 @@
     "day": "Friday, September 22",
     "events": [
       {
-        "title": "Hang Out and Laugh: Monikers",
-        "hosts": "Matt C. Wilson"
+        "title": "Festival doors open",
+        "hosts": "",
+        "venue": "Telegraph Area",
+        "start": "2:00 PM",
+        "end": "3:30 PM"
       },
       {
-        "title": "Team Forecasting",
-        "hosts": "Michael Wheatley"
+        "title": "Festival Kickoff",
+        "hosts": "Austin Chen",
+        "venue": "The Park",
+        "start": "3:30 PM",
+        "end": "4:00 PM"
+      },
+      {
+        "title": "Hang Out and Laugh: Monikers",
+        "hosts": "Matt C. Wilson",
+        "venue": "A - Board Gaming",
+        "start": "4:00 PM",
+        "end": "4:30 PM",
+        "description": "Monikers is a social game about getting your team to guess a character using increasingly silly clues and instant inside jokes. If you like games like Taboo, Charades, Pictionary, or Catch Phrase, or enjoy laughing and bonding with other humans, swing by and play or watch!"
       },
       {
         "title": "Prediction Markets Evangelism",
-        "hosts": "James Grugett, Stephen Grugett"
+        "hosts": "James Grugett, Stephen Grugett",
+        "venue": "E - Main Session",
+        "start": "4:00 PM",
+        "end": "5:00 PM"
+      },
+      {
+        "title": "Team Forecasting",
+        "hosts": "Michael Wheatley",
+        "venue": "E - Floor 2 (Side Sessions)",
+        "start": "4:00 PM",
+        "end": "5:00 PM",
+        "description": "Forecast questions as a team: groups will analyze a set of major questions, guess probabilities, and discuss how to come to an accurate opinion.\n\nThen we will bet on our beliefs from a group Manifold account to see if we collectively beat the market."
       },
       {
         "title": "Poker: Satellite Table #1",
-        "hosts": "David Chee"
+        "hosts": "David Chee",
+        "venue": "A - Board Gaming",
+        "start": "4:30 PM",
+        "end": "6:00 PM"
       },
       {
         "title": "Optic Panel",
-        "hosts": "Tom Shlomi, Saul Munn"
-      },
-      {
-        "title": "Speedfriending Event #1",
-        "hosts": ""
+        "hosts": "Tom Shlomi, Saul Munn",
+        "venue": "E - Floor 2 (Side Sessions)",
+        "start": "5:00 PM",
+        "end": "5:30 PM"
       },
       {
         "title": "Prediction Markets Applied to Finance",
-        "hosts": "Louis Clouatre-Latraverse, Stephen Grugett"
+        "hosts": "Louis Clouatre-Latraverse, Stephen Grugett",
+        "venue": "E - Main Session",
+        "start": "5:00 PM",
+        "end": "6:00 PM"
+      },
+      {
+        "title": "Speedfriending event #1",
+        "hosts": "",
+        "venue": "B - Ground floor",
+        "start": "5:00 PM",
+        "end": "6:00 PM"
+      },
+      {
+        "title": "Friday Dinner",
+        "hosts": "",
+        "venue": "Telegraph Area",
+        "start": "6:00 PM",
+        "end": "8:00 PM"
       },
       {
         "title": "Improving AI Benchmarks",
-        "hosts": "Isabel Juniewicz, Stephen Grugett, Nathan Young"
+        "hosts": "Isabel Juniewicz, Stephen Grugett, Nathan Young",
+        "venue": "E - Main Session",
+        "start": "6:00 PM",
+        "end": "7:00 PM",
+        "description": "AIs can outperform the typical college graduate on most standardized tests, but this doesn't translate directly into real world effects. What kinds of evaluations would better capture the characteristics and capabilities that we care about? Talk followed by participant brainstorming for what evals will help make the future trajectory of AI more predictable."
       },
       {
         "title": "Learn Poker",
-        "hosts": "Max Chiswick"
+        "hosts": "Max Chiswick",
+        "venue": "A - Board Gaming",
+        "start": "6:00 PM",
+        "end": "6:30 PM"
       },
       {
         "title": "Prediction Markets in Journalism",
-        "hosts": "Dylan Matthews, Nathan Young"
+        "hosts": "Dylan Matthews, Nathan Young",
+        "venue": "E - Main Session",
+        "start": "7:00 PM",
+        "end": "8:00 PM"
       },
       {
         "title": "Karaoke + Live Betting",
-        "hosts": "Ian Philips"
+        "hosts": "Ian Philips",
+        "venue": "B - Ground floor",
+        "start": "8:00 PM",
+        "end": "9:30 PM"
       },
       {
         "title": "MTG Sealed Tournament (Wilds of Eldraine)",
-        "hosts": "Austin Chen"
+        "hosts": "Austin Chen",
+        "venue": "A - Board Gaming",
+        "start": "8:00 PM",
+        "end": "11:00 PM",
+        "description": "Come play Magic: the Gathering with other attendees! This is a Sealed Deck, so no need to bring your own cards. Every participant gets 6 packs of the latest set (Wilds of Eldraine) to build a deck with.\n\nEntry cost is 2500 mana; we'll play 3-4 rounds and pay out awards in mana too!"
       },
       {
         "title": "Predicting War Markets",
-        "hosts": "Douglas Campbell, Abhishek Kylasa, Nathan Young"
+        "hosts": "Douglas Campbell, Abhishek Kylasa, Nathan Young",
+        "venue": "E - Main Session",
+        "start": "8:00 PM",
+        "end": "9:00 PM"
       },
       {
         "title": "Political Betting Regulation: Pathways to Liberalization",
-        "hosts": "Pratik Chougule, Douglas Campbell"
+        "hosts": "Pratik Chougule, Douglas Campbell",
+        "venue": "E - Main Session",
+        "start": "9:00 PM",
+        "end": "10:00 PM",
+        "description": "1. Overview of what are the deliberations on the political betting front.\n2. What are the factors driving regulation in the space?\n3. Recommendations on what we as a community can move the needle\n\n(15-20m)\nAnd then questions!"
       },
       {
         "title": "Rise into Rave Heaven",
-        "hosts": "Ian Philips"
+        "hosts": "Ian Philips",
+        "venue": "B - Ground floor",
+        "start": "9:30 PM",
+        "end": "11:00 PM"
       }
     ]
   },
@@ -69,135 +140,267 @@
     "events": [
       {
         "title": "Build a Trading Bot Workshop",
-        "hosts": "Stephen Grugett"
+        "hosts": "Stephen Grugett",
+        "venue": "E - Main Session",
+        "start": "10:00 AM",
+        "end": "11:00 AM"
       },
       {
-        "title": "How to Take a Perfect Dating Photo",
-        "hosts": "Nikita Sokolsky"
+        "title": "How to take a perfect dating photo",
+        "hosts": "Nikita Sokolsky",
+        "venue": "The Park",
+        "start": "10:00 AM",
+        "end": "11:00 AM",
+        "description": "I've been taking portraits of people for a few years and figured out a precise formula for taking the most attractive dating photo for any person. Setting up a workshop where you can learn how to do it yourself at home - and will then take a free dating pic of any attendees who'd like one."
       },
       {
-        "title": "Verifiable Computing and Homomorphically Encrypted Data Sets — Oh My!",
-        "hosts": "James McGirk"
+        "title": "Verifiable Computing and Homomorphically Encrypted Data Sets - Oh My!",
+        "hosts": "James McGirk",
+        "venue": "B - Attic",
+        "start": "10:00 AM",
+        "end": "10:30 AM",
+        "description": "Spectral's senior content lead discusses new developments in web3 data science; including how they're using zero-knowledge machine learning to decentralize their on-chain credit scores."
       },
       {
         "title": "LK-99 Q&A",
-        "hosts": "Seo Sanghyeon"
+        "hosts": "Seo Sanghyeon",
+        "venue": "E - Floor 2 (Side Sessions)",
+        "start": "10:30 AM",
+        "end": "11:00 AM",
+        "description": "You can ask questions and I will try my best to answer"
       },
       {
         "title": "Cornhole RPG",
-        "hosts": "Adrian Marple"
-      },
-      {
-        "title": "Patrick McKenzie Fireside Chat",
-        "hosts": "Patrick McKenzie, Zvi Mowshowitz"
-      },
-      {
-        "title": "Poker: Satellite Table #2",
-        "hosts": "David Chee"
+        "hosts": "Adrian Marple",
+        "venue": "The Gardens",
+        "start": "11:00 AM",
+        "description": "Cornhole RPG is like cornhole only instead of throwing standard cornhole bags, you throw beanie babies. Each beanie baby represents a class which dictates how you have to throw and what abilities you activate. Play cooperatively as a team of 3-6 to complete increasingly difficult quests and see how far you can get!"
       },
       {
         "title": "Entrepreneurship in Quantification Jam Sesh",
-        "hosts": "Rai Sur"
+        "hosts": "Rai Sur",
+        "venue": "B - Attic",
+        "start": "11:00 AM",
+        "end": "12:00 PM",
+        "description": "There are huge opportunities to make money improving existing businesses with quantified forecasting but as we know, it can be hard to find the right niche that management wants to pay for/act on. In this session we'll be brainstorming ideas and meeting others interested in entrepreneurship to hopefully find some gems!"
       },
       {
-        "title": "Speedfriending Event #2",
-        "hosts": ""
+        "title": "Patrick McKenzie Fireside Chat",
+        "hosts": "Patrick McKenzie, Zvi Mowshowitz",
+        "venue": "E - Main Session",
+        "start": "11:00 AM"
       },
       {
-        "title": "Forecasting Community Discussion (with Voting)",
-        "hosts": "Nathan Young"
+        "title": "Poker: Satellite Table #2",
+        "hosts": "David Chee",
+        "venue": "A - Board Gaming",
+        "start": "11:00 AM",
+        "end": "12:30 PM"
+      },
+      {
+        "title": "Speedfriending event #2",
+        "hosts": "",
+        "venue": "B - Ground floor",
+        "start": "11:30 AM",
+        "end": "12:00 PM"
+      },
+      {
+        "title": "Forecasting Community Discussion (With Voting)",
+        "hosts": "Nathan Young",
+        "venue": "B - Attic",
+        "start": "12:00 PM",
+        "end": "12:30 PM",
+        "description": "What should the values of our community be? A session where we vote on norms and discuss them.\n\nAn attempt at a better kind of community discussion."
       },
       {
         "title": "Parenting & Pronatalism",
-        "hosts": "Simone Collins, Byrne Hobart, Zvi Mowshowitz, Malcolm Collins, Rachel Weinberg"
+        "hosts": "Simone Collins, Byrne Hobart, Zvi Mowshowitz, Malcolm Collins, Rachel Weinberg",
+        "venue": "E - Main Session",
+        "start": "12:00 PM",
+        "end": "1:00 PM"
       },
       {
-        "title": "Forecasting Isn't Working for Decision Makers",
-        "hosts": "Nathan Young"
+        "title": "Saturday Lunch",
+        "hosts": "",
+        "venue": "Telegraph Area",
+        "start": "12:00 PM",
+        "end": "2:00 PM"
       },
       {
-        "title": "Student Speed Networking",
-        "hosts": "Saul Munn"
+        "title": "Forecasting isn't Working for Decision Makers",
+        "hosts": "Nathan Young",
+        "venue": "E - Floor 2 (Side Sessions)",
+        "start": "12:30 PM",
+        "end": "1:00 PM",
+        "description": "Forecasting don't seem that useful for decision makers. How can we fix that? I have some thoughts and I'd like to hear yours.\n\nI build tools for forecasters and forecast for the Swift Centre."
       },
       {
         "title": "Calibration Practice Discussion",
-        "hosts": "Raymond Arnold"
+        "hosts": "Raymond Arnold",
+        "venue": "B - Attic",
+        "start": "1:00 PM",
+        "end": "2:00 PM",
+        "description": "I'm interested in hearing how people have practiced calibration, and presenting an exercise that might be useful. (I'm particularly interested in \"the qualia of calibration\". i.e. what is it like, when you notice you were surprised/wrong (or underconfident), and how can you use that awareness to get better?)"
       },
       {
-        "title": "How to Start a Forecasting Club Fireside Chat",
-        "hosts": "Tom Shlomi, Saul Munn"
+        "title": "Student speed networking",
+        "hosts": "Saul Munn",
+        "venue": "B - Ground floor",
+        "start": "1:00 PM",
+        "end": "1:30 PM"
+      },
+      {
+        "title": "How to start a forecasting club fireside chat (same/adjacent room to student speed networking)",
+        "hosts": "Tom Shlomi, Saul Munn",
+        "venue": "E - Floor 2 (Side Sessions)",
+        "start": "1:30 PM",
+        "end": "2:00 PM"
       },
       {
         "title": "AI Safety Small Group",
-        "hosts": "Emanuele Ascani"
+        "hosts": "Emanuele Ascani",
+        "venue": "E - Floor 2 (Side Sessions)",
+        "start": "2:00 PM",
+        "end": "3:00 PM"
       },
       {
         "title": "Spicy Live Polling",
-        "hosts": "Aella, David Chee, Aaron Silverbook"
-      },
-      {
-        "title": "Manifold Founders Panel",
-        "hosts": "Austin Chen, James Grugett, Stephen Grugett, David Chee"
-      },
-      {
-        "title": "Speedfriending Event #3",
-        "hosts": ""
+        "hosts": "Aella, David Chee, Aaron Silverbook",
+        "venue": "The Park",
+        "start": "2:00 PM",
+        "end": "3:00 PM"
       },
       {
         "title": "Good Question Tournament",
-        "hosts": "Molly Hickman, Rajashree Agrawal"
+        "hosts": "Molly Hickman, Rajashree Agrawal",
+        "venue": "B - Attic",
+        "start": "3:00 PM",
+        "end": "4:00 PM",
+        "description": "What's in your model? Compete to come up with the goodest, most informative questions. In this tournament, we'll introduce Value of Information scoring. Participants will generate questions related to an ultimate question, forecast on each other's questions, and we will reveal the most valuable questions. There will be prizes."
+      },
+      {
+        "title": "Manifold Founders Panel",
+        "hosts": "Austin Chen, James Grugett, Stephen Grugett, David Chee",
+        "venue": "The Park",
+        "start": "3:00 PM",
+        "end": "4:00 PM"
+      },
+      {
+        "title": "Speedfriending event #3",
+        "hosts": "",
+        "venue": "B - Ground floor",
+        "start": "3:00 PM",
+        "end": "3:30 PM"
       },
       {
         "title": "Whalebait Markets on Manifold",
-        "hosts": "Michael Wheatley"
+        "hosts": "Michael Wheatley",
+        "venue": "E - Floor 2 (Side Sessions)",
+        "start": "3:30 PM",
+        "end": "4:00 PM",
+        "description": "A \"whalebait market\" is the most degenerate form of gambling known to mankind. When a prediction market tries to predict _its own price_, the market degenerates into a winner-take-all contest to see who can put down the most money. Michael Wheatley will recount the history and strategy of this (thankfully dead) artform on Manifold."
+      },
+      {
+        "title": "Prediction markets = bounded rationality?!?",
+        "hosts": "Daniel Filan",
+        "venue": "B - Attic",
+        "start": "4:00 PM",
+        "description": "Here's a style of question which has long intrigued AI scientists: What's the best way to make decisions when your brain is too tiny to run the best algorithm to make decisions? Similarly: given that you know the definition of pi, is it rational to take a 60-40 bet that the 180,023rd digit is odd (assuming the person offering you the bet hasn't computed it yet, but also knows the definition of pi)?\n\nIn this talk, I'll talk about two papers that try to get a grip on the problem of bounded rationality: \"Logical Induction\", by Garrabrant et al, and \"A Theory of Bounded Inductive Rationality\" by Oesterheld et al. I'll explain what these papers are trying to do, how they compare to other attempts to do the same thing, and how the use of prediction markets is key to each paper."
       },
       {
         "title": "Revolution Strategies",
-        "hosts": "Robin Hanson, David Chee"
-      },
-      {
-        "title": "Prediction Markets = Bounded Rationality?!?",
-        "hosts": "Daniel Filan"
+        "hosts": "Robin Hanson, David Chee",
+        "venue": "The Park",
+        "start": "4:00 PM",
+        "end": "5:00 PM",
+        "description": "While prediction markets have the potential to revolutionize our world, they have so far had only modest impact. Hanson outlines strategies for bridging this gap, in both business and intellectual worlds."
       },
       {
         "title": "Destiny vs Eliezer Debate",
-        "hosts": "Steven Bonnell II, David Chee, Aella, Nathan Young"
+        "hosts": "Steven Bonnell II, David Chee, Aella, Nathan Young",
+        "venue": "The Park",
+        "start": "5:00 PM",
+        "end": "6:00 PM"
       },
       {
         "title": "Prediction Markets as Commitment Devices",
-        "hosts": "Daniel Reeves"
+        "hosts": "Daniel Reeves",
+        "venue": "E - Floor 2 (Side Sessions)",
+        "start": "5:00 PM",
+        "end": "6:00 PM"
+      },
+      {
+        "title": "Saturday Dinner",
+        "hosts": "",
+        "venue": "Telegraph Area",
+        "start": "6:00 PM",
+        "end": "8:00 PM"
+      },
+      {
+        "title": "VIP Dinner",
+        "hosts": "",
+        "venue": "Ethiopia Restaurant",
+        "start": "6:00 PM",
+        "end": "8:00 PM"
       },
       {
         "title": "Mafia with Markets",
-        "hosts": "Arjun Panickssery"
+        "hosts": "Arjun Panickssery",
+        "venue": "E - Floor 2 (Side Sessions)",
+        "start": "7:00 PM",
+        "end": "8:00 PM"
       },
       {
-        "title": "Poker Satellite Table #4 (Late Reg)",
-        "hosts": "Max Chiswick"
-      },
-      {
-        "title": "Why Prediction Markets Struggle with Politics",
-        "hosts": "Jeremiah Johnson, Steven Bonnell II, Stephen Grugett"
+        "title": "Poker Satellite Table #4 (late reg)",
+        "hosts": "Max Chiswick",
+        "venue": "A - Board Gaming",
+        "start": "7:30 PM",
+        "end": "9:00 PM"
       },
       {
         "title": "Late Night Jackbox",
-        "hosts": ""
+        "hosts": "",
+        "venue": "D - Console Gaming",
+        "start": "8:00 PM",
+        "end": "9:00 PM",
+        "description": "Let's get together and play some party games! Get in early to secure your spot as a player"
       },
       {
         "title": "Night Market & Fair",
-        "hosts": ""
+        "hosts": "",
+        "venue": "Central Courtyard",
+        "start": "8:00 PM",
+        "end": "11:00 PM"
+      },
+      {
+        "title": "Why Prediction Markets Struggle with Politics",
+        "hosts": "Jeremiah Johnson, Steven Bonnell II, Stephen Grugett",
+        "venue": "E - Main Session",
+        "start": "8:00 PM",
+        "end": "9:00 PM"
       },
       {
         "title": "Jazz Jam (BYO Instrument)",
-        "hosts": "Ian Philips"
+        "hosts": "Ian Philips",
+        "venue": "B - Ground floor",
+        "start": "9:00 PM",
+        "end": "11:00 PM",
+        "description": "Musically inclined? Come jam with Ian Phillips and others. We'll have drums and a keyboard -- bring your own instrument too!"
       },
       {
         "title": "Moderating the First User-Generated Market Platform",
-        "hosts": "David Chee"
+        "hosts": "David Chee",
+        "venue": "E - Main Session",
+        "start": "9:00 PM",
+        "end": "9:45 PM"
       },
       {
         "title": "Team Estimation with a Traitor",
-        "hosts": "Eric Neyman"
+        "hosts": "Eric Neyman",
+        "venue": "E - Floor 2 (Side Sessions)",
+        "start": "10:00 PM",
+        "end": "11:00 PM",
+        "description": "You'll be on a team of four people, competing against other teams to estimate things (like the height of the tallest tree) as accurately as possible. But take note: on your team there will be a traitor, who will try to make your team's estimate as *inaccurate* as possible! Top scorers will be awarded mana :)"
       }
     ]
   },
@@ -205,140 +408,278 @@
     "day": "Sunday, September 24",
     "events": [
       {
-        "title": "Atoms and Espionage: Oppenheimer's Enigma",
-        "hosts": "Andrew Guo"
+        "title": "Atoms and Espionage: Oppenheimer’s Enigma",
+        "hosts": "Andrew Guo",
+        "venue": "E - Floor 2 (Side Sessions)",
+        "start": "10:00 AM",
+        "end": "11:00 AM",
+        "description": "“It’s tough to make predictions, especially about the past”—Yogi Berra (with apologies)\nStep into the role of an American physicist in the 1940s as the world around you marches towards war. Join a team of elite scientific minds using their predictive prowess to serve Uncle Sam in a vital national security role: beating the Nazis in an existential race for technological superiority.\n(No physics knowledge needed beyond the HS level; Oppenheimer spoilers only for those still agnostic as to the outcome of WWII.)"
       },
       {
         "title": "Reducing Bias in Education with Prediction Markets",
-        "hosts": "Simone Collins, Malcolm Collins, Rachel Weinberg"
+        "hosts": "Simone Collins, Malcolm Collins, Rachel Weinberg",
+        "venue": "E - Main Session",
+        "start": "10:00 AM",
+        "end": "11:00 AM"
       },
       {
         "title": "Replicating Academia",
-        "hosts": "Douglas Campbell"
+        "hosts": "Douglas Campbell",
+        "venue": "B - Attic",
+        "start": "10:30 AM",
+        "end": "11:00 AM"
       },
       {
-        "title": "Finding Truth Without Instant Liquidity",
-        "hosts": "Andreas Finke"
+        "title": "Finding truth without instant liquidity",
+        "hosts": "Andreas Finke",
+        "venue": "B - Attic",
+        "start": "11:00 AM",
+        "end": "12:00 PM",
+        "description": "I'll attempt to define \"truth\" (as an ex-physicist) and recap how liquid PMs incentivize sharing it.\nA problem is that liquidity is at risk and thus low in fair, diverse, sustainable real-money markets.\nHowever, I'll argue that this does not mean that volume must be low when users are empowered to be market makers,\nor when using GLOBs, a novel market structure that slows down trading."
       },
       {
         "title": "The Future of Trust and Evidence, in the Age of AI",
-        "hosts": "Emmett Shear, Rob Miles"
-      },
-      {
-        "title": "Performative Prediction",
-        "hosts": "Johannes Treutlein"
-      },
-      {
-        "title": "Legalizing Prediction Markets",
-        "hosts": "Tarek Mansour, Pratik Chougule"
+        "hosts": "Emmett Shear, Rob Miles",
+        "venue": "E - Main Session",
+        "start": "11:00 AM",
+        "end": "12:00 PM"
       },
       {
         "title": "How AI Poker Works",
-        "hosts": "Max Chiswick"
+        "hosts": "Max Chiswick",
+        "venue": "E - Floor 2 (Side Sessions)",
+        "start": "12:00 PM",
+        "end": "1:00 PM",
+        "description": "We'll look at the main algorithm, Counterfactual Regret Minimization (CFR), that is used to find game theory optimal strategies in poker and will apply it to a toy game. Then we'll look at how poker players use \"solvers\" to study poker strategy in Texas Hold'em."
+      },
+      {
+        "title": "Legalizing Prediction Markets",
+        "hosts": "Tarek Mansour, Pratik Chougule",
+        "venue": "E - Main Session",
+        "start": "12:00 PM"
+      },
+      {
+        "title": "Performative prediction",
+        "hosts": "Johannes Treutlein",
+        "venue": "B - Attic",
+        "start": "12:00 PM",
+        "end": "1:00 PM"
+      },
+      {
+        "title": "Sunday Lunch",
+        "hosts": "",
+        "venue": "Telegraph Area",
+        "start": "12:00 PM",
+        "end": "2:00 PM"
       },
       {
         "title": "Functions as Forecasts",
-        "hosts": "Ozzie Gooen, Austin Chen"
-      },
-      {
-        "title": "Polymarket Walk & Talk",
-        "hosts": "Shayne Coplan"
-      },
-      {
-        "title": "Try Out Varuna, an AI Forecaster, Built by the Former CTO and the Former Head of AI at Metaculus!",
-        "hosts": "Dan Schwarz"
+        "hosts": "Ozzie Gooen, Austin Chen",
+        "venue": "E - Main Session",
+        "start": "1:00 PM",
+        "end": "2:00 PM"
       },
       {
         "title": "Poker: Satellite Table #3",
-        "hosts": "David Chee"
+        "hosts": "David Chee",
+        "venue": "A - Board Gaming",
+        "start": "1:00 PM",
+        "end": "2:30 PM"
+      },
+      {
+        "title": "Polymarket Walk & Talk",
+        "hosts": "Shayne Coplan",
+        "venue": "The Gardens",
+        "start": "1:00 PM"
+      },
+      {
+        "title": "Try out Varuna, an AI forecaster, built by the former CTO and the former Head of AI at Metaculus!",
+        "hosts": "Dan Schwarz",
+        "venue": "E - Floor 2 (Side Sessions)",
+        "start": "1:00 PM",
+        "end": "2:00 PM",
+        "description": "My cofounder at Varuna AI and I will introduce our \"AI oracle\", and make predictions on questions from the audience. Varuna is only 6 weeks old, and it's not yet very accurate, but it can research, model, and forecast in real time, and often produces surprising and amusing results.\n\nLike Manifold, but unlike other forecasting platforms, it can handle niche topics about your city, your job, your interests, as long as they are Google-able - it depends heavily on finding good background information on base rates from the web."
+      },
+      {
+        "title": "Balance games and Wrestling!",
+        "hosts": "Keri Warr",
+        "venue": "The Park",
+        "start": "2:00 PM",
+        "end": "3:00 PM",
+        "description": "experience physical contact! find your comfort limits! alternating camaraderie and aggression! disengage higher functions! return to monke!\n\nfun for all shapes and sizes of people"
+      },
+      {
+        "title": "Every platform for debating predictions is terrible; thoughts on fixing them",
+        "hosts": "Eliezer Yudkowsky",
+        "venue": "B - Attic",
+        "start": "2:00 PM",
+        "end": "3:00 PM"
       },
       {
         "title": "Genetic Enhancement: Prediction Markets for Future People",
-        "hosts": "Jonathan Anomaly, Austin Chen"
+        "hosts": "Jonathan Anomaly, Austin Chen",
+        "venue": "E - Main Session",
+        "start": "2:00 PM",
+        "end": "3:00 PM",
+        "description": "Polygenic embryo screening will allow us to select in favor of traits like cognitive ability, and against a variety of diseases. But how should we prioritize diseases? Apart from QALYs, we might wonder which diseases are likely to be cured or treatable in the kids' lifetimes. This is where prediction markets come in."
       },
       {
         "title": "Robin Hanson Office Hours",
-        "hosts": "Robin Hanson"
-      },
-      {
-        "title": "Every Platform for Debating Predictions Is Terrible; Thoughts on Fixing Them",
-        "hosts": "Eliezer Yudkowsky"
-      },
-      {
-        "title": "Balance Games and Wrestling!",
-        "hosts": "Keri Warr"
-      },
-      {
-        "title": "What's Stopping You from Doing AI Safety Advocacy?",
-        "hosts": "Holly Elmore"
+        "hosts": "Robin Hanson",
+        "venue": "E - Floor 2 (Side Sessions)",
+        "start": "2:00 PM",
+        "end": "3:00 PM"
       },
       {
         "title": "Talk to a Theist",
-        "hosts": "Jeffrey Heninger"
+        "hosts": "Jeffrey Heninger",
+        "venue": "E - Breakout Sessions",
+        "start": "2:00 PM",
+        "end": "3:00 PM",
+        "description": "It can feel as though this community is reflexively secular. If you are religious and want to find other religious people to talk to, or if you want to understand more about being religious in this community, or if you want to talk about religion more generally, come over and chat.\n\nI have also talked about my religion on the Filan Cabinet: https://sites.libsyn.com/438081/10-mormonism-with-jeffrey-heninger"
       },
       {
-        "title": "Prediction Markets vs Financial Markets",
-        "hosts": "Byrne Hobart, Stephen Grugett"
+        "title": "What’s stopping you from doing AI Safety advocacy?",
+        "hosts": "Holly Elmore",
+        "venue": "B - Ground floor",
+        "start": "2:00 PM",
+        "end": "3:00 PM",
+        "description": "Group discussion about advocacy for AI Safety and advertisement for anti-irreversible proliferation protest on Friday 9/29."
       },
       {
         "title": "Fireside Chat: ManiFund Q+A",
-        "hosts": "Elizabeth Van Nostrand, Austin Chen, Rachel Weinberg"
+        "hosts": "Elizabeth Van Nostrand, Austin Chen, Rachel Weinberg",
+        "venue": "E - Floor 2 (Side Sessions)",
+        "start": "3:00 PM",
+        "end": "4:00 PM",
+        "description": "Elizabeth + ManiFund team member talk about manifund.\n\nCan include audience Q+A"
       },
       {
-        "title": "Subsidize Real-Money Prediction Markets on High-Impact Topics",
-        "hosts": "Ezra Brodey"
+        "title": "Prediction Markets vs Financial Markets",
+        "hosts": "Byrne Hobart, Stephen Grugett",
+        "venue": "E - Main Session",
+        "start": "3:00 PM",
+        "end": "4:00 PM"
       },
       {
         "title": "Proofniks / Conflux Q&A",
-        "hosts": "Jacob Cohen, Andrew Imbens, Allison Hung, Marco Angeldones"
+        "hosts": "Jacob Cohen, Andrew Imbens, Allison Hung, Marco Angeldones",
+        "venue": "B - Ground floor",
+        "start": "3:00 PM",
+        "end": "3:45 PM",
+        "description": "I decided to do a thing after all! Casual chat / Q&A / panel about the story of Proof School students on Manifold, the Market Manipulation Podcast, Manifold culture and history, anything."
       },
       {
-        "title": "Polymarket and Making Prediction Markets Mainstream",
-        "hosts": "Scott Alexander, Shayne Coplan, Zvi Mowshowitz, Pratik Chougule"
-      },
-      {
-        "title": "Lightning Talks!",
-        "hosts": "Sinclair Chen"
+        "title": "Subsidize Real-Money Prediction Markets on High-Impact Topics",
+        "hosts": "Ezra Brodey",
+        "venue": "B - Attic",
+        "start": "3:00 PM",
+        "description": "How do we create real-money prediction markets on high impact topics? This talk will explore how to take high impact questions found and on platforms such as Metaculus and GJOpen and make them into viable real-money markets."
       },
       {
         "title": "Lightning Talk: Prediction-Action Markets for Coordination",
-        "hosts": "Jason Gross"
+        "hosts": "Jason Gross",
+        "venue": "B - Ground floor",
+        "start": "4:00 PM",
+        "end": "4:30 PM",
+        "description": "Non-risk-neutral agents can use prediction markets to hedge against undesired outcomes. If the aggregate preferences result in the market cap exceeding the cost of intervention, the prediction market becomes an action market incentivizing the aggregate desired world. This dynamic can be used as a coordination mechanism, assuming market bids always resolve, but this turns out to work less well for risk-averse agents than for risk-seeking agents. Such dynamics can be concretely probed with toy examples such as the prisoner's dilemma, exposing the assumptions that underpin \"libertarian utopias\"."
+      },
+      {
+        "title": "Lightning Talks!",
+        "hosts": "Sinclair Chen",
+        "venue": "B - Ground floor",
+        "start": "4:00 PM",
+        "end": "5:00 PM",
+        "description": "Should throw in a bunch of backjacks"
+      },
+      {
+        "title": "Polymarket and Making Prediction Markets Mainstream",
+        "hosts": "Scott Alexander, Shayne Coplan, Zvi Mowshowitz, Pratik Chougule",
+        "venue": "E - Main Session",
+        "start": "4:00 PM",
+        "end": "5:00 PM"
       },
       {
         "title": "Caramel Taste Test Showdown",
-        "hosts": "Matt C. Wilson, Noa Nabeshima, Lauren Milliken"
+        "hosts": "Matt C. Wilson, Noa Nabeshima, Lauren Milliken",
+        "start": "5:00 PM",
+        "end": "5:30 PM",
+        "description": "Join us at the kitchen and help us decide which of Lauren’s caramels taste the best, or just bet on the market!\n\nhttps://manifold.markets/NoaNabeshima/will-apple-cider-caramels-beat-pine?r=TWF0dENXaWxzb24"
       },
       {
         "title": "Nate Silver Fireside Chat",
-        "hosts": "Nate Silver, Austin Chen"
+        "hosts": "Nate Silver, Austin Chen",
+        "venue": "E - Main Session",
+        "start": "5:00 PM",
+        "end": "5:45 PM"
       },
       {
-        "title": "Biggest Questions in AI Forecasting",
-        "hosts": "Matthew Barnett"
+        "title": "Closing Ceremony",
+        "hosts": "Austin Chen",
+        "venue": "The Park",
+        "start": "5:45 PM",
+        "end": "6:00 PM"
       },
       {
-        "title": "Forecast Aggregation Meetup",
-        "hosts": "Gustavo Lacerda"
+        "title": "Biggest questions in AI Forecasting",
+        "hosts": "Matthew Barnett",
+        "venue": "E - Main Session",
+        "start": "6:00 PM",
+        "end": "7:00 PM",
+        "description": "What are some of the biggest unanswered questions in AI forecasting? Can we make progress on them?"
+      },
+      {
+        "title": "Sunday Dinner",
+        "hosts": "",
+        "venue": "Telegraph Area",
+        "start": "6:00 PM",
+        "end": "8:00 PM"
+      },
+      {
+        "title": "Forecast Aggregation meetup",
+        "hosts": "Gustavo Lacerda",
+        "venue": "B - Attic",
+        "start": "6:30 PM",
+        "end": "7:00 PM",
+        "description": "Looking to share my obsession with forecast aggregation. If there's interest, we can dive into a paper such as Satopää's BIN model:\n\nhttps://faculty.wharton.upenn.edu/wp-content/uploads/2022/03/mnsc.2020.3882.pdf"
       },
       {
         "title": "Hot Seat (Intrusive Questions Game)",
-        "hosts": "Eti Rabys"
+        "hosts": "Eti Rabys",
+        "venue": "E - Floor 2 (Side Sessions)",
+        "start": "6:30 PM",
+        "end": "7:30 PM",
+        "description": "- Get in circles of 4-7 people\n- Go around the circle, each person fielding 3 intrusive questions (http://web.askhole.io/ is a good source of intrusive questions)"
       },
       {
         "title": "Poker Tournament Finals",
-        "hosts": "David Chee"
+        "hosts": "David Chee",
+        "venue": "A - Board Gaming",
+        "start": "6:30 PM",
+        "end": "9:00 PM",
+        "description": "see: https://www.notion.so/manifoldmarkets/D-Poker-Tournament-3a4763b536d542718e699c098447e34f"
       },
       {
         "title": "Minimum Viable Yom Kippur",
-        "hosts": "Max Chiswick"
+        "hosts": "Max Chiswick",
+        "venue": "Ward 2",
+        "start": "6:45 PM",
+        "end": "7:15 PM",
+        "description": "Kol Nidrei services for Jews who'd like to attend services (but also stay at Manifest)."
       },
       {
         "title": "Improving Biomedical Research",
-        "hosts": "Gavriel Kleinwaks"
+        "hosts": "Gavriel Kleinwaks",
+        "venue": "E - Main Session",
+        "start": "8:00 PM",
+        "end": "9:00 PM"
       },
       {
         "title": "Descent into Dance Hell",
-        "hosts": "Aella"
+        "hosts": "Aella",
+        "venue": "B - Ground floor",
+        "start": "9:00 PM",
+        "end": "11:00 PM"
       }
     ]
   }

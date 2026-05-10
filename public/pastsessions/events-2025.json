@@ -1,779 +1,1362 @@
 [
   {
     "day": "Friday, June 6",
-    "slots": [
+    "events": [
       {
-        "slot": "Afternoon — Doors Open",
-        "sessions": [
-          {
-            "title": "☆ Doors Open ☆",
-            "speaker": "David Chee"
-          },
-          {
-            "title": "Bughouse Chess",
-            "speaker": "Arjun Panickssery"
-          },
-          {
-            "title": "Figgie",
-            "speaker": "Arjun Panickssery"
-          },
-          {
-            "title": "Manifold.love Meetup #0",
-            "speaker": "Sinclair Chen"
-          },
-          {
-            "title": "Can Futarchy Fix Culture?",
-            "speaker": "Robin Hanson"
-          },
-          {
-            "title": "Manifold Founder SG & Theo Jaffee: Fireside Chat",
-            "speaker": "Stephen Grugett"
-          }
-        ]
+        "title": "Volunteer training",
+        "hosts": "Skyler",
+        "rsvp": 3,
+        "venue": "Rat Park",
+        "start": "12:00 PM",
+        "end": "1:00 PM"
       },
       {
-        "slot": "Evening — Opening &amp; Dinner Sessions",
-        "sessions": [
-          {
-            "title": "Opening Circle",
-            "speaker": "Rach"
-          },
-          {
-            "title": "Dinner",
-            "speaker": "David Chee"
-          },
-          {
-            "title": "Prediction Market Design in Outer Space",
-            "speaker": "Dave White"
-          },
-          {
-            "title": "Schools Should Pursue Excellence",
-            "speaker": "Tracing Woodgrains"
-          },
-          {
-            "title": "Manifold Power User Meetup",
-            "speaker": "Kevin"
-          },
-          {
-            "title": "Friend Algo Matching Survey Schelling Point",
-            "speaker": "Brian Smiley"
-          },
-          {
-            "title": "Poker Satellite #1",
-            "speaker": "David Chee"
-          },
-          {
-            "title": "Ricki and Dave's Kabbalat Shabbat",
-            "speaker": "Dave Kasten"
-          }
-        ]
+        "title": "Lunch for volunteers",
+        "hosts": "David Chee",
+        "rsvp": 2,
+        "venue": "Rat Park",
+        "start": "1:00 PM",
+        "end": "2:00 PM"
       },
       {
-        "slot": "Night — Talks &amp; Night Market",
-        "sessions": [
-          {
-            "title": "Kalshi's Internal Drama During the Elections",
-            "speaker": "Noah Sternig"
-          },
-          {
-            "title": "Why We Stopped Making New Land",
-            "speaker": "Connor Harris"
-          },
-          {
-            "title": "Predicting Large-Scale Catastrophes",
-            "speaker": "Nuño Sempere"
-          },
-          {
-            "title": "Speedfriending",
-            "speaker": "Saul Munn"
-          },
-          {
-            "title": "Speedfriending Overflow",
-            "speaker": "Saul Munn"
-          },
-          {
-            "title": "Night Market & Career Fair",
-            "speaker": "David Chee"
-          },
-          {
-            "title": "How Tech Hiring Is Changing with AI",
-            "speaker": "Sholto Douglas & Ben"
-          },
-          {
-            "title": "Making God — Exclusive Clip Screening + Q&A",
-            "speaker": "Connor Axiotes"
-          },
-          {
-            "title": "Super Babies!",
-            "speaker": "Rachel Wallis"
-          },
-          {
-            "title": "Make Sunset Stratospheric Aerosol Injection Balloon Launch",
-            "speaker": "Andrew Song"
-          },
-          {
-            "title": "Mentor <> Mentee Speed Meeting",
-            "speaker": "Ricki Heicklen"
-          },
-          {
-            "title": "Are Prediction Markets a Dead End?",
-            "speaker": "Austin Chen"
-          }
-        ]
+        "title": "☆ Doors open!  ☆",
+        "hosts": "David Chee",
+        "rsvp": 12,
+        "venue": "Rat Park",
+        "start": "2:00 PM",
+        "end": "2:30 PM"
+      },
+      {
+        "title": "Bughouse Chess",
+        "hosts": "Arjun Panickssery",
+        "rsvp": 2,
+        "venue": "Bayes Ground",
+        "start": "2:00 PM",
+        "end": "4:00 PM",
+        "description": "On the tables between building A and B 2v2 bughouse chess"
+      },
+      {
+        "title": "manifold.love meetup #0",
+        "hosts": "Sinclair Chen",
+        "rsvp": 4,
+        "venue": "Drethelin Gardens",
+        "start": "2:00 PM",
+        "end": "2:30 PM",
+        "description": "idk"
+      },
+      {
+        "title": "Can futarchy fix culture",
+        "hosts": "Robin Hanson",
+        "rsvp": 81,
+        "venue": "Rat Park",
+        "start": "3:30 PM",
+        "end": "4:15 PM",
+        "description": "Humanity's superpower is cultural evolution… futarchy, a new much more effective form of governance, might be an exception."
+      },
+      {
+        "title": "Manifold Founder SG & Theo Jaffee: Fireside Chat",
+        "hosts": "Stephen Grugett",
+        "rsvp": 35,
+        "venue": "Cantor's Diagonal Hall",
+        "start": "4:30 PM",
+        "end": "5:15 PM",
+        "description": "Manifold Cofounder & CEO Stephen Grugett joins podcaster Theo Jaffee for a fireside chat on Manifold, the future of markets, and life in the Bay Area."
+      },
+      {
+        "title": "Opening Circle",
+        "hosts": "Rach",
+        "rsvp": 37,
+        "venue": "Rat Park",
+        "start": "5:15 PM",
+        "end": "6:00 PM"
+      },
+      {
+        "title": "Dinner",
+        "hosts": "David Chee",
+        "rsvp": 43,
+        "venue": "Rat Park",
+        "start": "6:00 PM",
+        "end": "7:00 PM"
+      },
+      {
+        "title": "Manifold power user meetup",
+        "hosts": "Kevin",
+        "rsvp": 24,
+        "venue": "Olds' Attic (Bayes)",
+        "start": "6:00 PM",
+        "end": "6:45 PM",
+        "description": "Schelling point for us whales (20k+ profit). Newbies welcome but geared toward advanced Manifold topics."
+      },
+      {
+        "title": "Prediction Market Design in Outer Space",
+        "hosts": "Dave White",
+        "rsvp": 50,
+        "venue": "Cantor's Diagonal Hall",
+        "start": "6:00 PM",
+        "end": "6:45 PM",
+        "description": "An interactive, mechanism-designed talk on mechanisms I've designed. One was featured in Money Stuff yesterday!"
+      },
+      {
+        "title": "Ricki and Dave's Kabbalat Shabbat",
+        "hosts": "Dave Kasten",
+        "rsvp": 3,
+        "venue": "Drethelin Gardens",
+        "start": "6:00 PM",
+        "end": "6:45 PM",
+        "description": "A quick Kabbalat Shabbat service in the gardens. We'll have prayerbooks and kippot!"
+      },
+      {
+        "title": "Schools should pursue excellence",
+        "hosts": "Tracing Woodgrains",
+        "rsvp": 80,
+        "venue": "Eigenhall",
+        "start": "6:00 PM",
+        "end": "6:45 PM",
+        "description": "The cofounder of the Center for Educational Progress on where schools have de-prioritized raising the ceiling and the case for excellence-focused schools."
+      },
+      {
+        "title": "Friend algo matching survey schelling point",
+        "hosts": "Brian Smiley",
+        "rsvp": 50,
+        "venue": "Bayes Ground",
+        "start": "6:30 PM",
+        "end": "7:00 PM",
+        "description": "Hangout to fill out the algorithmic friend matching survey for Saturday's 10am meeting (lovescience.club)."
+      },
+      {
+        "title": "Poker Satellite #1",
+        "hosts": "David Chee",
+        "rsvp": 14,
+        "venue": "Glass Hall (Gaming)",
+        "start": "6:30 PM",
+        "end": "8:00 PM"
+      },
+      {
+        "title": "A Story Telling of Kalshi's Internal Drama & Decisions During the Elections",
+        "hosts": "Noah Sternig",
+        "rsvp": 57,
+        "venue": "Cantor's Diagonal Hall",
+        "start": "7:00 PM",
+        "end": "7:45 PM",
+        "description": "Live Q&A about working at Kalshi during the election takeoff."
+      },
+      {
+        "title": "Predicting large-scale catastrophes w/ Nuño Sempere",
+        "hosts": "Nuño Sempere",
+        "rsvp": 45,
+        "venue": "Olds' Attic (Bayes)",
+        "start": "7:00 PM",
+        "end": "7:45 PM",
+        "description": "By Nuño Sempere, Head of Foresight at Sentinel."
+      },
+      {
+        "title": "Speedfriending",
+        "hosts": "Saul Munn",
+        "rsvp": 57,
+        "venue": "Drethelin Gardens",
+        "start": "7:00 PM",
+        "end": "8:00 PM",
+        "description": "Quickly meet lots of people fast. Recommended for newcomers & old-timers alike."
+      },
+      {
+        "title": "Speedfriending overflow",
+        "hosts": "Saul Munn",
+        "rsvp": 3,
+        "venue": "Feynman House",
+        "start": "7:00 PM",
+        "end": "8:00 PM",
+        "description": "(overflow room)"
+      },
+      {
+        "title": "Why we stopped making new land, and why we should start again",
+        "hosts": "Connor Harris",
+        "rsvp": 45,
+        "venue": "Eigenhall",
+        "start": "7:00 PM",
+        "end": "7:45 PM",
+        "description": "History of land reclamation, why it stopped in the U.S., and the economic case for restarting."
+      },
+      {
+        "title": "Night Market & Career Fair",
+        "hosts": "David Chee",
+        "rsvp": 96,
+        "venue": "Rat Park",
+        "start": "7:30 PM",
+        "end": "8:30 PM",
+        "description": "Tons of free swag from sponsors, attendee booths, hiring companies. Doors open to public free at 8pm."
+      },
+      {
+        "title": "Slutstack pod",
+        "hosts": "Chesed",
+        "rsvp": 1,
+        "venue": "Podcast Room",
+        "start": "7:30 PM",
+        "end": "9:00 PM"
+      },
+      {
+        "title": "How tech hiring is changing with AI, w/ Sholto & Ben",
+        "hosts": "Sholto Douglas",
+        "rsvp": 90,
+        "venue": "Cantor's Diagonal Hall",
+        "start": "8:00 PM",
+        "end": "8:45 PM",
+        "description": "Panel with Sholto (Anthropic) and Ben Cohen (Substack) on how hiring priorities have shifted with LLMs."
+      },
+      {
+        "title": "Making God Exclusive Clip Screening + Q&A",
+        "hosts": "Connor Axiotes",
+        "rsvp": 27,
+        "venue": "Eigenhall",
+        "start": "8:00 PM",
+        "end": "8:45 PM",
+        "description": "Exclusive clip from the AI documentary Making God for Manifest attendees."
+      },
+      {
+        "title": "Super Babies!",
+        "hosts": "Rachel Wallis",
+        "rsvp": 41,
+        "venue": "Olds' Attic (Bayes)",
+        "start": "8:00 PM",
+        "end": "8:45 PM",
+        "description": "Embryo selection, strong germline engineering, and the Super Babies conference (June 10-12 at Lighthaven)."
+      },
+      {
+        "title": "Figgie",
+        "hosts": "Arjun Panickssery",
+        "rsvp": 8,
+        "venue": "Glass Hall (Gaming)",
+        "start": "8:30 PM",
+        "end": "8:45 PM"
+      },
+      {
+        "title": "Make Sunset Stratospheric Aerosol Injection Balloon Launch",
+        "hosts": "Andrew Song",
+        "rsvp": 22,
+        "venue": "Rat Park",
+        "start": "8:30 PM",
+        "end": "8:45 PM"
+      },
+      {
+        "title": "Night Market",
+        "hosts": "Rach",
+        "rsvp": 27,
+        "venue": "Rat Park",
+        "start": "8:45 PM",
+        "end": "10:00 PM"
+      },
+      {
+        "title": "Are prediction markets a dead end?",
+        "hosts": "Austin Chen",
+        "rsvp": 36,
+        "venue": "Exobrain",
+        "start": "9:00 PM",
+        "end": "9:45 PM",
+        "description": "Casual discussion built around two Gwern prompts on whether PM/AI is a dead end and whether classic PM design is a skeuomorphism in the LLM era."
+      },
+      {
+        "title": "Mentor <> Mentee speed meeting",
+        "hosts": "Ricki Heicklen",
+        "rsvp": 56,
+        "venue": "Cantor's Diagonal Hall",
+        "start": "9:00 PM",
+        "end": "9:30 PM",
+        "description": "Come find your next mentor or mentee!"
+      },
+      {
+        "title": "Cuddle Puddle",
+        "hosts": "Cuddles",
+        "rsvp": 31,
+        "venue": "Olds' Attic (Bayes)",
+        "start": "9:30 PM",
+        "end": "12:30 AM",
+        "description": "Non-sexual cuddle puddle. Clothes on, no photos, consent mandatory."
+      },
+      {
+        "title": "Rare & Exotic-ish Drama Games from Australia",
+        "hosts": "Isabella",
+        "rsvp": 28,
+        "venue": "Exobrain",
+        "start": "10:00 PM",
+        "end": "11:00 PM",
+        "description": "Drama/improv workshop run by a professional Australian drama instructor."
       }
     ]
   },
   {
     "day": "Saturday, June 7",
-    "slots": [
+    "events": [
       {
-        "slot": "Morning",
-        "sessions": [
-          {
-            "title": "Manifund: Markets in AI Safety",
-            "speaker": "Austin Chen"
-          },
-          {
-            "title": "10 Things I'd Do If I Ran Polymarket / Kalshi / Manifold / Metaculus",
-            "speaker": "Lucas Kohorst"
-          },
-          {
-            "title": "David Shor & Jesse Richardson",
-            "speaker": "Jesse Richardson"
-          },
-          {
-            "title": "Prediction Markets Panel",
-            "speaker": "Stephen Grugett"
-          },
-          {
-            "title": "Possibilities for Nuclear War",
-            "speaker": "Kyle S"
-          },
-          {
-            "title": "Electricity 2011–2040",
-            "speaker": "Sam Penrose"
-          },
-          {
-            "title": "Weird Findings in the Last 10 Years of Exercise Science",
-            "speaker": "Andrew Rettek"
-          },
-          {
-            "title": "Live Polling with Aella",
-            "speaker": "Aella"
-          },
-          {
-            "title": "Scaling Public Epistemics: Community Notes & What's Next",
-            "speaker": "Jay Baxter"
-          },
-          {
-            "title": "What's the Value of Land in Berkeley?",
-            "speaker": "Lars A. Doucet"
-          },
-          {
-            "title": "Futarchy: Reimagining Governance",
-            "speaker": "Clement Lesaege"
-          },
-          {
-            "title": "Our Broken High-Skilled Immigration System",
-            "speaker": "Jasmine Ren"
-          },
-          {
-            "title": "Speedfriending #2",
-            "speaker": "Saul Munn"
-          },
-          {
-            "title": "Experimental Meditation Experiments",
-            "speaker": "Raj Thimmiah"
-          },
-          {
-            "title": "Manifold Users Meetup (Day 2)",
-            "speaker": ""
-          },
-          {
-            "title": "Poker Satellite #2",
-            "speaker": "David Chee"
-          },
-          {
-            "title": "Talk to a Rationalist Leftist",
-            "speaker": "David Youssef"
-          },
-          {
-            "title": "Memory Systems / Anki / SRS Meetup",
-            "speaker": "Saul Munn"
-          },
-          {
-            "title": "Manifestation",
-            "speaker": "Sinclair Chen"
-          }
-        ]
+        "title": "Morning Block",
+        "hosts": "Rach",
+        "rsvp": 1,
+        "venue": "Eigenhall / Exobrain / Bayes Ground / Olds' Attic / Glass Hall",
+        "start": "8:00 AM",
+        "end": "9:00 AM"
       },
       {
-        "slot": "Midday",
-        "sessions": [
-          {
-            "title": "Lunch",
-            "speaker": "David Chee"
-          },
-          {
-            "title": "AI 2027 Q&A",
-            "speaker": "Eli Lifland"
-          },
-          {
-            "title": "Make Polymarket Liquid with DeFi",
-            "speaker": "arsenii"
-          },
-          {
-            "title": "Life as a Gambling Globetrotter",
-            "speaker": "Michael Seaman"
-          },
-          {
-            "title": "US-China Competition: AI, Semiconductors, Miltech Panel",
-            "speaker": "Steve Hsu"
-          },
-          {
-            "title": "Panel: US-China with Steve Hsu & Noah Smith",
-            "speaker": "Steve Hsu"
-          },
-          {
-            "title": "Geopolitics of AI Infrastructure",
-            "speaker": "Dylan Patel"
-          },
-          {
-            "title": "Weirdly Priced Markets",
-            "speaker": "Eric Neyman"
-          },
-          {
-            "title": "Language Models as the Bessemer Process for Reasoning",
-            "speaker": "Panda"
-          },
-          {
-            "title": "AI Consciousness Discussion",
-            "speaker": "Rosie Campbell"
-          },
-          {
-            "title": "Nate Silver & Chris Best Discussion",
-            "speaker": "Nate Silver"
-          },
-          {
-            "title": "ThermoRex Fanclub",
-            "speaker": "Christian Larsen"
-          },
-          {
-            "title": "Poker Satellite #3",
-            "speaker": "David Chee"
-          },
-          {
-            "title": "How I've Had More Sex (Talk + AMA)",
-            "speaker": "Nathan Young"
-          },
-          {
-            "title": "Manifold Lore Jeopardy!",
-            "speaker": "Jacob Cohen"
-          },
-          {
-            "title": "Pitch Competition Judges Huddle",
-            "speaker": "David Chee"
-          },
-          {
-            "title": "NHK Prediction Markets and Financial Research",
-            "speaker": ""
-          }
-        ]
+        "title": "Aligatorejo: Foreign language practice room",
+        "hosts": "Connor Harris",
+        "rsvp": 6,
+        "venue": "Exobrain",
+        "start": "9:00 AM",
+        "end": "9:45 AM",
+        "description": "Esperanto-style room where speaking your native language is forbidden. Bonan ŝancon!"
       },
       {
-        "slot": "Afternoon",
-        "sessions": [
-          {
-            "title": "Cremieux",
-            "speaker": "Crémieux"
-          },
-          {
-            "title": "Decision Betting Debates of 2024: a Retrospective",
-            "speaker": "Brennan Robbins"
-          },
-          {
-            "title": "Patio11 + Kuiper: Emergent Gameplay & Narrative",
-            "speaker": "Justin Kuiper"
-          },
-          {
-            "title": "Life as a Professional Gambler",
-            "speaker": "Vivienne Bellerose"
-          },
-          {
-            "title": "How to Change Your Mind (with Replacement Therapies)",
-            "speaker": "Matt Buckley"
-          },
-          {
-            "title": "Doom Debates: Liron vs Everyone",
-            "speaker": "Liron Shapira"
-          },
-          {
-            "title": "Political Strategy & Delivering Reform",
-            "speaker": "Adam Jarvis"
-          },
-          {
-            "title": "YouTube Economics: Attention & Status as Currency",
-            "speaker": "Justin Kuiper"
-          },
-          {
-            "title": "Startup Pitch Competition",
-            "speaker": "David Chee"
-          },
-          {
-            "title": "Market Making at Scale",
-            "speaker": "Ric Best"
-          },
-          {
-            "title": "Richard Hanania: a Decade of Trump Forecasting",
-            "speaker": "Richard Hanania"
-          },
-          {
-            "title": "Untitled Genetic Engineering Talk",
-            "speaker": "Andrew Rettek"
-          },
-          {
-            "title": "Fine-Tuning, the Multiverse & Anthropic Bias",
-            "speaker": "Rom (Rami) Gruman"
-          },
-          {
-            "title": "David Shor: Data Science & Politics",
-            "speaker": "David Shor"
-          },
-          {
-            "title": "Implementing Futarchy with Decision Markets",
-            "speaker": "Robin Hanson"
-          },
-          {
-            "title": "AI for Grantmaking: Demo",
-            "speaker": "Lydia Nottingham"
-          },
-          {
-            "title": "AI Welfare",
-            "speaker": "Joe Carlsmith"
-          },
-          {
-            "title": "The Intersection of NTRPs and Prediction Markets",
-            "speaker": "Edward Lee"
-          },
-          {
-            "title": "Read Some Poetry You Like",
-            "speaker": "Jennifer Chen"
-          },
-          {
-            "title": "Pitch Competition Setup / Rapid FIRE Tips",
-            "speaker": "David Chee"
-          },
-          {
-            "title": "Question Overflow",
-            "speaker": "Nathan Young"
-          },
-          {
-            "title": "Theory of Podcast (in Gardens)",
-            "speaker": "Sammy"
-          },
-          {
-            "title": "Arts & Crafts: Build a Marble Race Track",
-            "speaker": "Ian Philips"
-          },
-          {
-            "title": "Poker Satellite #4",
-            "speaker": "David Chee"
-          },
-          {
-            "title": "Rare & Exotic-Ish Drama Games from Australia",
-            "speaker": ""
-          },
-          {
-            "title": "Atlas Meetup",
-            "speaker": "David Lieman"
-          },
-          {
-            "title": "Quizbowl / Trivia",
-            "speaker": "Stevie Miller"
-          },
-          {
-            "title": "Banterbrush: Chill, Chat and Make Art",
-            "speaker": "Skyler"
-          },
-          {
-            "title": "Niacin Hot Seat",
-            "speaker": "Matthew Leo"
-          },
-          {
-            "title": "Awkwardmaxxing for the Socially Anxious",
-            "speaker": ""
-          }
-        ]
+        "title": "Manifund: markets in AI safety",
+        "hosts": "Austin Chen",
+        "rsvp": 43,
+        "venue": "Cantor's Diagonal Hall",
+        "start": "9:00 AM",
+        "end": "9:45 AM",
+        "description": "How Manifund applies markets to make AI safety funding better."
       },
       {
-        "slot": "Evening",
-        "sessions": [
-          {
-            "title": "Dinner",
-            "speaker": "David Chee"
-          },
-          {
-            "title": "Noam Brown: Learning to Reason with LLMs",
-            "speaker": "Noam Brown"
-          },
-          {
-            "title": "Scouting for Truth: Robust Bayesian Truth Serum",
-            "speaker": "Andrew Willsen"
-          },
-          {
-            "title": "Noahpinion: Mechanism Design of Deficit Spending",
-            "speaker": "Noah Smith"
-          },
-          {
-            "title": "How to Be Hot",
-            "speaker": "Aella & Chesed"
-          },
-          {
-            "title": "History Lecture with Live Betting (Sovereign)",
-            "speaker": "Michael Wheatley"
-          },
-          {
-            "title": "AI for Collective Agency",
-            "speaker": "Blake Borgeson"
-          },
-          {
-            "title": "Adventures in Text Generation: LLMs & Prose Fiction",
-            "speaker": "Alexander Wales"
-          },
-          {
-            "title": "Scott Alexander: Forecasting Transformative AI",
-            "speaker": "Scott Alexander"
-          },
-          {
-            "title": "Nash Pit: a Prediction Market Game Show",
-            "speaker": "Roque Dietrich"
-          },
-          {
-            "title": "Late Night Secrets to Trading on Kalshi",
-            "speaker": "Shaked Koplewitz"
-          },
-          {
-            "title": "Hang with Other Love Science Friend Survey People",
-            "speaker": "David Shor"
-          },
-          {
-            "title": "Dance Party",
-            "speaker": "Aella"
-          },
-          {
-            "title": "Acro",
-            "speaker": "Fredrik Ekholm"
-          },
-          {
-            "title": "LGBT Meetup",
-            "speaker": "Dony Christie"
-          },
-          {
-            "title": "Aella Meetup",
-            "speaker": "Aella"
-          },
-          {
-            "title": "Quaker Meetup",
-            "speaker": ""
-          },
-          {
-            "title": "Arm Wrestling Tournament",
-            "speaker": "Henri Lemoine"
-          }
-        ]
+        "title": "Speedfriending #2 with Saul",
+        "hosts": "David Chee",
+        "rsvp": 4,
+        "venue": "Rat Park",
+        "start": "9:00 AM",
+        "end": "9:45 AM",
+        "description": "Quickly meet lots of people fast."
+      },
+      {
+        "title": "10 things I would do if I ran <Polymarket, Kalshi, Manifold, Metaculus>",
+        "hosts": "Lucas Kohorst",
+        "rsvp": 28,
+        "venue": "Bayes Ground",
+        "start": "9:15 AM",
+        "end": "9:45 AM",
+        "description": "Interactive conversation on improvements for leading prediction markets."
+      },
+      {
+        "title": "David Shor, Jesse Richardson, & maybe special guest",
+        "hosts": "Jesse Richardson",
+        "rsvp": 80,
+        "venue": "Rat Park",
+        "start": "10:00 AM",
+        "end": "10:45 AM",
+        "description": "Deep dive into political forecasting, polling, and trading."
+      },
+      {
+        "title": "Electricity 2011-2040",
+        "hosts": "Sam Penrose",
+        "rsvp": 74,
+        "venue": "Exobrain",
+        "start": "10:00 AM",
+        "end": "10:45 AM",
+        "description": "Mental models for nuclear, solar, fossil at scale. How electric power could become much more abundant by 2030."
+      },
+      {
+        "title": "Experimental Meditation Experiments",
+        "hosts": "Raj Thimmiah",
+        "rsvp": 12,
+        "venue": "Olds' Attic (Bayes)",
+        "start": "10:00 AM",
+        "end": "10:45 AM",
+        "description": "Cycles of: read → design experiment → try it → reflect → repeat, especially paired with friends."
+      },
+      {
+        "title": "Possibilities for Nuclear War",
+        "hosts": "Kyle S",
+        "rsvp": 33,
+        "venue": "Eigenhall",
+        "start": "10:00 AM",
+        "end": "10:45 AM",
+        "description": "Recent developments in nuclear risk and how they impact forecasts."
+      },
+      {
+        "title": "Prediction Markets Panel",
+        "hosts": "Stephen Grugett",
+        "rsvp": 30,
+        "venue": "Cantor's Diagonal Hall",
+        "start": "10:00 AM",
+        "end": "10:45 AM",
+        "description": "Panel with Stephen Grugett (Manifold), Nancy Yi (Bayes), and TBD from Kalshi."
+      },
+      {
+        "title": "Weird Findings in the last 10 years of Exercise Science",
+        "hosts": "Andrew Rettek",
+        "rsvp": 42,
+        "venue": "Bayes Ground",
+        "start": "10:00 AM",
+        "end": "10:45 AM",
+        "description": "Three recent findings of Exercise Science that will change your understanding of your body but be of no practical value."
+      },
+      {
+        "title": "Futarchy: Reimagining Governance Through Prediction Markets",
+        "hosts": "Clement Lesaege",
+        "rsvp": 34,
+        "venue": "Exobrain",
+        "start": "11:00 AM",
+        "end": "11:45 AM",
+        "description": "How prediction markets can serve as foundational primitives for rethinking governance."
+      },
+      {
+        "title": "Lars A. Doucet: What's the value of land in Berkeley?…Somers System",
+        "hosts": "Lars A Doucet",
+        "rsvp": 30,
+        "venue": "Eigenhall",
+        "start": "11:00 AM",
+        "end": "12:45 PM",
+        "description": "Live demo of consensus-based land valuation from the 1900s."
+      },
+      {
+        "title": "Live Polling with Aella",
+        "hosts": "Aella",
+        "rsvp": 66,
+        "venue": "Rat Park",
+        "start": "11:00 AM",
+        "end": "11:45 AM",
+        "description": "Attendees line themselves up in a live interactive poll."
+      },
+      {
+        "title": "Manifold users meetup [Day 2]",
+        "hosts": "Dylan (@Ziddletwix)",
+        "rsvp": 13,
+        "venue": "Drethelin Gardens",
+        "start": "11:00 AM",
+        "end": "11:45 AM",
+        "description": "Hang with familiar Manifold usernames & profile pics."
+      },
+      {
+        "title": "Our Broken High-skilled Immigration System: A Primer",
+        "hosts": "Jasmine Ren",
+        "rsvp": 30,
+        "venue": "Bayes Ground",
+        "start": "11:00 AM",
+        "end": "11:45 AM",
+        "description": "Tobias Pace (USCIS contractor) and Jasmine Ren (visa holder) walk through the system."
+      },
+      {
+        "title": "Poker Satellite #2",
+        "hosts": "David Chee",
+        "rsvp": 10,
+        "venue": "Glass Hall (Gaming)",
+        "start": "11:00 AM",
+        "end": "12:30 PM"
+      },
+      {
+        "title": "Policy Session (private event)",
+        "hosts": "Gavriel Kleinwaks",
+        "rsvp": 4,
+        "venue": "Feynman House",
+        "start": "11:00 AM",
+        "end": "11:45 AM",
+        "description": "Roundtable with Cremieux on how politics works, by invitation/referral only."
+      },
+      {
+        "title": "Scaling Public Epistemics: Community Notes & What's Next",
+        "hosts": "Jay Baxter",
+        "rsvp": 36,
+        "venue": "Cantor's Diagonal Hall",
+        "start": "11:00 AM",
+        "end": "11:45 AM",
+        "description": "Why Community Notes works, lessons learned, similarities to PMs, and Supernotes."
+      },
+      {
+        "title": "AI 2027 Q&A",
+        "hosts": "Eli Lifland",
+        "rsvp": 73,
+        "venue": "Cantor's Diagonal Hall",
+        "start": "12:00 PM",
+        "end": "12:45 PM",
+        "description": "Q&A with Eli Lifland (and possibly other AI 2027 team members)."
+      },
+      {
+        "title": "Life as a Gambling Globetrotter",
+        "hosts": "Michael Seaman",
+        "rsvp": 13,
+        "venue": "Bayes Ground",
+        "start": "12:00 PM",
+        "end": "12:45 PM",
+        "description": "Full-time prediction-market betting and travel hacking."
+      },
+      {
+        "title": "Lunch",
+        "hosts": "David Chee",
+        "rsvp": 39,
+        "venue": "Rat Park",
+        "start": "12:00 PM",
+        "end": "12:30 PM"
+      },
+      {
+        "title": "Make Polymarket liquid with DeFi",
+        "hosts": "arsenii",
+        "rsvp": 39,
+        "venue": "Exobrain",
+        "start": "12:00 PM",
+        "end": "12:45 PM",
+        "description": "Polymarket bets are tokens; building a DeFi layer on top."
+      },
+      {
+        "title": "ThermoRex Fanclub",
+        "hosts": "Christian Larsen",
+        "rsvp": 1,
+        "venue": "Olds' Attic (Bayes)",
+        "start": "12:00 PM",
+        "end": "12:30 PM"
+      },
+      {
+        "title": "US-China Competition: AI, Semiconductors, Miltech Panel",
+        "hosts": "Steve Hsu",
+        "rsvp": 96,
+        "venue": "Rat Park",
+        "start": "12:30 PM",
+        "end": "1:00 PM"
+      },
+      {
+        "title": "AI consciousness discussion",
+        "hosts": "Rosie Campbell",
+        "rsvp": 57,
+        "venue": "Olds' Attic (Bayes)",
+        "start": "1:00 PM",
+        "end": "1:45 PM",
+        "description": "Rob and Rosie (Eleos) on AI welfare; open discussion on consciousness."
+      },
+      {
+        "title": "Game Theory, Emotions, and Evolutionarily Stable Strategies",
+        "hosts": "John Boyle",
+        "rsvp": 8,
+        "venue": "Exobrain",
+        "start": "1:00 PM",
+        "end": "1:45 PM",
+        "description": "Threats and promises, anger and gratitude, and why we end up with some societies and not others."
+      },
+      {
+        "title": "Geopolitics of AI Infrastructure",
+        "hosts": "Dylan Patel",
+        "rsvp": 90,
+        "venue": "Cantor's Diagonal Hall",
+        "start": "1:00 PM",
+        "end": "1:45 PM"
+      },
+      {
+        "title": "Language Models as the Bessemer process for reasoning",
+        "hosts": "Panda",
+        "rsvp": 42,
+        "venue": "Bayes Ground",
+        "start": "1:00 PM",
+        "end": "1:45 PM",
+        "description": "What happens when LLMs make competent analysis cheap and abundant."
+      },
+      {
+        "title": "Panel US-China w/ Steve Hsu and Noah Smith",
+        "hosts": "Steve Hsu",
+        "rsvp": 50,
+        "venue": "Rat Park",
+        "start": "1:00 PM",
+        "end": "1:30 PM"
+      },
+      {
+        "title": "Roasting your resume (and more) AMA",
+        "hosts": "Calum Richards",
+        "rsvp": 5,
+        "venue": "Drethelin Gardens",
+        "start": "1:00 PM",
+        "end": "1:45 PM",
+        "description": "GiveWell research-recruiting lead taking resume / interview questions."
+      },
+      {
+        "title": "Weirdly Priced Markets with Jesse Richardson",
+        "hosts": "Eric Neyman",
+        "rsvp": 68,
+        "venue": "Eigenhall",
+        "start": "1:00 PM",
+        "end": "1:45 PM",
+        "description": "Eric and Jesse on the most weirdly priced prediction markets they've seen."
+      },
+      {
+        "title": "Nate Silver & Chris Best discussion",
+        "hosts": "Nate Silver",
+        "rsvp": 119,
+        "venue": "Rat Park",
+        "start": "1:30 PM",
+        "end": "2:30 PM"
+      },
+      {
+        "title": "Poker Satellite #3",
+        "hosts": "David Chee",
+        "rsvp": 7,
+        "venue": "Glass Hall (Gaming)",
+        "start": "1:30 PM",
+        "end": "3:00 PM"
+      },
+      {
+        "title": "Razib <> Steve",
+        "hosts": "Razib Khan",
+        "rsvp": 1,
+        "venue": "Podcast Room",
+        "start": "1:45 PM",
+        "end": "2:45 PM"
+      },
+      {
+        "title": "Cremieux",
+        "hosts": "Crémieux",
+        "rsvp": 86,
+        "venue": "Cantor's Diagonal Hall",
+        "start": "2:00 PM",
+        "end": "2:45 PM",
+        "description": "TBD"
+      },
+      {
+        "title": "Election Betting Debates of 2024: A Retrospective",
+        "hosts": "Brennan Robbins",
+        "rsvp": 44,
+        "venue": "Exobrain",
+        "start": "2:00 PM",
+        "end": "2:45 PM",
+        "description": "Learning gambling strategy by reviewing 2024 election strategies."
+      },
+      {
+        "title": "Life as a Professional Gambler",
+        "hosts": "Vivienne Bellerose",
+        "rsvp": 17,
+        "venue": "Drethelin Gardens",
+        "start": "2:00 PM",
+        "end": "2:45 PM",
+        "description": "Full-time advantage player on blackjack and video poker shares the lifestyle."
+      },
+      {
+        "title": "patio11 + kuiper: Emergent gameplay and narrative",
+        "hosts": "Justin Kuiper",
+        "rsvp": 44,
+        "venue": "Bayes Ground",
+        "start": "2:00 PM",
+        "end": "2:45 PM",
+        "description": "Patrick McKenzie & Justin Kuiper on video games — emergent gameplay and narrative."
+      },
+      {
+        "title": "Talk to a Rationalist Leftist",
+        "hosts": "David Youssef",
+        "rsvp": 5,
+        "venue": "Feynman House",
+        "start": "2:00 PM",
+        "end": "2:45 PM",
+        "description": "Pop your bubble and dampen your echo chamber."
+      },
+      {
+        "title": "Memory Systems/Anki/SRS Meetup",
+        "hosts": "Saul Munn",
+        "rsvp": 34,
+        "venue": "Olds' Attic (Bayes)",
+        "start": "2:30 PM",
+        "end": "3:30 PM",
+        "description": "Spaced repetition / Anki / Supermemo / MathAcademy meetup."
+      },
+      {
+        "title": "The Intersection of APMMs and Prediction Markets",
+        "hosts": "Edward Lee",
+        "rsvp": 37,
+        "venue": "Rat Park",
+        "start": "2:30 PM",
+        "end": "3:00 PM",
+        "description": "Wang presents an Automated Prediction Market Maker from the Bayes app."
+      },
+      {
+        "title": "Pitch competition judges huddle",
+        "hosts": "David Chee",
+        "rsvp": 1,
+        "venue": "Feynman House",
+        "start": "2:45 PM",
+        "end": "3:15 PM",
+        "description": "Pitch judges/Sovereigns only."
+      },
+      {
+        "title": "Doom Debates: Liron vs. Everyone",
+        "hosts": "Liron Shapira",
+        "rsvp": 38,
+        "venue": "Eigenhall",
+        "start": "3:00 PM",
+        "end": "3:45 PM",
+        "description": "Live group debate."
+      },
+      {
+        "title": "Matt Buckley: How To Change Your Mind (with Replacement Therapies)",
+        "hosts": "Matt Buckley",
+        "rsvp": 45,
+        "venue": "Cantor's Diagonal Hall",
+        "start": "3:00 PM",
+        "end": "3:45 PM",
+        "description": "Brain cell/tissue replacement strategies for prolonging cognition."
+      },
+      {
+        "title": "Political Strategy & Delivering Reform",
+        "hosts": "Adam Jarvis",
+        "rsvp": 16,
+        "venue": "Exobrain",
+        "start": "3:00 PM",
+        "end": "3:45 PM",
+        "description": "Local and international case studies on strategy and reform."
+      },
+      {
+        "title": "Read Some Poetry You Like",
+        "hosts": "Jennifer Chen",
+        "rsvp": 12,
+        "venue": "Drethelin Gardens",
+        "start": "3:00 PM",
+        "end": "3:45 PM",
+        "description": "Bring poems you like and read them aloud."
+      },
+      {
+        "title": "YouTube economics: attention and status as currency",
+        "hosts": "Justin Kuiper",
+        "rsvp": 48,
+        "venue": "Bayes Ground",
+        "start": "3:00 PM",
+        "end": "3:45 PM",
+        "description": "Lessons from 200 videos, 600M views, and a Streamy Award."
+      },
+      {
+        "title": "Pitch competition setup/Rapid fire tips for founders",
+        "hosts": "David Chee",
+        "rsvp": 5,
+        "venue": "Rat Park",
+        "start": "3:15 PM",
+        "end": "3:30 PM"
+      },
+      {
+        "title": "How I've had more sex (Talk + AMA) [In Olds' Attic!!]",
+        "hosts": "Nathan Young",
+        "rsvp": 30,
+        "venue": "Olds' Attic (Bayes)",
+        "start": "3:30 PM",
+        "end": "4:00 PM",
+        "description": "Personal experiences that may be useful to you."
+      },
+      {
+        "title": "Startup Pitch competition",
+        "hosts": "David Chee",
+        "rsvp": 72,
+        "venue": "Rat Park",
+        "start": "3:30 PM",
+        "end": "6:00 PM",
+        "description": "Manifest's shark tank with live Manifold markets on funding outcomes."
+      },
+      {
+        "title": "Fine-Tuning, the Multiverse, Anthropic Bias, and the Reference-Class Problem",
+        "hosts": "Rom (Rami) Gruman",
+        "rsvp": 43,
+        "venue": "Bayes Ground",
+        "start": "4:00 PM",
+        "end": "4:45 PM",
+        "description": "Fine-tuning of the universe and what it might imply about a multiverse."
+      },
+      {
+        "title": "Market Making at Scale",
+        "hosts": "Ric Best",
+        "rsvp": 72,
+        "venue": "Cantor's Diagonal Hall",
+        "start": "4:00 PM",
+        "end": "4:45 PM",
+        "description": "Susquehanna's head of PM/event contracts on automating, taking vs making, and asymmetric news quoting."
+      },
+      {
+        "title": "Poker Satellite #4",
+        "hosts": "David Chee",
+        "rsvp": 7,
+        "venue": "Glass Hall (Gaming)",
+        "start": "4:00 PM",
+        "end": "5:30 PM"
+      },
+      {
+        "title": "Question overflow",
+        "hosts": "Nathan Young",
+        "rsvp": 1,
+        "venue": "Olds' Attic (Bayes)",
+        "start": "4:00 PM",
+        "end": "4:15 PM"
+      },
+      {
+        "title": "Richard Hanania: A Decade of Trump Forecasting",
+        "hosts": "Richard Hanania",
+        "rsvp": 101,
+        "venue": "Eigenhall",
+        "start": "4:00 PM",
+        "end": "4:45 PM",
+        "description": "Ten years of predicting the Trump phenomenon and where conventional wisdom got it wrong."
+      },
+      {
+        "title": "Theory Of Podcast (in gardens)",
+        "hosts": "Sammy",
+        "rsvp": 11,
+        "venue": "Drethelin Gardens",
+        "start": "4:00 PM",
+        "end": "4:45 PM",
+        "description": "What podcasts do better than blog posts; concrete steps to produce one."
+      },
+      {
+        "title": "Untitled Genetic Engineering Talk",
+        "hosts": "Andrew Rettek",
+        "rsvp": 55,
+        "venue": "Exobrain",
+        "start": "4:00 PM",
+        "end": "4:45 PM",
+        "description": "No journalists, no recording."
+      },
+      {
+        "title": "Manifold Lore Jeopardy!",
+        "hosts": "Jacob Cohen",
+        "rsvp": 5,
+        "venue": "Olds' Attic (Bayes)",
+        "start": "4:15 PM",
+        "end": "4:45 PM",
+        "description": "Trivia game legally distinct from Jeopardy! about Manifold lore."
+      },
+      {
+        "title": "AI for Grantmaking: Demo",
+        "hosts": "Lydia Nottingham",
+        "rsvp": 14,
+        "venue": "Exobrain",
+        "start": "5:00 PM",
+        "end": "5:45 PM",
+        "description": "Manifund's AI grantmaker demo."
+      },
+      {
+        "title": "AI welfare",
+        "hosts": "Joe Carlsmith",
+        "rsvp": 58,
+        "venue": "Olds' Attic (Bayes)",
+        "start": "5:00 PM",
+        "end": "5:45 PM",
+        "description": "Why near-term AI welfare matters and why AIs can probably be conscious in principle."
+      },
+      {
+        "title": "Armin Stepanyan vs. Liron - AI doom debate",
+        "hosts": "Liron Shapira",
+        "venue": "Podcast Room",
+        "start": "5:00 PM",
+        "end": "6:00 PM"
+      },
+      {
+        "title": "Arts & crafts: build a marble race track",
+        "hosts": "Ian Philips",
+        "rsvp": 19,
+        "venue": "Bayes Ground",
+        "start": "5:00 PM",
+        "end": "6:45 PM",
+        "description": "Build the track that decides Sunday night's Mannys."
+      },
+      {
+        "title": "David Shor: Data Science and Politics",
+        "hosts": "David Shor",
+        "rsvp": 92,
+        "venue": "Cantor's Diagonal Hall",
+        "start": "5:00 PM",
+        "end": "5:45 PM",
+        "description": "No journalists, no recording."
+      },
+      {
+        "title": "Implementing Futarchy with Decision Markets",
+        "hosts": "Robin Hanson",
+        "rsvp": 39,
+        "venue": "Eigenhall",
+        "start": "5:00 PM",
+        "end": "5:45 PM",
+        "description": "Robin Hanson restates the case for decision markets, now with operational deployments."
+      },
+      {
+        "title": "set up",
+        "hosts": "Rach",
+        "venue": "Drethelin Gardens",
+        "start": "5:00 PM",
+        "end": "5:30 PM"
+      },
+      {
+        "title": "Dinner",
+        "hosts": "David Chee",
+        "rsvp": 37,
+        "venue": "Rat Park",
+        "start": "6:00 PM",
+        "end": "7:00 PM"
+      },
+      {
+        "title": "Manifestation",
+        "hosts": "Sinclair Chen",
+        "rsvp": 11,
+        "venue": "Olds' Attic (Bayes)",
+        "start": "6:00 PM",
+        "end": "6:30 PM",
+        "description": "Practice visualizing the future you want."
+      },
+      {
+        "title": "NEW: Prediction Markets & Financial Research",
+        "hosts": "Ethan",
+        "rsvp": 9,
+        "venue": "Exobrain",
+        "start": "6:00 PM",
+        "end": "6:45 PM",
+        "description": "Hands-on with a brand-new prediction market platform."
+      },
+      {
+        "title": "Noam Brown: Learning to Reason with LLMs",
+        "hosts": "Noam Brown",
+        "rsvp": 113,
+        "venue": "Cantor's Diagonal Hall",
+        "start": "6:00 PM",
+        "end": "6:45 PM",
+        "description": "LLMs and reasoning capabilities."
+      },
+      {
+        "title": "Scouting for Truth: Robust Bayesian Truth Serum, Peer Prediction and Hidden Talent",
+        "hosts": "Andrew Willsen",
+        "rsvp": 52,
+        "venue": "Eigenhall",
+        "start": "6:00 PM",
+        "end": "6:45 PM",
+        "description": "Peer-prediction mechanism for uncovering overlooked brilliance."
+      },
+      {
+        "title": "Poker Satellite #4 (cont.)",
+        "hosts": "David Chee",
+        "rsvp": 2,
+        "venue": "TBD",
+        "start": "6:30 PM",
+        "end": "7:00 PM"
+      },
+      {
+        "title": "Poker Satellite #5",
+        "hosts": "David Chee",
+        "rsvp": 8,
+        "venue": "Glass Hall (Gaming)",
+        "start": "6:30 PM",
+        "end": "8:00 PM"
+      },
+      {
+        "title": "Acro",
+        "hosts": "Fredrik Ekholm",
+        "rsvp": 4,
+        "venue": "Olds' Attic (Bayes)",
+        "start": "7:00 PM",
+        "end": "7:45 PM",
+        "description": "Acroyoga / Partner Acrobatics."
+      },
+      {
+        "title": "Adventures in text generation: LLMs and prose fiction",
+        "hosts": "Alexander Wales",
+        "rsvp": 31,
+        "venue": "Bayes Ground",
+        "start": "7:00 PM",
+        "end": "7:45 PM",
+        "description": "Getting LLMs to generate novels — failures, future, state of the art."
+      },
+      {
+        "title": "AI for Collective Agency (bring laptop!)",
+        "hosts": "Blake Borgeson",
+        "rsvp": 23,
+        "venue": "Exobrain",
+        "start": "7:00 PM",
+        "end": "7:45 PM",
+        "description": "Using AI to increase collective agency."
+      },
+      {
+        "title": "History Lecture with Live Betting (Sovereign)",
+        "hosts": "Michael Wheatley",
+        "rsvp": 35,
+        "venue": "Eigenhall",
+        "start": "7:00 PM",
+        "end": "7:45 PM",
+        "description": "Historical topic with live betting on what happens next."
+      },
+      {
+        "title": "How to be hot (with Aella)",
+        "hosts": "Chesed",
+        "rsvp": 85,
+        "venue": "Cantor's Diagonal Hall",
+        "start": "7:00 PM",
+        "end": "8:45 PM"
+      },
+      {
+        "title": "Noahpinion: The mechanism design of deficit spending and interest rates",
+        "hosts": "Noah Smith",
+        "rsvp": 87,
+        "venue": "Rat Park",
+        "start": "7:00 PM",
+        "end": "7:45 PM"
+      },
+      {
+        "title": "Nash Pit: A Prediction Market Game Show",
+        "hosts": "Roque Dietrich",
+        "rsvp": 69,
+        "venue": "Eigenhall",
+        "start": "8:00 PM",
+        "end": "9:00 PM",
+        "description": "Prisoner's-Dilemma-based game show about insider trading and market manipulation."
+      },
+      {
+        "title": "Scott Alexander: Forecasting Transformative AI Using The Book Of Revelation",
+        "hosts": "Scott Alexander",
+        "rsvp": 130,
+        "venue": "Rat Park",
+        "start": "8:00 PM",
+        "end": "9:00 PM"
+      },
+      {
+        "title": "Awkwardmaxxing For The Socially Anxious",
+        "hosts": "Aaron Kaufman",
+        "rsvp": 18,
+        "venue": "Olds' Attic (Bayes)",
+        "start": "8:30 PM",
+        "end": "8:45 PM",
+        "description": "Embrace cringe to become more likeable."
+      },
+      {
+        "title": "🌈 LGBT meetup 🌈",
+        "hosts": "Dony Christie",
+        "rsvp": 8,
+        "venue": "Exobrain",
+        "start": "9:00 PM",
+        "end": "9:30 PM",
+        "description": "All orientations welcome."
+      },
+      {
+        "title": "Arm Wrestling Tournament",
+        "hosts": "Henri Lemoine",
+        "rsvp": 12,
+        "venue": "Glass Hall (Gaming)",
+        "start": "9:00 PM",
+        "end": "9:30 PM"
+      },
+      {
+        "title": "Atlas Meetup",
+        "hosts": "David Lieman",
+        "rsvp": 4,
+        "venue": "Bayes Ground",
+        "start": "9:00 PM",
+        "end": "10:30 PM",
+        "description": "Atlas fellow meetup."
+      },
+      {
+        "title": "Late night secrets to trading on Kalshi",
+        "hosts": "Shaked Koplewitz",
+        "rsvp": 76,
+        "venue": "Cantor's Diagonal Hall",
+        "start": "9:00 PM",
+        "end": "10:00 PM",
+        "description": "With Shaked (Kalshi), Joshua Flemming (Sovereign), Ric Best (SIG)."
+      },
+      {
+        "title": "Quizbowl/trivia",
+        "hosts": "Stevie Miller",
+        "rsvp": 9,
+        "venue": "Olds' Attic (Bayes)",
+        "start": "9:00 PM",
+        "end": "10:00 PM"
+      },
+      {
+        "title": "Banterbrush: Chill, chat and make art",
+        "hosts": "Skyler",
+        "rsvp": 7,
+        "venue": "Glass Hall (Gaming)",
+        "start": "9:30 PM",
+        "end": "10:30 PM",
+        "description": "AI-pipeline-based social art activity."
+      },
+      {
+        "title": "Dance Party",
+        "hosts": "Aella",
+        "rsvp": 41,
+        "venue": "Eigenhall",
+        "start": "9:30 PM",
+        "end": "11:30 PM"
+      },
+      {
+        "title": "Hang w other Love Science Friend survey people",
+        "hosts": "David Shor",
+        "rsvp": 97,
+        "venue": "Rat Park",
+        "start": "9:30 PM",
+        "end": "10:00 PM",
+        "description": "Hang out with people who filled out the Love Science Friend survey."
+      },
+      {
+        "title": "Niacin hot seat",
+        "hosts": "Matthew Leo",
+        "rsvp": 17,
+        "venue": "Olds' Attic (Bayes)",
+        "start": "10:00 PM",
+        "end": "12:00 AM",
+        "description": "Hot seat session with optional niacin (causes flushing response)."
+      },
+      {
+        "title": "Rare & Exotic-ish Drama Games from Australia",
+        "hosts": "",
+        "venue": "",
+        "start": "10:00 PM",
+        "end": ""
       }
     ]
   },
   {
     "day": "Sunday, June 8",
-    "slots": [
+    "events": [
       {
-        "slot": "Morning",
-        "sessions": [
-          {
-            "title": "How Accurate Are Prediction Markets, Really?",
-            "speaker": ""
-          },
-          {
-            "title": "Discussion: Deprecation of AI Models",
-            "speaker": "Clark"
-          },
-          {
-            "title": "Kalshi Sports: the Why & How",
-            "speaker": "Noah Sternig"
-          },
-          {
-            "title": "How Do We Solve the Alignment Problem?",
-            "speaker": "Joe Carlsmith"
-          },
-          {
-            "title": "From Angels to Monsters: Humanity's Hybrid Past",
-            "speaker": "Razib Khan"
-          },
-          {
-            "title": "Probability Theory for Cult Building",
-            "speaker": "Armin Stepanyan"
-          },
-          {
-            "title": "FIRE 101 & Hidden Traps",
-            "speaker": "vitalii"
-          },
-          {
-            "title": "Patrick McKenzie",
-            "speaker": "Patrick McKenzie"
-          },
-          {
-            "title": "Futuur & Predict.pm: Order Books, MCPs, Aggregators",
-            "speaker": "Tom Bennett"
-          },
-          {
-            "title": "Secure Attachment Is Sexy",
-            "speaker": "Chris Lakin"
-          },
-          {
-            "title": "Futurist Theory of Traditionalism",
-            "speaker": "Pablo Peniche"
-          },
-          {
-            "title": "Droning on (Ukraine Drone Discussion)",
-            "speaker": "Nathan Young"
-          },
-          {
-            "title": "Decision Markets Are Broken — How Do We Fix Them?",
-            "speaker": "Drake Thomas"
-          },
-          {
-            "title": "Experimental Meditation Experiments",
-            "speaker": "Raj Thimmiah"
-          },
-          {
-            "title": "Catholic Mass at Newman Parish",
-            "speaker": ""
-          },
-          {
-            "title": "Discussing Anthropic's Impact",
-            "speaker": "Joe Rogero"
-          },
-          {
-            "title": "Poker Satellite #6",
-            "speaker": "David Chee"
-          }
-        ]
+        "title": "How Accurate Are Prediction Markets, Really?",
+        "hosts": "Justin Dickerson (wasabipesto)"
       },
       {
-        "slot": "Midday",
-        "sessions": [
-          {
-            "title": "Lunch",
-            "speaker": "David Chee"
-          },
-          {
-            "title": "Wave's Culture: a Debrief",
-            "speaker": "Lincoln Quirk"
-          },
-          {
-            "title": "Panel: Has Trading & Gambling Gone Too Far in the US?",
-            "speaker": "Jeremiah Johnson"
-          },
-          {
-            "title": "What We've Learned Doing Futarchy for a Year",
-            "speaker": "Proph3t"
-          },
-          {
-            "title": "Manifest Destiny: Space Colonization Beyond Moon & Mars",
-            "speaker": "Matt Parlmer"
-          },
-          {
-            "title": "Nate Soares & Emmett Shear Fight About AI",
-            "speaker": "Nate Soares"
-          },
-          {
-            "title": "AI Forecasting & Epistemics Projects I'd Like to See",
-            "speaker": "Javier Prieto"
-          },
-          {
-            "title": "US Public Sector Demographics",
-            "speaker": "Michael Lachanski"
-          },
-          {
-            "title": "GLP-1 Discussion Group",
-            "speaker": "Andrew Rettek"
-          },
-          {
-            "title": "How Could Deep Learning Work Well in the Real World?",
-            "speaker": "Alex Gajewski"
-          },
-          {
-            "title": "AI for Adjudication",
-            "speaker": "Campbell Hutcheson"
-          },
-          {
-            "title": "American Manufacturing War Room",
-            "speaker": "Matt Parlmer"
-          },
-          {
-            "title": "The Furry Slayer",
-            "speaker": "Tracing Woodgrains"
-          }
-        ]
+        "title": "Discussion: Deprecation of AI Models",
+        "hosts": "Clark"
       },
       {
-        "slot": "Afternoon",
-        "sessions": [
-          {
-            "title": "Advanced Prediction Markets: Past, Present, Future",
-            "speaker": "Robin Hanson"
-          },
-          {
-            "title": "AI Evals on All the Things",
-            "speaker": "Ozzie Gooen"
-          },
-          {
-            "title": "Controlling AI, with Redwood & UK AISI",
-            "speaker": "Asa Cooper Stickland"
-          },
-          {
-            "title": "Intro to Trading",
-            "speaker": "Ricki Heicklen"
-          },
-          {
-            "title": "Overton Window Engineering",
-            "speaker": "John Bennett"
-          },
-          {
-            "title": "Decentralized AI: Upsides, Risks & Tech Tree",
-            "speaker": "Allison Duettmann"
-          },
-          {
-            "title": "The First Quadrillion Is the Hardest",
-            "speaker": "Flip Pidot"
-          },
-          {
-            "title": "Public Speaking 101",
-            "speaker": "Joe Rogero"
-          },
-          {
-            "title": "How to Build an Exchange",
-            "speaker": "Rachel Wonnacott"
-          },
-          {
-            "title": "Reversible Cryopreservation",
-            "speaker": "Laura Deming"
-          },
-          {
-            "title": "Writing & Slop: Roon, Scott Alexander, Gwern, Alexander Wales",
-            "speaker": "Roon"
-          },
-          {
-            "title": "An Asian Perspective of Prediction Markets",
-            "speaker": "Nancy Yi"
-          },
-          {
-            "title": "London Meetup",
-            "speaker": "Sam"
-          },
-          {
-            "title": "Men's Fashion Advice",
-            "speaker": "Rachel Weinberg"
-          },
-          {
-            "title": "Overcoming Sexual Shame",
-            "speaker": "Jehan Azad"
-          },
-          {
-            "title": "Simple Improv Games",
-            "speaker": "Simon Baars"
-          },
-          {
-            "title": "Women Who Wouldn't Be Caught Dead at a 'Women In...' Event",
-            "speaker": "Jennifer Chen"
-          },
-          {
-            "title": "Kalshi's Great Bean Content Reveal",
-            "speaker": "Noah Sternig"
-          },
-          {
-            "title": "A History of Predictive Processing from Democritus",
-            "speaker": "Emmett Shear"
-          },
-          {
-            "title": "Prediction, Personalization, Participation: the Bayes Bandit",
-            "speaker": "Jacky Chu"
-          },
-          {
-            "title": "The Case for Interactionist Dualism",
-            "speaker": "Vivienne Bellerose"
-          },
-          {
-            "title": "Poetry Art Jam Renga Party",
-            "speaker": "Malcolm Jackson"
-          },
-          {
-            "title": "Similarities Between Selling to Nation States and on Facebook Marketplace",
-            "speaker": "Jimmy Hsu"
-          },
-          {
-            "title": "AI Will Not Be Conscious (Blindsight Hypothesis)",
-            "speaker": "Brett aka Tumbles"
-          },
-          {
-            "title": "Prediction Market Parlays",
-            "speaker": "Benjamin Scheinberg"
-          },
-          {
-            "title": "Poker Satellite #7",
-            "speaker": "David Chee"
-          }
-        ]
+        "title": "Kalshi Sports: the Why & How",
+        "hosts": "Noah Sternig"
       },
       {
-        "slot": "Evening",
-        "sessions": [
-          {
-            "title": "Closing Ceremony",
-            "speaker": "David Chee"
-          },
-          {
-            "title": "Dinner (Starts 5:30)",
-            "speaker": "David Chee"
-          },
-          {
-            "title": "Big Manifold Awards Ceremony",
-            "speaker": "Ian Philips"
-          },
-          {
-            "title": "Reserved",
-            "speaker": "John Bennett"
-          },
-          {
-            "title": "Tech, Policy, and the Future of Private Equity",
-            "speaker": "Alex Aridgides"
-          },
-          {
-            "title": "Good Cities",
-            "speaker": "Theo Jaffee"
-          },
-          {
-            "title": "Robot Meetup",
-            "speaker": "Tessa Barton"
-          },
-          {
-            "title": "Fun Etymology",
-            "speaker": "Alok Singh"
-          },
-          {
-            "title": "Poker Final Table",
-            "speaker": "David Chee"
-          },
-          {
-            "title": "Rock Paper Scissors Poker",
-            "speaker": "chris (strutheo)"
-          },
-          {
-            "title": "Late Night Hangouts / Dance Party / Other Closing Socials",
-            "speaker": "David Chee"
-          }
-        ]
+        "title": "How Do We Solve the Alignment Problem?",
+        "hosts": "Joe Carlsmith"
+      },
+      {
+        "title": "From Angels to Monsters: Humanity's Hybrid Past",
+        "hosts": "Razib Khan"
+      },
+      {
+        "title": "Probability Theory for Cult Building",
+        "hosts": "Armin Stepanyan"
+      },
+      {
+        "title": "FIRE 101 & Hidden Traps",
+        "hosts": "vitalii"
+      },
+      {
+        "title": "Patrick McKenzie",
+        "hosts": "Patrick McKenzie"
+      },
+      {
+        "title": "Futuur & Predict.pm: Order Books, MCPs, Aggregators",
+        "hosts": "Tom Bennett"
+      },
+      {
+        "title": "Secure Attachment Is Sexy",
+        "hosts": "Chris Lakin"
+      },
+      {
+        "title": "Futurist Theory of Traditionalism",
+        "hosts": "Pablo Peniche"
+      },
+      {
+        "title": "Droning on (Ukraine Drone Discussion)",
+        "hosts": "Nathan Young"
+      },
+      {
+        "title": "Decision Markets Are Broken — How Do We Fix Them?",
+        "hosts": "Drake Thomas"
+      },
+      {
+        "title": "Experimental Meditation Experiments",
+        "hosts": "Raj Thimmiah"
+      },
+      {
+        "title": "Catholic Mass at Newman Parish",
+        "hosts": ""
+      },
+      {
+        "title": "Discussing Anthropic's Impact",
+        "hosts": "Joe Rogero"
+      },
+      {
+        "title": "Poker Satellite #6",
+        "hosts": "David Chee"
+      },
+      {
+        "title": "Lunch",
+        "hosts": "David Chee"
+      },
+      {
+        "title": "Wave's Culture: a Debrief",
+        "hosts": "Lincoln Quirk"
+      },
+      {
+        "title": "Panel: Has Trading & Gambling Gone Too Far in the US?",
+        "hosts": "Jeremiah Johnson"
+      },
+      {
+        "title": "What We've Learned Doing Futarchy for a Year",
+        "hosts": "Proph3t"
+      },
+      {
+        "title": "Manifest Destiny: Space Colonization Beyond Moon & Mars",
+        "hosts": "Matt Parlmer"
+      },
+      {
+        "title": "Nate Soares & Emmett Shear Fight About AI",
+        "hosts": "Nate Soares"
+      },
+      {
+        "title": "AI Forecasting & Epistemics Projects I'd Like to See",
+        "hosts": "Javier Prieto"
+      },
+      {
+        "title": "US Public Sector Demographics",
+        "hosts": "Michael Lachanski"
+      },
+      {
+        "title": "GLP-1 Discussion Group",
+        "hosts": "Andrew Rettek"
+      },
+      {
+        "title": "How Could Deep Learning Work Well in the Real World?",
+        "hosts": "Alex Gajewski"
+      },
+      {
+        "title": "AI for Adjudication",
+        "hosts": "Campbell Hutcheson"
+      },
+      {
+        "title": "American Manufacturing War Room",
+        "hosts": "Matt Parlmer"
+      },
+      {
+        "title": "The Furry Slayer",
+        "hosts": "Tracing Woodgrains"
+      },
+      {
+        "title": "Advanced Prediction Markets: Past, Present, Future",
+        "hosts": "Robin Hanson"
+      },
+      {
+        "title": "AI Evals on All the Things",
+        "hosts": "Ozzie Gooen"
+      },
+      {
+        "title": "Controlling AI, with Redwood & UK AISI",
+        "hosts": "Asa Cooper Stickland"
+      },
+      {
+        "title": "Intro to Trading",
+        "hosts": "Ricki Heicklen"
+      },
+      {
+        "title": "Overton Window Engineering",
+        "hosts": "John Bennett"
+      },
+      {
+        "title": "Decentralized AI: Upsides, Risks & Tech Tree",
+        "hosts": "Allison Duettmann"
+      },
+      {
+        "title": "The First Quadrillion Is the Hardest",
+        "hosts": "Flip Pidot"
+      },
+      {
+        "title": "Public Speaking 101",
+        "hosts": "Joe Rogero"
+      },
+      {
+        "title": "How to Build an Exchange",
+        "hosts": "Rachel Wonnacott"
+      },
+      {
+        "title": "Reversible Cryopreservation",
+        "hosts": "Laura Deming"
+      },
+      {
+        "title": "Writing & Slop: Roon, Scott Alexander, Gwern, Alexander Wales",
+        "hosts": "Roon"
+      },
+      {
+        "title": "An Asian Perspective of Prediction Markets",
+        "hosts": "Nancy Yi"
+      },
+      {
+        "title": "London Meetup",
+        "hosts": "Sam"
+      },
+      {
+        "title": "Men's Fashion Advice",
+        "hosts": "Rachel Weinberg"
+      },
+      {
+        "title": "Overcoming Sexual Shame",
+        "hosts": "Jehan Azad"
+      },
+      {
+        "title": "Simple Improv Games",
+        "hosts": "Simon Baars"
+      },
+      {
+        "title": "Women Who Wouldn't Be Caught Dead at a 'Women In...' Event",
+        "hosts": "Jennifer Chen"
+      },
+      {
+        "title": "Kalshi's Great Bean Content Reveal",
+        "hosts": "Noah Sternig"
+      },
+      {
+        "title": "A History of Predictive Processing from Democritus",
+        "hosts": "Emmett Shear"
+      },
+      {
+        "title": "Prediction, Personalization, Participation: the Bayes Bandit",
+        "hosts": "Jacky Chu"
+      },
+      {
+        "title": "The Case for Interactionist Dualism",
+        "hosts": "Vivienne Bellerose"
+      },
+      {
+        "title": "Poetry Art Jam Renga Party",
+        "hosts": "Malcolm Jackson"
+      },
+      {
+        "title": "Similarities Between Selling to Nation States and on Facebook Marketplace",
+        "hosts": "Jimmy Hsu"
+      },
+      {
+        "title": "AI Will Not Be Conscious (Blindsight Hypothesis)",
+        "hosts": "Brett aka Tumbles"
+      },
+      {
+        "title": "Prediction Market Parlays",
+        "hosts": "Benjamin Scheinberg"
+      },
+      {
+        "title": "Poker Satellite #7",
+        "hosts": "David Chee"
+      },
+      {
+        "title": "Closing Ceremony",
+        "hosts": "David Chee"
+      },
+      {
+        "title": "Dinner (Starts 5:30)",
+        "hosts": "David Chee"
+      },
+      {
+        "title": "Big Manifold Awards Ceremony",
+        "hosts": "Ian Philips"
+      },
+      {
+        "title": "Reserved",
+        "hosts": "John Bennett"
+      },
+      {
+        "title": "Tech, Policy, and the Future of Private Equity",
+        "hosts": "Alex Aridgides"
+      },
+      {
+        "title": "Good Cities",
+        "hosts": "Theo Jaffee"
+      },
+      {
+        "title": "Robot Meetup",
+        "hosts": "Tessa Barton"
+      },
+      {
+        "title": "Fun Etymology",
+        "hosts": "Alok Singh"
+      },
+      {
+        "title": "Poker Final Table",
+        "hosts": "David Chee"
+      },
+      {
+        "title": "Rock Paper Scissors Poker",
+        "hosts": "chris (strutheo)"
+      },
+      {
+        "title": "Late Night Hangouts / Dance Party / Other Closing Socials",
+        "hosts": "David Chee"
       }
     ]
   }
