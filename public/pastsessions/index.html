@@ -80,7 +80,8 @@
     font-weight: 700;
   }
 
-  .year-meta { font-size: 14px; color: var(--muted); margin-bottom: 22px; }
+  footer.site #year-meta::before { content: " · "; }
+  footer.site #year-organizers { margin-top: 4px; }
 
   .filter-row {
     display: flex;
@@ -100,13 +101,14 @@
   }
   .filter-row select {
     font-family: var(--font-cinzel);
-    font-size: 14px;
+    font-size: 15px;
+    line-height: 1.5;
     font-weight: 600;
     color: var(--ink);
     background: var(--panel);
     border: 1px solid var(--rule);
     border-radius: 999px;
-    padding: 14px 36px 14px 18px;
+    padding: 13px 36px 13px 18px;
     cursor: pointer;
     appearance: none;
     -webkit-appearance: none;
@@ -188,8 +190,9 @@
     justify-self: end;
     align-self: end;
     text-align: right;
-    overflow-wrap: anywhere;
+    overflow-wrap: break-word;
   }
+  .session .speaker-name { display: inline-block; }
 
   /* Category palette — soft pastels */
   .session[data-cat="talk"]      { background: #edf5fa; border-color: #d6e8f2; }
@@ -238,8 +241,6 @@
     <button data-year="2023" role="tab" aria-selected="false">2023</button>
   </nav>
 
-  <div id="year-meta" class="year-meta"></div>
-
   <div class="filter-row">
     <label for="cat-filter">Filter by type</label>
     <select id="cat-filter">
@@ -251,6 +252,8 @@
 
   <footer class="site">
     <span id="footer-text"></span>
+    <span id="year-meta"></span>
+    <div id="year-organizers"></div>
   </footer>
 </div>
 
@@ -258,9 +261,9 @@
 const slugify = s => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 
 const META = {
-  '2025': { dates: 'June 6–8, 2025' },
-  '2024': { dates: 'June 7–9, 2024' },
-  '2023': { dates: 'September 22–24, 2023' },
+  '2025': { dates: 'June 6–8, 2025', organizers: 'David Chee & Rachel Farley' },
+  '2024': { dates: 'June 7–9, 2024', organizers: 'Saul Munn & Rachel Weinberg' },
+  '2023': { dates: 'September 22–24, 2023', organizers: 'Saul Munn & David Chee' },
 };
 
 const YEAR_FILES = {
@@ -323,6 +326,7 @@ function titleCase(text) {
   const acronyms = {
     ai: 'AI',
     agi: 'AGI',
+    aisi: 'AISI',
     api: 'API',
     ea: 'EA',
     gpt: 'GPT',
@@ -331,10 +335,13 @@ function titleCase(text) {
     llm: 'LLM',
     llms: 'LLMs',
     mats: 'MATS',
+    nhk: 'NHK',
     nsfw: 'NSFW',
+    optic: 'OPTIC',
     qna: 'Q&A',
     'q&a': 'Q&A',
     rsvp: 'RSVP',
+    uk: 'UK',
     usa: 'USA',
   };
 
@@ -428,7 +435,16 @@ function createSessionCard(session) {
     <div class="speaker"></div>`;
   card.querySelector('.cat-label').textContent = CAT_LABEL[cat] || cat;
   card.querySelector('.title').textContent = titleCase(session.title);
-  card.querySelector('.speaker').textContent = session.speaker;
+  const speakerEl = card.querySelector('.speaker');
+  const names = (session.speaker || '').split(',').map(s => s.trim()).filter(Boolean);
+  speakerEl.textContent = '';
+  names.forEach((name, i) => {
+    const span = document.createElement('span');
+    span.className = 'speaker-name';
+    span.textContent = name;
+    speakerEl.appendChild(span);
+    if (i < names.length - 1) speakerEl.appendChild(document.createElement('br'));
+  });
   return { card, cat };
 }
 
@@ -446,6 +462,7 @@ async function loadYear(year) {
   // Year meta
   document.getElementById('year-meta').textContent = meta.dates;
   document.getElementById('footer-text').textContent = `Manifest ${year}`;
+  document.getElementById('year-organizers').textContent = meta.organizers;
 
   // Render schedule
   const catOrder = Object.fromEntries(CATEGORIES.map((c, i) => [c.key, i]));
