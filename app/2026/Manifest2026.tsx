@@ -314,44 +314,45 @@ nav.top.is-scrolled .top__register { color: #fff !important; }
 .v1-strip__item figcaption i { font-style: normal; opacity: 0.7; margin-right: 8px; }
 
 .v1-nm__row {
-  display: grid; grid-template-columns: 1.1fr 1.4fr; gap: 64px; align-items: start;
+  display: grid; grid-template-columns: 1fr 2fr; gap: 64px; align-items: start;
 }
 .v1-nm__eyebrow {
-  display: block; font-family: var(--cinzel); font-weight: 700; font-size: 11px; letter-spacing: 0.34em;
-  text-transform: uppercase; color: var(--plav); margin-bottom: 18px;
+  display: block; font-family: var(--cinzel); font-weight: 500; font-size: 12px; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--muted); margin-bottom: 18px;
 }
 .v1-nm__title {
-  font-family: var(--display); font-style: italic; font-weight: 500; font-size: 84px;
-  line-height: 0.95; letter-spacing: -0.015em; color: var(--pdeep); margin: 0 0 28px;
+  font-family: var(--deco); font-style: normal; font-weight: 400; font-size: 36px;
+  line-height: 1.1; letter-spacing: 0.04em; text-transform: uppercase; color: var(--pdeep); margin: 0 0 24px;
 }
-.v1-nm__lede .v1-body { margin: 0 0 28px; max-width: 44ch; font-weight: 600; color: var(--pdeep); }
+.v1-nm__lede .v1-body {
+  margin: 0 0 24px; max-width: 36ch; font-family: var(--serif);
+  font-size: 14px; font-weight: 400; line-height: 1.6; color: var(--ink);
+}
 .v1-nm__pill {
   display: inline-block;
-  font-family: var(--cinzel); font-weight: 800; font-size: 14px; letter-spacing: 0.18em;
+  font-family: var(--cinzel); font-weight: 700; font-size: 11px; letter-spacing: 0.22em;
   text-transform: uppercase; color: var(--pdeep);
 }
-.v1-nm__cols { display: grid; grid-template-columns: 1fr 1fr; gap: 0 40px; margin-top: 40px; }
+.v1-nm__cols { display: grid; grid-template-columns: 1fr 1fr; gap: 0 48px; padding-top: 8px; }
 .v1-nm__col { margin: 0; display: flex; flex-direction: column; }
 .v1-nm__col > div {
-  padding: 18px 0;
-  border-bottom: 1px dotted var(--rule);
+  padding: 0 0 24px 0;
 }
-.v1-nm__col > div:first-child { padding-top: 0; }
-.v1-nm__col > div:last-child { border-bottom: none; }
+.v1-nm__col > div:last-child { padding-bottom: 0; }
 .v1-nm__col dt {
   font-family: var(--cinzel); font-weight: 700; font-size: 13px;
   letter-spacing: 0.14em; text-transform: uppercase; color: var(--pdeep);
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 .v1-nm__col dd {
-  margin: 0; font-family: var(--serif); font-weight: 700; font-size: 14px;
-  line-height: 1.5; color: var(--pdeep);
+  margin: 0; font-family: var(--serif); font-weight: 400; font-size: 13px;
+  line-height: 1.5; color: var(--ink);
 }
 .v1-nm__cta { display: flex; justify-content: center; margin-top: 56px; }
 
 /* ----- TESTIMONIALS (V1) ----- */
 .v1-testi { padding: 28px 56px 80px; }
-.v1-testi__head { display: grid; grid-template-columns: 1.2fr 1fr; gap: 56px; align-items: end; margin-bottom: 44px; }
+.v1-testi__head { margin-bottom: 56px; display: flex; flex-direction: column; align-items: center; gap: 12px; }
 .v1-testi__row {
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
 }
@@ -769,7 +770,7 @@ const PAGE_HTML = `
   </div>
   <div class="v1-nm__row">
     <div class="v1-nm__lede">
-      <span class="v1-nm__eyebrow">— Opening Night · Free &amp; Public —</span>
+      <span class="v1-nm__eyebrow">Opening Night · Free &amp; Public</span>
       <h2 class="v1-nm__title">The Night Market</h2>
       <p class="v1-body">On Friday, the first night of Manifest, Lighthaven will be open and free to the public for our Career Fair &amp; Night Market. An open-air evening celebration of all things markets; it&rsquo;s a chance to meet people, share ideas, see strange gadgets, and wander around in a transcendent twilight…</p>
       <span class="v1-nm__pill">No ticket required</span>
@@ -796,7 +797,7 @@ const PAGE_HTML = `
 <section id="testimonials" class="v1-testi scroll-mt">
   <hr class="v1-divider" />
   <header class="v1-testi__head">
-    <h2 class="v1-h2">Tales from <em>Festivalgoers</em></h2>
+    <h2 class="v1-h2 v1-h2--center" style="font-family: var(--deco); font-style: normal; font-weight: 400; font-size: 48px; letter-spacing: 0.04em;">Tales from Festivalgoers</h2>
   </header>
   <div class="v1-testi__row">
     <a class="v1-testi__card" href="https://scottsumner.substack.com/p/paradise-on-telegraph-avenue" target="_blank" rel="noopener">
@@ -873,7 +874,7 @@ const PAGE_HTML = `
 <section id="organizers" class="v1-org scroll-mt">
   <hr class="v1-divider" />
   <header class="v1-org__head">
-    <h2 class="v1-h2 v1-h2--center">Organizers:</h2>
+    <h2 class="v1-h2 v1-h2--center" style="font-family: var(--deco); font-style: normal; font-weight: 400; font-size: 48px; letter-spacing: 0.04em;">Organizers:</h2>
     <p class="v1-org__sub">Questions? Please reach out.</p>
   </header>
   <div class="v1-org__grid">
