@@ -1,0 +1,345 @@
+[
+  {
+    "day": "Friday, September 22",
+    "events": [
+      {
+        "title": "Hang Out and Laugh: Monikers",
+        "hosts": "Matt C. Wilson"
+      },
+      {
+        "title": "Team Forecasting",
+        "hosts": "Michael Wheatley"
+      },
+      {
+        "title": "Prediction Markets Evangelism",
+        "hosts": "James Grugett, Stephen Grugett"
+      },
+      {
+        "title": "Poker: Satellite Table #1",
+        "hosts": "David Chee"
+      },
+      {
+        "title": "Optic Panel",
+        "hosts": "Tom Shlomi, Saul Munn"
+      },
+      {
+        "title": "Speedfriending Event #1",
+        "hosts": ""
+      },
+      {
+        "title": "Prediction Markets Applied to Finance",
+        "hosts": "Louis Clouatre-Latraverse, Stephen Grugett"
+      },
+      {
+        "title": "Improving AI Benchmarks",
+        "hosts": "Isabel Juniewicz, Stephen Grugett, Nathan Young"
+      },
+      {
+        "title": "Learn Poker",
+        "hosts": "Max Chiswick"
+      },
+      {
+        "title": "Prediction Markets in Journalism",
+        "hosts": "Dylan Matthews, Nathan Young"
+      },
+      {
+        "title": "Karaoke + Live Betting",
+        "hosts": "Ian Philips"
+      },
+      {
+        "title": "MTG Sealed Tournament (Wilds of Eldraine)",
+        "hosts": "Austin Chen"
+      },
+      {
+        "title": "Predicting War Markets",
+        "hosts": "Douglas Campbell, Abhishek Kylasa, Nathan Young"
+      },
+      {
+        "title": "Political Betting Regulation: Pathways to Liberalization",
+        "hosts": "Pratik Chougule, Douglas Campbell"
+      },
+      {
+        "title": "Rise into Rave Heaven",
+        "hosts": "Ian Philips"
+      }
+    ]
+  },
+  {
+    "day": "Saturday, September 23",
+    "events": [
+      {
+        "title": "Build a Trading Bot Workshop",
+        "hosts": "Stephen Grugett"
+      },
+      {
+        "title": "How to Take a Perfect Dating Photo",
+        "hosts": "Nikita Sokolsky"
+      },
+      {
+        "title": "Verifiable Computing and Homomorphically Encrypted Data Sets — Oh My!",
+        "hosts": "James McGirk"
+      },
+      {
+        "title": "LK-99 Q&A",
+        "hosts": "Seo Sanghyeon"
+      },
+      {
+        "title": "Cornhole RPG",
+        "hosts": "Adrian Marple"
+      },
+      {
+        "title": "Patrick McKenzie Fireside Chat",
+        "hosts": "Patrick McKenzie, Zvi Mowshowitz"
+      },
+      {
+        "title": "Poker: Satellite Table #2",
+        "hosts": "David Chee"
+      },
+      {
+        "title": "Entrepreneurship in Quantification Jam Sesh",
+        "hosts": "Rai Sur"
+      },
+      {
+        "title": "Speedfriending Event #2",
+        "hosts": ""
+      },
+      {
+        "title": "Forecasting Community Discussion (with Voting)",
+        "hosts": "Nathan Young"
+      },
+      {
+        "title": "Parenting & Pronatalism",
+        "hosts": "Simone Collins, Byrne Hobart, Zvi Mowshowitz, Malcolm Collins, Rachel Weinberg"
+      },
+      {
+        "title": "Forecasting Isn't Working for Decision Makers",
+        "hosts": "Nathan Young"
+      },
+      {
+        "title": "Student Speed Networking",
+        "hosts": "Saul Munn"
+      },
+      {
+        "title": "Calibration Practice Discussion",
+        "hosts": "Raymond Arnold"
+      },
+      {
+        "title": "How to Start a Forecasting Club Fireside Chat",
+        "hosts": "Tom Shlomi, Saul Munn"
+      },
+      {
+        "title": "AI Safety Small-Group",
+        "hosts": "Emanuele Ascani"
+      },
+      {
+        "title": "Spicy Live Polling",
+        "hosts": "Aella, David Chee, Aaron Silverbook"
+      },
+      {
+        "title": "Manifold Founders Panel",
+        "hosts": "Austin Chen, James Grugett, Stephen Grugett, David Chee"
+      },
+      {
+        "title": "Speedfriending Event #3",
+        "hosts": ""
+      },
+      {
+        "title": "Good Question Tournament",
+        "hosts": "Molly Hickman, Rajashree Agrawal"
+      },
+      {
+        "title": "Whalebait Markets on Manifold",
+        "hosts": "Michael Wheatley"
+      },
+      {
+        "title": "Revolution Strategies",
+        "hosts": "Robin Hanson, David Chee"
+      },
+      {
+        "title": "Prediction Markets = Bounded Rationality?!?",
+        "hosts": "Daniel Filan"
+      },
+      {
+        "title": "Destiny vs Eliezer Debate",
+        "hosts": "Steven Bonnell II, David Chee, Aella, Nathan Young"
+      },
+      {
+        "title": "Prediction Markets as Commitment Devices",
+        "hosts": "Daniel Reeves"
+      },
+      {
+        "title": "Mafia with Markets",
+        "hosts": "Arjun Panickssery"
+      },
+      {
+        "title": "Poker Satellite Table #4 (Late Reg)",
+        "hosts": "Max Chiswick"
+      },
+      {
+        "title": "Why Prediction Markets Struggle with Politics",
+        "hosts": "Jeremiah Johnson, Steven Bonnell II, Stephen Grugett"
+      },
+      {
+        "title": "Latenight Jackbox",
+        "hosts": "Michael Tebbs (Shelvacu)"
+      },
+      {
+        "title": "Night Market & Fair",
+        "hosts": ""
+      },
+      {
+        "title": "Jazz Jam (BYO Instrument)",
+        "hosts": "Ian Philips"
+      },
+      {
+        "title": "Moderating the First User Generated Market Platform",
+        "hosts": "David Chee"
+      },
+      {
+        "title": "Team Estimation with a Traitor",
+        "hosts": "Eric Neyman"
+      }
+    ]
+  },
+  {
+    "day": "Sunday, September 24",
+    "events": [
+      {
+        "title": "Atoms and Espionage: Oppenheimer's Enigma",
+        "hosts": "Andrew Guo"
+      },
+      {
+        "title": "Reducing Bias in Education with Prediction Markets",
+        "hosts": "Simone Collins, Malcolm Collins, Rachel Weinberg"
+      },
+      {
+        "title": "Replicating Academia",
+        "hosts": "Douglas Campbell"
+      },
+      {
+        "title": "Finding Truth Without Instant Liquidity",
+        "hosts": "Andreas Finke"
+      },
+      {
+        "title": "The Future of Trust and Evidence, in the Age of AI",
+        "hosts": "Emmett Shear, Rob Miles"
+      },
+      {
+        "title": "Performative Prediction",
+        "hosts": "Johannes Treutlein"
+      },
+      {
+        "title": "Legalizing Prediction Markets",
+        "hosts": "Tarek Mansour, Pratik Chougule"
+      },
+      {
+        "title": "How AI Poker Works",
+        "hosts": "Max Chiswick"
+      },
+      {
+        "title": "Functions as Forecasts",
+        "hosts": "Ozzie Gooen, Austin Chen"
+      },
+      {
+        "title": "Polymarket Walk & Talk",
+        "hosts": "Shayne Coplan"
+      },
+      {
+        "title": "Try Out Varuna, an AI Forecaster, Built by the Former CTO and the Former Head of AI at Metaculus!",
+        "hosts": "Dan Schwarz"
+      },
+      {
+        "title": "Poker: Satellite Table #3",
+        "hosts": "David Chee"
+      },
+      {
+        "title": "Genetic Enhancement: Prediction Markets for Future People",
+        "hosts": "Jonathan Anomaly, Austin Chen"
+      },
+      {
+        "title": "Robin Hanson Office Hours",
+        "hosts": "Robin Hanson"
+      },
+      {
+        "title": "Every Platform for Debating Predictions Is Terrible; Thoughts on Fixing Them",
+        "hosts": "Eliezer Yudkowsky"
+      },
+      {
+        "title": "Balance Games and Wrestling!",
+        "hosts": "Keri Warr"
+      },
+      {
+        "title": "What's Stopping You from Doing AI Safety Advocacy?",
+        "hosts": "Holly Elmore"
+      },
+      {
+        "title": "Talk to a Theist",
+        "hosts": "Jeffrey Heninger"
+      },
+      {
+        "title": "Prediction Markets vs Financial Markets",
+        "hosts": "Byrne Hobart, Stephen Grugett"
+      },
+      {
+        "title": "Fireside Chat: ManiFund Q+A",
+        "hosts": "Elizabeth Van Nostrand, Austin Chen, Rachel Weinberg"
+      },
+      {
+        "title": "Subsidize Real Money Prediction Markets on High Impact Topics",
+        "hosts": "Ezra Brodey"
+      },
+      {
+        "title": "Proofniks / Conflux Q&A",
+        "hosts": "Jacob Cohen, Andrew Imbens, Allison Hung, Marco Angeldones"
+      },
+      {
+        "title": "Polymarket and Making Prediction Markets Mainstream",
+        "hosts": "Scott Alexander, Shayne Coplan, Zvi Mowshowitz, Pratik Chougule"
+      },
+      {
+        "title": "Lightning Talks!",
+        "hosts": "Sinclair Chen"
+      },
+      {
+        "title": "Lightning Talk: Prediction-Action Markets for Coordination",
+        "hosts": "Jason Gross"
+      },
+      {
+        "title": "Caramel Taste Test Showdown",
+        "hosts": "Matt C. Wilson, Noa Nabeshima, Lauren Milliken"
+      },
+      {
+        "title": "Nate Silver Fireside Chat",
+        "hosts": "Nate Silver, Austin Chen"
+      },
+      {
+        "title": "Biggest Questions in AI Forecasting",
+        "hosts": "Matthew Barnett"
+      },
+      {
+        "title": "Forecast Aggregation Meetup",
+        "hosts": "Gustavo Lacerda"
+      },
+      {
+        "title": "Hot Seat (Intrusive Questions Game)",
+        "hosts": "Eti Rabys"
+      },
+      {
+        "title": "Poker Tournament Finals",
+        "hosts": "David Chee"
+      },
+      {
+        "title": "Minimum Viable Yom Kippur",
+        "hosts": "Max Chiswick"
+      },
+      {
+        "title": "Improving Biomedical Research",
+        "hosts": "Gavriel Kleinwaks"
+      },
+      {
+        "title": "Descent into Dance Hell",
+        "hosts": "Aella"
+      }
+    ]
+  }
+]
