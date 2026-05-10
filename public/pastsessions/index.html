@@ -193,6 +193,10 @@
     overflow-wrap: break-word;
   }
   .session .speaker-name { display: inline-block; }
+  .session a.speaker-name { color: inherit; text-decoration: none; border-bottom: 1px dotted currentColor; }
+  .session a.speaker-name:hover { color: var(--ink); border-bottom-style: solid; }
+  footer.site a { color: inherit; text-decoration: underline; text-decoration-color: var(--rule); }
+  footer.site a:hover { text-decoration-color: currentColor; }
 
   /* Category palette — soft pastels */
   .session[data-cat="talk"]      { background: #edf5fa; border-color: #d6e8f2; }
@@ -261,9 +265,9 @@
 const slugify = s => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 
 const META = {
-  '2025': { dates: 'June 6–8, 2025', organizers: 'David Chee & Rachel Farley' },
-  '2024': { dates: 'June 7–9, 2024', organizers: 'Saul Munn & Rachel Weinberg' },
-  '2023': { dates: 'September 22–24, 2023', organizers: 'Saul Munn & David Chee' },
+  '2025': { dates: 'June 6–8, 2025', organizers: 'David Chee, Rachel Farley & Austin Chen' },
+  '2024': { dates: 'June 7–9, 2024', organizers: 'Saul Munn, Rachel Weinberg & Austin Chen' },
+  '2023': { dates: 'September 22–24, 2023', organizers: 'Saul Munn, David Chee & Austin Chen' },
 };
 
 const YEAR_FILES = {
@@ -330,6 +334,7 @@ function titleCase(text) {
     api: 'API',
     ea: 'EA',
     gpt: 'GPT',
+    'glp-1': 'GLP-1',
     lgbt: 'LGBT',
     lgbtq: 'LGBTQ',
     llm: 'LLM',
@@ -373,6 +378,8 @@ function titleCase(text) {
 const CATEGORY_OVERRIDES = {
   'repolarize american politics: how to make the two-party system irrelevant': 'talk',
 };
+
+const SPEAKER_LINKS = {};
 
 function categorize(title, hosts) {
   const t = (title || '').toLowerCase();
@@ -439,10 +446,16 @@ function createSessionCard(session) {
   const names = (session.speaker || '').split(',').map(s => s.trim()).filter(Boolean);
   speakerEl.textContent = '';
   names.forEach((name, i) => {
-    const span = document.createElement('span');
-    span.className = 'speaker-name';
-    span.textContent = name;
-    speakerEl.appendChild(span);
+    const url = SPEAKER_LINKS[name];
+    const el = document.createElement(url ? 'a' : 'span');
+    el.className = 'speaker-name';
+    el.textContent = name;
+    if (url) {
+      el.href = url;
+      el.target = '_blank';
+      el.rel = 'noopener noreferrer';
+    }
+    speakerEl.appendChild(el);
     if (i < names.length - 1) speakerEl.appendChild(document.createElement('br'));
   });
   return { card, cat };
@@ -462,7 +475,20 @@ async function loadYear(year) {
   // Year meta
   document.getElementById('year-meta').textContent = meta.dates;
   document.getElementById('footer-text').textContent = `Manifest ${year}`;
-  document.getElementById('year-organizers').textContent = meta.organizers;
+  const orgEl = document.getElementById('year-organizers');
+  orgEl.textContent = '';
+  meta.organizers.split(/\s*[,&]\s*/).forEach((name, i, arr) => {
+    const url = SPEAKER_LINKS[name];
+    const el = document.createElement(url ? 'a' : 'span');
+    el.textContent = name;
+    if (url) {
+      el.href = url;
+      el.target = '_blank';
+      el.rel = 'noopener noreferrer';
+    }
+    orgEl.appendChild(el);
+    if (i < arr.length - 1) orgEl.appendChild(document.createElement('br'));
+  });
 
   // Render schedule
   const catOrder = Object.fromEntries(CATEGORIES.map((c, i) => [c.key, i]));
