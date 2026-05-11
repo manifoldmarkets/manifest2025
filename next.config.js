@@ -16,6 +16,18 @@ const nextConfig = {
         destination: '/2024/index.html',
       },
       {
+        source: '/2024/speakers',
+        destination: '/2024/speakers.html',
+      },
+      {
+        source: '/2024/tickets',
+        destination: '/2024/tickets.html',
+      },
+      {
+        source: '/2024/contact',
+        destination: '/2024/contact.html',
+      },
+      {
         source: '/2023',
         destination: '/2023/index.html',
       },
