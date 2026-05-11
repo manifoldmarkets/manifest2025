@@ -421,6 +421,7 @@ function titleCase(text) {
     aisi: 'AISI',
     api: 'API',
     ea: 'EA',
+    fire: 'FIRE',
     gpt: 'GPT',
     'glp-1': 'GLP-1',
     lgbt: 'LGBT',
@@ -502,9 +503,10 @@ const CATEGORY_OVERRIDES = {
   'how ai poker works': 'talk',
   'how could deep learning work well in the real world?': 'talk',
   'how tech hiring is changing with ai, w/ sholto & ben': 'panel',
-  'how to build an exchange': 'talk',
+  'how to build an exchange': 'workshop',
   'jazz jam (byo instrument)': 'performance',
   "kalshi's great bean content reveal": 'game',
+  'late night hangouts / dance party / other closing socials': 'social',
   'late night jackbox': 'game',
   'life as a professional gambler: intro to advantage play': 'talk',
   'mafia with markets': 'game',
@@ -517,6 +519,7 @@ const CATEGORY_OVERRIDES = {
   'minimum viable yom kippur': 'social',
   'nate soares & emmett shear fight about ai': 'panel',
   'niacin hot seat': 'game',
+  'parenting & pronatalism': 'panel',
   'noam brown: learning to reason with llms': 'talk',
   'patio11 + kuiper: emergent gameplay and narrative': 'panel',
   'pitch competition setup/rapid fire tips for founders': 'workshop',
@@ -545,6 +548,7 @@ const CATEGORY_OVERRIDES = {
   'top manifold traders discuss trading in real-world markets.': 'panel',
   'trade with the kalshi team': 'demo',
   'try out varuna, an ai forecaster, built by the former cto and the former head of ai at metaculus!': 'demo',
+  "wave's culture: a debrief": 'panel',
   'weird findings in the last 10 years of exercise science': 'talk',
   "what we've learned doing futarchy for a year": 'talk',
   'wrestling': 'wellness',
@@ -600,6 +604,7 @@ function sessionsForDay(day, year) {
     end: ev.end,
     venue: ev.venue,
     description: ev.description,
+    hostOrder: ev.hostOrder,
   }));
 }
 
@@ -657,35 +662,75 @@ function createSessionCard(session) {
     card.tabIndex = 0;
   }
   const speakerEl = card.querySelector('.speaker');
-  let groups = (session.speaker || '').split(',').map(s => s.trim()).filter(Boolean);
-  groups.sort((a, b) => a.length - b.length);
-  if (groups.length === 2 && !groups[0].includes('&') && !groups[1].includes('&')) {
-    groups = [groups.join(' & ')];
-  }
+  const rawSpeaker = session.speaker || '';
   speakerEl.textContent = '';
-  groups.forEach((group, gi) => {
-    const subnames = group.split(/\s*&\s*/).map(s => s.trim()).filter(Boolean).sort((a, b) => a.length - b.length);
-    subnames.forEach((name, si) => {
-      if (si > 0) {
-        let sep;
-        if (subnames.length === 2) sep = ' & ';
-        else if (si === subnames.length - 1) sep = ', & ';
-        else sep = ', ';
-        speakerEl.appendChild(document.createTextNode(sep));
-      }
-      const url = SPEAKER_LINKS[name];
-      const el = document.createElement(url ? 'a' : 'span');
-      el.className = 'speaker-name';
-      el.textContent = name;
-      if (url) {
-        el.href = url;
-        el.target = '_blank';
-        el.rel = 'noopener noreferrer';
-      }
-      speakerEl.appendChild(el);
+
+  function appendName(name) {
+    const url = SPEAKER_LINKS[name];
+    const el = document.createElement(url ? 'a' : 'span');
+    el.className = 'speaker-name';
+    el.textContent = name;
+    if (url) {
+      el.href = url;
+      el.target = '_blank';
+      el.rel = 'noopener noreferrer';
+    }
+    speakerEl.appendChild(el);
+  }
+  function appendText(text) { speakerEl.appendChild(document.createTextNode(text)); }
+  function appendBreak() { speakerEl.appendChild(document.createElement('br')); }
+
+  const hasComma = rawSpeaker.includes(',');
+  const hasAmp = rawSpeaker.includes('&');
+  const isFlat = !(hasComma && hasAmp);
+  const flatNames = isFlat
+    ? rawSpeaker.split(/\s*(?:,|&)\s*/).map(s => s.trim()).filter(Boolean)
+    : [];
+
+  if (isFlat && flatNames.length >= 1 && flatNames.length <= 5) {
+    const sorted = session.hostOrder === 'preserve'
+      ? [...flatNames]
+      : [...flatNames].sort((a, b) => a.length - b.length);
+    if (sorted.length === 1) {
+      appendName(sorted[0]);
+    } else if (sorted.length === 2) {
+      appendName(sorted[0]); appendText(' & '); appendName(sorted[1]);
+    } else if (sorted.length === 3) {
+      appendName(sorted[0]); appendText(',');
+      appendBreak();
+      appendName(sorted[1]); appendText(', & '); appendName(sorted[2]);
+    } else if (sorted.length === 4) {
+      appendName(sorted[0]); appendText(', '); appendName(sorted[1]); appendText(',');
+      appendBreak();
+      appendName(sorted[2]); appendText(', & '); appendName(sorted[3]);
+    } else {
+      appendName(sorted[0]); appendText(',');
+      appendBreak();
+      appendName(sorted[1]); appendText(', '); appendName(sorted[2]); appendText(',');
+      appendBreak();
+      appendName(sorted[3]); appendText(', & '); appendName(sorted[4]);
+    }
+  } else {
+    let groups = rawSpeaker.split(',').map(s => s.trim()).filter(Boolean);
+    groups.sort((a, b) => a.length - b.length);
+    if (groups.length === 2 && !groups[0].includes('&') && !groups[1].includes('&')) {
+      groups = [groups.join(' & ')];
+    }
+    groups.forEach((group, gi) => {
+      const subnames = group.split(/\s*&\s*/).map(s => s.trim()).filter(Boolean).sort((a, b) => a.length - b.length);
+      subnames.forEach((name, si) => {
+        if (si > 0) {
+          let sep;
+          if (subnames.length === 2) sep = ' & ';
+          else if (si === subnames.length - 1) sep = ', & ';
+          else sep = ', ';
+          appendText(sep);
+        }
+        appendName(name);
+      });
+      if (gi < groups.length - 1) appendBreak();
     });
-    if (gi < groups.length - 1) speakerEl.appendChild(document.createElement('br'));
-  });
+  }
   return { card, cat };
 }
 
