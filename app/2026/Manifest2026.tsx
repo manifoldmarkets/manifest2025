@@ -211,10 +211,15 @@ nav.top.is-scrolled .top__register { color: #fff !important; }
 }
 
 /* ----- WHAT IS MANIFEST (V1) ----- */
-.v1-what { margin: 0; padding: 28px 56px 56px; }
+.v1-what { margin: 0; padding: 0; }
+.v1-what__grid { display: grid; grid-template-columns: 1fr 1fr; align-items: start; }
+.v1-what__images { display: flex; flex-direction: column; gap: 0; }
+.v1-what__img { width: 100%; height: auto; display: block; }
+.v1-what__text { padding: 0 56px; }
+.v1-what__text .v1-themes__title { white-space: normal; margin-top: 48px; }
 
 /* ----- THEMES GRID (V1) ----- */
-.v1-themes { padding: 56px 0 0; }
+.v1-themes { padding: 0; }
 .v1-themes__head { margin: 0; padding: 0 56px 40px; }
 .v1-themes__title {
   font-family: var(--display); font-style: italic; font-weight: 500; font-size: 56px; line-height: 1.0;
@@ -583,6 +588,7 @@ nav.top.is-scrolled .top__register { color: #fff !important; }
   .v1-faq__item { grid-template-columns: 1fr; gap: 12px; }
   .v1-speakers__head { grid-template-columns: 1fr; gap: 20px; }
   .v1-strip { grid-template-columns: repeat(2, 1fr); }
+  .v1-what__grid { grid-template-columns: 1fr; gap: 32px; }
 }
 @media (max-width: 720px) {
   .v1-hero__title { font-size: 64px; }
@@ -590,7 +596,8 @@ nav.top.is-scrolled .top__register { color: #fff !important; }
   .v1-h2 { font-size: 48px; }
   .v1-nm__title { font-size: 48px; }
   .v1-themes__title { font-size: 36px; }
-  .v1-speakers, .v1-what, .v1-themes__head, .v1-nm, .v1-testi, .v1-spon, .v1-tix, .v1-faq, .v1-org { padding-left: 24px; padding-right: 24px; }
+  .v1-speakers, .v1-themes__head, .v1-nm, .v1-testi, .v1-spon, .v1-tix, .v1-faq, .v1-org { padding-left: 24px; padding-right: 24px; }
+  .v1-what__text { padding: 0 24px; }
   .v1-cell { padding: 28px 24px; }
   .v1-cell--list header { margin: 0 -24px 18px; padding: 22px 24px 14px; }
   .v1-foot { padding: 40px 24px 48px; }
@@ -664,19 +671,24 @@ const PAGE_HTML = `
 
 <!-- WHAT IS MANIFEST -->
 <section id="what-is-manifest" class="v1-what scroll-mt">
-  <hr class="v1-divider" />
-  <h2 class="v1-h2">What is Manifest?</h2>
-  <p class="v1-lede">Manifest is a festival ostensibly about prediction markets, but secretly about connecting with old friends and people you admire from your favorite niche corners of the internet.</p>
-  <p class="v1-body">&ldquo;Equal parts Math Olympiad and Burning Man&rdquo; — a gathering of nerds who want to find the thinkers and practitioners they vehemently agree (and disagree) with, share a meal around a cozy campfire, and come away with radically new ways of thinking.</p>
+  <div class="v1-what__grid">
+    <div class="v1-what__text">
+      <hr class="v1-divider" />
+      <h2 class="v1-h2">What is Manifest?</h2>
+      <p class="v1-lede">Manifest is a festival ostensibly about prediction markets, but secretly about connecting with old friends and people you admire from your favorite niche corners of the internet.</p>
+      <p class="v1-body">&ldquo;Equal parts Math Olympiad and Burning Man&rdquo; — a gathering of nerds who want to find the thinkers and practitioners they vehemently agree (and disagree) with, share a meal around a cozy campfire, and come away with radically new ways of thinking.</p>
+      <h3 class="v1-themes__title">What sorts of things happen at Manifest?</h3>
+      <p class="v1-themes__sub">Talks, panels, debates, workshops, games, prediction market tournaments, a night market, career fair, and much more.<br/><br/>Much of the schedule comes from attendee-led sessions. Past years have included&thinsp;—</p>
+    </div>
+    <div class="v1-what__images">
+      <img class="v1-what__img" src="/images/2026/what-is-manifest-1.jpg" alt="Attendees gathered under sunshade canopies at Manifest" />
+      <img class="v1-what__img" src="/images/2026/what-is-manifest-2.jpg" alt="Attendees in conversation at Manifest" />
+    </div>
+  </div>
 </section>
 
 <!-- THEMES GRID -->
 <section class="v1-themes">
-  <header class="v1-themes__head">
-    <h3 class="v1-themes__title">What sorts of things happen at Manifest?</h3>
-    <p class="v1-themes__sub">Talks, panels, debates, workshops, games, prediction market tournaments, a night market, career fair, and much more.<br/><br/>Much of the schedule comes from attendee-led sessions. Past years have included&thinsp;—</p>
-  </header>
-
   <div class="v1-grid">
     <figure class="v1-cell v1-cell--photo">
       <div class="v1-cell__img" style="background-image:url('/images/themes/sessions-1.jpg')"></div>
