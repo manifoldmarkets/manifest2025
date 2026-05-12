@@ -87,9 +87,7 @@ export default function Hero() {
         <div className="mt-10 flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
           <div className="relative flex flex-col items-center gap-2 transition-all duration-300 hover:-translate-y-1">
             <Link
-              href="https://www.havenbookings.space/festival-season"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/2026#tickets"
               className="transform rounded-md bg-indigo-600 px-8 py-3 font-medium text-white shadow-lg shadow-indigo-200 transition-all duration-300 hover:bg-indigo-700 hover:shadow-xl"
             >
               Buy Tickets
