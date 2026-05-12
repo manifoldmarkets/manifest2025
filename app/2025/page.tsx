@@ -337,6 +337,20 @@ export default async function Page() {
           !
         </p>
       </Section>
+
+      <footer className="border-t py-8 text-center text-sm">
+        <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
+          <a className="hover:underline" href="/2026">
+            Manifest 2026
+          </a>
+          <a className="hover:underline" href="/2024">
+            Manifest 2024
+          </a>
+          <a className="hover:underline" href="/2023">
+            Manifest 2023
+          </a>
+        </div>
+      </footer>
     </main>
   )
 }

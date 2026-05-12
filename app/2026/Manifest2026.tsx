@@ -919,6 +919,8 @@ const PAGE_HTML = `
       <a href="#faq">FAQ</a>
       <a href="https://discord.com/invite/MjDqMcQFdR" target="_blank" rel="noopener">Discord</a>
       <a href="/2025">Manifest 2025</a>
+      <a href="/2024">Manifest 2024</a>
+      <a href="/2023">Manifest 2023</a>
     </div>
   </div>
   <div class="v1-foot__rule"></div>
