@@ -51,6 +51,10 @@ const nextConfig = {
         source: '/2023/suggest-sessions',
         destination: '/2023/suggest-sessions.html',
       },
+      {
+        source: '/pastsessions',
+        destination: '/pastsessions/index.html',
+      },
     ]
   },
 }
