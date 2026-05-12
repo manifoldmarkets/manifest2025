@@ -675,7 +675,7 @@ const PAGE_HTML = `
     <div class="v1-what__text">
       <hr class="v1-divider" />
       <h2 class="v1-h2">What is Manifest?</h2>
-      <p class="v1-lede">Manifest is a festival ostensibly about prediction markets, but secretly about connecting with old friends and people you admire from your favorite niche corners of the internet.</p>
+      <p class="v1-lede">Manifest started in <a href="/2023">2023</a> as a festival about prediction markets and forecasting; it has since become an annual excuse to treat curiosity as a serious hobby — long conversations, unfinished arguments, bets, and the company of writers, researchers, and builders you admire from your favorite niche corners of the internet.</p>
       <p class="v1-body">&ldquo;Equal parts Math Olympiad and Burning Man&rdquo; — a gathering of nerds who want to find the thinkers and practitioners they vehemently agree (and disagree) with, share a meal around a cozy campfire, and come away with radically new ways of thinking.</p>
       <h3 class="v1-themes__title">What sorts of things happen at Manifest?</h3>
       <p class="v1-themes__sub">Talks, panels, debates, workshops, games, prediction market tournaments, a night market, career fair, and much more.<br/><br/>Much of the schedule comes from attendee-led sessions. Past years have included&thinsp;—</p>
