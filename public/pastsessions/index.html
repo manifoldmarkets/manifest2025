@@ -585,13 +585,6 @@ const CATEGORY_OVERRIDES = {
 };
 
 const SPEAKER_LINKS = {};
-const ORGANIZER_LINKS = {
-  'Austin Chen': 'https://www.linkedin.com/in/austinch/',
-  'Rachel Weinberg': 'https://www.linkedin.com/in/rachel-weinberg-789b23228/',
-  'Saul Munn': 'https://saulmunn.com',
-  'Rachel Farley': 'https://www.linkedin.com/in/rachelmfarley/',
-  'David Chee': 'https://www.linkedin.com/in/david-chee-355a551a0',
-};
 const tooltipEl = document.getElementById('session-tooltip');
 
 function categorize(title, hosts) {
@@ -856,14 +849,8 @@ async function loadYear(year) {
   const orgEl = document.getElementById('year-organizers');
   orgEl.textContent = '';
   meta.organizers.split(/\s*[,&]\s*/).forEach((name, i, arr) => {
-    const url = ORGANIZER_LINKS[name];
-    const el = document.createElement(url ? 'a' : 'span');
+    const el = document.createElement('span');
     el.textContent = name;
-    if (url) {
-      el.href = url;
-      el.target = '_blank';
-      el.rel = 'noopener noreferrer';
-    }
     orgEl.appendChild(el);
     if (i < arr.length - 1) orgEl.appendChild(document.createElement('br'));
   });
