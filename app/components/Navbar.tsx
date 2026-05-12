@@ -28,9 +28,6 @@ export default function Navbar() {
     { href: '/2025#nightmarket', label: 'Night Market' },
     { href: '/2025#contact', label: 'Contact' },
     { href: '/2025/schedule', label: 'Schedule' },
-    { href: '/2026', label: 'Manifest 2026' },
-    { href: '/2024', label: 'Manifest 2024' },
-    { href: '/2023', label: 'Manifest 2023' },
     {
       href: '/2026#tickets',
       label: 'Buy Tickets',
