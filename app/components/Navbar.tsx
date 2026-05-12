@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { HiExternalLink, HiMenu, HiX } from 'react-icons/hi'
+import { HiMenu, HiX } from 'react-icons/hi'
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -60,12 +60,9 @@ export default function Navbar() {
               <Link
                 key={link.label}
                 href={link.href}
-                className={`hover:underline ${link.external ? 'inline-flex items-center gap-0.5' : ''}`}
-                target={link.external ? '_blank' : undefined}
-                rel={link.external ? 'noopener noreferrer' : undefined}
+                className="hover:underline"
               >
                 {link.label}
-                {link.external && <HiExternalLink />}
               </Link>
             ))}
           </div>
@@ -98,13 +95,10 @@ export default function Navbar() {
               <Link
                 key={link.label}
                 href={link.href}
-                className={`text-sm hover:underline ${link.external ? 'inline-flex items-center gap-0.5' : ''}`}
-                target={link.external ? '_blank' : undefined}
-                rel={link.external ? 'noopener noreferrer' : undefined}
+                className="text-sm hover:underline"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {link.label}
-                {link.external && <HiExternalLink />}
               </Link>
             ))}
 
