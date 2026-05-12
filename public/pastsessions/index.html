@@ -29,6 +29,26 @@
   }
   .wrap { max-width: 1280px; margin: 0 auto; padding: 44px 32px 96px; }
 
+  a.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-cinzel);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-decoration: none;
+    margin-bottom: 20px;
+    transition: color 120ms;
+  }
+  a.back-link:hover { color: var(--ink); }
+  a.back-link .arrow {
+    transition: transform 120ms;
+  }
+  a.back-link:hover .arrow { transform: translateX(-3px); }
+
   header.site {
     border-bottom: 2px solid var(--ink);
     padding-bottom: 18px;
@@ -311,6 +331,7 @@
 </head>
 <body class="year-2025">
 <div class="wrap">
+  <a class="back-link" href="/2026"><span class="arrow" aria-hidden="true">&larr;</span> Back to Manifest 2026</a>
   <header class="site">
     <div class="brand">Manifest</div>
     <h1>Schedule of Previous Years</h1>
@@ -326,6 +347,12 @@
     <label for="cat-filter">Filter by type</label>
     <select id="cat-filter">
       <option value="all">All types</option>
+    </select>
+    <label for="sort-by">Sort by</label>
+    <select id="sort-by">
+      <option value="default">Session type</option>
+      <option value="rsvp">Attendee count</option>
+      <option value="time">Time</option>
     </select>
   </div>
 
@@ -623,11 +650,26 @@ function visibleSessions(day, year) {
   });
 }
 
+function parseStartMinutes(start) {
+  if (!start) return null;
+  const m = String(start).trim().match(/^(\d{1,2}):(\d{2})\s*(AM|PM)?$/i);
+  if (!m) return null;
+  let hour = parseInt(m[1], 10);
+  const min = parseInt(m[2], 10);
+  const ampm = (m[3] || '').toUpperCase();
+  if (ampm === 'PM' && hour !== 12) hour += 12;
+  if (ampm === 'AM' && hour === 12) hour = 0;
+  return hour * 60 + min;
+}
+
 function createSessionCard(session) {
   const card = document.createElement('div');
   card.className = 'session';
   const cat = categorize(session.title, session.speaker);
   card.dataset.cat = cat;
+  card.dataset.rsvp = String(Number(session.rsvp) || 0);
+  const startMin = parseStartMinutes(session.start);
+  if (startMin != null) card.dataset.startMin = String(startMin);
   card.innerHTML = `
     <div class="session__top">
       <div class="cat-label"></div>
@@ -838,7 +880,6 @@ async function loadYear(year) {
   }
 
   // Render schedule
-  const catOrder = Object.fromEntries(CATEGORIES.map((c, i) => [c.key, i]));
   const main = document.getElementById('schedule');
   main.innerHTML = '';
   for (const d of data) {
@@ -851,17 +892,38 @@ async function loadYear(year) {
     grid.className = 'session-grid';
 
     const items = visible.map(s => createSessionCard(s));
-    items.sort((a, b) => {
-      const ai = catOrder[a.cat] ?? 99;
-      const bi = catOrder[b.cat] ?? 99;
-      return ai - bi;
-    });
     for (const item of items) {
       grid.appendChild(item.card);
     }
     sec.appendChild(grid);
     main.appendChild(sec);
   }
+  applySort();
+}
+
+const CAT_ORDER = Object.fromEntries(CATEGORIES.map((c, i) => [c.key, i]));
+
+function applySort() {
+  const mode = sortSelect ? sortSelect.value : 'default';
+  document.querySelectorAll('.day-section').forEach(section => {
+    const grid = section.querySelector('.session-grid');
+    if (!grid) return;
+    const cards = Array.from(grid.children);
+    cards.sort((a, b) => {
+      if (mode === 'rsvp') {
+        return (Number(b.dataset.rsvp) || 0) - (Number(a.dataset.rsvp) || 0);
+      }
+      if (mode === 'time') {
+        const av = a.dataset.startMin != null ? Number(a.dataset.startMin) : Infinity;
+        const bv = b.dataset.startMin != null ? Number(b.dataset.startMin) : Infinity;
+        return av - bv;
+      }
+      const ai = CAT_ORDER[a.dataset.cat] ?? 99;
+      const bi = CAT_ORDER[b.dataset.cat] ?? 99;
+      return ai - bi;
+    });
+    for (const card of cards) grid.appendChild(card);
+  });
 }
 
 document.querySelectorAll('nav.years button').forEach(btn => {
@@ -873,6 +935,7 @@ document.querySelectorAll('nav.years button').forEach(btn => {
 
 // Filter dropdown
 const filterSelect = document.getElementById('cat-filter');
+const sortSelect = document.getElementById('sort-by');
 
 function refreshFilterOptions() {
   const present = new Set();
@@ -904,6 +967,7 @@ function applyFilter() {
 }
 
 filterSelect.addEventListener('change', applyFilter);
+sortSelect.addEventListener('change', () => { applySort(); applyFilter(); });
 
 document.getElementById('schedule').addEventListener('mouseover', event => {
   const card = event.target.closest('.session.has-tooltip');
