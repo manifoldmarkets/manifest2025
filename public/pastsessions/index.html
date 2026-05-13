@@ -60,7 +60,7 @@
     flex-wrap: wrap;
   }
   header.site h1 {
-    font-family: var(--font-cinzel-deco);
+    font-family: var(--font-libre-baskerville);
     font-size: 34px;
     font-weight: 700;
     margin: 0;
@@ -224,6 +224,7 @@
   }
   #session-tooltip .tooltip-description {
     white-space: pre-wrap;
+    line-height: 1.65;
   }
   .session .cat-label {
     font-family: var(--font-cinzel);
@@ -350,8 +351,8 @@
     </select>
     <label for="sort-by">Sort by</label>
     <select id="sort-by">
-      <option value="default">Session type</option>
       <option value="rsvp">Attendee count</option>
+      <option value="default">Session type</option>
       <option value="time">Time</option>
     </select>
   </div>
