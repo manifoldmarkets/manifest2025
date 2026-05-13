@@ -353,7 +353,7 @@ nav.top.is-scrolled .top__register { color: #fff !important; }
   margin: 0; font-family: var(--serif); font-weight: 400; font-size: 13px;
   line-height: 1.5; color: var(--ink);
 }
-.v1-nm__cta { display: flex; justify-content: center; margin-top: 56px; }
+.v1-nm__cta { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-top: 56px; }
 
 /* ----- TESTIMONIALS (V1) ----- */
 .v1-testi { padding: 28px 56px 80px; }
@@ -800,7 +800,8 @@ const PAGE_HTML = `
     </div>
   </div>
   <div class="v1-nm__cta">
-    <a href="https://airtable.com/appMZp1aBO5b7NTdM/pagH4yhHlxyolS2Qv/form" class="v1-btn v1-btn--ink pill" target="_blank" rel="noopener">Register your interest</a>
+    <a href="https://airtable.com/appMZp1aBO5b7NTdM/pag9gppXcX1cxRixI/edit" class="v1-btn v1-btn--ink pill" target="_blank" rel="noopener">Register your interest</a>
+    <a href="https://airtable.com/appMZp1aBO5b7NTdM/pagH4yhHlxyolS2Qv/form" class="v1-btn v1-btn--ink pill" target="_blank" rel="noopener">Job Market sign-up</a>
   </div>
 </section>
 
