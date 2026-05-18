@@ -214,7 +214,12 @@ nav.top.is-scrolled .top__register { color: #fff !important; }
 .v1-what { margin: 0; padding: 0; }
 .v1-what__grid { display: grid; grid-template-columns: 1fr 1fr; align-items: start; }
 .v1-what__images { display: flex; flex-direction: column; gap: 0; }
-.v1-what__img { width: 100%; height: auto; display: block; }
+.v1-what__img-wrap { overflow: hidden; display: block; }
+.v1-what__img {
+  width: 100%; height: auto; display: block;
+  transition: transform 250ms ease, filter 250ms ease;
+}
+.v1-what__img-wrap:hover .v1-what__img { transform: scale(1.04); filter: brightness(1.05); }
 .v1-what__text { padding: 0 56px; }
 .v1-what__text .v1-themes__title { white-space: normal; margin-top: 48px; }
 
@@ -681,8 +686,8 @@ const PAGE_HTML = `
       <p class="v1-themes__sub">Talks, panels, debates, workshops, games, prediction market tournaments, a night market, career fair, and much more.<br/><br/>Much of the schedule comes from attendee-led sessions. Past years have included&thinsp;—</p>
     </div>
     <div class="v1-what__images">
-      <img class="v1-what__img" src="/images/2026/what-is-manifest-1.jpg" alt="Attendees gathered under sunshade canopies at Manifest" />
-      <img class="v1-what__img" src="/images/2026/what-is-manifest-2.jpg" alt="Attendees in conversation at Manifest" />
+      <div class="v1-what__img-wrap"><img class="v1-what__img" src="/images/2026/what-is-manifest-1.jpg" alt="Attendees gathered under sunshade canopies at Manifest" loading="lazy" decoding="async" /></div>
+      <div class="v1-what__img-wrap"><img class="v1-what__img" src="/images/2026/what-is-manifest-2.jpg" alt="Attendees in conversation at Manifest" loading="lazy" decoding="async" /></div>
     </div>
   </div>
 </section>
@@ -872,11 +877,11 @@ const PAGE_HTML = `
   <dl class="v1-faq__list">
     <div class="v1-faq__item"><dt><span class="v1-faq__num">01</span>Where is Manifest happening?</dt><dd>Lighthaven, 2740 Telegraph Avenue, Berkeley, CA 94705.</dd></div>
     <div class="v1-faq__item"><dt><span class="v1-faq__num">02</span>Can I purchase accommodation?</dt><dd>Yes. Our venue, Lighthaven, has a limited number of rooms available for ticketholders — book directly through <a href="https://www.havenbookings.space/events/festival-season-2026" target="_blank" rel="noopener">Lighthaven</a>. Space fills up quickly, so most attendees will need to find other accommodations nearby.</dd></div>
-    <div class="v1-faq__item"><dt><span class="v1-faq__num">03</span>When does Manifest start and end?</dt><dd>We&rsquo;re still finalizing the schedule. In past years, the festival has started Friday afternoon around 2pm, with the opening ceremony around 6pm. The closing ceremony is Sunday evening, though events and informal gatherings continue into the night.</dd></div>
-    <div class="v1-faq__item"><dt><span class="v1-faq__num">04</span>How many people will be at Manifest?</dt><dd>We are expecting 500–700 attendees across the weekend.</dd></div>
-    <div class="v1-faq__item"><dt><span class="v1-faq__num">05</span>What does my ticket include?</dt><dd>Access to the festival from Friday through Sunday, including breakfast, lunch, and dinner every day.</dd></div>
-    <div class="v1-faq__item"><dt><span class="v1-faq__num">06</span>Can I bring my kids?</dt><dd>Yes, we love kids! Children 10 and under don&rsquo;t need tickets. We&rsquo;re unlikely to offer dedicated childcare this year.</dd></div>
-    <div class="v1-faq__item"><dt><span class="v1-faq__num">07</span>How does volunteering work?</dt><dd>Volunteers receive a discounted ticket in exchange for working shifts during the event. Once all shifts are completed, volunteers are eligible for a full refund.</dd></div>
+    <div class="v1-faq__item"><dt><span class="v1-faq__num">03</span>When does Manifest start and end?</dt><dd>We&rsquo;re still finalizing the schedule. In 2025, the festival opened doors on Friday at 2pm, held opening ceremony from 5:15-6pm. In 2025, the closing ceremony was Sunday 6-6:45pm, though events and informal gatherings continue into the night.</dd></div>
+    <div class="v1-faq__item"><dt><span class="v1-faq__num">04</span>How many people will be at Manifest?</dt><dd>We are expecting about 600-700 attendees over the course of the weekend.</dd></div>
+    <div class="v1-faq__item"><dt><span class="v1-faq__num">05</span>What does my ticket include?</dt><dd>Access to the festival from Fri afternoon through Sunday night, including all meals.</dd></div>
+    <div class="v1-faq__item"><dt><span class="v1-faq__num">06</span>Can I bring my kids?</dt><dd>We&rsquo;d love for you to bring your kids! Children 10 and under don&rsquo;t need tickets. We will offered onsite childcare at no cost to parents; Manifest will cover the costs. If you&rsquo;re bringing your kids (even if you don&rsquo;t want to use our childcare), please fill out this form: <a href="https://airtable.com/appMZp1aBO5b7NTdM/pag451KZs8vARd9sr/form" target="_blank" rel="noopener">https://airtable.com/appMZp1aBO5b7NTdM/pag451KZs8vARd9sr/form</a></dd></div>
+    <div class="v1-faq__item"><dt><span class="v1-faq__num">07</span>How does volunteering work?</dt><dd>Volunteers get to buy for a reduced-price ticket in exchange for working shifts (at least 3x 4+ hr shifts) during the event. Once all shifts are completed, volunteers are eligible for a full refund. Email <a href="mailto:volunteer@manifest.is">volunteer@manifest.is</a> with questions.</dd></div>
     <div class="v1-faq__item"><dt><span class="v1-faq__num">08</span>What if I need financial assistance to attend?</dt><dd>We don&rsquo;t want finances to keep anyone from attending. If the volunteer shift requirement or deposit is a barrier, fill out our <a href="https://airtable.com/appMZp1aBO5b7NTdM/pagTrQtYd1k1Oakhi/form" target="_blank" rel="noopener">Low-Income Ticket Form</a>, or reach out to team@manifest.is.</dd></div>
     <div class="v1-faq__item"><dt><span class="v1-faq__num">09</span>What is your refund policy?</dt><dd>Full refunds are available up to 7 days before the event. Contact team@manifest.is to request one.</dd></div>
   </dl>
@@ -981,7 +986,7 @@ export default function Manifest2026() {
     const topNav = document.querySelector('nav.top') as HTMLElement | null
     const updateNavColor = () => {
       if (!topNav) return
-      if (window.scrollY > window.innerHeight - 80) topNav.classList.add('is-scrolled')
+      if (window.scrollY > 40) topNav.classList.add('is-scrolled')
       else topNav.classList.remove('is-scrolled')
     }
     updateNavColor()
