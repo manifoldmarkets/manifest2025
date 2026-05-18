@@ -1,36 +1,39 @@
-import { Bungee_Shade, Cinzel, Cinzel_Decorative, DM_Sans, Libre_Baskerville, Outfit } from 'next/font/google'
+import { Bungee_Shade, Cinzel, Cinzel_Decorative, Libre_Baskerville, Outfit } from 'next/font/google'
 import type { Metadata } from 'next'
 import './globals.css'
 
-// const dmSans = DM_Sans({A
-//   variable: '--font-body',
-//   subsets: ['latin'],
-//   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
-// })
+// Outfit & Bungee Shade are only used by the legacy /2025 page, so don't preload.
 const outfit = Outfit({
   variable: '--font-body',
   subsets: ['latin'],
-  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  weight: ['300', '400', '500', '600', '700', '800'],
+  display: 'swap',
+  preload: false,
 })
 const bungeeShade = Bungee_Shade({
   variable: '--font-heading',
   subsets: ['latin'],
   weight: ['400'],
+  display: 'swap',
+  preload: false,
 })
 const cinzel = Cinzel({
   variable: '--font-cinzel',
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800', '900'],
+  weight: ['500', '600', '700'],
+  display: 'swap',
 })
 const cinzelDecorative = Cinzel_Decorative({
   variable: '--font-cinzel-decorative',
   subsets: ['latin'],
-  weight: ['400', '700', '900'],
+  weight: ['400', '700'],
+  display: 'swap',
 })
 const libreBaskerville = Libre_Baskerville({
   variable: '--font-libre-baskerville',
   subsets: ['latin'],
   weight: ['400', '700'],
+  display: 'swap',
 })
 
 export const metadata: Metadata = {
@@ -66,6 +69,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="preload" as="image" href="/images/2026/campfire.jpg" fetchPriority="high" />
+      </head>
       <body
         className={`${outfit.variable} ${bungeeShade.variable} ${cinzel.variable} ${cinzelDecorative.variable} ${libreBaskerville.variable} antialiased`}
       >
