@@ -880,8 +880,8 @@ const PAGE_HTML = `
     <div class="v1-faq__item"><dt><span class="v1-faq__num">03</span>When does Manifest start and end?</dt><dd>We&rsquo;re still finalizing the schedule. In 2025, the festival opened doors on Friday at 2pm, held opening ceremony from 5:15-6pm. In 2025, the closing ceremony was Sunday 6-6:45pm, though events and informal gatherings continue into the night.</dd></div>
     <div class="v1-faq__item"><dt><span class="v1-faq__num">04</span>How many people will be at Manifest?</dt><dd>We are expecting about 600-700 attendees over the course of the weekend.</dd></div>
     <div class="v1-faq__item"><dt><span class="v1-faq__num">05</span>What does my ticket include?</dt><dd>Access to the festival from Fri afternoon through Sunday night, including all meals.</dd></div>
-    <div class="v1-faq__item"><dt><span class="v1-faq__num">06</span>Can I bring my kids?</dt><dd>We&rsquo;d love for you to bring your kids! Children 10 and under don&rsquo;t need tickets. We will offered onsite childcare at no cost to parents; Manifest will cover the costs. If you&rsquo;re bringing your kids (even if you don&rsquo;t want to use our childcare), please fill out this form: <a href="https://airtable.com/appMZp1aBO5b7NTdM/pag451KZs8vARd9sr/form" target="_blank" rel="noopener">https://airtable.com/appMZp1aBO5b7NTdM/pag451KZs8vARd9sr/form</a></dd></div>
-    <div class="v1-faq__item"><dt><span class="v1-faq__num">07</span>How does volunteering work?</dt><dd>Volunteers get to buy for a reduced-price ticket in exchange for working shifts (at least 3x 4+ hr shifts) during the event. Once all shifts are completed, volunteers are eligible for a full refund. Email <a href="mailto:volunteer@manifest.is">volunteer@manifest.is</a> with questions.</dd></div>
+    <div class="v1-faq__item"><dt><span class="v1-faq__num">06</span>Can I bring my kids?</dt><dd>We&rsquo;d love for you to bring your kids! Please fill out this <a href="https://airtable.com/appMZp1aBO5b7NTdM/pag451KZs8vARd9sr/form" target="_blank" rel="noopener">Child Attendance Form</a>. Children 10 and under don&rsquo;t need tickets. And we offer free onsite childcare! To help us plan the event, please fill out the form whether or not you need childcare.</dd></div>
+    <div class="v1-faq__item"><dt><span class="v1-faq__num">07</span>How does volunteering work?</dt><dd>Volunteers get to buy for a reduced-price ticket in exchange for working shifts (at least 3x 4+ hr shifts) during the event. Once all shifts are completed, volunteers are eligible for a full refund. Email <a href="mailto:volunteers@manifest.is">volunteers@manifest.is</a> with questions.</dd></div>
     <div class="v1-faq__item"><dt><span class="v1-faq__num">08</span>What if I need financial assistance to attend?</dt><dd>We don&rsquo;t want finances to keep anyone from attending. If the volunteer shift requirement or deposit is a barrier, fill out our <a href="https://airtable.com/appMZp1aBO5b7NTdM/pagTrQtYd1k1Oakhi/form" target="_blank" rel="noopener">Low-Income Ticket Form</a>, or reach out to team@manifest.is.</dd></div>
     <div class="v1-faq__item"><dt><span class="v1-faq__num">09</span>What is your refund policy?</dt><dd>Full refunds are available up to 7 days before the event. Contact team@manifest.is to request one.</dd></div>
   </dl>
@@ -1013,7 +1013,10 @@ export default function Manifest2026() {
     const handlers = items.map((item) => {
       const dd = item.querySelector('dd') as HTMLElement | null
       if (dd) dd.style.display = 'none'
-      const handler = () => {
+      const handler = (e: MouseEvent) => {
+        const target = e.target as Node
+        if (dd && dd.contains(target)) return
+        if (window.getSelection()?.toString()) return
         const isOpen = item.classList.toggle('open')
         if (dd) dd.style.display = isOpen ? 'block' : 'none'
       }
