@@ -870,7 +870,7 @@ const PAGE_HTML = `
 <!-- SPONSORS (original layout) -->
 <section id="sponsors" class="sponsors-orig scroll-mt">
   <hr class="v1-divider" />
-  <h2 class="v1-h2 v1-h2--center" style="font-family: var(--deco); font-style: normal; font-weight: 400; font-size: 48px; letter-spacing: 0.04em;">Sponsors of 2025</h2>
+  <h2 class="v1-h2 v1-h2--center" style="font-family: var(--deco); font-style: normal; font-weight: 400; font-size: 48px; letter-spacing: 0.04em;">Past Sponsors</h2>
   <div class="sponsors-stack">
     <a href="https://polymarket.com" target="_blank" rel="noopener"><div class="mono-img mono-img--polymarket" role="img" aria-label="Polymarket"></div></a>
     <div class="sponsors-row">
@@ -983,7 +983,6 @@ const PAST_GUESTS: [string, string][] = [
   ['Noam Brown', 'OpenAI'],
   ['Oliver Habryka', 'Lightcone'],
   ['Panda Smith', 'Researcher'],
-  ['Ric Best', 'Substack'],
   ['Rob Miles', 'AI Safety'],
   ['Samo Burja', 'Bismarck Analysis'],
   ['Samuel Hammond', 'FAI'],
