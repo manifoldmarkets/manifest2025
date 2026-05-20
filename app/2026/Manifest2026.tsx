@@ -289,6 +289,24 @@ nav.top.is-scrolled .top__register { color: #fff !important; }
   flex: 1; font-family: var(--serif); font-style: normal; font-weight: 400;
   font-size: 14px; color: var(--pdeep); letter-spacing: 0;
 }
+.v1-themes__more {
+  display: flex; justify-content: center; padding: 36px 56px;
+  border-bottom: 1px solid var(--rule);
+}
+.v1-themes__more-link {
+  font-family: var(--cinzel); font-weight: 700; font-size: 13px;
+  letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none;
+  color: var(--pdeep); padding-bottom: 4px;
+  border-bottom: 1px dotted rgba(74,58,107,0.45);
+  transition: color 160ms, border-color 160ms, transform 160ms;
+}
+.v1-themes__more-link:hover {
+  color: var(--m26-btn); border-color: var(--m26-btn);
+}
+.v1-themes__more-link .v1-themes__more-arrow {
+  display: inline-block; margin-left: 10px; transition: transform 200ms;
+}
+.v1-themes__more-link:hover .v1-themes__more-arrow { transform: translateX(4px); }
 
 /* ----- NIGHT MARKET (V1) ----- */
 .v1-nm { padding: 0 56px 88px; }
@@ -605,6 +623,8 @@ nav.top.is-scrolled .top__register { color: #fff !important; }
   .v1-what__text { padding: 0 24px; }
   .v1-cell { padding: 28px 24px; }
   .v1-cell--list header { margin: 0 -24px 18px; padding: 22px 24px 14px; }
+  .v1-themes__more { padding: 28px 24px; }
+  .v1-themes__more-link { font-size: 11px; letter-spacing: 0.16em; text-align: center; }
   .v1-foot { padding: 40px 24px 48px; }
   .v1-foot__row { flex-direction: column; gap: 24px; }
   .v1-foot__links { justify-content: flex-start; }
@@ -683,7 +703,7 @@ const PAGE_HTML = `
       <p class="v1-lede">Manifest started in <a href="/2023">2023</a> as a festival about prediction markets and forecasting; it has since become an annual excuse to treat curiosity as a serious hobby — long conversations, unfinished arguments, bets, and the company of writers, researchers, and builders you admire from your favorite niche corners of the internet.</p>
       <p class="v1-body">&ldquo;Equal parts Math Olympiad and Burning Man&rdquo; — a gathering of nerds who want to find the thinkers and practitioners they vehemently agree (and disagree) with, share a meal around a cozy campfire, and come away with radically new ways of thinking.</p>
       <h3 class="v1-themes__title">What sorts of things happen at Manifest?</h3>
-      <p class="v1-themes__sub">Talks, panels, debates, workshops, games, prediction market tournaments, a night market, career fair, and much more.<br/><br/>Much of the schedule comes from attendee-led sessions. Past years have included&thinsp;—</p>
+      <p class="v1-themes__sub">Talks, panels, debates, workshops, games, prediction market tournaments, a night market, career fair, and much more. Much of the schedule comes from attendee-led sessions.</p>
     </div>
     <div class="v1-what__images">
       <div class="v1-what__img-wrap"><img class="v1-what__img" src="/images/2026/what-is-manifest-1.jpg" alt="Attendees gathered under sunshade canopies at Manifest" loading="lazy" decoding="async" /></div>
@@ -760,6 +780,9 @@ const PAGE_HTML = `
     <figure class="v1-cell v1-cell--photo">
       <div class="v1-cell__img" style="background-image:url('/images/themes/much-more-guitar.png')"></div>
     </figure>
+  </div>
+  <div class="v1-themes__more">
+    <a class="v1-btn v1-btn--ink pill v1-themes__more-btn" href="/pastsessions">See sessions from all previous years<span class="v1-themes__more-arrow">→</span></a>
   </div>
 </section>
 
