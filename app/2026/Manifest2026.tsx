@@ -1,9 +1,246 @@
 'use client'
 
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
+import type { CSSProperties, ReactNode } from 'react'
 
 /* -------------------------------------------------------------------------- */
-/* PAGE_CSS — original m26-* tokens + new v1-* editorial styles                */
+/* Data                                                                       */
+/* -------------------------------------------------------------------------- */
+
+const TICKETHOLDER_MARKET_URL =
+  'https://manifold.markets/strutheo/which-users-will-attend-a-manifest-IARLlNI5L8'
+
+type Person = { name: string; role: string; image: string }
+type Ticketholder = Person & { answerId: string }
+
+const confirmedSpeakers: Person[] = [
+  { name: 'Patrick McKenzie', role: 'Writer', image: '/images/speakers/patrick.jpg' },
+  { name: 'Chris Best', role: 'CEO @Substack', image: '/images/speakers/chris.jpg' },
+  { name: 'Tracing Woodgrains', role: '@TracingWoodgrains, Writer', image: '/images/2026/guests/tracing-woodgrains.jpg' },
+  { name: 'Jasmine Sun', role: '@jasmine’s substack, writer', image: '/images/2026/guests/jasmine-sun.jpg' },
+  { name: 'Sam Hammond', role: 'Foundation for American Innovation', image: '/images/2026/guests/sam-hammond.jpg' },
+  { name: 'Bentham’s Bulldog', role: '@Bentham’sBulldog, blogger', image: '/images/2026/guests/benthams-bulldog.jpg' },
+  { name: 'Chad Jones', role: 'Economist, Stanford University', image: '/images/2026/guests/chad-jones.jpg' },
+  { name: 'Richard Yetter Chappell', role: '@GoodThoughts, UMiami Philosophy', image: '/images/2026/guests/richard-yetter-chappell.jpg' },
+  { name: 'Aydin Mohseni', role: 'Philosopher of science and Bayesian epistemologist, CMU', image: '/images/2026/guests/aydin-mohseni.jpg' },
+  { name: 'Scott Sumner', role: 'Economist, Bentley University', image: '/images/2026/guests/scott-sumner.jpg' },
+]
+
+const ticketholders: Ticketholder[] = [
+  { answerId: 'nnP6y9EQEI', name: 'Joe Carlsmith', role: 'Anthropic', image: '/images/speakers/joe.jpg' },
+  { answerId: 'Qn2c2PN5lg', name: 'Eliezer Yudkowsky', role: 'MIRI', image: '/images/speakers/eliezer.jpg' },
+  { answerId: '0PtsnIZ6Lz', name: 'Scott Alexander', role: 'Astral Codex Ten', image: '/images/speakers/scott.jpg' },
+  { answerId: 'E6Qz22ndlZ', name: 'Robin Hanson', role: 'George Mason University', image: '/images/speakers/robin.jpg' },
+  { answerId: '0ysnsz0cQ9', name: 'Dwarkesh Patel', role: 'Dwarkesh Podcast', image: '/images/speakers/dwarkesh.jpg' },
+  { answerId: '8A0820SzyI', name: 'Aella', role: 'Researcher', image: '/images/speakers/aella.jpg' },
+  { answerId: 'C2zggLLylq', name: 'Daniel Kokotajlo', role: 'AI Futures Project', image: '/images/2026/guests/daniel-kokotajlo.jpg' },
+  { answerId: 'ORO8Pp20IP', name: 'Nate Soares', role: 'MIRI', image: '/images/2026/guests/nate-soares.jpg' },
+  { answerId: 'tdz5lShpN8', name: 'Robert Miles', role: '@RobertMilesAI', image: '/images/2026/guests/rob-miles.jpg' },
+  { answerId: '8298A2UEOu', name: 'Kelsey Piper', role: 'Vox Future Perfect', image: '/images/2026/guests/kelsey-piper.jpeg' },
+]
+
+const TICKETHOLDER_MARKET_API =
+  'https://api.manifold.markets/v0/slug/which-users-will-attend-a-manifest-IARLlNI5L8'
+
+const additionalTicketholders = [
+  'Buck Shlegeris', 'Jacob Falkovich', 'Nuño Sempere', 'Clara Collier',
+  'Janus', 'Owain Evans', 'David Oks', 'Jose Luis Ricon',
+  'Razib Khan', 'Duncan Sabien', 'Katja Grace', 'Richard Ngo',
+  'Dynomight', 'Lee Fang', 'Sarah Constantin', 'Eli Lifland',
+  'Michael Trazzi', 'Stephen Hsu', 'Frank Lantz', 'Nathan Young',
+]
+
+type ThemeListItem = { title: string; by?: string }
+type ThemeCell =
+  | { kind: 'photo'; src: string; bgPosition?: string }
+  | { kind: 'list'; title: string; items: ThemeListItem[]; stack?: boolean }
+
+const themeCells: ThemeCell[] = [
+  { kind: 'photo', src: '/images/themes/sessions-1.jpg' },
+  {
+    kind: 'list',
+    title: 'Talks',
+    items: [
+      { title: 'Press X to Doubt: Journalism Edition', by: 'Patrick McKenzie' },
+      { title: 'Reforming Academia via Reputation Futures', by: 'Robin Hanson' },
+      { title: 'What Is Aristotle’s Metaphysics About?', by: 'Arnold Brooks' },
+      { title: 'Humanist vs. Science/Tech Culture', by: 'Agnes Callard & Robin Hanson' },
+      { title: 'Forecasting AI Risks: Anthropic’s Responsible Scaling Policy', by: 'Ben Mann' },
+      { title: 'How Do We Solve the Alignment Problem?', by: 'Joe Carlsmith' },
+      { title: 'Data Science & Politics', by: 'David Shor' },
+      { title: 'Predicting Large-Scale Catastrophes', by: 'Nuño Sempere' },
+    ],
+  },
+  {
+    kind: 'list',
+    title: 'Workshops',
+    items: [
+      { title: 'Fine-Tuning, the Multiverse, Anthropic Bias, and the Reference-Class Problem' },
+      { title: 'Matt Buckley: How to Change Your Mind (with Replacement Therapies)' },
+      { title: 'History Lecture with Live Betting' },
+      { title: 'SuperMemo & Incremental Reading' },
+      { title: 'Intro to Quantitative Portfolio Construction' },
+      { title: 'Ricki Heicklen: Intro to Trading' },
+    ],
+  },
+  { kind: 'photo', src: '/images/themes/talks-adjacent.jpg' },
+  { kind: 'photo', src: '/images/gallery/2025-3.jpg', bgPosition: 'center 30%' },
+  {
+    kind: 'list',
+    title: 'Fireside / Panel / Q&A',
+    stack: true,
+    items: [
+      { title: 'Founder of Upstart, Paul Gu' },
+      { title: 'Nate Silver & Scott Alexander' },
+      { title: 'Manifold Founder, Stephen Grugett & Theo Jaffee' },
+      { title: 'AI 2027 Q&A, Eli Lifland' },
+      { title: 'Ajeya Cotra' },
+      { title: 'Kalshi Co-Founder, Luana Lopes Lara' },
+      { title: 'Substack CEO, Chris Best' },
+      { title: 'David Shor & Jesse Richardson' },
+    ],
+  },
+  {
+    kind: 'list',
+    title: '& Much more',
+    items: [
+      { title: 'Speedfriending' },
+      { title: 'Dance Class with Aella' },
+      { title: 'Experimental Meditation Experiments' },
+      { title: 'Memory Systems / Anki / SRS Meetup' },
+      { title: 'Similarities Between Selling to Nation States and on Facebook Marketplace' },
+      { title: 'The Case for Interactionist Dualism' },
+      { title: 'Futurist Theory of Traditionalism' },
+      { title: 'Fun Etymology' },
+    ],
+  },
+  { kind: 'photo', src: '/images/themes/much-more-guitar.png' },
+]
+
+const nightMarketImages = [
+  'ish-8691.jpg', '7q4a-9011.jpg', '7q4a-0831.jpg', '7q4a-0927.jpg',
+  'ish-3968.jpg', '7q4a-2266.jpg', 'ish-8040.jpg', '7q4a-2067.jpg',
+  'ish-5334.jpg', 'ish-7882.jpg', 'ish-8482.jpg', '7q4a-1682.jpg',
+  '7q4a-9506.jpg', '7q4a-2536.jpg', '7q4a-9765.jpg', '20230924-img-8312.jpg',
+  '7q4a-3907.jpg',
+]
+
+const nightMarketCategories: [string, string][] = [
+  ['Job Market', 'Trade your skills for other skills, or find your next gig'],
+  ['Experience Market', 'Mini games, fortunes, and digital interactions'],
+  ['Information Market', 'Like a poster session, but without the academic standards'],
+  ['Stuff Market', 'Arts, crafts, and locally crafted foods'],
+  ['Book Market', 'Got a book? Essay? Poem? Share your physical prints'],
+  ['Black Market', 'Naming rights to a baby’s middle name, ‘probiotics’, etc.'],
+]
+
+const testimonials = [
+  {
+    quote:
+      'I met many well-known figures I’ve been reading for years. Where else will you meet multiple people within 24 hours who casually mentioned the short story Funes the Memorious in conversation?',
+    author: 'Scott Sumner',
+    link: 'https://scottsumner.substack.com/p/paradise-on-telegraph-avenue',
+  },
+  {
+    quote:
+      'I love Manifest. My subsidy provided for swaying bauble lights, warm soporific nooks, flames and corridors, souls brought to Earth together, eyes lighting up at their electric worlds made real.',
+    author: 'Tomie',
+    link: 'https://x.com/tomieinlove/status/1931934629218734083',
+  },
+  {
+    quote:
+      'Gwern came to my talk and told me at the end “I disagree with everything you said and your entire theory of aesthetics is wrong.” lol',
+    author: 'Pablo',
+    link: 'https://x.com/PabloPeniche/status/1932095093827334543',
+  },
+  {
+    quote:
+      'It bills itself as “a festival for forecasting and prediction markets,” which fails to capture the spirit — it’s more like “Substack and Twitter live”, a festival-conference-party-Burning-Man for nerds with many interests.',
+    author: 'Jake Seliger',
+    link: 'https://jakeseliger.com/2024/06/13/manifest-the-manifold-markets-nerd-festival/',
+  },
+  {
+    quote:
+      'The Manifest conference has been a successful experiment: put enough introverts with common interests into a confined space and they’ll spontaneously turn into extroverts.',
+    author: 'Byrne Hobart',
+    link: 'https://x.com/ByrneHobart/status/1799963459658154203',
+  },
+  {
+    quote:
+      'For much of my life, I have poured my attention into tough-to-explain solitary pursuits, sitting in quiet corners on the fringes of gatherings wondering if they’re worth the effort. Not so last weekend.',
+    author: 'TracingWoodgrains',
+    link: 'https://x.com/tracewoodgrains/status/1800790146633138395',
+  },
+]
+
+const faqs: { q: string; a: ReactNode }[] = [
+  { q: 'Where is Manifest happening?', a: 'Lighthaven, 2740 Telegraph Avenue, Berkeley, CA 94705.' },
+  {
+    q: 'Can I purchase accommodation?',
+    a: (
+      <>
+        Yes. Our venue, Lighthaven, has a limited number of rooms available for ticketholders — book
+        directly through{' '}
+        <a href="https://www.havenbookings.space/events/festival-season-2026" target="_blank" rel="noopener">
+          Lighthaven
+        </a>
+        . Space fills up quickly, so most attendees will need to find other accommodations nearby.
+      </>
+    ),
+  },
+  {
+    q: 'When does Manifest start and end?',
+    a: 'We’re still finalizing the schedule. In 2025, the festival opened doors on Friday at 2pm, held opening ceremony from 5:15-6pm. In 2025, the closing ceremony was Sunday 6-6:45pm, though events and informal gatherings continue into the night.',
+  },
+  { q: 'How many people will be at Manifest?', a: 'We are expecting about 600-700 attendees over the course of the weekend.' },
+  { q: 'What does my ticket include?', a: 'Access to the festival from Fri afternoon through Sunday night, including all meals.' },
+  {
+    q: 'Can I bring my kids?',
+    a: (
+      <>
+        We’d love for you to bring your kids! Please fill out this{' '}
+        <a href="https://airtable.com/appMZp1aBO5b7NTdM/pag451KZs8vARd9sr/form" target="_blank" rel="noopener">
+          Child Attendance Form
+        </a>
+        . Children 10 and under don’t need tickets. And we offer free onsite childcare! To help us plan
+        the event, please fill out the form whether or not you need childcare.
+      </>
+    ),
+  },
+  {
+    q: 'How does volunteering work?',
+    a: (
+      <>
+        Volunteers get to buy for a reduced-price ticket in exchange for working shifts (at least 3x 4+
+        hr shifts) during the event. Once all shifts are completed, volunteers are eligible for a full
+        refund. Email <a href="mailto:volunteers@manifest.is">volunteers@manifest.is</a> with questions.
+      </>
+    ),
+  },
+  {
+    q: 'What if I need financial assistance to attend?',
+    a: (
+      <>
+        We don’t want finances to keep anyone from attending. If the volunteer shift requirement or
+        deposit is a barrier, fill out our{' '}
+        <a href="https://airtable.com/appMZp1aBO5b7NTdM/pagTrQtYd1k1Oakhi/form" target="_blank" rel="noopener">
+          Low-Income Ticket Form
+        </a>
+        , or reach out to team@manifest.is.
+      </>
+    ),
+  },
+  { q: 'What is your refund policy?', a: 'Full refunds are available up to 7 days before the event. Contact team@manifest.is to request one.' },
+]
+
+const organizers = [
+  { name: 'Winter', email: 'winter@manifest.is', image: '/images/staff/winter.jpg' },
+  { name: 'Austin', email: 'austin@manifest.is', image: '/images/staff/austin.jpg' },
+  { name: 'Carolanne', email: 'carolanne@manifest.is', image: '/images/staff/carolanne.jpg' },
+]
+
+/* -------------------------------------------------------------------------- */
+/* Stylesheet (kept inline — palette/markup are tightly coupled)              */
 /* -------------------------------------------------------------------------- */
 
 const PAGE_CSS = `
@@ -687,428 +924,510 @@ nav.top.is-scrolled .top__register { color: #fff !important; }
 `
 
 /* -------------------------------------------------------------------------- */
-/* PAGE_HTML — V1 markup, with ticket section preserved                       */
+/* Hooks & helpers                                                            */
 /* -------------------------------------------------------------------------- */
 
-const PAGE_HTML = `
-<!-- NAV -->
-<nav class="top">
-  <span class="top__brand">Manifest 2026</span>
-  <div class="top__links">
-    <a href="#speakers">Speakers</a>
-    <a href="#what-is-manifest">Festival</a>
-    <a href="#nightmarket">Night Market</a>
-    <a href="#faq">FAQ</a>
-    <a href="#tickets" class="top__register pill">Register</a>
-  </div>
-</nav>
-
-<!-- HERO -->
-<section class="v1-hero">
-  <div class="v1-hero__img" style="background-image: url('/images/2026/campfire.jpg');"></div>
-  <div class="v1-hero__veil"></div>
-  <div class="v1-hero__inner">
-    <h1 class="v1-hero__title">Manifest 2026</h1>
-    <p class="v1-hero__sub">A festival for predictions,<br/>and markets thereof.</p>
-    <div class="v1-hero__row">
-      <a href="#tickets" class="v1-btn v1-btn--solid pill">Register · June 12–14 · Berkeley</a>
-    </div>
-  </div>
-  <div class="v1-hero__fade"></div>
-</section>
-
-<!-- SPEAKERS -->
-<section id="speakers" class="v1-speakers scroll-mt">
-  <hr class="v1-divider" />
-  <header class="v1-speakers__head">
-    <h2 class="v1-h2">2026 Speakers &amp; <em>Guests</em></h2>
-    <p style="font-family: var(--cinzel); font-size: 14px; font-style: italic; color: var(--muted); margin: 0; letter-spacing: 0.04em; line-height: 1.6;">Confirmed speakers<br/>&amp; ticket holders; click any odds bar to place your bet.</p>
-  </header>
-  <div class="v1-spk-grid">
-    <figure class="v1-spk"><div class="v1-spk__img" style="background-image:url('/images/speakers/patrick.jpg')"></div><figcaption><span class="v1-spk__name">Patrick McKenzie</span><span class="v1-spk__role">Writer</span><span class="v1-spk__confirmed">Confirmed</span></figcaption></figure>
-    <figure class="v1-spk"><div class="v1-spk__img" style="background-image:url('/images/speakers/chris.jpg')"></div><figcaption><span class="v1-spk__name">Chris Best</span><span class="v1-spk__role">CEO @Substack</span><span class="v1-spk__confirmed">Confirmed</span></figcaption></figure>
-    <figure class="v1-spk"><div class="v1-spk__img" style="background-image:url('/images/2026/guests/tracing-woodgrains.jpg')"></div><figcaption><span class="v1-spk__name">Tracing Woodgrains</span><span class="v1-spk__role">@TracingWoodgrains, Writer</span><span class="v1-spk__confirmed">Confirmed</span></figcaption></figure>
-    <figure class="v1-spk"><div class="v1-spk__img" style="background-image:url('/images/2026/guests/jasmine-sun.jpg')"></div><figcaption><span class="v1-spk__name">Jasmine Sun</span><span class="v1-spk__role">@jasmine&rsquo;s substack, writer</span><span class="v1-spk__confirmed">Confirmed</span></figcaption></figure>
-    <figure class="v1-spk"><div class="v1-spk__img" style="background-image:url('/images/2026/guests/sam-hammond.jpg')"></div><figcaption><span class="v1-spk__name">Sam Hammond</span><span class="v1-spk__role">Foundation for American Innovation</span><span class="v1-spk__confirmed">Confirmed</span></figcaption></figure>
-    <figure class="v1-spk"><div class="v1-spk__img" style="background-image:url('/images/2026/guests/benthams-bulldog.jpg')"></div><figcaption><span class="v1-spk__name">Bentham&rsquo;s Bulldog</span><span class="v1-spk__role">@Bentham&rsquo;sBulldog, blogger</span><span class="v1-spk__confirmed">Confirmed</span></figcaption></figure>
-    <figure class="v1-spk"><div class="v1-spk__img" style="background-image:url('/images/2026/guests/chad-jones.jpg')"></div><figcaption><span class="v1-spk__name">Chad Jones</span><span class="v1-spk__role">Economist, Stanford University</span><span class="v1-spk__confirmed">Confirmed</span></figcaption></figure>
-    <figure class="v1-spk"><div class="v1-spk__img" style="background-image:url('/images/2026/guests/richard-yetter-chappell.jpg')"></div><figcaption><span class="v1-spk__name">Richard Yetter Chappell</span><span class="v1-spk__role">@GoodThoughts, UMiami Philosophy</span><span class="v1-spk__confirmed">Confirmed</span></figcaption></figure>
-    <figure class="v1-spk"><div class="v1-spk__img" style="background-image:url('/images/2026/guests/aydin-mohseni.jpg')"></div><figcaption><span class="v1-spk__name">Aydin Mohseni</span><span class="v1-spk__role">Philosopher of science and Bayesian epistemologist, CMU</span><span class="v1-spk__confirmed">Confirmed</span></figcaption></figure>
-    <figure class="v1-spk"><div class="v1-spk__img" style="background-image:url('/images/2026/guests/scott-sumner.jpg')"></div><figcaption><span class="v1-spk__name">Scott Sumner</span><span class="v1-spk__role">Economist, Bentley University</span><span class="v1-spk__confirmed">Confirmed</span></figcaption></figure>
-    <a class="v1-hold__card" data-answer-id="nnP6y9EQEI" href="https://manifold.markets/strutheo/which-users-will-attend-a-manifest-IARLlNI5L8" target="_blank" rel="noopener"><figure class="v1-spk"><div class="v1-spk__img" style="background-image:url('/images/speakers/joe.jpg')"></div><figcaption><span class="v1-spk__name">Joe Carlsmith</span><span class="v1-spk__role">Anthropic</span><div class="v1-spk__prob"><div class="v1-spk__prob-fill"></div></div><span class="v1-spk__prob-num">—</span></figcaption></figure></a>
-    <a class="v1-hold__card" data-answer-id="Qn2c2PN5lg" href="https://manifold.markets/strutheo/which-users-will-attend-a-manifest-IARLlNI5L8" target="_blank" rel="noopener"><figure class="v1-spk"><div class="v1-spk__img" style="background-image:url('/images/speakers/eliezer.jpg')"></div><figcaption><span class="v1-spk__name">Eliezer Yudkowsky</span><span class="v1-spk__role">MIRI</span><div class="v1-spk__prob"><div class="v1-spk__prob-fill"></div></div><span class="v1-spk__prob-num">—</span></figcaption></figure></a>
-    <a class="v1-hold__card" data-answer-id="0PtsnIZ6Lz" href="https://manifold.markets/strutheo/which-users-will-attend-a-manifest-IARLlNI5L8" target="_blank" rel="noopener"><figure class="v1-spk"><div class="v1-spk__img" style="background-image:url('/images/speakers/scott.jpg')"></div><figcaption><span class="v1-spk__name">Scott Alexander</span><span class="v1-spk__role">Astral Codex Ten</span><div class="v1-spk__prob"><div class="v1-spk__prob-fill"></div></div><span class="v1-spk__prob-num">—</span></figcaption></figure></a>
-    <a class="v1-hold__card" data-answer-id="E6Qz22ndlZ" href="https://manifold.markets/strutheo/which-users-will-attend-a-manifest-IARLlNI5L8" target="_blank" rel="noopener"><figure class="v1-spk"><div class="v1-spk__img" style="background-image:url('/images/speakers/robin.jpg')"></div><figcaption><span class="v1-spk__name">Robin Hanson</span><span class="v1-spk__role">George Mason University</span><div class="v1-spk__prob"><div class="v1-spk__prob-fill"></div></div><span class="v1-spk__prob-num">—</span></figcaption></figure></a>
-    <a class="v1-hold__card" data-answer-id="0ysnsz0cQ9" href="https://manifold.markets/strutheo/which-users-will-attend-a-manifest-IARLlNI5L8" target="_blank" rel="noopener"><figure class="v1-spk"><div class="v1-spk__img" style="background-image:url('/images/speakers/dwarkesh.jpg')"></div><figcaption><span class="v1-spk__name">Dwarkesh Patel</span><span class="v1-spk__role">Dwarkesh Podcast</span><div class="v1-spk__prob"><div class="v1-spk__prob-fill"></div></div><span class="v1-spk__prob-num">—</span></figcaption></figure></a>
-    <a class="v1-hold__card" data-answer-id="8A0820SzyI" href="https://manifold.markets/strutheo/which-users-will-attend-a-manifest-IARLlNI5L8" target="_blank" rel="noopener"><figure class="v1-spk"><div class="v1-spk__img" style="background-image:url('/images/speakers/aella.jpg')"></div><figcaption><span class="v1-spk__name">Aella</span><span class="v1-spk__role">Researcher</span><div class="v1-spk__prob"><div class="v1-spk__prob-fill"></div></div><span class="v1-spk__prob-num">—</span></figcaption></figure></a>
-    <a class="v1-hold__card" data-answer-id="C2zggLLylq" href="https://manifold.markets/strutheo/which-users-will-attend-a-manifest-IARLlNI5L8" target="_blank" rel="noopener"><figure class="v1-spk"><div class="v1-spk__img" style="background-image:url('/images/2026/guests/daniel-kokotajlo.jpg')"></div><figcaption><span class="v1-spk__name">Daniel Kokotajlo</span><span class="v1-spk__role">AI Futures Project</span><div class="v1-spk__prob"><div class="v1-spk__prob-fill"></div></div><span class="v1-spk__prob-num">—</span></figcaption></figure></a>
-    <a class="v1-hold__card" data-answer-id="ORO8Pp20IP" href="https://manifold.markets/strutheo/which-users-will-attend-a-manifest-IARLlNI5L8" target="_blank" rel="noopener"><figure class="v1-spk"><div class="v1-spk__img" style="background-image:url('/images/2026/guests/nate-soares.jpg')"></div><figcaption><span class="v1-spk__name">Nate Soares</span><span class="v1-spk__role">MIRI</span><div class="v1-spk__prob"><div class="v1-spk__prob-fill"></div></div><span class="v1-spk__prob-num">—</span></figcaption></figure></a>
-    <a class="v1-hold__card" data-answer-id="tdz5lShpN8" href="https://manifold.markets/strutheo/which-users-will-attend-a-manifest-IARLlNI5L8" target="_blank" rel="noopener"><figure class="v1-spk"><div class="v1-spk__img" style="background-image:url('/images/2026/guests/rob-miles.jpg')"></div><figcaption><span class="v1-spk__name">Robert Miles</span><span class="v1-spk__role">@RobertMilesAI</span><div class="v1-spk__prob"><div class="v1-spk__prob-fill"></div></div><span class="v1-spk__prob-num">—</span></figcaption></figure></a>
-    <a class="v1-hold__card" data-answer-id="8298A2UEOu" href="https://manifold.markets/strutheo/which-users-will-attend-a-manifest-IARLlNI5L8" target="_blank" rel="noopener"><figure class="v1-spk"><div class="v1-spk__img" style="background-image:url('/images/2026/guests/kelsey-piper.jpeg')"></div><figcaption><span class="v1-spk__name">Kelsey Piper</span><span class="v1-spk__role">Vox Future Perfect</span><div class="v1-spk__prob"><div class="v1-spk__prob-fill"></div></div><span class="v1-spk__prob-num">—</span></figcaption></figure></a>
-  </div>
-
-  <div class="v1-spk-more">
-    <span class="v1-spk-more__label">— Also holding tickets —</span>
-    <div class="v1-spk-more__grid">
-      <a href="https://manifold.markets/strutheo/which-users-will-attend-a-manifest-IARLlNI5L8" target="_blank" rel="noopener">Buck Shlegeris</a>
-      <a href="https://manifold.markets/strutheo/which-users-will-attend-a-manifest-IARLlNI5L8" target="_blank" rel="noopener">Jacob Falkovich</a>
-      <a href="https://manifold.markets/strutheo/which-users-will-attend-a-manifest-IARLlNI5L8" target="_blank" rel="noopener">Nuño Sempere</a>
-      <a href="https://manifold.markets/strutheo/which-users-will-attend-a-manifest-IARLlNI5L8" target="_blank" rel="noopener">Clara Collier</a>
-      <a href="https://manifold.markets/strutheo/which-users-will-attend-a-manifest-IARLlNI5L8" target="_blank" rel="noopener">Janus</a>
-      <a href="https://manifold.markets/strutheo/which-users-will-attend-a-manifest-IARLlNI5L8" target="_blank" rel="noopener">Owain Evans</a>
-      <a href="https://manifold.markets/strutheo/which-users-will-attend-a-manifest-IARLlNI5L8" target="_blank" rel="noopener">David Oks</a>
-      <a href="https://manifold.markets/strutheo/which-users-will-attend-a-manifest-IARLlNI5L8" target="_blank" rel="noopener">Jose Luis Ricon</a>
-      <a href="https://manifold.markets/strutheo/which-users-will-attend-a-manifest-IARLlNI5L8" target="_blank" rel="noopener">Razib Khan</a>
-      <a href="https://manifold.markets/strutheo/which-users-will-attend-a-manifest-IARLlNI5L8" target="_blank" rel="noopener">Duncan Sabien</a>
-      <a href="https://manifold.markets/strutheo/which-users-will-attend-a-manifest-IARLlNI5L8" target="_blank" rel="noopener">Katja Grace</a>
-      <a href="https://manifold.markets/strutheo/which-users-will-attend-a-manifest-IARLlNI5L8" target="_blank" rel="noopener">Richard Ngo</a>
-      <a href="https://manifold.markets/strutheo/which-users-will-attend-a-manifest-IARLlNI5L8" target="_blank" rel="noopener">Dynomight</a>
-      <a href="https://manifold.markets/strutheo/which-users-will-attend-a-manifest-IARLlNI5L8" target="_blank" rel="noopener">Lee Fang</a>
-      <a href="https://manifold.markets/strutheo/which-users-will-attend-a-manifest-IARLlNI5L8" target="_blank" rel="noopener">Sarah Constantin</a>
-      <a href="https://manifold.markets/strutheo/which-users-will-attend-a-manifest-IARLlNI5L8" target="_blank" rel="noopener">Eli Lifland</a>
-      <a href="https://manifold.markets/strutheo/which-users-will-attend-a-manifest-IARLlNI5L8" target="_blank" rel="noopener">Michael Trazzi</a>
-      <a href="https://manifold.markets/strutheo/which-users-will-attend-a-manifest-IARLlNI5L8" target="_blank" rel="noopener">Stephen Hsu</a>
-      <a href="https://manifold.markets/strutheo/which-users-will-attend-a-manifest-IARLlNI5L8" target="_blank" rel="noopener">Frank Lantz</a>
-      <a href="https://manifold.markets/strutheo/which-users-will-attend-a-manifest-IARLlNI5L8" target="_blank" rel="noopener">Nathan Young</a>
-    </div>
-  </div>
-</section>
-
-<!-- WHAT IS MANIFEST -->
-<section id="what-is-manifest" class="v1-what scroll-mt">
-  <div class="v1-what__grid">
-    <div class="v1-what__text">
-      <hr class="v1-divider" />
-      <h2 class="v1-h2">What is Manifest?</h2>
-      <p class="v1-lede">Manifest started in <a href="/2023">2023</a> as a festival about prediction markets and forecasting; it has since become an annual excuse to treat curiosity as a serious hobby — long conversations, unfinished arguments, bets, and the company of writers, researchers, and builders you admire from your favorite niche corners of the internet.</p>
-      <p class="v1-body">&ldquo;Equal parts Math Olympiad and Burning Man&rdquo; — a gathering of nerds who want to find the thinkers and practitioners they vehemently agree (and disagree) with, share a meal around a cozy campfire, and come away with radically new ways of thinking.</p>
-      <h3 class="v1-themes__title">What sorts of things happen at Manifest?</h3>
-      <p class="v1-themes__sub">Talks, panels, debates, workshops, games, prediction market tournaments, a night market, career fair, and much more. Much of the schedule comes from attendee-led sessions.</p>
-    </div>
-    <div class="v1-what__images">
-      <div class="v1-what__img-wrap"><img class="v1-what__img" src="/images/2026/what-is-manifest-1.jpg" alt="Attendees gathered under sunshade canopies at Manifest" loading="lazy" decoding="async" /></div>
-      <div class="v1-what__img-wrap"><img class="v1-what__img" src="/images/2026/what-is-manifest-2.jpg" alt="Attendees in conversation at Manifest" loading="lazy" decoding="async" /></div>
-    </div>
-  </div>
-</section>
-
-<!-- THEMES GRID -->
-<section class="v1-themes">
-  <div class="v1-grid">
-    <figure class="v1-cell v1-cell--photo">
-      <div class="v1-cell__img" style="background-image:url('/images/themes/sessions-1.jpg')"></div>
-    </figure>
-    <article class="v1-cell v1-cell--list">
-      <header><span class="v1-list__cat">Talks</span></header>
-      <ol class="v1-list__items">
-        <li><b>Reforming Academia via Reputation Futures</b><i>Robin Hanson</i></li>
-        <li><b>What Is Aristotle&rsquo;s Metaphysics About?</b><i>Arnold Brooks</i></li>
-        <li><b>Press X to Doubt: Journalism Edition</b><i>Patrick McKenzie</i></li>
-        <li><b>Humanist vs. Science/Tech Culture</b><i>Agnes Callard &amp; Robin Hanson</i></li>
-        <li><b>Forecasting AI Risks: Anthropic&rsquo;s Responsible Scaling Policy</b><i>Ben Mann</i></li>
-        <li><b>How Do We Solve the Alignment Problem?</b><i>Joe Carlsmith</i></li>
-        <li><b>Data Science &amp; Politics</b><i>David Shor</i></li>
-        <li><b>Predicting Large-Scale Catastrophes</b><i>Nuño Sempere</i></li>
-        <li><b>Learning to Reason with LLMs</b><i>Noam Brown</i></li>
-        <li><b>Forecasting Transformative AI Using the Book of Revelation</b><i>Noam Brown &amp; Scott Alexander</i></li>
-        <li><b>The Mechanism Design of Deficit Spending and Interest Rates</b><i>Scott Alexander &amp; Noahpinion</i></li>
-      </ol>
-    </article>
-
-    <article class="v1-cell v1-cell--list">
-      <header><span class="v1-list__cat">Workshops</span></header>
-      <ol class="v1-list__items">
-        <li><b>Fine-Tuning, the Multiverse, Anthropic Bias, and the Reference-Class Problem</b></li>
-        <li><b>Matt Buckley: How to Change Your Mind (with Replacement Therapies)</b></li>
-        <li><b>History Lecture with Live Betting</b></li>
-        <li><b>SuperMemo &amp; Incremental Reading</b></li>
-        <li><b>Intro to Quantitative Portfolio Construction</b></li>
-        <li><b>Ricki Heicklen: Intro to Trading</b></li>
-      </ol>
-    </article>
-    <figure class="v1-cell v1-cell--photo">
-      <div class="v1-cell__img" style="background-image:url('/images/themes/talks-adjacent.jpg')"></div>
-    </figure>
-
-    <figure class="v1-cell v1-cell--photo">
-      <div class="v1-cell__img" style="background-image:url('/images/gallery/2025-3.jpg'); background-position:center 30%;"></div>
-    </figure>
-    <article class="v1-cell v1-cell--list">
-      <header><span class="v1-list__cat">Fireside / Panel / Q&amp;A</span></header>
-      <ol class="v1-list__items v1-list__items--stack">
-        <li><b>Founder of Upstart, Paul Gu</b></li>
-        <li><b>Nate Silver &amp; Scott Alexander</b></li>
-        <li><b>Manifold Founder, Stephen Grugett &amp; Theo Jaffee</b></li>
-        <li><b>AI 2027 Q&amp;A, Eli Lifland</b></li>
-        <li><b>Ajeya Cotra</b></li>
-        <li><b>Kalshi Co-Founder, Luana Lopes Lara</b></li>
-        <li><b>Substack CEO, Chris Best</b></li>
-        <li><b>David Shor &amp; Jesse Richardson</b></li>
-      </ol>
-    </article>
-
-    <article class="v1-cell v1-cell--list">
-      <header><span class="v1-list__cat">&amp; Much more</span></header>
-      <ol class="v1-list__items">
-        <li><b>Speedfriending</b></li>
-        <li><b>Dance Class with Aella</b></li>
-        <li><b>Experimental Meditation Experiments</b></li>
-        <li><b>Memory Systems / Anki / SRS Meetup</b></li>
-        <li><b>Similarities Between Selling to Nation States and on Facebook Marketplace</b></li>
-        <li><b>The Case for Interactionist Dualism</b></li>
-        <li><b>Futurist Theory of Traditionalism</b></li>
-        <li><b>Fun Etymology</b></li>
-      </ol>
-    </article>
-    <figure class="v1-cell v1-cell--photo">
-      <div class="v1-cell__img" style="background-image:url('/images/themes/much-more-guitar.png')"></div>
-    </figure>
-  </div>
-  <div class="v1-themes__more">
-    <a class="v1-btn v1-btn--ink pill v1-themes__more-btn" href="/pastsessions">See sessions from all previous years<span class="v1-themes__more-arrow">→</span></a>
-  </div>
-</section>
-
-<!-- NIGHT MARKET -->
-<section id="nightmarket" class="v1-nm scroll-mt">
-  <div class="v1-strip">
-    <figure class="v1-strip__item"><div class="v1-strip__img" style="background-image:url('/images/night-market/ish-8691.jpg')"></div></figure>
-    <figure class="v1-strip__item"><div class="v1-strip__img" style="background-image:url('/images/night-market/7q4a-9011.jpg')"></div></figure>
-    <figure class="v1-strip__item"><div class="v1-strip__img" style="background-image:url('/images/night-market/7q4a-0831.jpg')"></div></figure>
-    <figure class="v1-strip__item"><div class="v1-strip__img" style="background-image:url('/images/night-market/7q4a-0927.jpg')"></div></figure>
-    <figure class="v1-strip__item"><div class="v1-strip__img" style="background-image:url('/images/night-market/ish-3968.jpg')"></div></figure>
-    <figure class="v1-strip__item"><div class="v1-strip__img" style="background-image:url('/images/night-market/7q4a-2266.jpg')"></div></figure>
-    <figure class="v1-strip__item"><div class="v1-strip__img" style="background-image:url('/images/night-market/ish-8040.jpg')"></div></figure>
-    <figure class="v1-strip__item"><div class="v1-strip__img" style="background-image:url('/images/night-market/7q4a-2067.jpg')"></div></figure>
-    <figure class="v1-strip__item"><div class="v1-strip__img" style="background-image:url('/images/night-market/ish-5334.jpg')"></div></figure>
-    <figure class="v1-strip__item"><div class="v1-strip__img" style="background-image:url('/images/night-market/ish-7882.jpg')"></div></figure>
-    <figure class="v1-strip__item"><div class="v1-strip__img" style="background-image:url('/images/night-market/ish-8482.jpg')"></div></figure>
-    <figure class="v1-strip__item"><div class="v1-strip__img" style="background-image:url('/images/night-market/7q4a-1682.jpg')"></div></figure>
-    <figure class="v1-strip__item"><div class="v1-strip__img" style="background-image:url('/images/night-market/7q4a-9506.jpg')"></div></figure>
-    <figure class="v1-strip__item"><div class="v1-strip__img" style="background-image:url('/images/night-market/7q4a-2536.jpg')"></div></figure>
-    <figure class="v1-strip__item"><div class="v1-strip__img" style="background-image:url('/images/night-market/7q4a-9765.jpg')"></div></figure>
-    <figure class="v1-strip__item"><div class="v1-strip__img" style="background-image:url('/images/night-market/20230924-img-8312.jpg')"></div></figure>
-    <figure class="v1-strip__item"><div class="v1-strip__img" style="background-image:url('/images/night-market/7q4a-3907.jpg')"></div></figure>
-  </div>
-  <div class="v1-nm__row">
-    <div class="v1-nm__lede">
-      <span class="v1-nm__eyebrow">Opening Night · Free &amp; Public</span>
-      <h2 class="v1-nm__title">The Night Market</h2>
-      <p class="v1-body">On Friday, the first night of Manifest, Lighthaven will be open and free to the public for our Career Fair &amp; Night Market. An open-air evening celebration of all things markets; it&rsquo;s a chance to meet people, share ideas, see strange gadgets, and wander around in a transcendent twilight…</p>
-      <span class="v1-nm__pill">No ticket required</span>
-    </div>
-    <div class="v1-nm__cols">
-      <dl class="v1-nm__col">
-        <div><dt>Job Market</dt><dd>Trade your skills for other skills, or find your next gig</dd></div>
-        <div><dt>Experience Market</dt><dd>Mini games, fortunes, and digital interactions</dd></div>
-        <div><dt>Information Market</dt><dd>Like a poster session, but without the academic standards</dd></div>
-      </dl>
-      <dl class="v1-nm__col">
-        <div><dt>Stuff Market</dt><dd>Arts, crafts, and locally crafted foods</dd></div>
-        <div><dt>Book Market</dt><dd>Got a book? Essay? Poem? Share your physical prints</dd></div>
-        <div><dt>Black Market</dt><dd>Naming rights to a baby&rsquo;s middle name, &lsquo;probiotics&rsquo;, etc.</dd></div>
-      </dl>
-    </div>
-  </div>
-  <div class="v1-nm__cta">
-    <a href="https://airtable.com/appMZp1aBO5b7NTdM/pag9gppXcX1cxRixI/form" class="v1-btn v1-btn--ink pill" target="_blank" rel="noopener">Register your interest</a>
-    <a href="https://airtable.com/appMZp1aBO5b7NTdM/pagH4yhHlxyolS2Qv/form" class="v1-btn v1-btn--ink pill" target="_blank" rel="noopener">Job Market sign-up</a>
-  </div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section id="testimonials" class="v1-testi scroll-mt">
-  <hr class="v1-divider" />
-  <header class="v1-testi__head">
-    <h2 class="v1-h2 v1-h2--center" style="font-family: var(--deco); font-style: normal; font-weight: 400; font-size: 48px; letter-spacing: 0.04em;">Tales from Festivalgoers</h2>
-  </header>
-  <div class="v1-testi__row">
-    <a class="v1-testi__card" href="https://scottsumner.substack.com/p/paradise-on-telegraph-avenue" target="_blank" rel="noopener">
-      <blockquote>I met many well-known figures I&rsquo;ve been reading for years. Where else will you meet multiple people within 24 hours who casually mentioned the short story Funes the Memorious in conversation?</blockquote>
-      <figcaption>— Scott Sumner</figcaption>
-    </a>
-    <a class="v1-testi__card" href="https://x.com/tomieinlove/status/1931934629218734083" target="_blank" rel="noopener">
-      <blockquote>I love Manifest. My subsidy provided for swaying bauble lights, warm soporific nooks, flames and corridors, souls brought to Earth together, eyes lighting up at their electric worlds made real.</blockquote>
-      <figcaption>— Tomie</figcaption>
-    </a>
-    <a class="v1-testi__card" href="https://x.com/PabloPeniche/status/1932095093827334543" target="_blank" rel="noopener">
-      <blockquote>Gwern came to my talk and told me at the end &ldquo;I disagree with everything you said and your entire theory of aesthetics is wrong.&rdquo; lol</blockquote>
-      <figcaption>— Pablo</figcaption>
-    </a>
-    <a class="v1-testi__card" href="https://jakeseliger.com/2024/06/13/manifest-the-manifold-markets-nerd-festival/" target="_blank" rel="noopener">
-      <blockquote>It bills itself as &ldquo;a festival for forecasting and prediction markets,&rdquo; which fails to capture the spirit — it&rsquo;s more like &ldquo;Substack and Twitter live&rdquo;, a festival-conference-party-Burning-Man for nerds with many interests.</blockquote>
-      <figcaption>— Jake Seliger</figcaption>
-    </a>
-    <a class="v1-testi__card" href="https://x.com/ByrneHobart/status/1799963459658154203" target="_blank" rel="noopener">
-      <blockquote>The Manifest conference has been a successful experiment: put enough introverts with common interests into a confined space and they&rsquo;ll spontaneously turn into extroverts.</blockquote>
-      <figcaption>— Byrne Hobart</figcaption>
-    </a>
-    <a class="v1-testi__card" href="https://x.com/tracewoodgrains/status/1800790146633138395" target="_blank" rel="noopener">
-      <blockquote>For much of my life, I have poured my attention into tough-to-explain solitary pursuits, sitting in quiet corners on the fringes of gatherings wondering if they&rsquo;re worth the effort. Not so last weekend.</blockquote>
-      <figcaption>— TracingWoodgrains</figcaption>
-    </a>
-  </div>
-</section>
-
-<!-- SPONSORS (original layout) -->
-<section id="sponsors" class="sponsors-orig scroll-mt">
-  <hr class="v1-divider" />
-  <h2 class="v1-h2 v1-h2--center" style="font-family: var(--deco); font-style: normal; font-weight: 400; font-size: 48px; letter-spacing: 0.04em;">Past Sponsors</h2>
-  <div class="sponsors-stack">
-    <a href="https://polymarket.com" target="_blank" rel="noopener"><div class="mono-img mono-img--polymarket" role="img" aria-label="Polymarket"></div></a>
-    <div class="sponsors-row">
-      <a href="https://substack.com" target="_blank" rel="noopener"><div class="mono-img mono-img--substack" role="img" aria-label="Substack"></div></a>
-      <a href="https://kalshi.com" target="_blank" rel="noopener"><div class="mono-img mono-img--kalshi" role="img" aria-label="Kalshi"></div></a>
-    </div>
-    <p class="sponsors-small">Sovereign &middot; Bayes &middot; Elicit &middot; Futuur &middot; Metagame</p>
-  </div>
-  <div class="sponsors-cta">
-    <a href="mailto:team@manifest.is" class="btn-solid pill">Sponsorships available for 2026</a>
-  </div>
-</section>
-
-<!-- TICKETS (preserved) -->
-<section id="tickets" class="v1-tix scroll-mt">
-  <div class="v1-tix__frame">
-    <iframe src="https://less.online/manifest-embed" title="Manifest 2026 tickets" loading="lazy"></iframe>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section id="faq" class="v1-faq scroll-mt">
-  <hr class="v1-divider" />
-  <header class="v1-faq__head">
-    <h2 class="v1-h2" style="font-size: 56px;">Frequently <em>Asked</em></h2>
-  </header>
-  <dl class="v1-faq__list">
-    <div class="v1-faq__item"><dt><span class="v1-faq__num">01</span>Where is Manifest happening?</dt><dd>Lighthaven, 2740 Telegraph Avenue, Berkeley, CA 94705.</dd></div>
-    <div class="v1-faq__item"><dt><span class="v1-faq__num">02</span>Can I purchase accommodation?</dt><dd>Yes. Our venue, Lighthaven, has a limited number of rooms available for ticketholders — book directly through <a href="https://www.havenbookings.space/events/festival-season-2026" target="_blank" rel="noopener">Lighthaven</a>. Space fills up quickly, so most attendees will need to find other accommodations nearby.</dd></div>
-    <div class="v1-faq__item"><dt><span class="v1-faq__num">03</span>When does Manifest start and end?</dt><dd>We&rsquo;re still finalizing the schedule. In 2025, the festival opened doors on Friday at 2pm, held opening ceremony from 5:15-6pm. In 2025, the closing ceremony was Sunday 6-6:45pm, though events and informal gatherings continue into the night.</dd></div>
-    <div class="v1-faq__item"><dt><span class="v1-faq__num">04</span>How many people will be at Manifest?</dt><dd>We are expecting about 600-700 attendees over the course of the weekend.</dd></div>
-    <div class="v1-faq__item"><dt><span class="v1-faq__num">05</span>What does my ticket include?</dt><dd>Access to the festival from Fri afternoon through Sunday night, including all meals.</dd></div>
-    <div class="v1-faq__item"><dt><span class="v1-faq__num">06</span>Can I bring my kids?</dt><dd>We&rsquo;d love for you to bring your kids! Please fill out this <a href="https://airtable.com/appMZp1aBO5b7NTdM/pag451KZs8vARd9sr/form" target="_blank" rel="noopener">Child Attendance Form</a>. Children 10 and under don&rsquo;t need tickets. And we offer free onsite childcare! To help us plan the event, please fill out the form whether or not you need childcare.</dd></div>
-    <div class="v1-faq__item"><dt><span class="v1-faq__num">07</span>How does volunteering work?</dt><dd>Volunteers get to buy for a reduced-price ticket in exchange for working shifts (at least 3x 4+ hr shifts) during the event. Once all shifts are completed, volunteers are eligible for a full refund. Email <a href="mailto:volunteers@manifest.is">volunteers@manifest.is</a> with questions.</dd></div>
-    <div class="v1-faq__item"><dt><span class="v1-faq__num">08</span>What if I need financial assistance to attend?</dt><dd>We don&rsquo;t want finances to keep anyone from attending. If the volunteer shift requirement or deposit is a barrier, fill out our <a href="https://airtable.com/appMZp1aBO5b7NTdM/pagTrQtYd1k1Oakhi/form" target="_blank" rel="noopener">Low-Income Ticket Form</a>, or reach out to team@manifest.is.</dd></div>
-    <div class="v1-faq__item"><dt><span class="v1-faq__num">09</span>What is your refund policy?</dt><dd>Full refunds are available up to 7 days before the event. Contact team@manifest.is to request one.</dd></div>
-  </dl>
-</section>
-
-<!-- ORGANIZERS -->
-<section id="organizers" class="v1-org scroll-mt">
-  <hr class="v1-divider" />
-  <header class="v1-org__head">
-    <h2 class="v1-h2 v1-h2--center" style="font-family: var(--deco); font-style: normal; font-weight: 400; font-size: 48px; letter-spacing: 0.04em;">Organizers:</h2>
-    <p class="v1-org__sub">Questions? Please reach out.</p>
-  </header>
-  <div class="v1-org__grid">
-    <figure class="v1-org__card">
-      <div class="v1-org__photo" style="background-image:url('/images/staff/winter.jpg')"></div>
-      <figcaption><span class="v1-org__name">Winter</span><a class="v1-org__email" href="mailto:winter@manifest.is">winter@manifest.is</a></figcaption>
-    </figure>
-    <figure class="v1-org__card">
-      <div class="v1-org__photo" style="background-image:url('/images/staff/austin.jpg')"></div>
-      <figcaption><span class="v1-org__name">Austin</span><a class="v1-org__email" href="mailto:austin@manifest.is">austin@manifest.is</a></figcaption>
-    </figure>
-    <figure class="v1-org__card">
-      <div class="v1-org__photo" style="background-image:url('/images/staff/carolanne.jpg')"></div>
-      <figcaption><span class="v1-org__name">Carolanne</span><a class="v1-org__email" href="mailto:carolanne@manifest.is">carolanne@manifest.is</a></figcaption>
-    </figure>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="v1-foot">
-  <div class="v1-foot__row">
-    <div class="v1-foot__brand">
-      <span class="v1-foot__title">Manifest 2026</span>
-      <span class="v1-foot__sub">June 12 – 14 · Lighthaven, Berkeley</span>
-    </div>
-    <div class="v1-foot__links">
-      <a href="#speakers">Speakers</a>
-      <a href="#what-is-manifest">Festival</a>
-      <a href="#nightmarket">Night Market</a>
-      <a href="#tickets">Tickets</a>
-      <a href="#faq">FAQ</a>
-      <a href="https://discord.com/invite/MjDqMcQFdR" target="_blank" rel="noopener">Discord</a>
-      <a href="/2025">Manifest 2025</a>
-      <a href="/2024">Manifest 2024</a>
-      <a href="/2023">Manifest 2023</a>
-    </div>
-  </div>
-  <div class="v1-foot__rule"></div>
-  <div class="v1-foot__fine">
-    <span>Berkeley, CA</span>
-    <span>team@manifest.is</span>
-  </div>
-</footer>
-`
-
-export default function Manifest2026() {
+function useScrolled(threshold = 40) {
+  const [scrolled, setScrolled] = useState(false)
   useEffect(() => {
-    /* nav scroll color shift (same behaviour as before) */
-    const topNav = document.querySelector('nav.top') as HTMLElement | null
-    const updateNavColor = () => {
-      if (!topNav) return
-      if (window.scrollY > 40) topNav.classList.add('is-scrolled')
-      else topNav.classList.remove('is-scrolled')
-    }
-    updateNavColor()
-    window.addEventListener('scroll', updateNavColor, { passive: true })
+    const onScroll = () => setScrolled(window.scrollY > threshold)
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [threshold])
+  return scrolled
+}
 
-    /* populate ticketholder probability bars from the Manifold market */
+function useTicketholderProbabilities() {
+  const [probabilities, setProbabilities] = useState<Record<string, number>>({})
+  useEffect(() => {
     let cancelled = false
-    fetch(
-      'https://api.manifold.markets/v0/slug/which-users-will-attend-a-manifest-IARLlNI5L8'
-    )
+    fetch(TICKETHOLDER_MARKET_API)
       .then((r) => r.json())
       .then((market: { answers?: { id: string; probability: number }[] }) => {
         if (cancelled) return
-        const byId: Record<string, number> = {}
+        const next: Record<string, number> = {}
         market.answers?.forEach((a) => {
-          byId[a.id] = Math.round(a.probability * 100)
+          next[a.id] = Math.round(a.probability * 100)
         })
-        document
-          .querySelectorAll<HTMLElement>('.v1-hold__card[data-answer-id]')
-          .forEach((card) => {
-            const id = card.dataset.answerId
-            if (!id) return
-            const prob = byId[id]
-            if (prob == null) return
-            const fill = card.querySelector<HTMLElement>('.v1-spk__prob-fill')
-            const num = card.querySelector<HTMLElement>('.v1-spk__prob-num')
-            if (fill) fill.style.width = prob + '%'
-            if (num) num.textContent = prob + '%'
-          })
+        setProbabilities(next)
       })
       .catch(() => {})
-
-    /* FAQ accordion — V1 markup uses .v1-faq__item */
-    const items = Array.from(document.querySelectorAll<HTMLElement>('.v1-faq__item'))
-    const handlers = items.map((item) => {
-      const dd = item.querySelector('dd') as HTMLElement | null
-      if (dd) dd.style.display = 'none'
-      const handler = (e: MouseEvent) => {
-        const target = e.target as Node
-        if (dd && dd.contains(target)) return
-        if (window.getSelection()?.toString()) return
-        const isOpen = item.classList.toggle('open')
-        if (dd) dd.style.display = isOpen ? 'block' : 'none'
-      }
-      item.addEventListener('click', handler)
-      return () => item.removeEventListener('click', handler)
-    })
-
     return () => {
       cancelled = true
-      window.removeEventListener('scroll', updateNavColor)
-      handlers.forEach((cleanup) => cleanup())
     }
   }, [])
+  return probabilities
+}
 
+const bgImage = (src: string, extra?: CSSProperties): CSSProperties => ({
+  backgroundImage: `url('${src}')`,
+  ...extra,
+})
+
+/* -------------------------------------------------------------------------- */
+/* Sections                                                                   */
+/* -------------------------------------------------------------------------- */
+
+function TopNav() {
+  const scrolled = useScrolled()
+  return (
+    <nav className={`top${scrolled ? ' is-scrolled' : ''}`}>
+      <span className="top__brand">Manifest 2026</span>
+      <div className="top__links">
+        <a href="#speakers">Speakers</a>
+        <a href="#what-is-manifest">Festival</a>
+        <a href="#nightmarket">Night Market</a>
+        <a href="#faq">FAQ</a>
+        <a href="#tickets" className="top__register pill">Register</a>
+      </div>
+    </nav>
+  )
+}
+
+function Hero() {
+  return (
+    <section className="v1-hero">
+      <div className="v1-hero__img" style={bgImage('/images/2026/campfire.jpg')} />
+      <div className="v1-hero__veil" />
+      <div className="v1-hero__inner">
+        <h1 className="v1-hero__title">Manifest 2026</h1>
+        <p className="v1-hero__sub">
+          A festival for predictions,
+          <br />
+          and markets thereof.
+        </p>
+        <div className="v1-hero__row">
+          <a href="#tickets" className="v1-btn v1-btn--solid pill">
+            Register · June 12–14 · Berkeley
+          </a>
+        </div>
+      </div>
+      <div className="v1-hero__fade" />
+    </section>
+  )
+}
+
+function SpeakerFigure({ name, role, image, confirmed }: Person & { confirmed?: boolean }) {
+  return (
+    <figure className="v1-spk">
+      <div className="v1-spk__img" style={bgImage(image)} />
+      <figcaption>
+        <span className="v1-spk__name">{name}</span>
+        <span className="v1-spk__role">{role}</span>
+        {confirmed && <span className="v1-spk__confirmed">Confirmed</span>}
+      </figcaption>
+    </figure>
+  )
+}
+
+function TicketholderFigure({
+  name,
+  role,
+  image,
+  probability,
+}: Person & { probability?: number }) {
+  const hasProb = probability != null
+  return (
+    <a className="v1-hold__card" href={TICKETHOLDER_MARKET_URL} target="_blank" rel="noopener">
+      <figure className="v1-spk">
+        <div className="v1-spk__img" style={bgImage(image)} />
+        <figcaption>
+          <span className="v1-spk__name">{name}</span>
+          <span className="v1-spk__role">{role}</span>
+          <div className="v1-spk__prob">
+            <div className="v1-spk__prob-fill" style={{ width: hasProb ? `${probability}%` : 0 }} />
+          </div>
+          <span className="v1-spk__prob-num">{hasProb ? `${probability}%` : '—'}</span>
+        </figcaption>
+      </figure>
+    </a>
+  )
+}
+
+function Speakers({ probabilities }: { probabilities: Record<string, number> }) {
+  return (
+    <section id="speakers" className="v1-speakers scroll-mt">
+      <hr className="v1-divider" />
+      <header className="v1-speakers__head">
+        <h2 className="v1-h2">
+          2026 Speakers & <em>Guests</em>
+        </h2>
+        <p
+          style={{
+            fontFamily: 'var(--cinzel)',
+            fontSize: 14,
+            fontStyle: 'italic',
+            color: 'var(--muted)',
+            margin: 0,
+            letterSpacing: '0.04em',
+            lineHeight: 1.6,
+          }}
+        >
+          Confirmed speakers
+          <br />
+          & ticket holders; click any odds bar to place your bet.
+        </p>
+      </header>
+
+      <div className="v1-spk-grid">
+        {confirmedSpeakers.map((s) => (
+          <SpeakerFigure key={s.name} {...s} confirmed />
+        ))}
+        {ticketholders.map((t) => (
+          <TicketholderFigure key={t.answerId} {...t} probability={probabilities[t.answerId]} />
+        ))}
+      </div>
+
+      <div className="v1-spk-more">
+        <span className="v1-spk-more__label">— Also holding tickets —</span>
+        <div className="v1-spk-more__grid">
+          {additionalTicketholders.map((name) => (
+            <a key={name} href={TICKETHOLDER_MARKET_URL} target="_blank" rel="noopener">
+              {name}
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function WhatIsManifest() {
+  return (
+    <section id="what-is-manifest" className="v1-what scroll-mt">
+      <div className="v1-what__grid">
+        <div className="v1-what__text">
+          <hr className="v1-divider" />
+          <h2 className="v1-h2">What is Manifest?</h2>
+          <p className="v1-lede">
+            Manifest started in <a href="/2023">2023</a> as a festival about prediction markets and
+            forecasting; it has since become an annual excuse to treat curiosity as a serious hobby —
+            long conversations, unfinished arguments, bets, and the company of writers, researchers,
+            and builders you admire from your favorite niche corners of the internet.
+          </p>
+          <p className="v1-body">
+            “Equal parts Math Olympiad and Burning Man” — a gathering of nerds who want to find the
+            thinkers and practitioners they vehemently agree (and disagree) with, share a meal around
+            a cozy campfire, and come away with radically new ways of thinking.
+          </p>
+          <h3 className="v1-themes__title">What sorts of things happen at Manifest?</h3>
+          <p className="v1-themes__sub">
+            Talks, panels, debates, workshops, games, prediction market tournaments, a night market,
+            career fair, and much more. Much of the schedule comes from attendee-led sessions.
+          </p>
+        </div>
+        <div className="v1-what__images">
+          <div className="v1-what__img-wrap">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              className="v1-what__img"
+              src="/images/2026/what-is-manifest-1.jpg"
+              alt="Attendees gathered under sunshade canopies at Manifest"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div className="v1-what__img-wrap">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              className="v1-what__img"
+              src="/images/2026/what-is-manifest-2.jpg"
+              alt="Attendees in conversation at Manifest"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function ThemesGrid() {
+  return (
+    <section className="v1-themes">
+      <div className="v1-grid">
+        {themeCells.map((cell, i) =>
+          cell.kind === 'photo' ? (
+            <figure key={i} className="v1-cell v1-cell--photo">
+              <div
+                className="v1-cell__img"
+                style={bgImage(
+                  cell.src,
+                  cell.bgPosition ? { backgroundPosition: cell.bgPosition } : undefined
+                )}
+              />
+            </figure>
+          ) : (
+            <article key={i} className="v1-cell v1-cell--list">
+              <header>
+                <span className="v1-list__cat">{cell.title}</span>
+              </header>
+              <ol className={`v1-list__items${cell.stack ? ' v1-list__items--stack' : ''}`}>
+                {cell.items.map((item, j) => (
+                  <li key={j}>
+                    <b>{item.title}</b>
+                    {item.by && <i>{item.by}</i>}
+                  </li>
+                ))}
+              </ol>
+            </article>
+          )
+        )}
+      </div>
+      <div className="v1-themes__more">
+        <a className="v1-btn v1-btn--ink pill v1-themes__more-btn" href="/pastsessions">
+          See sessions from all previous years
+          <span className="v1-themes__more-arrow">→</span>
+        </a>
+      </div>
+    </section>
+  )
+}
+
+function NightMarket() {
+  return (
+    <section id="nightmarket" className="v1-nm scroll-mt">
+      <div className="v1-strip">
+        {nightMarketImages.map((file) => (
+          <figure key={file} className="v1-strip__item">
+            <div className="v1-strip__img" style={bgImage(`/images/night-market/${file}`)} />
+          </figure>
+        ))}
+      </div>
+      <div className="v1-nm__row">
+        <div className="v1-nm__lede">
+          <span className="v1-nm__eyebrow">Opening Night · Free & Public</span>
+          <h2 className="v1-nm__title">The Night Market</h2>
+          <p className="v1-body">
+            On Friday, the first night of Manifest, Lighthaven will be open and free to the public for
+            our Career Fair & Night Market. An open-air evening celebration of all things markets;
+            it’s a chance to meet people, share ideas, see strange gadgets, and wander around in a
+            transcendent twilight…
+          </p>
+          <span className="v1-nm__pill">No ticket required</span>
+        </div>
+        <div className="v1-nm__cols">
+          {[nightMarketCategories.slice(0, 3), nightMarketCategories.slice(3, 6)].map((col, i) => (
+            <dl key={i} className="v1-nm__col">
+              {col.map(([term, desc]) => (
+                <div key={term}>
+                  <dt>{term}</dt>
+                  <dd>{desc}</dd>
+                </div>
+              ))}
+            </dl>
+          ))}
+        </div>
+      </div>
+      <div className="v1-nm__cta">
+        <a
+          href="https://airtable.com/appMZp1aBO5b7NTdM/pag9gppXcX1cxRixI/edit"
+          className="v1-btn v1-btn--ink pill"
+          target="_blank"
+          rel="noopener"
+        >
+          Register your interest
+        </a>
+        <a
+          href="https://airtable.com/appMZp1aBO5b7NTdM/pagH4yhHlxyolS2Qv/form"
+          className="v1-btn v1-btn--ink pill"
+          target="_blank"
+          rel="noopener"
+        >
+          Job Market sign-up
+        </a>
+      </div>
+    </section>
+  )
+}
+
+const centeredDecoH2: CSSProperties = {
+  fontFamily: 'var(--deco)',
+  fontStyle: 'normal',
+  fontWeight: 400,
+  fontSize: 48,
+  letterSpacing: '0.04em',
+}
+
+function Testimonials() {
+  return (
+    <section id="testimonials" className="v1-testi scroll-mt">
+      <hr className="v1-divider" />
+      <header className="v1-testi__head">
+        <h2 className="v1-h2 v1-h2--center" style={centeredDecoH2}>
+          Tales from Festivalgoers
+        </h2>
+      </header>
+      <div className="v1-testi__row">
+        {testimonials.map(({ quote, author, link }) => (
+          <a key={author} className="v1-testi__card" href={link} target="_blank" rel="noopener">
+            <blockquote>{quote}</blockquote>
+            <figcaption>— {author}</figcaption>
+          </a>
+        ))}
+      </div>
+    </section>
+  )
+}
+
+function Sponsors() {
+  return (
+    <section id="sponsors" className="sponsors-orig scroll-mt">
+      <hr className="v1-divider" />
+      <h2 className="v1-h2 v1-h2--center" style={centeredDecoH2}>
+        Past Sponsors
+      </h2>
+      <div className="sponsors-stack">
+        <a href="https://polymarket.com" target="_blank" rel="noopener">
+          <div className="mono-img mono-img--polymarket" role="img" aria-label="Polymarket" />
+        </a>
+        <div className="sponsors-row">
+          <a href="https://substack.com" target="_blank" rel="noopener">
+            <div className="mono-img mono-img--substack" role="img" aria-label="Substack" />
+          </a>
+          <a href="https://kalshi.com" target="_blank" rel="noopener">
+            <div className="mono-img mono-img--kalshi" role="img" aria-label="Kalshi" />
+          </a>
+        </div>
+        <p className="sponsors-small">Sovereign · Bayes · Elicit · Futuur · Metagame</p>
+      </div>
+      <div className="sponsors-cta">
+        <a href="mailto:team@manifest.is" className="btn-solid pill">
+          Sponsorships available for 2026
+        </a>
+      </div>
+    </section>
+  )
+}
+
+function Tickets() {
+  return (
+    <section id="tickets" className="v1-tix scroll-mt">
+      <div className="v1-tix__frame">
+        <iframe src="https://less.online/manifest-embed" title="Manifest 2026 tickets" loading="lazy" />
+      </div>
+    </section>
+  )
+}
+
+function Faq() {
+  const [openIdx, setOpenIdx] = useState<number | null>(null)
+  return (
+    <section id="faq" className="v1-faq scroll-mt">
+      <hr className="v1-divider" />
+      <header className="v1-faq__head">
+        <h2 className="v1-h2" style={{ fontSize: 56 }}>
+          Frequently <em>Asked</em>
+        </h2>
+      </header>
+      <dl className="v1-faq__list">
+        {faqs.map((item, i) => {
+          const open = openIdx === i
+          return (
+            <div
+              key={i}
+              className={`v1-faq__item${open ? ' open' : ''}`}
+              onClick={() => {
+                if (window.getSelection()?.toString()) return
+                setOpenIdx(open ? null : i)
+              }}
+            >
+              <dt>
+                <span className="v1-faq__num">{String(i + 1).padStart(2, '0')}</span>
+                {item.q}
+              </dt>
+              <dd onClick={(e) => e.stopPropagation()} style={{ display: open ? 'block' : 'none' }}>
+                {item.a}
+              </dd>
+            </div>
+          )
+        })}
+      </dl>
+    </section>
+  )
+}
+
+function Organizers() {
+  return (
+    <section id="organizers" className="v1-org scroll-mt">
+      <hr className="v1-divider" />
+      <header className="v1-org__head">
+        <h2 className="v1-h2 v1-h2--center" style={centeredDecoH2}>
+          Organizers:
+        </h2>
+        <p className="v1-org__sub">Questions? Please reach out.</p>
+      </header>
+      <div className="v1-org__grid">
+        {organizers.map((o) => (
+          <figure key={o.name} className="v1-org__card">
+            <div className="v1-org__photo" style={bgImage(o.image)} />
+            <figcaption>
+              <span className="v1-org__name">{o.name}</span>
+              <a className="v1-org__email" href={`mailto:${o.email}`}>
+                {o.email}
+              </a>
+            </figcaption>
+          </figure>
+        ))}
+      </div>
+    </section>
+  )
+}
+
+function SiteFooter() {
+  return (
+    <footer className="v1-foot">
+      <div className="v1-foot__row">
+        <div className="v1-foot__brand">
+          <span className="v1-foot__title">Manifest 2026</span>
+          <span className="v1-foot__sub">June 12 – 14 · Lighthaven, Berkeley</span>
+        </div>
+        <div className="v1-foot__links">
+          <a href="#speakers">Speakers</a>
+          <a href="#what-is-manifest">Festival</a>
+          <a href="#nightmarket">Night Market</a>
+          <a href="#tickets">Tickets</a>
+          <a href="#faq">FAQ</a>
+          <a href="https://discord.com/invite/MjDqMcQFdR" target="_blank" rel="noopener">
+            Discord
+          </a>
+          <a href="/2025">Manifest 2025</a>
+          <a href="/2024">Manifest 2024</a>
+          <a href="/2023">Manifest 2023</a>
+        </div>
+      </div>
+      <div className="v1-foot__rule" />
+      <div className="v1-foot__fine">
+        <span>Berkeley, CA</span>
+        <span>team@manifest.is</span>
+      </div>
+    </footer>
+  )
+}
+
+/* -------------------------------------------------------------------------- */
+/* Page                                                                       */
+/* -------------------------------------------------------------------------- */
+
+export default function Manifest2026() {
+  const probabilities = useTicketholderProbabilities()
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: PAGE_CSS }} />
-      <div dangerouslySetInnerHTML={{ __html: PAGE_HTML }} />
+      <TopNav />
+      <Hero />
+      <Speakers probabilities={probabilities} />
+      <WhatIsManifest />
+      <ThemesGrid />
+      <NightMarket />
+      <Testimonials />
+      <Sponsors />
+      <Tickets />
+      <Faq />
+      <Organizers />
+      <SiteFooter />
     </>
   )
 }
