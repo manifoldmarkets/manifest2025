@@ -312,9 +312,19 @@ nav.top.is-scrolled .top__register { color: #fff !important; }
   letter-spacing: 0.04em; text-transform: uppercase; color: var(--pdeep);
 }
 .v1-list__items {
-  list-style: none; margin: 0; padding: 0;
+  list-style: none; margin: 0; padding: 0 8px 0 0;
   font-family: var(--serif); font-size: 13.5px; line-height: 1.45; color: var(--ink);
+  max-height: 260px; overflow-y: auto;
+  scrollbar-width: thin; scrollbar-color: rgba(74,58,107,0.35) transparent;
+  -webkit-mask-image: linear-gradient(to bottom, #000 calc(100% - 36px), transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 calc(100% - 36px), transparent 100%);
 }
+.v1-list__items::-webkit-scrollbar { width: 6px; }
+.v1-list__items::-webkit-scrollbar-track { background: transparent; }
+.v1-list__items::-webkit-scrollbar-thumb {
+  background: rgba(74,58,107,0.3); border-radius: 3px;
+}
+.v1-list__items::-webkit-scrollbar-thumb:hover { background: rgba(74,58,107,0.5); }
 .v1-list__items li {
   display: flex; align-items: baseline; gap: 16px;
   padding: 9px 0;
@@ -359,6 +369,8 @@ nav.top.is-scrolled .top__register { color: #fff !important; }
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
+  -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 80px), transparent 100%);
+  mask-image: linear-gradient(to right, #000 calc(100% - 80px), transparent 100%);
 }
 .v1-strip::-webkit-scrollbar { height: 6px; }
 .v1-strip::-webkit-scrollbar-thumb { background: rgba(74,58,107,0.3); border-radius: 999px; }
@@ -789,14 +801,17 @@ const PAGE_HTML = `
     <article class="v1-cell v1-cell--list">
       <header><span class="v1-list__cat">Talks</span></header>
       <ol class="v1-list__items">
-        <li><b>Press X to Doubt: Journalism Edition</b><i>Patrick McKenzie</i></li>
         <li><b>Reforming Academia via Reputation Futures</b><i>Robin Hanson</i></li>
         <li><b>What Is Aristotle&rsquo;s Metaphysics About?</b><i>Arnold Brooks</i></li>
+        <li><b>Press X to Doubt: Journalism Edition</b><i>Patrick McKenzie</i></li>
         <li><b>Humanist vs. Science/Tech Culture</b><i>Agnes Callard &amp; Robin Hanson</i></li>
         <li><b>Forecasting AI Risks: Anthropic&rsquo;s Responsible Scaling Policy</b><i>Ben Mann</i></li>
         <li><b>How Do We Solve the Alignment Problem?</b><i>Joe Carlsmith</i></li>
         <li><b>Data Science &amp; Politics</b><i>David Shor</i></li>
         <li><b>Predicting Large-Scale Catastrophes</b><i>Nuño Sempere</i></li>
+        <li><b>Learning to Reason with LLMs</b><i>Noam Brown</i></li>
+        <li><b>Forecasting Transformative AI Using the Book of Revelation</b><i>Noam Brown &amp; Scott Alexander</i></li>
+        <li><b>The Mechanism Design of Deficit Spending and Interest Rates</b><i>Scott Alexander &amp; Noahpinion</i></li>
       </ol>
     </article>
 
@@ -896,7 +911,7 @@ const PAGE_HTML = `
     </div>
   </div>
   <div class="v1-nm__cta">
-    <a href="https://airtable.com/appMZp1aBO5b7NTdM/pag9gppXcX1cxRixI/edit" class="v1-btn v1-btn--ink pill" target="_blank" rel="noopener">Register your interest</a>
+    <a href="https://airtable.com/appMZp1aBO5b7NTdM/pag9gppXcX1cxRixI/form" class="v1-btn v1-btn--ink pill" target="_blank" rel="noopener">Register your interest</a>
     <a href="https://airtable.com/appMZp1aBO5b7NTdM/pagH4yhHlxyolS2Qv/form" class="v1-btn v1-btn--ink pill" target="_blank" rel="noopener">Job Market sign-up</a>
   </div>
 </section>
