@@ -206,6 +206,16 @@ nav.top.is-scrolled .top__register { color: #fff !important; }
   font-family: var(--cinzel); font-weight: 600; font-size: 11px;
   letter-spacing: 0.08em; color: var(--muted);
 }
+.v1-spk__confirmed {
+  display: inline-block;
+  margin: 2px 0 10px;
+  padding: 3px 10px 2px;
+  font-family: var(--cinzel); font-weight: 700; font-size: 10px;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--pdeep);
+  background: rgba(107,91,141,0.18);
+  border-radius: 9999px 0 9999px 0;
+}
 
 .v1-spk-more { margin: 64px auto 0; text-align: center; max-width: 900px; }
 .v1-spk-more__label {
@@ -673,7 +683,7 @@ const PAGE_HTML = `
 <nav class="top">
   <span class="top__brand">Manifest 2026</span>
   <div class="top__links">
-    <a href="#ticketholders">Guests</a>
+    <a href="#speakers">Speakers</a>
     <a href="#what-is-manifest">Festival</a>
     <a href="#nightmarket">Night Market</a>
     <a href="#faq">FAQ</a>
@@ -695,34 +705,24 @@ const PAGE_HTML = `
   <div class="v1-hero__fade"></div>
 </section>
 
-<!-- CONFIRMED SPEAKERS -->
-<section id="confirmed" class="v1-speakers scroll-mt">
+<!-- SPEAKERS -->
+<section id="speakers" class="v1-speakers scroll-mt">
   <hr class="v1-divider" />
   <header class="v1-speakers__head">
-    <h2 class="v1-h2">Confirmed <em>Speakers</em></h2>
+    <h2 class="v1-h2">2026 Speakers &amp; <em>Guests</em></h2>
+    <p style="font-family: var(--cinzel); font-size: 14px; font-style: italic; color: var(--muted); margin: 0; letter-spacing: 0.04em; line-height: 1.6;">Confirmed speakers<br/>&amp; ticket holders; click any odds bar to place your bet.</p>
   </header>
   <div class="v1-spk-grid">
-    <figure class="v1-spk"><div class="v1-spk__img" style="background-image:url('/images/speakers/patrick.jpg')"></div><figcaption><span class="v1-spk__name">Patrick McKenzie</span><span class="v1-spk__role">Writer</span></figcaption></figure>
-    <figure class="v1-spk"><div class="v1-spk__img" style="background-image:url('/images/speakers/chris.jpg')"></div><figcaption><span class="v1-spk__name">Chris Best</span><span class="v1-spk__role">Substack</span></figcaption></figure>
-    <figure class="v1-spk"><div class="v1-spk__img" style="background-image:url('/images/2026/guests/tracing-woodgrains.jpg')"></div><figcaption><span class="v1-spk__name">Tracing Woodgrains</span><span class="v1-spk__role">Writer</span></figcaption></figure>
-    <figure class="v1-spk"><div class="v1-spk__img" style="background-image:url('/images/2026/guests/jasmine-sun.jpg')"></div><figcaption><span class="v1-spk__name">Jasmine Sun</span><span class="v1-spk__role">Writer</span></figcaption></figure>
-    <figure class="v1-spk"><div class="v1-spk__img" style="background-image:url('/images/2026/guests/sam-hammond.jpg')"></div><figcaption><span class="v1-spk__name">Sam Hammond</span><span class="v1-spk__role">Foundation for American Innovation</span></figcaption></figure>
-    <figure class="v1-spk"><div class="v1-spk__img" style="background-image:url('/images/2026/guests/benthams-bulldog.jpg')"></div><figcaption><span class="v1-spk__name">Bentham&rsquo;s Bulldog</span><span class="v1-spk__role">Philosopher</span></figcaption></figure>
-    <figure class="v1-spk"><div class="v1-spk__img" style="background-image:url('/images/2026/guests/chad-jones.jpg')"></div><figcaption><span class="v1-spk__name">Chad Jones</span><span class="v1-spk__role">Stanford University</span></figcaption></figure>
-    <figure class="v1-spk"><div class="v1-spk__img" style="background-image:url('/images/2026/guests/richard-yetter-chappell.jpg')"></div><figcaption><span class="v1-spk__name">Richard Yetter Chappell</span><span class="v1-spk__role">@GoodThoughts, Philosopher</span></figcaption></figure>
-    <figure class="v1-spk"><div class="v1-spk__img" style="background-image:url('/images/2026/guests/aydin-mohseni.jpg')"></div><figcaption><span class="v1-spk__name">Aydin Mohseni</span><span class="v1-spk__role">CMU Philosophy</span></figcaption></figure>
-    <figure class="v1-spk"><div class="v1-spk__img" style="background-image:url('/images/2026/guests/scott-sumner.jpg')"></div><figcaption><span class="v1-spk__name">Scott Sumner</span><span class="v1-spk__role">Bentley University</span></figcaption></figure>
-  </div>
-</section>
-
-<!-- TICKETHOLDERS -->
-<section id="ticketholders" class="v1-speakers scroll-mt">
-  <hr class="v1-divider" />
-  <header class="v1-speakers__head" style="grid-template-columns: 1fr;">
-    <h2 class="v1-h2" style="font-size: clamp(28px, 5.5vw, 64px); text-wrap: balance;">They&rsquo;ve bought in. <em>Bet on whether they make it to Berkeley.</em></h2>
-    <p style="font-family: var(--cinzel); font-size: 12px; font-style: italic; color: var(--muted); margin: 4px 0 0; letter-spacing: 0.04em;">Click any to find their answer on the Manifold market →</p>
-  </header>
-  <div class="v1-spk-grid">
+    <figure class="v1-spk"><div class="v1-spk__img" style="background-image:url('/images/speakers/patrick.jpg')"></div><figcaption><span class="v1-spk__name">Patrick McKenzie</span><span class="v1-spk__role">Writer</span><span class="v1-spk__confirmed">Confirmed</span></figcaption></figure>
+    <figure class="v1-spk"><div class="v1-spk__img" style="background-image:url('/images/speakers/chris.jpg')"></div><figcaption><span class="v1-spk__name">Chris Best</span><span class="v1-spk__role">CEO @Substack</span><span class="v1-spk__confirmed">Confirmed</span></figcaption></figure>
+    <figure class="v1-spk"><div class="v1-spk__img" style="background-image:url('/images/2026/guests/tracing-woodgrains.jpg')"></div><figcaption><span class="v1-spk__name">Tracing Woodgrains</span><span class="v1-spk__role">@TracingWoodgrains, Writer</span><span class="v1-spk__confirmed">Confirmed</span></figcaption></figure>
+    <figure class="v1-spk"><div class="v1-spk__img" style="background-image:url('/images/2026/guests/jasmine-sun.jpg')"></div><figcaption><span class="v1-spk__name">Jasmine Sun</span><span class="v1-spk__role">@jasmine&rsquo;s substack, writer</span><span class="v1-spk__confirmed">Confirmed</span></figcaption></figure>
+    <figure class="v1-spk"><div class="v1-spk__img" style="background-image:url('/images/2026/guests/sam-hammond.jpg')"></div><figcaption><span class="v1-spk__name">Sam Hammond</span><span class="v1-spk__role">Foundation for American Innovation</span><span class="v1-spk__confirmed">Confirmed</span></figcaption></figure>
+    <figure class="v1-spk"><div class="v1-spk__img" style="background-image:url('/images/2026/guests/benthams-bulldog.jpg')"></div><figcaption><span class="v1-spk__name">Bentham&rsquo;s Bulldog</span><span class="v1-spk__role">@Bentham&rsquo;sBulldog, blogger</span><span class="v1-spk__confirmed">Confirmed</span></figcaption></figure>
+    <figure class="v1-spk"><div class="v1-spk__img" style="background-image:url('/images/2026/guests/chad-jones.jpg')"></div><figcaption><span class="v1-spk__name">Chad Jones</span><span class="v1-spk__role">Economist, Stanford University</span><span class="v1-spk__confirmed">Confirmed</span></figcaption></figure>
+    <figure class="v1-spk"><div class="v1-spk__img" style="background-image:url('/images/2026/guests/richard-yetter-chappell.jpg')"></div><figcaption><span class="v1-spk__name">Richard Yetter Chappell</span><span class="v1-spk__role">@GoodThoughts, UMiami Philosophy</span><span class="v1-spk__confirmed">Confirmed</span></figcaption></figure>
+    <figure class="v1-spk"><div class="v1-spk__img" style="background-image:url('/images/2026/guests/aydin-mohseni.jpg')"></div><figcaption><span class="v1-spk__name">Aydin Mohseni</span><span class="v1-spk__role">Philosopher of science and Bayesian epistemologist, CMU</span><span class="v1-spk__confirmed">Confirmed</span></figcaption></figure>
+    <figure class="v1-spk"><div class="v1-spk__img" style="background-image:url('/images/2026/guests/scott-sumner.jpg')"></div><figcaption><span class="v1-spk__name">Scott Sumner</span><span class="v1-spk__role">Economist, Bentley University</span><span class="v1-spk__confirmed">Confirmed</span></figcaption></figure>
     <a class="v1-hold__card" data-answer-id="nnP6y9EQEI" href="https://manifold.markets/strutheo/which-users-will-attend-a-manifest-IARLlNI5L8" target="_blank" rel="noopener"><figure class="v1-spk"><div class="v1-spk__img" style="background-image:url('/images/speakers/joe.jpg')"></div><figcaption><span class="v1-spk__name">Joe Carlsmith</span><span class="v1-spk__role">Anthropic</span><div class="v1-spk__prob"><div class="v1-spk__prob-fill"></div></div><span class="v1-spk__prob-num">—</span></figcaption></figure></a>
     <a class="v1-hold__card" data-answer-id="Qn2c2PN5lg" href="https://manifold.markets/strutheo/which-users-will-attend-a-manifest-IARLlNI5L8" target="_blank" rel="noopener"><figure class="v1-spk"><div class="v1-spk__img" style="background-image:url('/images/speakers/eliezer.jpg')"></div><figcaption><span class="v1-spk__name">Eliezer Yudkowsky</span><span class="v1-spk__role">MIRI</span><div class="v1-spk__prob"><div class="v1-spk__prob-fill"></div></div><span class="v1-spk__prob-num">—</span></figcaption></figure></a>
     <a class="v1-hold__card" data-answer-id="0PtsnIZ6Lz" href="https://manifold.markets/strutheo/which-users-will-attend-a-manifest-IARLlNI5L8" target="_blank" rel="noopener"><figure class="v1-spk"><div class="v1-spk__img" style="background-image:url('/images/speakers/scott.jpg')"></div><figcaption><span class="v1-spk__name">Scott Alexander</span><span class="v1-spk__role">Astral Codex Ten</span><div class="v1-spk__prob"><div class="v1-spk__prob-fill"></div></div><span class="v1-spk__prob-num">—</span></figcaption></figure></a>
@@ -1009,7 +1009,7 @@ const PAGE_HTML = `
       <span class="v1-foot__sub">June 12 – 14 · Lighthaven, Berkeley</span>
     </div>
     <div class="v1-foot__links">
-      <a href="#ticketholders">Guests</a>
+      <a href="#speakers">Speakers</a>
       <a href="#what-is-manifest">Festival</a>
       <a href="#nightmarket">Night Market</a>
       <a href="#tickets">Tickets</a>
