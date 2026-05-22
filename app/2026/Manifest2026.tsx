@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import type { CSSProperties, ReactNode } from 'react'
 
@@ -338,7 +339,7 @@ nav.top.is-scrolled .top__register { color: #fff !important; }
 .v1-hero { position: relative; height: 100vh; min-height: 720px; overflow: hidden; }
 .v1-hero__img {
   position: absolute; inset: 0;
-  background-size: cover; background-position: center;
+  object-fit: cover; object-position: center;
   transform: scale(1.04);
 }
 .v1-hero__veil {
@@ -420,7 +421,7 @@ nav.top.is-scrolled .top__register { color: #fff !important; }
 .v1-spk { margin: 0; display: flex; flex-direction: column; align-items: center; }
 .v1-spk__img {
   width: 112px; height: 112px;
-  background-size: cover; background-position: center center;
+  object-fit: cover; object-position: center;
   border-radius: 50%;
   box-shadow: 0 4px 16px rgba(46,31,77,0.2);
   transition: transform 250ms ease, filter 250ms ease;
@@ -533,7 +534,7 @@ nav.top.is-scrolled .top__register { color: #fff !important; }
 .v1-cell:nth-last-child(-n+2) { border-bottom: none; }
 .v1-cell--photo { padding: 0; overflow: hidden; }
 .v1-cell--photo .v1-cell__img {
-  position: absolute; inset: 0; background-size: cover; background-position: center;
+  position: absolute; inset: 0; object-fit: cover; object-position: center;
   transition: transform 600ms ease;
 }
 .v1-cell--photo:hover .v1-cell__img { transform: scale(1.03); }
@@ -628,7 +629,7 @@ nav.top.is-scrolled .top__register { color: #fff !important; }
 }
 .v1-strip__item:last-child { border-right: none; }
 .v1-strip__img {
-  position: absolute; inset: 0; background-size: cover; background-position: center;
+  position: absolute; inset: 0; object-fit: cover; object-position: center;
   transition: transform 600ms ease;
 }
 /* (no strip hover) */
@@ -854,7 +855,7 @@ nav.top.is-scrolled .top__register { color: #fff !important; }
 .v1-org__card { margin: 0; display: flex; flex-direction: column; align-items: center; gap: 12px; }
 .v1-org__photo {
   width: 144px; height: 144px; border-radius: 50%;
-  background-size: cover; background-position: center;
+  object-fit: cover; object-position: center;
   background-color: var(--plav);
   box-shadow: 0 6px 20px rgba(46,31,77,0.18);
   transition: transform 250ms;
@@ -967,11 +968,6 @@ function useTicketholderProbabilities() {
   return probabilities
 }
 
-const bgImage = (src: string, extra?: CSSProperties): CSSProperties => ({
-  backgroundImage: `url('${src}')`,
-  ...extra,
-})
-
 /* -------------------------------------------------------------------------- */
 /* Sections                                                                   */
 /* -------------------------------------------------------------------------- */
@@ -995,7 +991,14 @@ function TopNav() {
 function Hero() {
   return (
     <section className="v1-hero">
-      <div className="v1-hero__img" style={bgImage('/images/2026/campfire.jpg')} />
+      <Image
+        src="/images/2026/campfire.jpg"
+        alt=""
+        fill
+        priority
+        sizes="100vw"
+        className="v1-hero__img"
+      />
       <div className="v1-hero__veil" />
       <div className="v1-hero__inner">
         <h1 className="v1-hero__title">Manifest 2026</h1>
@@ -1015,10 +1018,23 @@ function Hero() {
   )
 }
 
+function SpeakerPortrait({ name, image }: Pick<Person, 'name' | 'image'>) {
+  return (
+    <Image
+      src={image}
+      alt={name}
+      width={112}
+      height={112}
+      className="v1-spk__img"
+      sizes="112px"
+    />
+  )
+}
+
 function SpeakerFigure({ name, role, image, confirmed }: Person & { confirmed?: boolean }) {
   return (
     <figure className="v1-spk">
-      <div className="v1-spk__img" style={bgImage(image)} />
+      <SpeakerPortrait name={name} image={image} />
       <figcaption>
         <span className="v1-spk__name">{name}</span>
         <span className="v1-spk__role">{role}</span>
@@ -1038,7 +1054,7 @@ function TicketholderFigure({
   return (
     <a className="v1-hold__card" href={TICKETHOLDER_MARKET_URL} target="_blank" rel="noopener">
       <figure className="v1-spk">
-        <div className="v1-spk__img" style={bgImage(image)} />
+        <SpeakerPortrait name={name} image={image} />
         <figcaption>
           <span className="v1-spk__name">{name}</span>
           <span className="v1-spk__role">{role}</span>
@@ -1111,23 +1127,23 @@ function WhatIsManifest() {
         </div>
         <div className="v1-what__images">
           <div className="v1-what__img-wrap">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               className="v1-what__img"
               src="/images/2026/what-is-manifest-1.jpg"
               alt="Attendees gathered under sunshade canopies at Manifest"
-              loading="lazy"
-              decoding="async"
+              width={1800}
+              height={1000}
+              sizes="(max-width: 900px) 100vw, 50vw"
             />
           </div>
           <div className="v1-what__img-wrap">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               className="v1-what__img"
               src="/images/2026/what-is-manifest-2.jpg"
               alt="Attendees in conversation at Manifest"
-              loading="lazy"
-              decoding="async"
+              width={1426}
+              height={745}
+              sizes="(max-width: 900px) 100vw, 50vw"
             />
           </div>
         </div>
@@ -1143,12 +1159,13 @@ function ThemesGrid() {
         {themeCells.map((cell, i) =>
           cell.kind === 'photo' ? (
             <figure key={i} className="v1-cell v1-cell--photo">
-              <div
+              <Image
+                src={cell.src}
+                alt=""
+                fill
+                sizes="(max-width: 900px) 100vw, 50vw"
                 className="v1-cell__img"
-                style={bgImage(
-                  cell.src,
-                  cell.bgPosition ? { backgroundPosition: cell.bgPosition } : undefined
-                )}
+                style={cell.bgPosition ? { objectPosition: cell.bgPosition } : undefined}
               />
             </figure>
           ) : (
@@ -1184,7 +1201,13 @@ function NightMarket() {
       <div className="v1-strip">
         {nightMarketImages.map((file) => (
           <figure key={file} className="v1-strip__item">
-            <div className="v1-strip__img" style={bgImage(`/images/night-market/${file}`)} />
+            <Image
+              src={`/images/night-market/${file}`}
+              alt=""
+              fill
+              sizes="(max-width: 900px) 50vw, 25vw"
+              className="v1-strip__img"
+            />
           </figure>
         ))}
       </div>
@@ -1354,7 +1377,14 @@ function Organizers() {
       <div className="v1-org__grid">
         {organizers.map((o) => (
           <figure key={o.name} className="v1-org__card">
-            <div className="v1-org__photo" style={bgImage(o.image)} />
+            <Image
+              src={o.image}
+              alt={o.name}
+              width={144}
+              height={144}
+              className="v1-org__photo"
+              sizes="144px"
+            />
             <figcaption>
               <span className="v1-org__name">{o.name}</span>
               <a className="v1-org__email" href={`mailto:${o.email}`}>
