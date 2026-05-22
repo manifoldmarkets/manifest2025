@@ -702,6 +702,7 @@ nav.top.is-scrolled .top__register { color: #fff !important; }
 .v1-testi__card blockquote {
   margin: 0;
   font-family: var(--display); font-style: italic;
+  font-weight: 600;
   font-size: 17px; line-height: 1.55; color: var(--pdeep);
   text-wrap: pretty;
 }
