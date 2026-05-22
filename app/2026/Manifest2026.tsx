@@ -1238,7 +1238,7 @@ function NightMarket() {
       </div>
       <div className="v1-nm__cta">
         <a
-          href="https://airtable.com/appMZp1aBO5b7NTdM/pag9gppXcX1cxRixI/edit"
+          href="https://airtable.com/appMZp1aBO5b7NTdM/pag9gppXcX1cxRixI/form"
           className="v1-btn v1-btn--ink pill"
           target="_blank"
           rel="noopener"
