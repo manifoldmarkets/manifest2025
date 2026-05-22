@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
-import type { CSSProperties, ReactNode } from 'react'
+import type { ReactNode } from 'react'
 
 /* -------------------------------------------------------------------------- */
 /* Data                                                                       */
@@ -400,6 +400,10 @@ nav.top.is-scrolled .top__register { color: #fff !important; }
 }
 .v1-h2 em { font-style: italic; color: var(--plav); }
 .v1-h2--center { text-align: center; }
+.v1-h2--deco {
+  font-family: var(--deco); font-style: normal; font-weight: 400;
+  font-size: 48px; letter-spacing: 0.04em;
+}
 .v1-lede {
   font-family: var(--serif); font-style: italic; font-size: 22px; line-height: 1.55;
   margin: 0 0 18px; color: var(--pdeep); max-width: 56ch;
@@ -916,9 +920,10 @@ nav.top.is-scrolled .top__register { color: #fff !important; }
   .v1-hero__title { font-size: 64px; }
   .v1-hero__sub { font-size: 18px; }
   .v1-h2 { font-size: 48px; }
+  .v1-h2--deco { font-size: 30px; }
   .v1-nm__title { font-size: 48px; }
   .v1-themes__title { font-size: 36px; }
-  .v1-speakers, .v1-themes__head, .v1-nm, .v1-testi, .v1-spon, .v1-tix, .v1-faq, .v1-org { padding-left: 24px; padding-right: 24px; }
+  .v1-speakers, .v1-themes__head, .v1-nm, .v1-testi, .sponsors-orig, .v1-tix, .v1-faq, .v1-org { padding-left: 24px; padding-right: 24px; }
   .v1-what__text { padding: 0 24px; }
   .v1-cell { padding: 28px 24px; }
   .v1-cell--list header { margin: 0 -24px 18px; padding: 22px 24px 14px; }
@@ -928,6 +933,21 @@ nav.top.is-scrolled .top__register { color: #fff !important; }
   .v1-foot__row { flex-direction: column; gap: 24px; }
   .v1-foot__links { justify-content: flex-start; }
   .v1-foot__fine { flex-direction: column; gap: 8px; }
+  /* nav: keep only brand + Register so it fits */
+  nav.top { padding: 10px 16px; }
+  .top__links { gap: 12px; }
+  .top__links a:not(.top__register) { display: none; }
+  /* speakers: smaller portraits so 3-col fits cleanly */
+  .v1-spk__img { width: 96px; height: 96px; }
+  .v1-spk-more__grid { column-gap: 24px; }
+  /* night market: 2 per row, negative margin matches mobile padding */
+  .v1-nm > .v1-strip { margin: 0 -24px 56px; }
+  .v1-strip__item { flex: 0 0 50%; }
+  /* sponsors: wrap rows and shrink polymarket logo */
+  .sponsors-row { gap: 24px; flex-wrap: wrap; justify-content: center; }
+  .mono-img--polymarket { width: 240px; height: 64px; }
+  /* organizers: wrap to two rows on phones */
+  .v1-org__grid { gap: 24px 32px; flex-wrap: wrap; }
 }
 `
 
@@ -1258,20 +1278,12 @@ function NightMarket() {
   )
 }
 
-const centeredDecoH2: CSSProperties = {
-  fontFamily: 'var(--deco)',
-  fontStyle: 'normal',
-  fontWeight: 400,
-  fontSize: 48,
-  letterSpacing: '0.04em',
-}
-
 function Testimonials() {
   return (
     <section id="testimonials" className="v1-testi scroll-mt">
       <hr className="v1-divider" />
       <header className="v1-testi__head">
-        <h2 className="v1-h2 v1-h2--center" style={centeredDecoH2}>
+        <h2 className="v1-h2 v1-h2--center v1-h2--deco">
           Tales from Festivalgoers
         </h2>
       </header>
@@ -1291,7 +1303,7 @@ function Sponsors() {
   return (
     <section id="sponsors" className="sponsors-orig scroll-mt">
       <hr className="v1-divider" />
-      <h2 className="v1-h2 v1-h2--center" style={centeredDecoH2}>
+      <h2 className="v1-h2 v1-h2--center v1-h2--deco">
         Past Sponsors
       </h2>
       <div className="sponsors-stack">
@@ -1369,7 +1381,7 @@ function Organizers() {
     <section id="organizers" className="v1-org scroll-mt">
       <hr className="v1-divider" />
       <header className="v1-org__head">
-        <h2 className="v1-h2 v1-h2--center" style={centeredDecoH2}>
+        <h2 className="v1-h2 v1-h2--center v1-h2--deco">
           Organizers:
         </h2>
         <p className="v1-org__sub">Questions? Please reach out.</p>
