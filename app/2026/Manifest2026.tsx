@@ -414,8 +414,9 @@ nav.top.is-scrolled .top__register { color: #fff !important; }
 .v1-speakers__head { display: grid; grid-template-columns: 1.2fr 1fr; gap: 56px; align-items: end; margin-bottom: 44px; }
 .v1-speakers__head .v1-h2 { margin: 0; }
 .v1-spk-grid {
-  display: grid; grid-template-columns: repeat(5, 1fr); gap: 4px 0;
+  display: flex; flex-wrap: wrap; justify-content: center; row-gap: 4px;
 }
+.v1-spk-grid > * { flex: 0 0 20%; }
 .v1-spk { margin: 0; display: flex; flex-direction: column; align-items: center; }
 .v1-spk__img {
   width: 112px; height: 112px;
@@ -899,7 +900,7 @@ nav.top.is-scrolled .top__register { color: #fff !important; }
 
 /* ----- responsive ----- */
 @media (max-width: 900px) {
-  .v1-spk-grid { grid-template-columns: repeat(3, 1fr); }
+  .v1-spk-grid > * { flex: 0 0 33.333%; }
   .v1-grid { grid-template-columns: 1fr; }
   .v1-cell { border-right: none; }
   .v1-nm__row { grid-template-columns: 1fr; gap: 40px; }
