@@ -14,41 +14,47 @@ type Person = { name: string; role: string; image: string }
 type Ticketholder = Person & { answerId: string }
 
 const confirmedSpeakers: Person[] = [
-  { name: 'Patrick McKenzie', role: 'Writer', image: '/images/speakers/patrick.jpg' },
-  { name: 'Chris Best', role: 'CEO @Substack', image: '/images/speakers/chris.jpg' },
-  { name: 'Tracing Woodgrains', role: '@TracingWoodgrains, Writer', image: '/images/2026/guests/tracing-woodgrains.jpg' },
-  { name: 'Jasmine Sun', role: '@jasmine’s substack, writer', image: '/images/2026/guests/jasmine-sun.jpg' },
-  { name: 'Sam Hammond', role: 'Foundation for American Innovation', image: '/images/2026/guests/sam-hammond.jpg' },
-  { name: 'Bentham’s Bulldog', role: '@Bentham’sBulldog, blogger', image: '/images/2026/guests/benthams-bulldog.jpg' },
-  { name: 'Chad Jones', role: 'Economist, Stanford University', image: '/images/2026/guests/chad-jones.jpg' },
-  { name: 'Richard Yetter Chappell', role: '@GoodThoughts, UMiami Philosophy', image: '/images/2026/guests/richard-yetter-chappell.jpg' },
-  { name: 'Aydin Mohseni', role: 'Philosopher of science and Bayesian epistemologist, CMU', image: '/images/2026/guests/aydin-mohseni.jpg' },
-  { name: 'Scott Sumner', role: 'Economist, Bentley University', image: '/images/2026/guests/scott-sumner.jpg' },
+  { name: 'Patrick McKenzie', role: 'patio11', image: '/images/speakers/patrick.jpg' },
+  { name: 'Scott Alexander', role: 'Astral Codex Ten', image: '/images/speakers/scott.jpg' },
+  { name: 'Chris Best', role: 'CEO, Substack', image: '/images/speakers/chris.jpg' },
+  { name: 'David Oks', role: 'Writer, a16z', image: '/images/2026/guests/david-oks.png' },
+  // { name: 'Tracing Woodgrains', role: '@TracingWoodgrains, Writer', image: '/images/2026/guests/tracing-woodgrains.jpg' },
+  { name: 'Jasmine Sun', role: 'Writer', image: '/images/2026/guests/jasmine-sun.jpg' },
+  { name: 'Robin Hanson', role: 'George Mason University', image: '/images/speakers/robin.jpg' },
+  { name: 'Sam Hammond', role: 'FAI', image: '/images/2026/guests/sam-hammond.jpg' },
+  { name: 'Anthony Giovanetti', role: 'Slay the Spire', image: '/images/2026/guests/anthony-giovanetti.png' },
+  // { name: 'Bentham’s Bulldog', role: '@Bentham’sBulldog, blogger', image: '/images/2026/guests/benthams-bulldog.jpg' },
+  { name: 'Chad Jones', role: 'Economist, Stanford', image: '/images/2026/guests/chad-jones.jpg' },
+  // { name: 'Richard Yetter Chappell', role: 'Good Thoughts', image: '/images/2026/guests/richard-yetter-chappell.jpg' },
+  // { name: 'Aydin Mohseni', role: 'Philosopher of science and Bayesian epistemologist, CMU', image: '/images/2026/guests/aydin-mohseni.jpg' },
+  { name: 'Scott Sumner', role: 'Economist', image: '/images/2026/guests/scott-sumner.jpg' },
 ]
 
 const ticketholders: Ticketholder[] = [
+  { answerId: 'g8OzZPcChU', name: 'Nate Silver', role: 'Silver Bulletin', image: '/images/speakers/nate.jpg' },
   { answerId: 'nnP6y9EQEI', name: 'Joe Carlsmith', role: 'Anthropic', image: '/images/speakers/joe.jpg' },
   { answerId: 'Qn2c2PN5lg', name: 'Eliezer Yudkowsky', role: 'MIRI', image: '/images/speakers/eliezer.jpg' },
-  { answerId: '0PtsnIZ6Lz', name: 'Scott Alexander', role: 'Astral Codex Ten', image: '/images/speakers/scott.jpg' },
-  { answerId: 'E6Qz22ndlZ', name: 'Robin Hanson', role: 'George Mason University', image: '/images/speakers/robin.jpg' },
+  { answerId: 'shPIpsg5ld', name: 'Ajeya Cotra', role: 'METR', image: '/images/speakers/ajeya.jpg' },
   { answerId: '0ysnsz0cQ9', name: 'Dwarkesh Patel', role: 'Dwarkesh Podcast', image: '/images/speakers/dwarkesh.jpg' },
   { answerId: '8A0820SzyI', name: 'Aella', role: 'Researcher', image: '/images/speakers/aella.jpg' },
   { answerId: 'C2zggLLylq', name: 'Daniel Kokotajlo', role: 'AI Futures Project', image: '/images/2026/guests/daniel-kokotajlo.jpg' },
-  { answerId: 'ORO8Pp20IP', name: 'Nate Soares', role: 'MIRI', image: '/images/2026/guests/nate-soares.jpg' },
-  { answerId: 'tdz5lShpN8', name: 'Robert Miles', role: '@RobertMilesAI', image: '/images/2026/guests/rob-miles.jpg' },
-  { answerId: '8298A2UEOu', name: 'Kelsey Piper', role: 'Vox Future Perfect', image: '/images/2026/guests/kelsey-piper.jpeg' },
+  // { answerId: 'ORO8Pp20IP', name: 'Nate Soares', role: 'MIRI', image: '/images/2026/guests/nate-soares.jpg' },
+  // { answerId: 'tdz5lShpN8', name: 'Robert Miles', role: '@RobertMilesAI', image: '/images/2026/guests/rob-miles.jpg' },
+  { answerId: '8298A2UEOu', name: 'Kelsey Piper', role: 'The Argument', image: '/images/2026/guests/kelsey-piper.jpeg' },
 ]
 
 const TICKETHOLDER_MARKET_API =
   'https://api.manifold.markets/v0/slug/which-users-will-attend-a-manifest-IARLlNI5L8'
 
-const additionalTicketholders = [
-  'Buck Shlegeris', 'Jacob Falkovich', 'Nuño Sempere', 'Clara Collier',
-  'Janus', 'Owain Evans', 'David Oks', 'Jose Luis Ricon',
+const additionalTicketholders = ['Alex Gajewski', 'Gwern Branwen', 
+  'Buck Shlegeris', 'Jacob Falkovich', 'Clara Collier',
+  'Janus', 'Owain Evans', 'Jose Luis Ricon',
   'Razib Khan', 'Duncan Sabien', 'Katja Grace', 'Richard Ngo',
   'Dynomight', 'Lee Fang', 'Sarah Constantin', 'Eli Lifland',
-  'Michael Trazzi', 'Stephen Hsu', 'Frank Lantz', 'Nathan Young',
-]
+  'Stephen Hsu', 'Frank Lantz', 'Chana Messinger', 'Rob Miles',
+  'Jack (Trace) Zhou', 'Bentham’s Bulldog', 'Aydin Mohseni', 'Tim Hwang',
+  'Richard Yetter Chappell', 'Stephen Grugett', 'Nate Soares',
+].sort((a, b) => a.localeCompare(b))
 
 type ThemeListItem = { title: string; by?: string }
 type ThemeCell =
@@ -1053,21 +1059,6 @@ function Speakers({ probabilities }: { probabilities: Record<string, number> }) 
         <h2 className="v1-h2">
           2026 Speakers & <em>Guests</em>
         </h2>
-        <p
-          style={{
-            fontFamily: 'var(--cinzel)',
-            fontSize: 14,
-            fontStyle: 'italic',
-            color: 'var(--muted)',
-            margin: 0,
-            letterSpacing: '0.04em',
-            lineHeight: 1.6,
-          }}
-        >
-          Confirmed speakers
-          <br />
-          & ticket holders; click any odds bar to place your bet.
-        </p>
       </header>
 
       <div className="v1-spk-grid">
@@ -1080,7 +1071,7 @@ function Speakers({ probabilities }: { probabilities: Record<string, number> }) 
       </div>
 
       <div className="v1-spk-more">
-        <span className="v1-spk-more__label">— Also holding tickets —</span>
+        <span className="v1-spk-more__label">— And good odds on —</span>
         <div className="v1-spk-more__grid">
           {additionalTicketholders.map((name) => (
             <a key={name} href={TICKETHOLDER_MARKET_URL} target="_blank" rel="noopener">
