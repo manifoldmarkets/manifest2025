@@ -381,7 +381,7 @@ nav.top.is-scrolled .top__register { color: #fff !important; }
 .v1-btn {
   display: inline-flex; align-items: center; gap: 8px;
   padding: 14px 26px; font-family: var(--cinzel); font-weight: 700; font-size: 13px;
-  letter-spacing: 0.2em; text-transform: uppercase; text-decoration: none;
+  letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none;
   border-radius: 999px 0 999px 0; transition: transform 200ms, background 160ms;
 }
 .v1-btn--solid { background: #fff; color: var(--pdeep); }
