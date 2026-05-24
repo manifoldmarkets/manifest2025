@@ -18,7 +18,7 @@ const confirmedSpeakers: Person[] = [
   { name: 'Patrick McKenzie', role: 'patio11', image: '/images/speakers/patrick.jpg' },
   { name: 'Scott Alexander', role: 'Astral Codex Ten', image: '/images/speakers/scott.jpg' },
   { name: 'Chris Best', role: 'CEO, Substack', image: '/images/speakers/chris.jpg' },
-  { name: 'David Oks', role: 'Writer, a16z', image: '/images/2026/guests/david-oks.png' },
+  { name: 'David Oks', role: 'Writer', image: '/images/2026/guests/david-oks.png' },
   // { name: 'Tracing Woodgrains', role: '@TracingWoodgrains, Writer', image: '/images/2026/guests/tracing-woodgrains.jpg' },
   { name: 'Jasmine Sun', role: 'Writer', image: '/images/2026/guests/jasmine-sun.jpg' },
   { name: 'Robin Hanson', role: 'George Mason University', image: '/images/speakers/robin.jpg' },
