@@ -25,6 +25,7 @@ const confirmedSpeakers: Person[] = [
   { name: 'Sam Hammond', role: 'FAI', image: '/images/2026/guests/sam-hammond.jpg' },
   { name: 'Anthony Giovanetti', role: 'Slay the Spire', image: '/images/2026/guests/anthony-giovanetti.png' },
   // { name: 'Bentham’s Bulldog', role: '@Bentham’sBulldog, blogger', image: '/images/2026/guests/benthams-bulldog.jpg' },
+  { name: 'Byrne Hobart', role: 'The Diff', image: '/images/speakers/byrne.jpg' },
   { name: 'Chad Jones', role: 'Economist, Stanford', image: '/images/2026/guests/chad-jones.jpg' },
   // { name: 'Richard Yetter Chappell', role: 'Good Thoughts', image: '/images/2026/guests/richard-yetter-chappell.jpg' },
   // { name: 'Aydin Mohseni', role: 'Philosopher of science and Bayesian epistemologist, CMU', image: '/images/2026/guests/aydin-mohseni.jpg' },
@@ -53,7 +54,7 @@ const additionalTicketholders = ['Alex Gajewski', 'Gwern Branwen',
   'Razib Khan', 'Duncan Sabien', 'Katja Grace', 'Richard Ngo',
   'Dynomight', 'Lee Fang', 'Sarah Constantin', 'Eli Lifland',
   'Stephen Hsu', 'Frank Lantz', 'Chana Messinger', 'Rob Miles',
-  'Jack (Trace) Zhou', 'Bentham’s Bulldog', 'Aydin Mohseni', 'Tim Hwang',
+  'Tracing Woodgrains', 'Bentham’s Bulldog', 'Aydin Mohseni', 'Tim Hwang',
   'Richard Yetter Chappell', 'Stephen Grugett', 'Nate Soares',
 ].sort((a, b) => a.localeCompare(b))
 
