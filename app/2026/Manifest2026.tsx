@@ -44,8 +44,8 @@ const ticketholders: Ticketholder[] = [
   // { answerId: 'tdz5lShpN8', name: 'Robert Miles', role: '@RobertMilesAI', image: '/images/2026/guests/rob-miles.jpg' },
   { answerId: '8298A2UEOu', name: 'Kelsey Piper', role: 'The Argument', image: '/images/2026/guests/kelsey-piper.jpeg' },
   { answerId: 'pending-david-shor', name: 'David Shor', role: 'Blue Rose Research', image: '/images/speakers/davidshor.jpg' },
-  { answerId: 'pending-sreeram-kannan', name: 'Sreeram Kannan', role: 'EigenLayer', image: '/images/2026/guests/sreeram-kannan.png' },
-  { answerId: 'pending-andreas-stuhlmueller', name: 'Andreas Stuhlmüller', role: 'Elicit', image: '/images/2026/guests/andreas-stuhlmueller.png' },
+  { answerId: 'IPuznZ0ICt', name: 'Sreeram Kannan', role: 'EigenLayer', image: '/images/2026/guests/sreeram-kannan.png' },
+  { answerId: '2ZqtuNtuN2', name: 'Andreas Stuhlmüller', role: 'Elicit', image: '/images/2026/guests/andreas-stuhlmueller.png' },
 ]
 
 const TICKETHOLDER_MARKET_API =
