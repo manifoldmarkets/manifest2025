@@ -43,7 +43,7 @@ const ticketholders: Ticketholder[] = [
   // { answerId: 'ORO8Pp20IP', name: 'Nate Soares', role: 'MIRI', image: '/images/2026/guests/nate-soares.jpg' },
   // { answerId: 'tdz5lShpN8', name: 'Robert Miles', role: '@RobertMilesAI', image: '/images/2026/guests/rob-miles.jpg' },
   { answerId: '8298A2UEOu', name: 'Kelsey Piper', role: 'The Argument', image: '/images/2026/guests/kelsey-piper.jpeg' },
-  { answerId: 'pending-david-shor', name: 'David Shor', role: 'Blue Rose Research', image: '/images/speakers/davidshor.jpg' },
+  { answerId: 'RpOtQuq9C2', name: 'David Shor', role: 'Blue Rose Research', image: '/images/speakers/davidshor.jpg' },
   { answerId: 'IPuznZ0ICt', name: 'Sreeram Kannan', role: 'EigenLayer', image: '/images/2026/guests/sreeram-kannan.png' },
   { answerId: '2ZqtuNtuN2', name: 'Andreas Stuhlmüller', role: 'Elicit', image: '/images/2026/guests/andreas-stuhlmueller.png' },
 ]
