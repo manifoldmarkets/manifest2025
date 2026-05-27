@@ -30,6 +30,7 @@ const confirmedSpeakers: Person[] = [
   // { name: 'Richard Yetter Chappell', role: 'Good Thoughts', image: '/images/2026/guests/richard-yetter-chappell.jpg' },
   // { name: 'Aydin Mohseni', role: 'Philosopher of science and Bayesian epistemologist, CMU', image: '/images/2026/guests/aydin-mohseni.jpg' },
   { name: 'Scott Sumner', role: 'Economist', image: '/images/2026/guests/scott-sumner.jpg' },
+  { name: 'Destiny', role: 'Streamer', image: '/images/2026/guests/destiny.jpg' },
 ]
 
 const ticketholders: Ticketholder[] = [
