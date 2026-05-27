@@ -40,7 +40,7 @@ const ticketholders: Ticketholder[] = [
   { answerId: 'shPIpsg5ld', name: 'Ajeya Cotra', role: 'METR', image: '/images/speakers/ajeya.jpg' },
   { answerId: '0ysnsz0cQ9', name: 'Dwarkesh Patel', role: 'Dwarkesh Podcast', image: '/images/speakers/dwarkesh.jpg' },
   { answerId: '8A0820SzyI', name: 'Aella', role: 'Researcher', image: '/images/speakers/aella.jpg' },
-  { answerId: 'C2zggLLylq', name: 'Daniel Kokotajlo', role: 'AI Futures Project', image: '/images/2026/guests/daniel-kokotajlo.jpg' },
+  // { answerId: 'C2zggLLylq', name: 'Daniel Kokotajlo', role: 'AI Futures Project', image: '/images/2026/guests/daniel-kokotajlo.jpg' },
   // { answerId: 'ORO8Pp20IP', name: 'Nate Soares', role: 'MIRI', image: '/images/2026/guests/nate-soares.jpg' },
   // { answerId: 'tdz5lShpN8', name: 'Robert Miles', role: '@RobertMilesAI', image: '/images/2026/guests/rob-miles.jpg' },
   { answerId: '8298A2UEOu', name: 'Kelsey Piper', role: 'The Argument', image: '/images/2026/guests/kelsey-piper.jpeg' },
