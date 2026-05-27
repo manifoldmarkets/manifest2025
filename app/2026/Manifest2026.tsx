@@ -1146,8 +1146,9 @@ function WhatIsManifest() {
           </p>
           <h3 className="v1-themes__title">What sorts of things happen at Manifest?</h3>
           <p className="v1-themes__sub">
-            Talks, panels, debates, workshops, games, prediction market tournaments, a night market,
-            career fair, and much more. Much of the schedule comes from attendee-led sessions.
+            Talks, panels, debates, workshops, games, prediction market tournaments, a night
+            market, career fair, and much more. Much of the schedule comes from attendee-led
+            sessions. Sessions from past years included:
           </p>
         </div>
         <div className="v1-what__images">
