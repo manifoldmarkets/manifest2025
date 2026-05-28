@@ -365,8 +365,10 @@ nav.top.is-scrolled .top__register { color: #fff !important; }
   padding: 0 24px; color: #fff;
 }
 .v1-hero__eyebrow {
-  font-family: var(--cinzel); font-size: 12px; letter-spacing: 0.4em; text-transform: uppercase;
-  color: rgba(255,255,255,0.85); margin-bottom: 18px;
+  font-family: var(--cinzel); font-weight: 900; font-size: 20px;
+  letter-spacing: 0.4em; text-transform: uppercase;
+  color: #fff; margin-bottom: 22px;
+  text-shadow: 0 2px 10px rgba(46,31,77,0.7);
 }
 .v1-hero__title {
   font-family: var(--deco); font-weight: 700; font-size: 128px; line-height: 1;
@@ -383,6 +385,15 @@ nav.top.is-scrolled .top__register { color: #fff !important; }
   text-shadow: 0 2px 10px rgba(46,31,77,0.7);
 }
 .v1-hero__row { display: flex; gap: 14px; }
+.v1-hero__note {
+  margin: 22px 0 0; font-family: var(--cinzel); font-weight: 700;
+  font-size: 18px; line-height: 1.4; color: #fff;
+  letter-spacing: 0.04em; white-space: nowrap;
+  text-shadow: 0 2px 10px rgba(46,31,77,0.85), 0 0 24px rgba(46,31,77,0.6);
+}
+@media (max-width: 720px) {
+  .v1-hero__note { white-space: normal; font-size: 15px; max-width: 520px; }
+}
 .v1-btn {
   display: inline-flex; align-items: center; gap: 8px;
   padding: 14px 26px; font-family: var(--cinzel); font-weight: 700; font-size: 13px;
@@ -1018,7 +1029,7 @@ function Hero() {
   return (
     <section className="v1-hero">
       <Image
-        src="/images/2026/campfire.jpg"
+        src="/images/2026/hero-bg.jpg"
         alt=""
         fill
         priority
@@ -1027,6 +1038,7 @@ function Hero() {
       />
       <div className="v1-hero__veil" />
       <div className="v1-hero__inner">
+        <p className="v1-hero__eyebrow">June 12–14 · Berkeley</p>
         <h1 className="v1-hero__title">Manifest 2026</h1>
         <p className="v1-hero__sub">
           A festival for predictions,
@@ -1035,9 +1047,13 @@ function Hero() {
         </p>
         <div className="v1-hero__row">
           <a href="#tickets" className="v1-btn v1-btn--solid pill">
-            Register · June 12–14 · Berkeley
+            Get your tickets
           </a>
         </div>
+        <p className="v1-hero__note">
+          Ticket prices go up by $125 after Saturday May 30th. Get yours before
+          then.
+        </p>
       </div>
       <div className="v1-hero__fade" />
     </section>
@@ -1149,6 +1165,7 @@ function WhatIsManifest() {
           <p className="v1-themes__sub">
             Talks, panels, debates, workshops, games, prediction market tournaments, a night market,
             career fair, and much more. Much of the schedule comes from attendee-led sessions.
+            Schedule from past years have included:
           </p>
         </div>
         <div className="v1-what__images">

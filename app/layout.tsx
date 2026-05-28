@@ -20,7 +20,7 @@ const bungeeShade = Bungee_Shade({
 const cinzel = Cinzel({
   variable: '--font-cinzel',
   subsets: ['latin'],
-  weight: ['500', '600', '700'],
+  weight: ['500', '600', '700', '900'],
   display: 'swap',
 })
 const cinzelDecorative = Cinzel_Decorative({
