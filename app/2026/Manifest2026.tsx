@@ -43,7 +43,7 @@ const ticketholders: Ticketholder[] = [
   { answerId: 'nnP6y9EQEI', name: 'Joe Carlsmith', role: 'Anthropic', image: '/images/speakers/joe.jpg' },
   { answerId: 'Qn2c2PN5lg', name: 'Eliezer Yudkowsky', role: 'MIRI', image: '/images/speakers/eliezer.jpg' },
   { answerId: 'shPIpsg5ld', name: 'Ajeya Cotra', role: 'METR', image: '/images/speakers/ajeya.jpg' },
-  { answerId: '0ysnsz0cQ9', name: 'Dwarkesh Patel', role: 'Dwarkesh Podcast', image: '/images/speakers/dwarkesh.jpg' },
+  // { answerId: '0ysnsz0cQ9', name: 'Dwarkesh Patel', role: 'Dwarkesh Podcast', image: '/images/speakers/dwarkesh.jpg' },
   { answerId: '8A0820SzyI', name: 'Aella', role: 'Researcher', image: '/images/speakers/aella.jpg' },
   // { answerId: 'C2zggLLylq', name: 'Daniel Kokotajlo', role: 'AI Futures Project', image: '/images/2026/guests/daniel-kokotajlo.jpg' },
   // { answerId: 'ORO8Pp20IP', name: 'Nate Soares', role: 'MIRI', image: '/images/2026/guests/nate-soares.jpg' },
@@ -62,7 +62,7 @@ const additionalTicketholders = ['Alex Gajewski', 'Gwern Branwen',
   'Dynomight', 'Lee Fang', 'Sarah Constantin', 'Eli Lifland',
   'Stephen Hsu', 'Frank Lantz', 'Chana Messinger', 'Rob Miles',
   'Tracing Woodgrains', 'Bentham’s Bulldog', 'Aydin Mohseni', 'Tim Hwang',
-  'Richard Yetter Chappell', 'Stephen Grugett', 'Nate Soares', 'Jeff Alstott', 'Lydia Laurenson'
+  'Richard Yetter Chappell', 'Stephen Grugett', 'Nate Soares', 'Jeff Alstott', 'Lydia Laurenson', 'Panda Smith'
 ].sort((a, b) => a.localeCompare(b))
 
 type ThemeListItem = { title: string; by?: string }
@@ -440,7 +440,7 @@ nav.top.is-scrolled .top__register { color: #fff !important; }
 .v1-spk-grid {
   display: flex; flex-wrap: wrap; justify-content: center; row-gap: 4px;
 }
-.v1-spk-grid > * { flex: 0 0 20%; }
+.v1-spk-grid > * { flex: 0 0 16.666%; }
 .v1-spk { margin: 0; display: flex; flex-direction: column; align-items: center; }
 .v1-spk__img {
   width: 112px; height: 112px;
