@@ -34,6 +34,7 @@ const confirmedSpeakers: Person[] = [
   { name: 'Sreeram Kannan', role: 'Eigen Labs', image: '/images/2026/guests/sreeram-kannan.png' },
   { name: 'Emmett Shear', role: 'CEO, Softmax', image: '/images/2026/guests/emmett-shear.webp' },
   { name: 'Noam Brown', role: 'OpenAI', image: '/images/2026/guests/noam-brown.jpg' },
+  { name: 'David Shor', role: 'Blue Rose Research', image: '/images/speakers/davidshor.jpg' },
 ]
 
 const ticketholders: Ticketholder[] = [
@@ -47,7 +48,6 @@ const ticketholders: Ticketholder[] = [
   // { answerId: 'ORO8Pp20IP', name: 'Nate Soares', role: 'MIRI', image: '/images/2026/guests/nate-soares.jpg' },
   // { answerId: 'tdz5lShpN8', name: 'Robert Miles', role: '@RobertMilesAI', image: '/images/2026/guests/rob-miles.jpg' },
   { answerId: '8298A2UEOu', name: 'Kelsey Piper', role: 'The Argument', image: '/images/2026/guests/kelsey-piper.jpeg' },
-  { answerId: 'RpOtQuq9C2', name: 'David Shor', role: 'Blue Rose Research', image: '/images/speakers/davidshor.jpg' },
   { answerId: '2ZqtuNtuN2', name: 'Andreas Stuhlmüller', role: 'Elicit', image: '/images/2026/guests/andreas-stuhlmueller.png' },
 ]
 
