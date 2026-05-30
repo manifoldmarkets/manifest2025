@@ -32,6 +32,8 @@ const confirmedSpeakers: Person[] = [
   { name: 'Scott Sumner', role: 'Economist', image: '/images/2026/guests/scott-sumner.jpg' },
   { name: 'Destiny', role: 'Streamer', image: '/images/2026/guests/destiny.jpg' },
   { name: 'Sreeram Kannan', role: 'Eigen Labs', image: '/images/2026/guests/sreeram-kannan.png' },
+  { name: 'Emmett Shear', role: 'CEO, Softmax', image: '/images/2026/guests/emmett-shear.webp' },
+  { name: 'Noam Brown', role: 'OpenAI', image: '/images/2026/guests/noam-brown.jpg' },
 ]
 
 const ticketholders: Ticketholder[] = [
