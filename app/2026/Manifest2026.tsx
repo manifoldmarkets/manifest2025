@@ -36,6 +36,9 @@ const confirmedSpeakers: Person[] = [
   { name: 'Noam Brown', role: 'OpenAI', image: '/images/2026/guests/noam-brown.jpg' },
   { name: 'David Shor', role: 'Blue Rose Research', image: '/images/speakers/davidshor.jpg' },
   { name: 'Allison Duettman', role: 'Foresight Institute', image: '/images/speakers/allison.jpg' },
+  { name: 'Kelsey Piper', role: 'The Argument', image: '/images/2026/guests/kelsey-piper.jpeg' },
+  { name: 'Andreas Stuhlmüller', role: 'CEO, Elicit', image: '/images/2026/guests/andreas-stuhlmueller.png' },
+  { name: 'Aella', role: 'Researcher', image: '/images/speakers/aella.jpg' },
 ]
 
 const ticketholders: Ticketholder[] = [
@@ -44,12 +47,9 @@ const ticketholders: Ticketholder[] = [
   { answerId: 'Qn2c2PN5lg', name: 'Eliezer Yudkowsky', role: 'MIRI', image: '/images/speakers/eliezer.jpg' },
   { answerId: 'shPIpsg5ld', name: 'Ajeya Cotra', role: 'METR', image: '/images/speakers/ajeya.jpg' },
   // { answerId: '0ysnsz0cQ9', name: 'Dwarkesh Patel', role: 'Dwarkesh Podcast', image: '/images/speakers/dwarkesh.jpg' },
-  { answerId: '8A0820SzyI', name: 'Aella', role: 'Researcher', image: '/images/speakers/aella.jpg' },
   // { answerId: 'C2zggLLylq', name: 'Daniel Kokotajlo', role: 'AI Futures Project', image: '/images/2026/guests/daniel-kokotajlo.jpg' },
   // { answerId: 'ORO8Pp20IP', name: 'Nate Soares', role: 'MIRI', image: '/images/2026/guests/nate-soares.jpg' },
   // { answerId: 'tdz5lShpN8', name: 'Robert Miles', role: '@RobertMilesAI', image: '/images/2026/guests/rob-miles.jpg' },
-  { answerId: '8298A2UEOu', name: 'Kelsey Piper', role: 'The Argument', image: '/images/2026/guests/kelsey-piper.jpeg' },
-  { answerId: '2ZqtuNtuN2', name: 'Andreas Stuhlmüller', role: 'CEO, Elicit', image: '/images/2026/guests/andreas-stuhlmueller.png' },
 ]
 
 const TICKETHOLDER_MARKET_API =
@@ -1053,10 +1053,6 @@ function Hero() {
             Get your tickets
           </a>
         </div>
-        <p className="v1-hero__note">
-          Ticket prices go up by $125 after Saturday May 30th. Get yours before
-          then.
-        </p>
       </div>
       <div className="v1-hero__fade" />
     </section>
