@@ -1,6 +1,6 @@
 'use client'
 
-import type { ReactNode } from 'react'
+import { useState, type ReactNode } from 'react'
 import Image from 'next/image'
 
 /* -------------------------------------------------------------------------- */
@@ -65,7 +65,7 @@ function SectionHeading({
   return (
     <h2
       id={id}
-      className="mt-20 scroll-mt-24 font-cinzel-decorative text-3xl font-bold tracking-tight text-m26-purple-dark sm:text-4xl"
+      className="mt-12 scroll-mt-16 font-cinzel-decorative text-[28px] font-bold leading-tight tracking-tight text-m26-purple-dark sm:mt-20 sm:scroll-mt-24 sm:text-4xl"
     >
       <span className="mr-3" aria-hidden>
         {emoji}
@@ -77,7 +77,7 @@ function SectionHeading({
 
 function SubHeading({ children }: { children: ReactNode }) {
   return (
-    <h3 className="mt-8 font-cinzel text-xl font-semibold text-m26-purple-deep">
+    <h3 className="mt-6 font-cinzel text-lg font-semibold text-m26-purple-deep sm:mt-8 sm:text-xl">
       {children}
     </h3>
   )
@@ -85,11 +85,11 @@ function SubHeading({ children }: { children: ReactNode }) {
 
 function Callout({ emoji, children }: { emoji: string; children: ReactNode }) {
   return (
-    <div className="my-5 flex items-start gap-4 rounded-br-3xl rounded-tl-3xl border border-m26-lav/60 bg-m26-cream px-5 py-4 shadow-sm">
-      <span className="text-2xl leading-none" aria-hidden>
+    <div className="my-5 flex items-start gap-3 rounded-br-3xl rounded-tl-3xl border border-m26-lav/60 bg-m26-cream px-4 py-4 shadow-sm sm:gap-4 sm:px-5">
+      <span className="text-xl leading-none sm:text-2xl" aria-hidden>
         {emoji}
       </span>
-      <div className="flex-1 font-baskerville text-base leading-relaxed text-m26-purple-deep">
+      <div className="min-w-0 flex-1 break-words font-baskerville text-base leading-relaxed text-m26-purple-deep">
         {children}
       </div>
     </div>
@@ -124,7 +124,7 @@ function Link({ href, children }: { href: string; children: ReactNode }) {
       href={href}
       target={external ? '_blank' : undefined}
       rel={external ? 'noopener noreferrer' : undefined}
-      className="text-m26-purple underline decoration-m26-lav-mid underline-offset-2 transition-colors hover:text-m26-purple-deep hover:decoration-m26-purple"
+      className="break-words text-m26-purple underline decoration-m26-lav-mid underline-offset-2 transition-colors hover:text-m26-purple-deep hover:decoration-m26-purple"
     >
       {children}
     </a>
@@ -144,6 +144,8 @@ function P({ children }: { children: ReactNode }) {
 /* -------------------------------------------------------------------------- */
 
 export default function AttendeeGuide() {
+  const [tocOpen, setTocOpen] = useState(false)
+
   return (
     <main className="min-h-screen bg-m26-parchment text-m26-purple-deep">
       {/* Cover */}
@@ -162,10 +164,10 @@ export default function AttendeeGuide() {
         </div>
         <div className="mx-auto mt-10 max-w-3xl px-6 sm:mt-12">
           <div className="flex flex-col items-center text-center">
-            <h1 className="font-cinzel-decorative text-4xl font-bold leading-tight tracking-tight text-m26-purple-dark sm:text-5xl">
+            <h1 className="font-cinzel-decorative text-[32px] font-bold leading-tight tracking-tight text-m26-purple-dark sm:text-5xl">
               Manifest 2026 Attendee Guide
             </h1>
-            <p className="mt-3 font-cinzel text-sm uppercase tracking-[0.2em] text-m26-purple">
+            <p className="mt-3 font-cinzel text-xs uppercase tracking-[0.18em] text-m26-purple sm:text-sm sm:tracking-[0.2em]">
               June 12–14, 2026 · Berkeley, CA
             </p>
           </div>
@@ -173,20 +175,36 @@ export default function AttendeeGuide() {
       </header>
 
       <div className="lg:flex lg:items-start">
-        {/* Table of contents — full-height left rail on lg+, inline panel on smaller screens */}
+        {/* Table of contents — full-height left rail on lg+, collapsible panel on smaller screens */}
         <nav
           aria-label="Table of contents"
-          className="mx-6 mb-10 mt-12 rounded-br-3xl rounded-tl-3xl border border-m26-lav/60 bg-m26-cream/80 px-5 py-5 lg:sticky lg:top-0 lg:mx-0 lg:mb-0 lg:mt-0 lg:flex lg:h-screen lg:w-64 lg:flex-shrink-0 lg:flex-col lg:overflow-y-auto lg:rounded-none lg:border-0 lg:border-r lg:border-m26-lav/60 lg:bg-m26-cream/60 lg:px-6 lg:py-10 xl:w-72"
+          className="mx-4 mb-8 mt-8 rounded-br-3xl rounded-tl-3xl border border-m26-lav/60 bg-m26-cream/80 px-4 py-3 sm:mx-6 sm:mt-12 sm:px-5 sm:py-5 lg:sticky lg:top-0 lg:mx-0 lg:mb-0 lg:mt-0 lg:flex lg:h-screen lg:w-64 lg:flex-shrink-0 lg:flex-col lg:overflow-y-auto lg:rounded-none lg:border-0 lg:border-r lg:border-m26-lav/60 lg:bg-m26-cream/60 lg:px-6 lg:py-10 xl:w-72"
         >
-          <h2 className="font-cinzel text-xs font-semibold uppercase tracking-[0.18em] text-m26-purple">
-            Table of Contents
-          </h2>
-          <ul className="mt-4 grid grid-cols-1 gap-y-1.5 sm:grid-cols-2 lg:mt-6 lg:grid-cols-1">
+          <button
+            type="button"
+            onClick={() => setTocOpen((v) => !v)}
+            aria-expanded={tocOpen}
+            aria-controls="toc-list"
+            className="flex w-full items-center justify-between gap-2 font-cinzel text-xs font-semibold uppercase tracking-[0.18em] text-m26-purple lg:pointer-events-none"
+          >
+            <span>Table of Contents</span>
+            <span
+              className={`text-base transition-transform lg:hidden ${tocOpen ? 'rotate-180' : ''}`}
+              aria-hidden
+            >
+              ▾
+            </span>
+          </button>
+          <ul
+            id="toc-list"
+            className={`${tocOpen ? 'mt-4 grid' : 'hidden'} grid-cols-1 gap-y-0.5 sm:grid-cols-2 lg:mt-6 lg:!grid lg:grid-cols-1`}
+          >
             {toc.map((item) => (
               <li key={item.id}>
                 <a
                   href={`#${item.id}`}
-                  className="flex items-center gap-2 rounded-md px-2 py-1.5 font-baskerville text-sm text-m26-purple-deep transition-colors hover:bg-m26-lav-light/60 hover:text-m26-purple-dark"
+                  onClick={() => setTocOpen(false)}
+                  className="flex min-h-[44px] items-center gap-2 rounded-md px-2 py-2 font-baskerville text-base text-m26-purple-deep transition-colors hover:bg-m26-lav-light/60 hover:text-m26-purple-dark active:bg-m26-lav-light/80 lg:min-h-0 lg:py-1.5 lg:text-sm"
                 >
                   <span aria-hidden>{item.emoji}</span>
                   <span>{item.label}</span>
@@ -196,7 +214,7 @@ export default function AttendeeGuide() {
           </ul>
         </nav>
 
-        <article className="mx-auto min-w-0 max-w-3xl px-6 pb-24 pt-12 lg:flex-1 lg:px-12 lg:pt-16">
+        <article className="mx-auto min-w-0 max-w-3xl px-5 pb-20 pt-2 sm:px-6 sm:pb-24 sm:pt-12 lg:flex-1 lg:px-12 lg:pt-16">
           {/* Venue */}
           <SectionHeading id="venue" emoji="🏡">
             Venue
@@ -392,7 +410,7 @@ export default function AttendeeGuide() {
           <SectionHeading id="policies" emoji="⚖️">
             Participant Policies
           </SectionHeading>
-          <h3 className="mt-8 font-cinzel text-2xl font-bold text-m26-purple-deep">
+          <h3 className="mt-6 font-cinzel text-xl font-bold text-m26-purple-deep sm:mt-8 sm:text-2xl">
             Code of Conduct
           </h3>
           <P>
@@ -426,7 +444,7 @@ export default function AttendeeGuide() {
             be fun for us, and probably not for you either.
           </P>
 
-          <h3 className="mt-8 font-cinzel text-2xl font-bold text-m26-purple-deep">
+          <h3 className="mt-6 font-cinzel text-xl font-bold text-m26-purple-deep sm:mt-8 sm:text-2xl">
             Privacy and Photo Policy
           </h3>
           <P>
