@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, type ReactNode } from 'react'
+import { useEffect, useState, type ReactNode } from 'react'
 import Image from 'next/image'
 
 /* -------------------------------------------------------------------------- */
@@ -145,6 +145,29 @@ function P({ children }: { children: ReactNode }) {
 
 export default function AttendeeGuide() {
   const [tocOpen, setTocOpen] = useState(false)
+  const [activeId, setActiveId] = useState<string>(toc[0].id)
+
+  useEffect(() => {
+    const sections = toc
+      .map((item) => document.getElementById(item.id))
+      .filter((el): el is HTMLElement => el !== null)
+    if (sections.length === 0) return
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((e) => e.isIntersecting)
+          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)
+        if (visible.length > 0) {
+          setActiveId(visible[0].target.id)
+        }
+      },
+      { rootMargin: '-80px 0px -65% 0px', threshold: 0 },
+    )
+
+    sections.forEach((el) => observer.observe(el))
+    return () => observer.disconnect()
+  }, [])
 
   return (
     <main className="min-h-screen bg-m26-parchment text-m26-purple-deep">
@@ -199,18 +222,26 @@ export default function AttendeeGuide() {
             id="toc-list"
             className={`${tocOpen ? 'mt-4 grid' : 'hidden'} grid-cols-1 gap-y-0.5 sm:grid-cols-2 lg:mt-6 lg:!grid lg:grid-cols-1`}
           >
-            {toc.map((item) => (
-              <li key={item.id}>
-                <a
-                  href={`#${item.id}`}
-                  onClick={() => setTocOpen(false)}
-                  className="flex min-h-[44px] items-center gap-2 rounded-md px-2 py-2 font-baskerville text-base text-m26-purple-deep transition-colors hover:bg-m26-lav-light/60 hover:text-m26-purple-dark active:bg-m26-lav-light/80 lg:min-h-0 lg:py-1.5 lg:text-sm"
-                >
-                  <span aria-hidden>{item.emoji}</span>
-                  <span>{item.label}</span>
-                </a>
-              </li>
-            ))}
+            {toc.map((item) => {
+              const isActive = activeId === item.id
+              return (
+                <li key={item.id}>
+                  <a
+                    href={`#${item.id}`}
+                    onClick={() => setTocOpen(false)}
+                    aria-current={isActive ? 'location' : undefined}
+                    className={`flex min-h-[44px] items-center gap-2 rounded-md px-2 py-2 font-baskerville text-base transition-colors hover:bg-m26-lav-light/60 hover:text-m26-purple-dark active:bg-m26-lav-light/80 lg:min-h-0 lg:py-1.5 lg:text-sm ${
+                      isActive
+                        ? 'bg-m26-lav-light/80 font-semibold text-m26-purple-dark'
+                        : 'text-m26-purple-deep'
+                    }`}
+                  >
+                    <span aria-hidden>{item.emoji}</span>
+                    <span>{item.label}</span>
+                  </a>
+                </li>
+              )
+            })}
           </ul>
         </nav>
 
@@ -246,6 +277,21 @@ export default function AttendeeGuide() {
               </div>
             </a>
           </figure>
+          <Callout emoji="🚗">
+            <strong>There is no parking at the venue</strong>, so we recommend
+            parking at Telegraph Channing Parking Garage (15 min walk away), or
+            Ubering, biking, or walking. The 51B bus also takes you directly to
+            the venue from Downtown Berkeley BART.
+          </Callout>
+          <Callout emoji="🛏️">
+            <strong>
+              You can book accommodations on-site{' '}
+              <Link href="https://www.havenbookings.space/events/festival-season-2026">
+                here
+              </Link>
+            </strong>
+            , though spaces are limited.
+          </Callout>
 
           {/* Waypoint */}
           <SectionHeading id="waypoint" emoji="🧭">
@@ -253,7 +299,7 @@ export default function AttendeeGuide() {
           </SectionHeading>
           <P>
             Please ensure you are able to access Waypoint. This is how you will
-            be able to access the schedule, venue map, attendee list, and
+            be able to access the event, schedule, venue map, attendee list, and
             receive conference announcements.
           </P>
           <P>
@@ -442,6 +488,21 @@ export default function AttendeeGuide() {
             to: asking you politely to stop; asking you slightly less politely
             to stop; asking you to leave the venue; etc. That definitely won’t
             be fun for us, and probably not for you either.
+          </P>
+
+          <h3 className="mt-6 font-cinzel text-xl font-bold text-m26-purple-deep sm:mt-8 sm:text-2xl">
+            Code of Being a Particularly Awesome Attendee
+          </h3>
+          <P>
+            The code of conduct above expresses how <em>not</em> to behave at
+            Manifest. But more importantly, we have a guide for how <em>to</em>{' '}
+            behave at Manifest if you want to go above and beyond:
+          </P>
+          <P>
+            🐶{' '}
+            <Link href="https://www.notion.so/manifoldmarkets/How-to-be-prosocial-at-Manifest-2024-e404dc1bdd3446eca24b5258c2ba4955?source=copy_link">
+              How to Be Prosocial at Manifest
+            </Link>
           </P>
 
           <h3 className="mt-6 font-cinzel text-xl font-bold text-m26-purple-deep sm:mt-8 sm:text-2xl">
