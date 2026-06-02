@@ -55,6 +55,10 @@ const nextConfig = {
         source: '/pastsessions',
         destination: '/pastsessions/index.html',
       },
+      {
+        source: '/attendeeguide',
+        destination: '/attendeeguide/index.html',
+      },
     ]
   },
 }
