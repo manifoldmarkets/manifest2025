@@ -371,7 +371,9 @@ export default function AttendeeGuide() {
               We’re hosting a poker tournament over the course of the weekend,
               with finals on Sunday night. It’s open to pros and amateurs alike.
             </P>
-            <Button href="#">Sign up here</Button>
+            <Button href="https://forms.gle/xXn6PkYyjRbC92CC7">
+              Sign up here
+            </Button>
           </div>
 
           {/* Ticketing */}
