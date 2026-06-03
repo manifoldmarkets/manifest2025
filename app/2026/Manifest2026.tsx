@@ -62,7 +62,8 @@ const additionalTicketholders = ['Alex Gajewski', 'Gwern Branwen',
   'Dynomight', 'Lee Fang', 'Sarah Constantin', 'Eli Lifland',
   'Stephen Hsu', 'Frank Lantz', 'Chana Messinger', 'Rob Miles',
   'Tracing Woodgrains', 'Bentham’s Bulldog', 'Aydin Mohseni', 'Tim Hwang',
-  'Richard Yetter Chappell', 'Stephen Grugett', 'Nate Soares', 'Jeff Alstott', 'Lydia Laurenson', 'Panda Smith'
+  'Richard Yetter Chappell', 'Stephen Grugett', 'Nate Soares', 'Jeff Alstott', 'Lydia Laurenson', 'Panda Smith',
+  'Steve Kuhn'
 ].sort((a, b) => a.localeCompare(b))
 
 type ThemeListItem = { title: string; by?: string }
