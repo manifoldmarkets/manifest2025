@@ -365,21 +365,6 @@ export default function AttendeeGuide() {
 
           <div className="my-6 rounded-br-3xl rounded-tl-3xl border border-m26-lav bg-m26-lav-light/40 px-6 py-5">
             <h4 className="font-cinzel text-lg font-bold text-m26-purple-dark">
-              Career Fair
-            </h4>
-            <P>
-              In parallel to the night market, we will also have a career fair,
-              where you can talk to hiring sponsors and hang out. Please submit
-              this form if you think you might come, whether or not you are
-              interested in looking for work.
-            </P>
-            <Button href="https://airtable.com/appMZp1aBO5b7NTdM/pagH4yhHlxyolS2Qv/form">
-              Submit this form
-            </Button>
-          </div>
-
-          <div className="my-6 rounded-br-3xl rounded-tl-3xl border border-m26-lav bg-m26-lav-light/40 px-6 py-5">
-            <h4 className="font-cinzel text-lg font-bold text-m26-purple-dark">
               Poker Tournament
             </h4>
             <P>
