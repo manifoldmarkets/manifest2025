@@ -314,6 +314,10 @@ export default function AttendeeGuide() {
             </Link>{' '}
             and click “Forgot Password” to get a new email.
           </P>
+          <P>
+            If you are experiencing issues with Waypoint, you can report them{' '}
+            <Link href="https://waypoint.lighthaven.space/support">here</Link>.
+          </P>
 
           {/* Schedule */}
           <SectionHeading id="schedule" emoji="📆">
@@ -372,6 +376,17 @@ export default function AttendeeGuide() {
             <Button href="https://airtable.com/appMZp1aBO5b7NTdM/pagH4yhHlxyolS2Qv/form">
               Submit this form
             </Button>
+          </div>
+
+          <div className="my-6 rounded-br-3xl rounded-tl-3xl border border-m26-lav bg-m26-lav-light/40 px-6 py-5">
+            <h4 className="font-cinzel text-lg font-bold text-m26-purple-dark">
+              Poker Tournament
+            </h4>
+            <P>
+              We’re hosting a poker tournament over the course of the weekend,
+              with finals on Sunday night. It’s open to pros and amateurs alike.
+            </P>
+            <Button href="#">Sign up here</Button>
           </div>
 
           {/* Ticketing */}
