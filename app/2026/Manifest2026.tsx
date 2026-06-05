@@ -1400,7 +1400,7 @@ function Sponsors() {
               className="sponsors-logo sponsors-logo--futo"
             />
           </a>
-          <a href="https://soccer.sportspredict.com/" target="_blank" rel="noopener">
+          <a href="https://sportspredict.com/" target="_blank" rel="noopener">
             <Image
               src="/images/sponsors/sportspredict-logo.png"
               alt="Sports Predict"
