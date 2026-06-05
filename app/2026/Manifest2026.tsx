@@ -809,12 +809,13 @@ nav.top.is-scrolled .top__register { color: #fff !important; }
 .sponsors-logo--invert { filter: invert(1); mix-blend-mode: multiply; }
 .sponsors-tier--xl .sponsors-logo { max-height: 140px; max-width: 460px; }
 .sponsors-tier--lg .sponsors-logo { max-height: 110px; max-width: 280px; }
+.sponsors-tier--lg .sponsors-logo--manifold { max-height: 124px; max-width: 320px; }
 .sponsors-tier--md .sponsors-logo { max-height: 72px; max-width: 200px; }
 .sponsors-tier--sm .sponsors-logo { max-height: 56px; max-width: 180px; }
 .sponsors-tier--sm .sponsors-logo--eigen { max-height: 38px; max-width: 130px; transform: translateY(6px); }
-.sponsors-tier--md .sponsors-logo--sportspredict { max-height: 56px; max-width: 150px; transform: translateY(6px); }
-.sponsors-tier--md .sponsors-logo--mnx { max-height: 56px; max-width: 150px; }
-.sponsors-tier--md .sponsors-logo--futo { max-height: 56px; max-width: 150px; }
+.sponsors-tier--md .sponsors-logo--sportspredict { max-height: 50px; max-width: 138px; transform: translateY(6px); }
+.sponsors-tier--md .sponsors-logo--mnx { max-height: 50px; max-width: 138px; }
+.sponsors-tier--md .sponsors-logo--futo { max-height: 50px; max-width: 138px; }
 .sponsors-cta { margin-top: 40px; text-align: center; }
 .btn-solid {
   display: inline-block;
@@ -1376,7 +1377,7 @@ function Sponsors() {
               alt="Manifold Markets"
               width={1118}
               height={306}
-              className="sponsors-logo"
+              className="sponsors-logo sponsors-logo--manifold"
             />
           </a>
         </div>
