@@ -1,4 +1,11 @@
-import { Bungee_Shade, Cinzel, Cinzel_Decorative, Libre_Baskerville, Outfit } from 'next/font/google'
+import {
+  Bungee_Shade,
+  Cinzel,
+  Cinzel_Decorative,
+  Cormorant_Garamond,
+  Libre_Baskerville,
+  Outfit,
+} from 'next/font/google'
 import type { Metadata } from 'next'
 import './globals.css'
 
@@ -20,19 +27,27 @@ const bungeeShade = Bungee_Shade({
 const cinzel = Cinzel({
   variable: '--font-cinzel',
   subsets: ['latin'],
-  weight: ['500', '600', '700', '900'],
+  weight: ['400', '500', '600', '700', '800', '900'],
   display: 'swap',
 })
 const cinzelDecorative = Cinzel_Decorative({
   variable: '--font-cinzel-decorative',
   subsets: ['latin'],
-  weight: ['400', '700'],
+  weight: ['400', '700', '900'],
   display: 'swap',
 })
 const libreBaskerville = Libre_Baskerville({
   variable: '--font-libre-baskerville',
   subsets: ['latin'],
   weight: ['400', '700'],
+  style: ['normal', 'italic'],
+  display: 'swap',
+})
+const cormorantGaramond = Cormorant_Garamond({
+  variable: '--font-cormorant-garamond',
+  subsets: ['latin'],
+  weight: ['400', '500', '600'],
+  style: ['normal', 'italic'],
   display: 'swap',
 })
 
@@ -69,11 +84,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <link rel="preload" as="image" href="/images/2026/campfire.jpg" fetchPriority="high" />
-      </head>
       <body
-        className={`${outfit.variable} ${bungeeShade.variable} ${cinzel.variable} ${cinzelDecorative.variable} ${libreBaskerville.variable} antialiased`}
+        className={`${outfit.variable} ${bungeeShade.variable} ${cinzel.variable} ${cinzelDecorative.variable} ${libreBaskerville.variable} ${cormorantGaramond.variable} antialiased`}
       >
         {children}
       </body>

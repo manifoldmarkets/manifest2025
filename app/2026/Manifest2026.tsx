@@ -261,8 +261,6 @@ const organizers = [
 /* -------------------------------------------------------------------------- */
 
 const PAGE_CSS = `
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Cinzel+Decorative:wght@400;700;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap');
-
 :root {
   --m26-parchment: #f0e8df;
   --m26-cream: #f5f0eb;
@@ -279,14 +277,16 @@ const PAGE_CSS = `
   --p: #f0e8df; --c: #f5f0eb; --pdeep: #2e1f4d; --pmid: #4a3a6b;
   --plav: #6b5b8d; --btn: #7b6b9e; --ink: #4a3a6b; --muted: #6b5b7d;
   --rule: rgba(74,58,107,0.18);
+}
 
-  --font-cinzel: "Cinzel", serif;
-  --font-cinzel-deco: "Cinzel Decorative", serif;
-  --font-baskerville: "Libre Baskerville", Georgia, serif;
-  --cinzel: "Cinzel", serif;
-  --deco: "Cinzel Decorative", serif;
-  --serif: "Libre Baskerville", Georgia, serif;
-  --display: "Cormorant Garamond", "Libre Baskerville", Georgia, serif;
+/* Font aliases — point at the next/font CSS variables set on <body>. */
+body {
+  --cinzel: var(--font-cinzel), serif;
+  --deco: var(--font-cinzel-decorative), serif;
+  --serif: var(--font-libre-baskerville), Georgia, serif;
+  --display: var(--font-cormorant-garamond), var(--font-libre-baskerville), Georgia, serif;
+  --font-baskerville: var(--font-libre-baskerville), Georgia, serif;
+  --font-cinzel-deco: var(--font-cinzel-decorative), serif;
 }
 
 * { box-sizing: border-box; }
@@ -468,9 +468,12 @@ nav.top.is-scrolled .top__register { color: #fff !important; }
 }
 .v1-spk__prob-fill {
   position: absolute; left: 0; top: 0; bottom: 0;
-  width: 0;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: left center;
   background: var(--plav);
-  transition: width 600ms ease;
+  transition: transform 600ms ease;
+  will-change: transform;
 }
 .v1-spk__prob-num {
   font-family: var(--cinzel); font-weight: 600; font-size: 11px;
@@ -931,8 +934,8 @@ nav.top.is-scrolled .top__register { color: #fff !important; }
 }
 .v1-foot__links a:hover { color: #fff; }
 .v1-foot__past {
-  display: flex; justify-content: center; flex-wrap: wrap;
-  gap: 28px; margin-top: 36px;
+  display: flex; flex-direction: column; align-items: center;
+  gap: 12px; margin: 0 0 28px;
 }
 .v1-foot__past a {
   font-family: var(--font-cinzel); font-weight: 700; font-size: 14px;
@@ -940,7 +943,7 @@ nav.top.is-scrolled .top__register { color: #fff !important; }
   color: rgba(255,255,255,0.85); text-decoration: none;
 }
 .v1-foot__past a:hover { color: #fff; }
-.v1-foot__rule { height: 1px; background: rgba(255,255,255,0.2); margin: 36px 0 22px; }
+.v1-foot__rule { height: 1px; background: rgba(255,255,255,0.2); margin: 36px 0 28px; }
 .v1-foot__fine {
   display: flex; justify-content: space-between; gap: 24px;
   font-family: var(--cinzel); font-size: 10px; letter-spacing: 0.22em;
@@ -1124,7 +1127,10 @@ function TicketholderFigure({
           <span className="v1-spk__name">{name}</span>
           <span className="v1-spk__role">{role}</span>
           <div className="v1-spk__prob">
-            <div className="v1-spk__prob-fill" style={{ width: hasProb ? `${probability}%` : 0 }} />
+            <div
+              className="v1-spk__prob-fill"
+              style={{ transform: `scaleX(${hasProb ? probability! / 100 : 0})` }}
+            />
           </div>
           <span className="v1-spk__prob-num">{hasProb ? `${probability}%` : '—'}</span>
         </figcaption>
@@ -1353,13 +1359,15 @@ function Sponsors() {
       </h2>
       <div className="sponsors-stack">
         <div className="sponsors-tier sponsors-tier--xl">
-          <Image
-            src="/images/sponsors/sovereign-logo.png"
-            alt="Sovereign"
-            width={701}
-            height={276}
-            className="sponsors-logo"
-          />
+          <a href="https://sovereign.trading/" target="_blank" rel="noopener">
+            <Image
+              src="/images/sponsors/sovereign-logo.png"
+              alt="Sovereign"
+              width={701}
+              height={276}
+              className="sponsors-logo"
+            />
+          </a>
         </div>
         <div className="sponsors-tier sponsors-tier--lg">
           <a href="https://manifold.markets/" target="_blank" rel="noopener">
@@ -1522,12 +1530,12 @@ function SiteFooter() {
           </a>
         </div>
       </div>
+      <div className="v1-foot__rule" />
       <div className="v1-foot__past">
         <a href="/2025">Manifest 2025</a>
         <a href="/2024">Manifest 2024</a>
         <a href="/2023">Manifest 2023</a>
       </div>
-      <div className="v1-foot__rule" />
       <div className="v1-foot__fine">
         <span>Berkeley, CA</span>
         <span>team@manifest.is</span>
