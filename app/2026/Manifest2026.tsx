@@ -800,6 +800,18 @@ nav.top.is-scrolled .top__register { color: #fff !important; }
   font-family: var(--font-cinzel); font-weight: 700; font-size: 18px;
   letter-spacing: 0.02em; color: var(--m26-purple);
 }
+.sponsors-tier { display: flex; align-items: center; justify-content: center; gap: 48px; flex-wrap: wrap; }
+.sponsors-tier--md { margin-top: 24px; }
+.sponsors-logo { height: auto; width: auto; object-fit: contain; mix-blend-mode: multiply; }
+.sponsors-logo--invert { filter: invert(1); mix-blend-mode: multiply; }
+.sponsors-tier--xl .sponsors-logo { max-height: 140px; max-width: 460px; }
+.sponsors-tier--lg .sponsors-logo { max-height: 110px; max-width: 280px; }
+.sponsors-tier--md .sponsors-logo { max-height: 72px; max-width: 200px; }
+.sponsors-tier--sm .sponsors-logo { max-height: 56px; max-width: 180px; }
+.sponsors-tier--sm .sponsors-logo--eigen { max-height: 38px; max-width: 130px; transform: translateY(6px); }
+.sponsors-tier--md .sponsors-logo--sportspredict { max-height: 56px; max-width: 150px; transform: translateY(6px); }
+.sponsors-tier--md .sponsors-logo--mnx { max-height: 56px; max-width: 150px; }
+.sponsors-tier--md .sponsors-logo--futo { max-height: 56px; max-width: 150px; }
 .sponsors-cta { margin-top: 40px; text-align: center; }
 .btn-solid {
   display: inline-block;
@@ -918,6 +930,16 @@ nav.top.is-scrolled .top__register { color: #fff !important; }
   font-family: var(--cinzel); font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
 }
 .v1-foot__links a:hover { color: #fff; }
+.v1-foot__past {
+  display: flex; justify-content: center; flex-wrap: wrap;
+  gap: 28px; margin-top: 36px;
+}
+.v1-foot__past a {
+  font-family: var(--font-cinzel); font-weight: 700; font-size: 14px;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: rgba(255,255,255,0.85); text-decoration: none;
+}
+.v1-foot__past a:hover { color: #fff; }
 .v1-foot__rule { height: 1px; background: rgba(255,255,255,0.2); margin: 36px 0 22px; }
 .v1-foot__fine {
   display: flex; justify-content: space-between; gap: 24px;
@@ -1018,10 +1040,10 @@ function TopNav() {
   const scrolled = useScrolled()
   return (
     <nav className={`top${scrolled ? ' is-scrolled' : ''}`}>
-      <span className="top__brand">Manifest 2026</span>
+      <a href="#top" className="top__brand">Manifest 2026</a>
       <div className="top__links">
         <a href="#speakers">Speakers</a>
-        <a href="#what-is-manifest">Festival</a>
+        <a href="https://Manifest.is/pastsessions">Past Sessions</a>
         <a href="#nightmarket">Night Market</a>
         <a href="#faq">FAQ</a>
         <a href="#tickets" className="top__register pill">Register</a>
@@ -1032,7 +1054,7 @@ function TopNav() {
 
 function Hero() {
   return (
-    <section className="v1-hero">
+    <section id="top" className="v1-hero">
       <Image
         src="/images/2026/hero-bg.jpg"
         alt=""
@@ -1168,6 +1190,12 @@ function WhatIsManifest() {
             career fair, and much more. Much of the schedule comes from attendee-led sessions.
             Schedule from past years have included:
           </p>
+          <div className="v1-themes__more">
+            <a className="v1-btn v1-btn--ink pill v1-themes__more-btn" href="/pastsessions">
+              See sessions from all previous years
+              <span className="v1-themes__more-arrow">→</span>
+            </a>
+          </div>
         </div>
         <div className="v1-what__images">
           <div className="v1-what__img-wrap">
@@ -1228,12 +1256,6 @@ function ThemesGrid() {
             </article>
           )
         )}
-      </div>
-      <div className="v1-themes__more">
-        <a className="v1-btn v1-btn--ink pill v1-themes__more-btn" href="/pastsessions">
-          See sessions from all previous years
-          <span className="v1-themes__more-arrow">→</span>
-        </a>
       </div>
     </section>
   )
@@ -1328,26 +1350,74 @@ function Sponsors() {
     <section id="sponsors" className="sponsors-orig scroll-mt">
       <hr className="v1-divider" />
       <h2 className="v1-h2 v1-h2--center v1-h2--deco">
-        Past Sponsors
+        Sponsored by
       </h2>
       <div className="sponsors-stack">
-        <a href="https://polymarket.com" target="_blank" rel="noopener">
-          <div className="mono-img mono-img--polymarket" role="img" aria-label="Polymarket" />
-        </a>
-        <div className="sponsors-row">
-          <a href="https://substack.com" target="_blank" rel="noopener">
-            <div className="mono-img mono-img--substack" role="img" aria-label="Substack" />
-          </a>
-          <a href="https://kalshi.com" target="_blank" rel="noopener">
-            <div className="mono-img mono-img--kalshi" role="img" aria-label="Kalshi" />
+        <div className="sponsors-tier sponsors-tier--xl">
+          <Image
+            src="/images/sponsors/sovereign-logo.png"
+            alt="Sovereign"
+            width={701}
+            height={276}
+            className="sponsors-logo"
+          />
+        </div>
+        <div className="sponsors-tier sponsors-tier--lg">
+          <a href="https://manifold.markets/" target="_blank" rel="noopener">
+            <Image
+              src="/images/sponsors/manifold-logo.png"
+              alt="Manifold Markets"
+              width={1118}
+              height={306}
+              className="sponsors-logo"
+            />
           </a>
         </div>
-        <p className="sponsors-small">Sovereign · Bayes · Elicit · Futuur · Metagame</p>
-      </div>
-      <div className="sponsors-cta">
-        <a href="mailto:team@manifest.is" className="btn-solid pill">
-          Sponsorships available for 2026
-        </a>
+        <div className="sponsors-tier sponsors-tier--md sponsors-row">
+          <a href="https://mnx.fi/" target="_blank" rel="noopener">
+            <Image
+              src="/images/sponsors/mnx-logo.png"
+              alt="MNX"
+              width={485}
+              height={133}
+              className="sponsors-logo sponsors-logo--mnx"
+            />
+          </a>
+          <a href="https://futo.tech/" target="_blank" rel="noopener">
+            <Image
+              src="/images/sponsors/futo-logo.svg"
+              alt="Futo"
+              width={400}
+              height={160}
+              className="sponsors-logo sponsors-logo--futo"
+            />
+          </a>
+          <a href="https://soccer.sportspredict.com/" target="_blank" rel="noopener">
+            <Image
+              src="/images/sponsors/sportspredict-logo.png"
+              alt="Sports Predict"
+              width={1200}
+              height={460}
+              className="sponsors-logo sponsors-logo--sportspredict"
+            />
+          </a>
+        </div>
+        <div className="sponsors-tier sponsors-tier--sm sponsors-row">
+          <Image
+            src="/images/sponsors/futuur-logo-new.png"
+            alt="Futuur"
+            width={970}
+            height={400}
+            className="sponsors-logo"
+          />
+          <Image
+            src="/images/sponsors/eigenlabs-logo.png"
+            alt="Eigen Labs"
+            width={960}
+            height={200}
+            className="sponsors-logo sponsors-logo--eigen"
+          />
+        </div>
       </div>
     </section>
   )
@@ -1451,10 +1521,12 @@ function SiteFooter() {
           <a href="https://discord.com/invite/MjDqMcQFdR" target="_blank" rel="noopener">
             Discord
           </a>
-          <a href="/2025">Manifest 2025</a>
-          <a href="/2024">Manifest 2024</a>
-          <a href="/2023">Manifest 2023</a>
         </div>
+      </div>
+      <div className="v1-foot__past">
+        <a href="/2025">Manifest 2025</a>
+        <a href="/2024">Manifest 2024</a>
+        <a href="/2023">Manifest 2023</a>
       </div>
       <div className="v1-foot__rule" />
       <div className="v1-foot__fine">
@@ -1481,8 +1553,8 @@ export default function Manifest2026() {
       <ThemesGrid />
       <NightMarket />
       <Testimonials />
-      <Sponsors />
       <Tickets />
+      <Sponsors />
       <Faq />
       <Organizers />
       <SiteFooter />
