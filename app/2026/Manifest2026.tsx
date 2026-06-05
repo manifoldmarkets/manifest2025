@@ -39,6 +39,7 @@ const confirmedSpeakers: Person[] = [
   { name: 'Kelsey Piper', role: 'The Argument', image: '/images/2026/guests/kelsey-piper.jpeg' },
   { name: 'Andreas Stuhlmüller', role: 'CEO, Elicit', image: '/images/2026/guests/andreas-stuhlmueller.png' },
   { name: 'Aella', role: 'Researcher', image: '/images/speakers/aella.jpg' },
+  { name: 'Danielle Fong', role: 'Lightcell', image: '/images/2026/guests/danielle-fong.jpg' },
 ]
 
 const ticketholders: Ticketholder[] = [
