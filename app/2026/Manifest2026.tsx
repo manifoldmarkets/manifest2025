@@ -1153,7 +1153,6 @@ function Speakers({ probabilities }: { probabilities: Record<string, number> }) 
       </div>
 
       <div className="v1-spk-more">
-        <span className="v1-spk-more__label">— And good odds on —</span>
         <div className="v1-spk-more__grid">
           {additionalTicketholders.map((name) => (
             <a key={name} href={TICKETHOLDER_MARKET_URL} target="_blank" rel="noopener">
