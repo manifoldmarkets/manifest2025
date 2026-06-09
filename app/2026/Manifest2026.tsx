@@ -524,6 +524,7 @@ nav.top.is-scrolled .top__register { color: #fff !important; }
   transition: color 180ms ease;
 }
 .v1-spk-more__grid a:hover { color: var(--plav); }
+.v1-speakers__schedule { display: flex; justify-content: center; margin-top: 48px; }
 
 /* ----- WHAT IS MANIFEST (V1) ----- */
 .v1-what { margin: 0; padding: 0; }
@@ -1168,6 +1169,17 @@ function Speakers({ probabilities }: { probabilities: Record<string, number> }) 
           ))}
         </div>
       </div>
+
+      <div className="v1-speakers__schedule">
+        <a
+          className="v1-btn v1-btn--ink pill"
+          href="https://waypoint.lighthaven.space/e/manifest-2026/schedule"
+          target="_blank"
+          rel="noopener"
+        >
+          2026 working schedule
+        </a>
+      </div>
     </section>
   )
 }
@@ -1375,8 +1387,8 @@ function Sponsors() {
             <Image
               src="/images/sponsors/manifold-logo.png"
               alt="Manifold Markets"
-              width={1118}
-              height={306}
+              width={960}
+              height={266}
               className="sponsors-logo sponsors-logo--manifold"
             />
           </a>
