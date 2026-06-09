@@ -343,10 +343,6 @@ export default function AttendeeGuide() {
           </ul>
 
           <SubHeading>Special events you can register for now</SubHeading>
-          <P>
-            These are some highly participatory events organized by Manifest,
-            which you can register for in advance.
-          </P>
 
           <div className="my-6 rounded-br-3xl rounded-tl-3xl border border-m26-lav bg-m26-lav-light/40 px-6 py-5">
             <h4 className="font-cinzel text-lg font-bold text-m26-purple-dark">
@@ -354,9 +350,7 @@ export default function AttendeeGuide() {
             </h4>
             <P>
               On Friday evening, there will be a night market that is open to
-              the public, where you can sign up to host a booth. Booth/table
-              space is limited, with some priority given to Manifest ticket
-              holders, however we encourage you to get your requests in early.
+              the public, where you can sign up to host a booth.
             </P>
             <Button href="https://airtable.com/appMZp1aBO5b7NTdM/pag9gppXcX1cxRixI/form">
               Register interest here
@@ -388,8 +382,8 @@ export default function AttendeeGuide() {
             If you’re coming to multiple events during the festival season,
             you’ll have a separate name badge for each part (LessOnline, Summer
             Camp, and Manifest). You’ll be expected to wear your name badge at
-            all times while on campus. If you forget to wear your badge, staff
-            or security may ask you to see your name badge and ID.
+            all times while on campus. If you forget your badge, you will not be
+            allowed in the venue.
           </P>
           <P>
             When you first arrive at the venue, you’ll be asked to show your
@@ -403,8 +397,8 @@ export default function AttendeeGuide() {
             , and will open at 9am on Saturday and Sunday.
           </Callout>
           <P>
-            Once you have your badge, you’ll be free to come and go from the
-            venue at any time.
+            Once you have your badge, you’ll be free to enter and exit the venue
+            at any time.
           </P>
 
           {/* Connect */}
@@ -432,8 +426,8 @@ export default function AttendeeGuide() {
             <strong>Food and drinks will be provided free of charge.</strong>{' '}
             We’ll have plenty of vegan and vegetarian options, and we’ll do our
             best to accommodate dietary restrictions, allergies, and
-            preferences. <strong>Meals provided:</strong> dinner on Friday, plus
-            grab-and-go breakfast, lunch, and dinner on Saturday and Sunday.
+            preferences. <strong>Meals provided:</strong> dinner on Friday;
+            breakfast, lunch, and dinner on Saturday and Sunday.
           </P>
           <SubHeading>Snacks</SubHeading>
           <P>
@@ -572,7 +566,7 @@ export default function AttendeeGuide() {
           </SectionHeading>
           <P>
             There’s no dress code beyond the basics: a top, a bottom, and
-            (highly encouraged) shoes. We expect most people to be dressed
+            (encouraged) shoes. We expect most people to be dressed
             casually, but encourage fashion, self-expression, and even costumes.
           </P>
           <P>
