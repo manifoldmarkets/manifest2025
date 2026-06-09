@@ -397,8 +397,8 @@ export default function AttendeeGuide() {
             , and will open at 9am on Saturday and Sunday.
           </Callout>
           <P>
-            Once you have your badge, you’ll be free to come and go from the
-            venue at any time.
+            Once you have your badge, you’ll be free to enter and exit the venue
+            at any time.
           </P>
 
           {/* Connect */}
