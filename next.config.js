@@ -9,6 +9,16 @@ const nextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: '/volunteer-guide',
+        destination:
+          'https://www.notion.so/manifoldmarkets/2026-Volunteer-Guide-Manifest-c6e54492ea7a83baa9e881d6b7356ad0?source=copy_link',
+        permanent: false,
+      },
+    ]
+  },
   async rewrites() {
     return [
       {
