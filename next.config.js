@@ -17,6 +17,11 @@ const nextConfig = {
           'https://www.notion.so/manifoldmarkets/2026-Volunteer-Guide-Manifest-c6e54492ea7a83baa9e881d6b7356ad0?source=copy_link',
         permanent: false,
       },
+      {
+        source: '/map',
+        destination: 'https://waypoint.lighthaven.space/e/manifest-2026/map',
+        permanent: false,
+      },
     ]
   },
   async rewrites() {
