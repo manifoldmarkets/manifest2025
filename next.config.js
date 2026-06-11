@@ -22,6 +22,12 @@ const nextConfig = {
         destination: 'https://waypoint.lighthaven.space/e/manifest-2026/map',
         permanent: false,
       },
+      {
+        source: '/emptybadge',
+        destination:
+          'https://airtable.com/appMZp1aBO5b7NTdM/pag0LLgblrhQ8TjdK/form',
+        permanent: false,
+      },
     ]
   },
   async rewrites() {
