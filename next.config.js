@@ -22,6 +22,12 @@ const nextConfig = {
         destination: 'https://waypoint.lighthaven.space/e/manifest-2026/map',
         permanent: false,
       },
+      {
+        source: '/schedule',
+        destination:
+          'https://waypoint.lighthaven.space/e/manifest-2026/schedule',
+        permanent: false,
+      },
     ]
   },
   async rewrites() {
