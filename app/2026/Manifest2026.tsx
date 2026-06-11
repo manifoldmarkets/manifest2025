@@ -31,7 +31,7 @@ const confirmedSpeakers: Person[] = [
   // { name: 'Aydin Mohseni', role: 'Philosopher of science and Bayesian epistemologist, CMU', image: '/images/2026/guests/aydin-mohseni.jpg' },
   { name: 'David Oks', role: 'Writer', image: '/images/2026/guests/david-oks.png' },
   { name: 'Scott Sumner', role: 'Economist', image: '/images/2026/guests/scott-sumner.jpg' },
-  { name: 'Destiny', role: 'Streamer', image: '/images/2026/guests/destiny.jpg' },
+  // { name: 'Destiny', role: 'Streamer', image: '/images/2026/guests/destiny.jpg' },
   { name: 'Sreeram Kannan', role: 'Eigen Labs', image: '/images/2026/guests/sreeram-kannan.png' },
   { name: 'Noam Brown', role: 'OpenAI', image: '/images/2026/guests/noam-brown.jpg' },
   { name: 'David Shor', role: 'Blue Rose Research', image: '/images/speakers/davidshor.jpg' },
@@ -44,7 +44,7 @@ const confirmedSpeakers: Person[] = [
 
 const ticketholders: Ticketholder[] = [
   { answerId: 'g8OzZPcChU', name: 'Nate Silver', role: 'Silver Bulletin', image: '/images/speakers/nate.jpg' },
-  { answerId: 'nnP6y9EQEI', name: 'Joe Carlsmith', role: 'Anthropic', image: '/images/speakers/joe.jpg' },
+  // { answerId: 'nnP6y9EQEI', name: 'Joe Carlsmith', role: 'Anthropic', image: '/images/speakers/joe.jpg' },
   { answerId: 'Qn2c2PN5lg', name: 'Eliezer Yudkowsky', role: 'MIRI', image: '/images/speakers/eliezer.jpg' },
   { answerId: 'shPIpsg5ld', name: 'Ajeya Cotra', role: 'METR', image: '/images/speakers/ajeya.jpg' },
   // { answerId: '0ysnsz0cQ9', name: 'Dwarkesh Patel', role: 'Dwarkesh Podcast', image: '/images/speakers/dwarkesh.jpg' },
@@ -57,14 +57,14 @@ const TICKETHOLDER_MARKET_API =
   'https://api.manifold.markets/v0/slug/which-users-will-attend-a-manifest-IARLlNI5L8'
 
 const additionalTicketholders = ['Alex Gajewski', 'Gwern Branwen', 
-  'Buck Shlegeris', 'Jacob Falkovich', 'Clara Collier',
+ 'Jacob Falkovich', 'Clara Collier',
   'Janus', 'Owain Evans', 'Jose Luis Ricon',
   'Razib Khan', 'Duncan Sabien', 'Katja Grace', 'Richard Ngo',
   'Dynomight', 'Lee Fang', 'Sarah Constantin', 'Eli Lifland',
   'Stephen Hsu', 'Chana Messinger', 'Rob Miles',
   'Tracing Woodgrains', 'Bentham’s Bulldog', 'Aydin Mohseni', 'Tim Hwang',
   'Richard Yetter Chappell', 'Stephen Grugett', 'Nate Soares', 'Jeff Alstott', 'Lydia Laurenson', 'Panda Smith',
-  'Steve Kuhn'
+  'Steve Kuhn', 'Kelsey Pool'
 ].sort((a, b) => a.localeCompare(b))
 
 type ThemeListItem = { title: string; by?: string }
