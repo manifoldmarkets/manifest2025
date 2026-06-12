@@ -28,6 +28,12 @@ const nextConfig = {
           'https://waypoint.lighthaven.space/e/manifest-2026/schedule',
         permanent: false,
       },
+      {
+        source: '/ticket',
+        destination:
+          'https://waypoint.lighthaven.space/e/manifest-2026/admission-qr',
+        permanent: false,
+      },
     ]
   },
   async rewrites() {
