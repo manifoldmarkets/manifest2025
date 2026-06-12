@@ -35,7 +35,7 @@ const nextConfig = {
         permanent: false,
       },
       {
-        source: '/volunteer-guide-room',
+        source: '/volunteer-guide-registration',
         destination:
           'https://www.notion.so/manifoldmarkets/Registration-Volunteer-Guide-06954492ea7a838496568163bd3b9e8e?source=copy_link',
         permanent: false,
