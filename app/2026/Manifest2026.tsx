@@ -816,6 +816,7 @@ nav.top.is-scrolled .top__register { color: #fff !important; }
 .sponsors-tier--md .sponsors-logo--sportspredict { max-height: 50px; max-width: 138px; transform: translateY(6px); }
 .sponsors-tier--md .sponsors-logo--mnx { max-height: 50px; max-width: 138px; }
 .sponsors-tier--md .sponsors-logo--futo { max-height: 50px; max-width: 138px; }
+.sponsors-tier--md .sponsors-logo--futuresearch { max-height: 38px; max-width: 220px; }
 .sponsors-cta { margin-top: 40px; text-align: center; }
 .btn-solid {
   display: inline-block;
@@ -1408,6 +1409,15 @@ function Sponsors() {
               width={1200}
               height={460}
               className="sponsors-logo sponsors-logo--sportspredict"
+            />
+          </a>
+          <a href="https://futuresearch.ai/" target="_blank" rel="noopener">
+            <Image
+              src="/images/sponsors/futuresearch-logo.png"
+              alt="FutureSearch"
+              width={1144}
+              height={168}
+              className="sponsors-logo sponsors-logo--futuresearch"
             />
           </a>
         </div>
