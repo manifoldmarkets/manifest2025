@@ -40,6 +40,11 @@ const nextConfig = {
           'https://airtable.com/app3T5RL0xfEKlRIc/pagDs8E00yNO0eD92/form',
         permanent: false,
       },
+      {
+        source: '/discord',
+        destination: 'https://discord.gg/zSNbdppjQ4',
+        permanent: false,
+      },
     ]
   },
   async rewrites() {
